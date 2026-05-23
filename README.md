@@ -7,8 +7,16 @@ Supports the standards in use today:
 - **APP-6 B and C** (and MIL-STD-2525 B/C) — 15-character letter-based encoding, in [`app6b/`](./app6b/).
 - **APP-6 D and E** (and MIL-STD-2525 D/E) — 20-character number-based encoding, in [`app6d/`](./app6d/).
 
-This module only handles the SIDC string. Rendering symbols to SVG, canvas, or
-icons is out of scope; pair it with a renderer such as [milsymbol](https://github.com/spatialillusions/milsymbol)
+This module is a Go port of the SIDC-handling parts of Måns Beckman's
+JavaScript libraries, [`milsymbol`](https://github.com/spatialillusions/milsymbol),
+[`stanag-app6`](https://github.com/spatialillusions/stanag-app6), and
+[`milstandard-e`](https://github.com/spatialillusions/milstandard-e). The
+field layouts, symbol-set mappings, version-detection rules, and lookup
+tables all come from those projects; this module restates them as typed
+Go code with table-driven tests and fuzzing.
+
+This module only handles the SIDC string. Rendering symbols to SVG, canvas,
+or icons is out of scope; pair it with [`milsymbol`](https://github.com/spatialillusions/milsymbol)
 on the JavaScript side if you need pictures.
 
 ## Install
@@ -255,10 +263,31 @@ alias until the next major version.
 
 ## Upstream credits
 
-The TSV source tables are vendored from MIT-licensed projects by Måns Beckman:
+The design of this module is a direct port of Måns Beckman's
+MIT-licensed JavaScript libraries; without those, this project would not
+exist. All three are works to look at if you want to understand the
+standards in detail:
 
-- [stanag-app6](https://github.com/spatialillusions/stanag-app6) (APP-6 B and APP-6 D tables).
-- [milstandard-e](https://github.com/spatialillusions/milstandard-e) (APP-6 E tables).
+- [`milsymbol`](https://github.com/spatialillusions/milsymbol) — the
+  reference JS library for rendering MIL-STD-2525 / STANAG APP-6 symbols.
+  This module reproduces (in Go) the SIDC parsing logic from
+  [`src/numbersidc/metadata.js`](https://github.com/spatialillusions/milsymbol/blob/master/src/numbersidc/metadata.js)
+  and [`src/lettersidc/metadata.js`](https://github.com/spatialillusions/milsymbol/blob/master/src/lettersidc/metadata.js):
+  the field positions, the version → standard mapping, the symbol-set →
+  dimension/affiliation rules, and the HQ/task-force/feint-dummy bitfield
+  semantics.
+- [`stanag-app6`](https://github.com/spatialillusions/stanag-app6) — the
+  TSV tables for APP-6 B and APP-6 D. The files under
+  [`tables/app6b/`](./tables/app6b/) and [`tables/app6d/`](./tables/app6d/)
+  are copied verbatim from this project's `tsv-tables/` directory.
+- [`milstandard-e`](https://github.com/spatialillusions/milstandard-e) —
+  the TSV tables for APP-6 E. The files under
+  [`tables/app6e/`](./tables/app6e/) are copied verbatim from this
+  project's `tsv-tables/` directory.
+
+Both upstream projects, and this module, are MIT-licensed. If you spot a
+bug in the field semantics or the table data, the fix probably belongs
+upstream first.
 
 ## Licence
 
