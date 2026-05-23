@@ -5,55 +5,156 @@ package app6d
 
 // Modifier 1 constants for symbol set 25 (Control Measures).
 const (
-	Modifier1ControlMeasure_WheeledLimitedCrossCountry                                                                       Modifier1 = 1  // Wheeled limited cross country
-	Modifier1ControlMeasure_WheeledCrossCountry                                                                              Modifier1 = 2  // Wheeled cross country
-	Modifier1ControlMeasure_Tracked                                                                                          Modifier1 = 3  // Tracked
-	Modifier1ControlMeasure_WheeledAndTrackedCombination                                                                     Modifier1 = 4  // Wheeled and tracked combination
-	Modifier1ControlMeasure_Towed                                                                                            Modifier1 = 5  // Towed
-	Modifier1ControlMeasure_Rail                                                                                             Modifier1 = 6  // Rail
-	Modifier1ControlMeasure_OverSnowPrimeMover                                                                               Modifier1 = 7  // Over snow (prime mover)
-	Modifier1ControlMeasure_Sled                                                                                             Modifier1 = 8  // Sled
-	Modifier1ControlMeasure_PackAnimals                                                                                      Modifier1 = 9  // Pack Animals
-	Modifier1ControlMeasure_Barge                                                                                            Modifier1 = 10 // Barge
-	Modifier1ControlMeasure_Amphibious                                                                                       Modifier1 = 11 // Amphibious
-	Modifier1ControlMeasure_NoVehicles                                                                                       Modifier1 = 12 // No Vehicles
-	Modifier1ControlMeasure_UnspecifiedMine                                                                                  Modifier1 = 13 // Unspecified Mine
-	Modifier1ControlMeasure_AntipersonnelMine                                                                                Modifier1 = 14 // Antipersonnel Mine
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffects                                                          Modifier1 = 15 // Antipersonnel Mine with Directional Effects
-	Modifier1ControlMeasure_AntitankMine                                                                                     Modifier1 = 16 // Antitank Mine
-	Modifier1ControlMeasure_AntitankMineWithAntihandlingDevice                                                               Modifier1 = 17 // Antitank Mine with Antihandling Device
-	Modifier1ControlMeasure_WideAreaAntitankMine                                                                             Modifier1 = 18 // Wide Area Antitank Mine
-	Modifier1ControlMeasure_MineCluster                                                                                      Modifier1 = 19 // Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineAndAntipersonnelMineWithDirectionalEffects                                      Modifier1 = 20 // Antipersonnel Mine and Antipersonnel Mine with Directional Effects
-	Modifier1ControlMeasure_AntipersonnelMineAndAntitankMine                                                                 Modifier1 = 21 // Antipersonnel Mine and Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineAndAntitankMineWithAntihandlingDevice                                           Modifier1 = 22 // Antipersonnel Mine and Antitank Mine with Antihandling Device
-	Modifier1ControlMeasure_AntipersonnelMineAndWideAreaAntitankMine                                                         Modifier1 = 23 // Antipersonnel Mine and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineAndMineCluster                                                                  Modifier1 = 24 // Antipersonnel Mine and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndAntitankMine                                           Modifier1 = 25 // Antipersonnel Mine with Directional Effects and Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndAntitankMineWithAntihandlingDevice                     Modifier1 = 26 // Antipersonnel Mine with Directional Effects and Antitank Mine with Antihandling Device
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndWideAreaAntitankMine                                   Modifier1 = 27 // Antipersonnel Mine with Directional Effects and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndMineCluster                                            Modifier1 = 28 // Antipersonnel Mine with Directional Effects and Mine Cluster
-	Modifier1ControlMeasure_AntitankMineAndAntitankMineWithAntihandlingDevice                                                Modifier1 = 29 // Antitank Mine and Antitank Mine with Antihandling Device
-	Modifier1ControlMeasure_AntitankMineAndWideAreaAntitankMine                                                              Modifier1 = 30 // Antitank Mine and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntitankMineAndMineCluster                                                                       Modifier1 = 31 // Antitank Mine and Mine Cluster
-	Modifier1ControlMeasure_AntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine                                        Modifier1 = 32 // Antitank Mine with Antihandling Device and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntitankMineWithAntihandlingDeviceAndMineCluster                                                 Modifier1 = 33 // Antitank Mine with Antihandling Device and Mine Cluster
-	Modifier1ControlMeasure_WideAreaAntitankMineAndMineCluster                                                               Modifier1 = 34 // Wide Area Antitank Mine and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndAntitankMine                          Modifier1 = 35 // Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndAntitankMineWithAntihandlingDevice    Modifier1 = 36 // Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Antitank Mine with Antihandling Device
-	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndWideAreaAntitankMine                  Modifier1 = 37 // Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndMineCluster                           Modifier1 = 38 // Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndAntitankMineWithAntihandlingDevice                               Modifier1 = 39 // Antipersonnel Mine, Antitank Mine, and Antitank Mine with Antihandling Device
-	Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndWideAreaAntitankMine                                             Modifier1 = 40 // Antipersonnel Mine, Antitank Mine, and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndMineCluster                                                      Modifier1 = 41 // Antipersonnel Mine, Antitank Mine, and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineAntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine                       Modifier1 = 42 // Antipersonnel Mine, Antitank Mine with Antihandling Device, and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineAntitankMineWithAntihandlingDeviceAndMineCluster                                Modifier1 = 43 // Antipersonnel Mine, Antitank Mine with Antihandling Device, and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineWideAreaAntitankMineAndMineCluster                                              Modifier1 = 44 // Antipersonnel Mine, Wide Area Antitank Mine, and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndAntitankMineWithAntihandlingDevice         Modifier1 = 45 // Antipersonnel Mine with Directional Effects, Antitank Mine, and Antitank Mine with Antihandling Device
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndWideAreaAntitankMine                       Modifier1 = 46 // Antipersonnel Mine with Directional Effects, Antitank Mine, and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndMineCluster                                Modifier1 = 47 // Antipersonnel Mine with Directional Effects, Antitank Mine, and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine Modifier1 = 48 // Antipersonnel Mine with Directional Effects, Antitank Mine with Antihandling Device, and Wide Area Antitank Mine
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineWithAntihandlingDeviceAndMineCluster          Modifier1 = 49 // Antipersonnel Mine with Directional Effects, Antitank Mine with Antihandling Device, and Mine Cluster
-	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsWideAreaAntitankMineAndMineCluster                        Modifier1 = 50 // Antipersonnel Mine with Directional Effects, Wide Area Antitank Mine, and Mine Cluster
-	Modifier1ControlMeasure_Dismounted                                                                                       Modifier1 = 51 // Dismounted
+	// Modifier1ControlMeasure_WheeledLimitedCrossCountry is Wheeled limited cross country.
+	Modifier1ControlMeasure_WheeledLimitedCrossCountry Modifier1 = 1
+
+	// Modifier1ControlMeasure_WheeledCrossCountry is Wheeled cross country.
+	Modifier1ControlMeasure_WheeledCrossCountry Modifier1 = 2
+
+	// Modifier1ControlMeasure_Tracked is Tracked.
+	Modifier1ControlMeasure_Tracked Modifier1 = 3
+
+	// Modifier1ControlMeasure_WheeledAndTrackedCombination is Wheeled and tracked combination.
+	Modifier1ControlMeasure_WheeledAndTrackedCombination Modifier1 = 4
+
+	// Modifier1ControlMeasure_Towed is Towed.
+	Modifier1ControlMeasure_Towed Modifier1 = 5
+
+	// Modifier1ControlMeasure_Rail is Rail.
+	Modifier1ControlMeasure_Rail Modifier1 = 6
+
+	// Modifier1ControlMeasure_OverSnowPrimeMover is Over snow (prime mover).
+	Modifier1ControlMeasure_OverSnowPrimeMover Modifier1 = 7
+
+	// Modifier1ControlMeasure_Sled is Sled.
+	Modifier1ControlMeasure_Sled Modifier1 = 8
+
+	// Modifier1ControlMeasure_PackAnimals is Pack Animals.
+	Modifier1ControlMeasure_PackAnimals Modifier1 = 9
+
+	// Modifier1ControlMeasure_Barge is Barge.
+	Modifier1ControlMeasure_Barge Modifier1 = 10
+
+	// Modifier1ControlMeasure_Amphibious is Amphibious.
+	Modifier1ControlMeasure_Amphibious Modifier1 = 11
+
+	// Modifier1ControlMeasure_NoVehicles is No Vehicles.
+	Modifier1ControlMeasure_NoVehicles Modifier1 = 12
+
+	// Modifier1ControlMeasure_UnspecifiedMine is Unspecified Mine.
+	Modifier1ControlMeasure_UnspecifiedMine Modifier1 = 13
+
+	// Modifier1ControlMeasure_AntipersonnelMine is Antipersonnel Mine.
+	Modifier1ControlMeasure_AntipersonnelMine Modifier1 = 14
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffects is Antipersonnel Mine with Directional Effects.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffects Modifier1 = 15
+
+	// Modifier1ControlMeasure_AntitankMine is Antitank Mine.
+	Modifier1ControlMeasure_AntitankMine Modifier1 = 16
+
+	// Modifier1ControlMeasure_AntitankMineWithAntihandlingDevice is Antitank Mine with Antihandling Device.
+	Modifier1ControlMeasure_AntitankMineWithAntihandlingDevice Modifier1 = 17
+
+	// Modifier1ControlMeasure_WideAreaAntitankMine is Wide Area Antitank Mine.
+	Modifier1ControlMeasure_WideAreaAntitankMine Modifier1 = 18
+
+	// Modifier1ControlMeasure_MineCluster is Mine Cluster.
+	Modifier1ControlMeasure_MineCluster Modifier1 = 19
+
+	// Modifier1ControlMeasure_AntipersonnelMineAndAntipersonnelMineWithDirectionalEffects is Antipersonnel Mine and Antipersonnel Mine with Directional Effects.
+	Modifier1ControlMeasure_AntipersonnelMineAndAntipersonnelMineWithDirectionalEffects Modifier1 = 20
+
+	// Modifier1ControlMeasure_AntipersonnelMineAndAntitankMine is Antipersonnel Mine and Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineAndAntitankMine Modifier1 = 21
+
+	// Modifier1ControlMeasure_AntipersonnelMineAndAntitankMineWithAntihandlingDevice is Antipersonnel Mine and Antitank Mine with Antihandling Device.
+	Modifier1ControlMeasure_AntipersonnelMineAndAntitankMineWithAntihandlingDevice Modifier1 = 22
+
+	// Modifier1ControlMeasure_AntipersonnelMineAndWideAreaAntitankMine is Antipersonnel Mine and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineAndWideAreaAntitankMine Modifier1 = 23
+
+	// Modifier1ControlMeasure_AntipersonnelMineAndMineCluster is Antipersonnel Mine and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineAndMineCluster Modifier1 = 24
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndAntitankMine is Antipersonnel Mine with Directional Effects and Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndAntitankMine Modifier1 = 25
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndAntitankMineWithAntihandlingDevice is Antipersonnel Mine with Directional Effects and Antitank Mine with Antihandling Device.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndAntitankMineWithAntihandlingDevice Modifier1 = 26
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndWideAreaAntitankMine is Antipersonnel Mine with Directional Effects and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndWideAreaAntitankMine Modifier1 = 27
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndMineCluster is Antipersonnel Mine with Directional Effects and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAndMineCluster Modifier1 = 28
+
+	// Modifier1ControlMeasure_AntitankMineAndAntitankMineWithAntihandlingDevice is Antitank Mine and Antitank Mine with Antihandling Device.
+	Modifier1ControlMeasure_AntitankMineAndAntitankMineWithAntihandlingDevice Modifier1 = 29
+
+	// Modifier1ControlMeasure_AntitankMineAndWideAreaAntitankMine is Antitank Mine and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntitankMineAndWideAreaAntitankMine Modifier1 = 30
+
+	// Modifier1ControlMeasure_AntitankMineAndMineCluster is Antitank Mine and Mine Cluster.
+	Modifier1ControlMeasure_AntitankMineAndMineCluster Modifier1 = 31
+
+	// Modifier1ControlMeasure_AntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine is Antitank Mine with Antihandling Device and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine Modifier1 = 32
+
+	// Modifier1ControlMeasure_AntitankMineWithAntihandlingDeviceAndMineCluster is Antitank Mine with Antihandling Device and Mine Cluster.
+	Modifier1ControlMeasure_AntitankMineWithAntihandlingDeviceAndMineCluster Modifier1 = 33
+
+	// Modifier1ControlMeasure_WideAreaAntitankMineAndMineCluster is Wide Area Antitank Mine and Mine Cluster.
+	Modifier1ControlMeasure_WideAreaAntitankMineAndMineCluster Modifier1 = 34
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndAntitankMine is Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndAntitankMine Modifier1 = 35
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndAntitankMineWithAntihandlingDevice is Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Antitank Mine with Antihandling Device.
+	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndAntitankMineWithAntihandlingDevice Modifier1 = 36
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndWideAreaAntitankMine is Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndWideAreaAntitankMine Modifier1 = 37
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndMineCluster is Antipersonnel Mine, Antipersonnel Mine with Directional Effects, and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineAntipersonnelMineWithDirectionalEffectsAndMineCluster Modifier1 = 38
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndAntitankMineWithAntihandlingDevice is Antipersonnel Mine, Antitank Mine, and Antitank Mine with Antihandling Device.
+	Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndAntitankMineWithAntihandlingDevice Modifier1 = 39
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndWideAreaAntitankMine is Antipersonnel Mine, Antitank Mine, and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndWideAreaAntitankMine Modifier1 = 40
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndMineCluster is Antipersonnel Mine, Antitank Mine, and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineAntitankMineAndMineCluster Modifier1 = 41
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine is Antipersonnel Mine, Antitank Mine with Antihandling Device, and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineAntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine Modifier1 = 42
+
+	// Modifier1ControlMeasure_AntipersonnelMineAntitankMineWithAntihandlingDeviceAndMineCluster is Antipersonnel Mine, Antitank Mine with Antihandling Device, and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineAntitankMineWithAntihandlingDeviceAndMineCluster Modifier1 = 43
+
+	// Modifier1ControlMeasure_AntipersonnelMineWideAreaAntitankMineAndMineCluster is Antipersonnel Mine, Wide Area Antitank Mine, and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineWideAreaAntitankMineAndMineCluster Modifier1 = 44
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndAntitankMineWithAntihandlingDevice is Antipersonnel Mine with Directional Effects, Antitank Mine, and Antitank Mine with Antihandling Device.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndAntitankMineWithAntihandlingDevice Modifier1 = 45
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndWideAreaAntitankMine is Antipersonnel Mine with Directional Effects, Antitank Mine, and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndWideAreaAntitankMine Modifier1 = 46
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndMineCluster is Antipersonnel Mine with Directional Effects, Antitank Mine, and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineAndMineCluster Modifier1 = 47
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine is Antipersonnel Mine with Directional Effects, Antitank Mine with Antihandling Device, and Wide Area Antitank Mine.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineWithAntihandlingDeviceAndWideAreaAntitankMine Modifier1 = 48
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineWithAntihandlingDeviceAndMineCluster is Antipersonnel Mine with Directional Effects, Antitank Mine with Antihandling Device, and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsAntitankMineWithAntihandlingDeviceAndMineCluster Modifier1 = 49
+
+	// Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsWideAreaAntitankMineAndMineCluster is Antipersonnel Mine with Directional Effects, Wide Area Antitank Mine, and Mine Cluster.
+	Modifier1ControlMeasure_AntipersonnelMineWithDirectionalEffectsWideAreaAntitankMineAndMineCluster Modifier1 = 50
+
+	// Modifier1ControlMeasure_Dismounted is Dismounted.
+	Modifier1ControlMeasure_Dismounted Modifier1 = 51
 )

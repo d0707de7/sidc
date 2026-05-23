@@ -5,26 +5,69 @@ package app6d
 
 // Modifier 1 constants for symbol set 40 (Activities).
 const (
-	Modifier1Activities_Disused                                     Modifier1 = 1  // {Disused}
-	Modifier1Activities_Disused_02                                  Modifier1 = 2  // {Disused}
-	Modifier1Activities_Disused_03                                  Modifier1 = 3  // {Disused}
-	Modifier1Activities_HouseToHouse                                Modifier1 = 4  // House–to–House
-	Modifier1Activities_Disused_05                                  Modifier1 = 5  // {Disused}
-	Modifier1Activities_Murder                                      Modifier1 = 6  // Murder
-	Modifier1Activities_Disused_07                                  Modifier1 = 7  // {Disused}
-	Modifier1Activities_Disused_08                                  Modifier1 = 8  // {Disused}
-	Modifier1Activities_WrittenMilitaryInformationSupportOperations Modifier1 = 9  // Written Military Information Support Operations
-	Modifier1Activities_Pirate                                      Modifier1 = 10 // Pirate
-	Modifier1Activities_False                                       Modifier1 = 11 // False
-	Modifier1Activities_Find                                        Modifier1 = 12 // Find
-	Modifier1Activities_FoundAndCleared                             Modifier1 = 13 // Found and Cleared
-	Modifier1Activities_HoaxDecoy                                   Modifier1 = 14 // Hoax (Decoy)
-	Modifier1Activities_Attempted                                   Modifier1 = 15 // Attempted
-	Modifier1Activities_Disused_16                                  Modifier1 = 16 // {Disused}
-	Modifier1Activities_Incident                                    Modifier1 = 17 // Incident
-	Modifier1Activities_Theft                                       Modifier1 = 18 // Theft
-	Modifier1Activities_Disused_19                                  Modifier1 = 19 // {Disused}
-	Modifier1Activities_Disused_20                                  Modifier1 = 20 // {Disused}
-	Modifier1Activities_Eviction                                    Modifier1 = 21 // Eviction
-	Modifier1Activities_Raid                                        Modifier1 = 22 // Raid
+	// Modifier1Activities_Disused is {Disused}.
+	Modifier1Activities_Disused Modifier1 = 1
+
+	// Modifier1Activities_Disused_02 is {Disused}.
+	Modifier1Activities_Disused_02 Modifier1 = 2
+
+	// Modifier1Activities_Disused_03 is {Disused}.
+	Modifier1Activities_Disused_03 Modifier1 = 3
+
+	// Modifier1Activities_HouseToHouse is House–to–House.
+	Modifier1Activities_HouseToHouse Modifier1 = 4
+
+	// Modifier1Activities_Disused_05 is {Disused}.
+	Modifier1Activities_Disused_05 Modifier1 = 5
+
+	// Modifier1Activities_Murder is Murder.
+	Modifier1Activities_Murder Modifier1 = 6
+
+	// Modifier1Activities_Disused_07 is {Disused}.
+	Modifier1Activities_Disused_07 Modifier1 = 7
+
+	// Modifier1Activities_Disused_08 is {Disused}.
+	Modifier1Activities_Disused_08 Modifier1 = 8
+
+	// Modifier1Activities_WrittenMilitaryInformationSupportOperations is Written Military Information Support Operations.
+	Modifier1Activities_WrittenMilitaryInformationSupportOperations Modifier1 = 9
+
+	// Modifier1Activities_Pirate is Pirate.
+	Modifier1Activities_Pirate Modifier1 = 10
+
+	// Modifier1Activities_False is False.
+	Modifier1Activities_False Modifier1 = 11
+
+	// Modifier1Activities_Find is Find.
+	Modifier1Activities_Find Modifier1 = 12
+
+	// Modifier1Activities_FoundAndCleared is Found and Cleared.
+	Modifier1Activities_FoundAndCleared Modifier1 = 13
+
+	// Modifier1Activities_HoaxDecoy is Hoax (Decoy).
+	Modifier1Activities_HoaxDecoy Modifier1 = 14
+
+	// Modifier1Activities_Attempted is Attempted.
+	Modifier1Activities_Attempted Modifier1 = 15
+
+	// Modifier1Activities_Disused_16 is {Disused}.
+	Modifier1Activities_Disused_16 Modifier1 = 16
+
+	// Modifier1Activities_Incident is Incident.
+	Modifier1Activities_Incident Modifier1 = 17
+
+	// Modifier1Activities_Theft is Theft.
+	Modifier1Activities_Theft Modifier1 = 18
+
+	// Modifier1Activities_Disused_19 is {Disused}.
+	Modifier1Activities_Disused_19 Modifier1 = 19
+
+	// Modifier1Activities_Disused_20 is {Disused}.
+	Modifier1Activities_Disused_20 Modifier1 = 20
+
+	// Modifier1Activities_Eviction is Eviction.
+	Modifier1Activities_Eviction Modifier1 = 21
+
+	// Modifier1Activities_Raid is Raid.
+	Modifier1Activities_Raid Modifier1 = 22
 )

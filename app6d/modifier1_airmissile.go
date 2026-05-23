@@ -5,13 +5,30 @@ package app6d
 
 // Modifier 1 constants for symbol set 02 (Air missile).
 const (
-	Modifier1AirMissile_Air           Modifier1 = 1 // Air
-	Modifier1AirMissile_Surface       Modifier1 = 2 // Surface
-	Modifier1AirMissile_Subsurface    Modifier1 = 3 // Subsurface
-	Modifier1AirMissile_Space         Modifier1 = 4 // Space
-	Modifier1AirMissile_AntiBallistic Modifier1 = 5 // Anti–Ballistic
-	Modifier1AirMissile_Ballistic     Modifier1 = 6 // Ballistic
-	Modifier1AirMissile_Cruise        Modifier1 = 7 // Cruise
-	Modifier1AirMissile_Interceptor   Modifier1 = 8 // Interceptor
-	Modifier1AirMissile_Hypersonic    Modifier1 = 9 // Hypersonic
+	// Modifier1AirMissile_Air is Air.
+	Modifier1AirMissile_Air Modifier1 = 1
+
+	// Modifier1AirMissile_Surface is Surface.
+	Modifier1AirMissile_Surface Modifier1 = 2
+
+	// Modifier1AirMissile_Subsurface is Subsurface.
+	Modifier1AirMissile_Subsurface Modifier1 = 3
+
+	// Modifier1AirMissile_Space is Space.
+	Modifier1AirMissile_Space Modifier1 = 4
+
+	// Modifier1AirMissile_AntiBallistic is Anti–Ballistic.
+	Modifier1AirMissile_AntiBallistic Modifier1 = 5
+
+	// Modifier1AirMissile_Ballistic is Ballistic.
+	Modifier1AirMissile_Ballistic Modifier1 = 6
+
+	// Modifier1AirMissile_Cruise is Cruise.
+	Modifier1AirMissile_Cruise Modifier1 = 7
+
+	// Modifier1AirMissile_Interceptor is Interceptor.
+	Modifier1AirMissile_Interceptor Modifier1 = 8
+
+	// Modifier1AirMissile_Hypersonic is Hypersonic.
+	Modifier1AirMissile_Hypersonic Modifier1 = 9
 )

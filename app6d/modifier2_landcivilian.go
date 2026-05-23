@@ -5,6 +5,9 @@ package app6d
 
 // Modifier 2 constants for symbol set 11 (Land civilian).
 const (
-	Modifier2LandCivilian_LeaderOrLeadership Modifier2 = 1 // Leader or Leadership
-	Modifier2LandCivilian_Disused            Modifier2 = 2 // {Disused}
+	// Modifier2LandCivilian_LeaderOrLeadership is Leader or Leadership.
+	Modifier2LandCivilian_LeaderOrLeadership Modifier2 = 1
+
+	// Modifier2LandCivilian_Disused is {Disused}.
+	Modifier2LandCivilian_Disused Modifier2 = 2
 )

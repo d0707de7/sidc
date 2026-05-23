@@ -5,17 +5,42 @@ package app6d
 
 // Modifier 1 constants for symbol set 20 (Land installation).
 const (
-	Modifier1LandInstallation_Biological         Modifier1 = 1  // Biological
-	Modifier1LandInstallation_Disused            Modifier1 = 2  // {Disused}
-	Modifier1LandInstallation_Disused_03         Modifier1 = 3  // {Disused}
-	Modifier1LandInstallation_Disused_04         Modifier1 = 4  // {Disused}
-	Modifier1LandInstallation_Disused_05         Modifier1 = 5  // {Disused}
-	Modifier1LandInstallation_Coal               Modifier1 = 6  // Coal
-	Modifier1LandInstallation_Geothermal         Modifier1 = 7  // Geothermal
-	Modifier1LandInstallation_Hydroelectric      Modifier1 = 8  // Hydroelectric
-	Modifier1LandInstallation_NaturalGas         Modifier1 = 9  // Natural Gas
-	Modifier1LandInstallation_Disused_10         Modifier1 = 10 // {Disused}
-	Modifier1LandInstallation_Disused_11         Modifier1 = 11 // {Disused}
-	Modifier1LandInstallation_CivilianTelephone  Modifier1 = 12 // Civilian Telephone
-	Modifier1LandInstallation_CivilianTelevision Modifier1 = 13 // Civilian Television
+	// Modifier1LandInstallation_Biological is Biological.
+	Modifier1LandInstallation_Biological Modifier1 = 1
+
+	// Modifier1LandInstallation_Disused is {Disused}.
+	Modifier1LandInstallation_Disused Modifier1 = 2
+
+	// Modifier1LandInstallation_Disused_03 is {Disused}.
+	Modifier1LandInstallation_Disused_03 Modifier1 = 3
+
+	// Modifier1LandInstallation_Disused_04 is {Disused}.
+	Modifier1LandInstallation_Disused_04 Modifier1 = 4
+
+	// Modifier1LandInstallation_Disused_05 is {Disused}.
+	Modifier1LandInstallation_Disused_05 Modifier1 = 5
+
+	// Modifier1LandInstallation_Coal is Coal.
+	Modifier1LandInstallation_Coal Modifier1 = 6
+
+	// Modifier1LandInstallation_Geothermal is Geothermal.
+	Modifier1LandInstallation_Geothermal Modifier1 = 7
+
+	// Modifier1LandInstallation_Hydroelectric is Hydroelectric.
+	Modifier1LandInstallation_Hydroelectric Modifier1 = 8
+
+	// Modifier1LandInstallation_NaturalGas is Natural Gas.
+	Modifier1LandInstallation_NaturalGas Modifier1 = 9
+
+	// Modifier1LandInstallation_Disused_10 is {Disused}.
+	Modifier1LandInstallation_Disused_10 Modifier1 = 10
+
+	// Modifier1LandInstallation_Disused_11 is {Disused}.
+	Modifier1LandInstallation_Disused_11 Modifier1 = 11
+
+	// Modifier1LandInstallation_CivilianTelephone is Civilian Telephone.
+	Modifier1LandInstallation_CivilianTelephone Modifier1 = 12
+
+	// Modifier1LandInstallation_CivilianTelevision is Civilian Television.
+	Modifier1LandInstallation_CivilianTelevision Modifier1 = 13
 )

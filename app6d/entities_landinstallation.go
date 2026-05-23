@@ -5,135 +5,396 @@ package app6d
 
 // Entity constants for symbol set 20 (Land installation).
 const (
-	EntityLandInstallation_MilitaryCivilian                                                                                Entity = 110000 // Military/Civilian
-	EntityLandInstallation_MilitaryCivilianAircraftProductionAssembly                                                      Entity = 110100 // Military/Civilian / Aircraft Production/Assembly
-	EntityLandInstallation_MilitaryCivilianAmmunitionAndExplosivesProduction                                               Entity = 110200 // Military/Civilian / Ammunition and Explosives Production
-	EntityLandInstallation_MilitaryCivilianAmmunitionCache                                                                 Entity = 110300 // Military/Civilian / Ammunition Cache
-	EntityLandInstallation_MilitaryCivilianArmamentProduction                                                              Entity = 110400 // Military/Civilian / Armament Production
-	EntityLandInstallation_MilitaryCivilianBlackListLocation                                                               Entity = 110500 // Military/Civilian / Black List Location
-	EntityLandInstallation_MilitaryCivilianChemicalBiologicalRadiologicalAndNuclearCBRN                                    Entity = 110600 // Military/Civilian / Chemical, Biological, Radiological and Nuclear (CBRN)
-	EntityLandInstallation_MilitaryCivilianEngineeringEquipmentProduction                                                  Entity = 110700 // Military/Civilian / Engineering Equipment Production
-	EntityLandInstallation_MilitaryCivilianEngineeringEquipmentProductionBridge                                            Entity = 110701 // Military/Civilian / Engineering Equipment Production / Bridge
-	EntityLandInstallation_MilitaryCivilianEquipmentManufacture                                                            Entity = 110800 // Military/Civilian / Equipment Manufacture
-	EntityLandInstallation_MilitaryCivilianGovernmentLeadership                                                            Entity = 110900 // Military/Civilian / Government Leadership
-	EntityLandInstallation_MilitaryCivilianGrayListLocation                                                                Entity = 111000 // Military/Civilian / Gray List Location
-	EntityLandInstallation_MilitaryCivilianMassGraveSite                                                                   Entity = 111100 // Military/Civilian / Mass Grave Site
-	EntityLandInstallation_MilitaryCivilianMateriel                                                                        Entity = 111200 // Military/Civilian / Materiel
-	EntityLandInstallation_MilitaryCivilianMine                                                                            Entity = 111300 // Military/Civilian / Mine
-	EntityLandInstallation_MilitaryCivilianMissileAndSpaceSystemProduction                                                 Entity = 111400 // Military/Civilian / Missile and Space System Production
-	EntityLandInstallation_MilitaryCivilianNuclearNonCBRNDefense                                                           Entity = 111500 // Military/Civilian / Nuclear (Non CBRN Defense)
-	EntityLandInstallation_MilitaryCivilianPrintedMedia                                                                    Entity = 111600 // Military/Civilian / Printed Media
-	EntityLandInstallation_MilitaryCivilianSafeHouse                                                                       Entity = 111700 // Military/Civilian / Safe House
-	EntityLandInstallation_MilitaryCivilianWhiteListLocation                                                               Entity = 111800 // Military/Civilian / White List Location
-	EntityLandInstallation_MilitaryCivilianTentedCamp                                                                      Entity = 111900 // Military/Civilian / Tented Camp
-	EntityLandInstallation_MilitaryCivilianTentedCampDisplacedPersonsRefugeeEvacueesCamp                                   Entity = 111901 // Military/Civilian / Tented Camp / Displaced Persons/ Refugee/Evacuees Camp
-	EntityLandInstallation_MilitaryCivilianTentedCampTrainingCamp                                                          Entity = 111902 // Military/Civilian / Tented Camp / Training Camp
-	EntityLandInstallation_MilitaryCivilianWarehouseStorageFacility                                                        Entity = 112000 // Military/Civilian / Warehouse/Storage Facility
-	EntityLandInstallation_MilitaryCivilianWarehouseStorageFacilityGrenade                                                 Entity = 112001 // Military/Civilian / Warehouse/Storage Facility / Grenade
-	EntityLandInstallation_MilitaryCivilianLawEnforcement                                                                  Entity = 112100 // Military/Civilian / Law Enforcement
-	EntityLandInstallation_MilitaryCivilianLawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice Entity = 112101 // Military/Civilian / Law Enforcement / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice)
-	EntityLandInstallation_MilitaryCivilianLawEnforcementBorderPatrol                                                      Entity = 112102 // Military/Civilian / Law Enforcement / Border Patrol
-	EntityLandInstallation_MilitaryCivilianLawEnforcementCustomsService                                                    Entity = 112103 // Military/Civilian / Law Enforcement / Customs Service
-	EntityLandInstallation_MilitaryCivilianLawEnforcementDrugEnforcementAdministrationDEA                                  Entity = 112104 // Military/Civilian / Law Enforcement / Drug Enforcement Administration (DEA)
-	EntityLandInstallation_MilitaryCivilianLawEnforcementDepartmentOfJusticeDOJ                                            Entity = 112105 // Military/Civilian / Law Enforcement / Department of Justice (DOJ)
-	EntityLandInstallation_MilitaryCivilianLawEnforcementFederalBureauOfInvestigationFBI                                   Entity = 112106 // Military/Civilian / Law Enforcement / Federal Bureau of Investigation (FBI)
-	EntityLandInstallation_MilitaryCivilianLawEnforcementPolice                                                            Entity = 112107 // Military/Civilian / Law Enforcement / Police
-	EntityLandInstallation_MilitaryCivilianLawEnforcementPrison                                                            Entity = 112108 // Military/Civilian / Law Enforcement / Prison
-	EntityLandInstallation_MilitaryCivilianLawEnforcementUnitedStatesSecretServiceUSSS                                     Entity = 112109 // Military/Civilian / Law Enforcement / United States Secret Service (USSS)
-	EntityLandInstallation_MilitaryCivilianLawEnforcementTransportationSecurityAdministrationTSA                           Entity = 112110 // Military/Civilian / Law Enforcement / Transportation Security Administration (TSA)
-	EntityLandInstallation_MilitaryCivilianLawEnforcementCoastGuard                                                        Entity = 112111 // Military/Civilian / Law Enforcement / Coast Guard
-	EntityLandInstallation_MilitaryCivilianLawEnforcementUSMarshalsService                                                 Entity = 112112 // Military/Civilian / Law Enforcement / US Marshals Service
-	EntityLandInstallation_MilitaryCivilianEmergencyOperation                                                              Entity = 112200 // Military/Civilian / Emergency Operation
-	EntityLandInstallation_MilitaryCivilianEmergencyOperationFireStation                                                   Entity = 112201 // Military/Civilian / Emergency Operation / Fire Station
-	EntityLandInstallation_MilitaryCivilianEmergencyOperationEmergencyMedicalOperation                                     Entity = 112202 // Military/Civilian / Emergency Operation / Emergency Medical Operation
-	EntityLandInstallation_MilitaryCivilianHomeHouse                                                                       Entity = 112300 // Military/Civilian / Home/House
-	EntityLandInstallation_Infrastructure                                                                                  Entity = 120000 // Infrastructure
-	EntityLandInstallation_InfrastructureAgricultureAndFood                                                                Entity = 120100 // Infrastructure / Agriculture and Food
-	EntityLandInstallation_InfrastructureAgricultureAndFoodAgricultureLaboratory                                           Entity = 120101 // Infrastructure / Agriculture and Food / Agriculture Laboratory
-	EntityLandInstallation_InfrastructureAgricultureAndFoodAnimalFeedlot                                                   Entity = 120102 // Infrastructure / Agriculture and Food / Animal Feedlot
-	EntityLandInstallation_InfrastructureAgricultureAndFoodCommercialFoodDistributionCenter                                Entity = 120103 // Infrastructure / Agriculture and Food / Commercial Food Distribution Center
-	EntityLandInstallation_InfrastructureAgricultureAndFoodFarmRanch                                                       Entity = 120104 // Infrastructure / Agriculture and Food / Farm/Ranch
-	EntityLandInstallation_InfrastructureAgricultureAndFoodFoodDistribution                                                Entity = 120105 // Infrastructure / Agriculture and Food / Food Distribution
-	EntityLandInstallation_InfrastructureAgricultureAndFoodFoodProductionCenter                                            Entity = 120106 // Infrastructure / Agriculture and Food / Food Production Center
-	EntityLandInstallation_InfrastructureAgricultureAndFoodFoodRetail                                                      Entity = 120107 // Infrastructure / Agriculture and Food / Food Retail
-	EntityLandInstallation_InfrastructureAgricultureAndFoodGrainStorage                                                    Entity = 120108 // Infrastructure / Agriculture and Food / Grain Storage
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsurance                                                        Entity = 120200 // Infrastructure / Banking Finance and Insurance
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceATM                                                     Entity = 120201 // Infrastructure / Banking Finance and Insurance / ATM
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceBank                                                    Entity = 120202 // Infrastructure / Banking Finance and Insurance / Bank
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceBullionStorage                                          Entity = 120203 // Infrastructure / Banking Finance and Insurance / Bullion Storage
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceEconomicInfrastructureAsset                             Entity = 120204 // Infrastructure / Banking Finance and Insurance / Economic Infrastructure Asset
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFederalReserveBank                                      Entity = 120205 // Infrastructure / Banking Finance and Insurance / Federal Reserve Bank
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFinancialExchange                                       Entity = 120206 // Infrastructure / Banking Finance and Insurance / Financial Exchange
-	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFinancialServicesOther                                  Entity = 120207 // Infrastructure / Banking Finance and Insurance / Financial Services, Other
-	EntityLandInstallation_InfrastructureCommercial                                                                        Entity = 120300 // Infrastructure / Commercial
-	EntityLandInstallation_InfrastructureCommercialChemicalPlant                                                           Entity = 120301 // Infrastructure / Commercial / Chemical Plant
-	EntityLandInstallation_InfrastructureCommercialFirearmsManufacturer                                                    Entity = 120302 // Infrastructure / Commercial / Firearms Manufacturer
-	EntityLandInstallation_InfrastructureCommercialFirearmsRetailer                                                        Entity = 120303 // Infrastructure / Commercial / Firearms Retailer
-	EntityLandInstallation_InfrastructureCommercialHazardousMaterialProduction                                             Entity = 120304 // Infrastructure / Commercial / Hazardous Material Production
-	EntityLandInstallation_InfrastructureCommercialHazardousMaterialStorage                                                Entity = 120305 // Infrastructure / Commercial / Hazardous Material Storage
-	EntityLandInstallation_InfrastructureCommercialIndustrialSite                                                          Entity = 120306 // Infrastructure / Commercial / Industrial Site
-	EntityLandInstallation_InfrastructureCommercialLandfill                                                                Entity = 120307 // Infrastructure / Commercial / Landfill
-	EntityLandInstallation_InfrastructureCommercialPharmaceuticalManufacturer                                              Entity = 120308 // Infrastructure / Commercial / Pharmaceutical Manufacturer
-	EntityLandInstallation_InfrastructureCommercialContaminatedHazardousWasteSite                                          Entity = 120309 // Infrastructure / Commercial / Contaminated Hazardous Waste Site
-	EntityLandInstallation_InfrastructureCommercialToxicReleaseInventory                                                   Entity = 120310 // Infrastructure / Commercial / Toxic Release Inventory
-	EntityLandInstallation_InfrastructureEducationalFacilities                                                             Entity = 120400 // Infrastructure / Educational Facilities
-	EntityLandInstallation_InfrastructureEducationalFacilitiesCollegeUniversity                                            Entity = 120401 // Infrastructure / Educational Facilities / College/University
-	EntityLandInstallation_InfrastructureEducationalFacilitiesSchool                                                       Entity = 120402 // Infrastructure / Educational Facilities / School
-	EntityLandInstallation_InfrastructureEnergyFacility                                                                    Entity = 120500 // Infrastructure / Energy Facility
-	EntityLandInstallation_InfrastructureEnergyFacilityElectricPower                                                       Entity = 120501 // Infrastructure / Energy Facility / Electric Power
-	EntityLandInstallation_InfrastructureEnergyFacilityGenerationStation                                                   Entity = 120502 // Infrastructure / Energy Facility / Generation Station
-	EntityLandInstallation_InfrastructureEnergyFacilityNaturalGasFacility                                                  Entity = 120503 // Infrastructure / Energy Facility / Natural Gas Facility
-	EntityLandInstallation_InfrastructureEnergyFacilityDisused                                                             Entity = 120504 // Infrastructure / Energy Facility / {Disused}
-	EntityLandInstallation_InfrastructureEnergyFacilityPetroleumGasOil                                                     Entity = 120505 // Infrastructure / Energy Facility / Petroleum/Gas/Oil
-	EntityLandInstallation_InfrastructureEnergyFacilityPropaneFacility                                                     Entity = 120506 // Infrastructure / Energy Facility / Propane Facility
-	EntityLandInstallation_InfrastructureGovernmentSite                                                                    Entity = 120600 // Infrastructure / Government Site
-	EntityLandInstallation_InfrastructureMedical                                                                           Entity = 120700 // Infrastructure / Medical
-	EntityLandInstallation_InfrastructureMedicalMedical                                                                    Entity = 120701 // Infrastructure / Medical / Medical
-	EntityLandInstallation_InfrastructureMedicalMedicalTreatmentFacilityHospital                                           Entity = 120702 // Infrastructure / Medical / Medical Treatment Facility (Hospital)
-	EntityLandInstallation_InfrastructureMilitary                                                                          Entity = 120800 // Infrastructure / Military
-	EntityLandInstallation_InfrastructureMilitaryMilitaryArmory                                                            Entity = 120801 // Infrastructure / Military / Military Armory
-	EntityLandInstallation_InfrastructureMilitaryMilitaryBase                                                              Entity = 120802 // Infrastructure / Military / Military Base
-	EntityLandInstallation_InfrastructureMilitaryAirportAirBase                                                            Entity = 120803 // Infrastructure / Military / Airport/Air Base
-	EntityLandInstallation_InfrastructurePostalServices                                                                    Entity = 120900 // Infrastructure / Postal Services
-	EntityLandInstallation_InfrastructurePostalServicesPostalDistributionCenter                                            Entity = 120901 // Infrastructure / Postal Services / Postal Distribution Center
-	EntityLandInstallation_InfrastructurePostalServicesPostOffice                                                          Entity = 120902 // Infrastructure / Postal Services / Post Office
-	EntityLandInstallation_InfrastructurePublicVenues                                                                      Entity = 121000 // Infrastructure / Public Venues
-	EntityLandInstallation_InfrastructurePublicVenuesEnclosedFacilityPublicVenue                                           Entity = 121001 // Infrastructure / Public Venues / Enclosed Facility (Public Venue)
-	EntityLandInstallation_InfrastructurePublicVenuesOpenFacilityPublicVenue                                               Entity = 121002 // Infrastructure / Public Venues / Open Facility (Public Venue)
-	EntityLandInstallation_InfrastructurePublicVenuesRecreationalArea                                                      Entity = 121003 // Infrastructure / Public Venues / Recreational Area
-	EntityLandInstallation_InfrastructurePublicVenuesReligiousInstitution                                                  Entity = 121004 // Infrastructure / Public Venues / Religious Institution
-	EntityLandInstallation_InfrastructureSpecialNeeds                                                                      Entity = 121100 // Infrastructure / Special Needs
-	EntityLandInstallation_InfrastructureSpecialNeedsAdultDayCare                                                          Entity = 121101 // Infrastructure / Special Needs / Adult Day Care
-	EntityLandInstallation_InfrastructureSpecialNeedsChildDayCare                                                          Entity = 121102 // Infrastructure / Special Needs / Child Day Care
-	EntityLandInstallation_InfrastructureSpecialNeedsElderCare                                                             Entity = 121103 // Infrastructure / Special Needs / Elder Care
-	EntityLandInstallation_InfrastructureTelecommunications                                                                Entity = 121200 // Infrastructure / Telecommunications
-	EntityLandInstallation_InfrastructureTelecommunicationsBroadcastTransmitterAntennae                                    Entity = 121201 // Infrastructure / Telecommunications / Broadcast Transmitter Antennae
-	EntityLandInstallation_InfrastructureTelecommunicationsTelecommunications                                              Entity = 121202 // Infrastructure / Telecommunications / Telecommunications
-	EntityLandInstallation_InfrastructureTelecommunicationsTelecommunicationsTower                                         Entity = 121203 // Infrastructure / Telecommunications / Telecommunications Tower
-	EntityLandInstallation_InfrastructureTransportation                                                                    Entity = 121300 // Infrastructure / Transportation
-	EntityLandInstallation_InfrastructureTransportationAerialPortOfDebarkationAerialPortOfEmbarkation                      Entity = 121301 // Infrastructure / Transportation / Aerial Port of Debarkation/Aerial Port of Embarkation
-	EntityLandInstallation_InfrastructureTransportationAirTrafficControlFacility                                           Entity = 121302 // Infrastructure / Transportation / Air Traffic Control Facility
-	EntityLandInstallation_InfrastructureTransportationBusStation                                                          Entity = 121303 // Infrastructure / Transportation / Bus Station
-	EntityLandInstallation_InfrastructureTransportationFerryTerminal                                                       Entity = 121304 // Infrastructure / Transportation / Ferry Terminal
-	EntityLandInstallation_InfrastructureTransportationHelicopterLandingSite                                               Entity = 121305 // Infrastructure / Transportation / Helicopter Landing Site
-	EntityLandInstallation_InfrastructureTransportationMaintenanceFacility                                                 Entity = 121306 // Infrastructure / Transportation / Maintenance Facility
-	EntityLandInstallation_InfrastructureTransportationRailheadRailroadStation                                             Entity = 121307 // Infrastructure / Transportation / Railhead/Railroad Station
-	EntityLandInstallation_InfrastructureTransportationRestStop                                                            Entity = 121308 // Infrastructure / Transportation / Rest Stop
-	EntityLandInstallation_InfrastructureTransportationSeaPortNavalBase                                                    Entity = 121309 // Infrastructure / Transportation / Sea Port/Naval Base
-	EntityLandInstallation_InfrastructureTransportationShipYard                                                            Entity = 121310 // Infrastructure / Transportation / Ship Yard
-	EntityLandInstallation_InfrastructureTransportationTollFacility                                                        Entity = 121311 // Infrastructure / Transportation / Toll Facility
-	EntityLandInstallation_InfrastructureTransportationTrafficInspectionFacility                                           Entity = 121312 // Infrastructure / Transportation / Traffic Inspection Facility
-	EntityLandInstallation_InfrastructureTransportationTunnel                                                              Entity = 121313 // Infrastructure / Transportation / Tunnel
-	EntityLandInstallation_InfrastructureWaterSupply                                                                       Entity = 121400 // Infrastructure / Water Supply
-	EntityLandInstallation_InfrastructureWaterSupplyControlValve                                                           Entity = 121401 // Infrastructure / Water Supply / Control Valve
-	EntityLandInstallation_InfrastructureWaterSupplyDam                                                                    Entity = 121402 // Infrastructure / Water Supply / Dam
-	EntityLandInstallation_InfrastructureWaterSupplyDischargeOutfall                                                       Entity = 121403 // Infrastructure / Water Supply / Discharge Outfall
-	EntityLandInstallation_InfrastructureWaterSupplyGroundWaterWell                                                        Entity = 121404 // Infrastructure / Water Supply / Ground Water Well
-	EntityLandInstallation_InfrastructureWaterSupplyPumpingStation                                                         Entity = 121405 // Infrastructure / Water Supply / Pumping Station
-	EntityLandInstallation_InfrastructureWaterSupplyReservoir                                                              Entity = 121406 // Infrastructure / Water Supply / Reservoir
-	EntityLandInstallation_InfrastructureWaterSupplyStorageTower                                                           Entity = 121407 // Infrastructure / Water Supply / Storage Tower
-	EntityLandInstallation_InfrastructureWaterSupplySurfaceWaterIntake                                                     Entity = 121408 // Infrastructure / Water Supply / Surface Water Intake
-	EntityLandInstallation_InfrastructureWaterSupplyWastewaterTreatmentFacility                                            Entity = 121409 // Infrastructure / Water Supply / Wastewater Treatment Facility
-	EntityLandInstallation_InfrastructureWaterSupplyWater                                                                  Entity = 121410 // Infrastructure / Water Supply / Water
-	EntityLandInstallation_InfrastructureWaterSupplyWaterTreatment                                                         Entity = 121411 // Infrastructure / Water Supply / Water Treatment
+	// EntityLandInstallation_MilitaryCivilian is Military/Civilian.
+	EntityLandInstallation_MilitaryCivilian Entity = 110000
+
+	// EntityLandInstallation_MilitaryCivilianAircraftProductionAssembly is Military/Civilian / Aircraft Production/Assembly.
+	EntityLandInstallation_MilitaryCivilianAircraftProductionAssembly Entity = 110100
+
+	// EntityLandInstallation_MilitaryCivilianAmmunitionAndExplosivesProduction is Military/Civilian / Ammunition and Explosives Production.
+	EntityLandInstallation_MilitaryCivilianAmmunitionAndExplosivesProduction Entity = 110200
+
+	// EntityLandInstallation_MilitaryCivilianAmmunitionCache is Military/Civilian / Ammunition Cache.
+	EntityLandInstallation_MilitaryCivilianAmmunitionCache Entity = 110300
+
+	// EntityLandInstallation_MilitaryCivilianArmamentProduction is Military/Civilian / Armament Production.
+	EntityLandInstallation_MilitaryCivilianArmamentProduction Entity = 110400
+
+	// EntityLandInstallation_MilitaryCivilianBlackListLocation is Military/Civilian / Black List Location.
+	EntityLandInstallation_MilitaryCivilianBlackListLocation Entity = 110500
+
+	// EntityLandInstallation_MilitaryCivilianChemicalBiologicalRadiologicalAndNuclearCBRN is Military/Civilian / Chemical, Biological, Radiological and Nuclear (CBRN).
+	EntityLandInstallation_MilitaryCivilianChemicalBiologicalRadiologicalAndNuclearCBRN Entity = 110600
+
+	// EntityLandInstallation_MilitaryCivilianEngineeringEquipmentProduction is Military/Civilian / Engineering Equipment Production.
+	EntityLandInstallation_MilitaryCivilianEngineeringEquipmentProduction Entity = 110700
+
+	// EntityLandInstallation_MilitaryCivilianEngineeringEquipmentProductionBridge is Military/Civilian / Engineering Equipment Production / Bridge.
+	EntityLandInstallation_MilitaryCivilianEngineeringEquipmentProductionBridge Entity = 110701
+
+	// EntityLandInstallation_MilitaryCivilianEquipmentManufacture is Military/Civilian / Equipment Manufacture.
+	EntityLandInstallation_MilitaryCivilianEquipmentManufacture Entity = 110800
+
+	// EntityLandInstallation_MilitaryCivilianGovernmentLeadership is Military/Civilian / Government Leadership.
+	EntityLandInstallation_MilitaryCivilianGovernmentLeadership Entity = 110900
+
+	// EntityLandInstallation_MilitaryCivilianGrayListLocation is Military/Civilian / Gray List Location.
+	EntityLandInstallation_MilitaryCivilianGrayListLocation Entity = 111000
+
+	// EntityLandInstallation_MilitaryCivilianMassGraveSite is Military/Civilian / Mass Grave Site.
+	EntityLandInstallation_MilitaryCivilianMassGraveSite Entity = 111100
+
+	// EntityLandInstallation_MilitaryCivilianMateriel is Military/Civilian / Materiel.
+	EntityLandInstallation_MilitaryCivilianMateriel Entity = 111200
+
+	// EntityLandInstallation_MilitaryCivilianMine is Military/Civilian / Mine.
+	EntityLandInstallation_MilitaryCivilianMine Entity = 111300
+
+	// EntityLandInstallation_MilitaryCivilianMissileAndSpaceSystemProduction is Military/Civilian / Missile and Space System Production.
+	EntityLandInstallation_MilitaryCivilianMissileAndSpaceSystemProduction Entity = 111400
+
+	// EntityLandInstallation_MilitaryCivilianNuclearNonCBRNDefense is Military/Civilian / Nuclear (Non CBRN Defense).
+	EntityLandInstallation_MilitaryCivilianNuclearNonCBRNDefense Entity = 111500
+
+	// EntityLandInstallation_MilitaryCivilianPrintedMedia is Military/Civilian / Printed Media.
+	EntityLandInstallation_MilitaryCivilianPrintedMedia Entity = 111600
+
+	// EntityLandInstallation_MilitaryCivilianSafeHouse is Military/Civilian / Safe House.
+	EntityLandInstallation_MilitaryCivilianSafeHouse Entity = 111700
+
+	// EntityLandInstallation_MilitaryCivilianWhiteListLocation is Military/Civilian / White List Location.
+	EntityLandInstallation_MilitaryCivilianWhiteListLocation Entity = 111800
+
+	// EntityLandInstallation_MilitaryCivilianTentedCamp is Military/Civilian / Tented Camp.
+	EntityLandInstallation_MilitaryCivilianTentedCamp Entity = 111900
+
+	// EntityLandInstallation_MilitaryCivilianTentedCampDisplacedPersonsRefugeeEvacueesCamp is Military/Civilian / Tented Camp / Displaced Persons/ Refugee/Evacuees Camp.
+	EntityLandInstallation_MilitaryCivilianTentedCampDisplacedPersonsRefugeeEvacueesCamp Entity = 111901
+
+	// EntityLandInstallation_MilitaryCivilianTentedCampTrainingCamp is Military/Civilian / Tented Camp / Training Camp.
+	EntityLandInstallation_MilitaryCivilianTentedCampTrainingCamp Entity = 111902
+
+	// EntityLandInstallation_MilitaryCivilianWarehouseStorageFacility is Military/Civilian / Warehouse/Storage Facility.
+	EntityLandInstallation_MilitaryCivilianWarehouseStorageFacility Entity = 112000
+
+	// EntityLandInstallation_MilitaryCivilianWarehouseStorageFacilityGrenade is Military/Civilian / Warehouse/Storage Facility / Grenade.
+	EntityLandInstallation_MilitaryCivilianWarehouseStorageFacilityGrenade Entity = 112001
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcement is Military/Civilian / Law Enforcement.
+	EntityLandInstallation_MilitaryCivilianLawEnforcement Entity = 112100
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice is Military/Civilian / Law Enforcement / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice).
+	EntityLandInstallation_MilitaryCivilianLawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice Entity = 112101
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementBorderPatrol is Military/Civilian / Law Enforcement / Border Patrol.
+	EntityLandInstallation_MilitaryCivilianLawEnforcementBorderPatrol Entity = 112102
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementCustomsService is Military/Civilian / Law Enforcement / Customs Service.
+	EntityLandInstallation_MilitaryCivilianLawEnforcementCustomsService Entity = 112103
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementDrugEnforcementAdministrationDEA is Military/Civilian / Law Enforcement / Drug Enforcement Administration (DEA).
+	EntityLandInstallation_MilitaryCivilianLawEnforcementDrugEnforcementAdministrationDEA Entity = 112104
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementDepartmentOfJusticeDOJ is Military/Civilian / Law Enforcement / Department of Justice (DOJ).
+	EntityLandInstallation_MilitaryCivilianLawEnforcementDepartmentOfJusticeDOJ Entity = 112105
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementFederalBureauOfInvestigationFBI is Military/Civilian / Law Enforcement / Federal Bureau of Investigation (FBI).
+	EntityLandInstallation_MilitaryCivilianLawEnforcementFederalBureauOfInvestigationFBI Entity = 112106
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementPolice is Military/Civilian / Law Enforcement / Police.
+	EntityLandInstallation_MilitaryCivilianLawEnforcementPolice Entity = 112107
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementPrison is Military/Civilian / Law Enforcement / Prison.
+	EntityLandInstallation_MilitaryCivilianLawEnforcementPrison Entity = 112108
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementUnitedStatesSecretServiceUSSS is Military/Civilian / Law Enforcement / United States Secret Service (USSS).
+	EntityLandInstallation_MilitaryCivilianLawEnforcementUnitedStatesSecretServiceUSSS Entity = 112109
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementTransportationSecurityAdministrationTSA is Military/Civilian / Law Enforcement / Transportation Security Administration (TSA).
+	EntityLandInstallation_MilitaryCivilianLawEnforcementTransportationSecurityAdministrationTSA Entity = 112110
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementCoastGuard is Military/Civilian / Law Enforcement / Coast Guard.
+	EntityLandInstallation_MilitaryCivilianLawEnforcementCoastGuard Entity = 112111
+
+	// EntityLandInstallation_MilitaryCivilianLawEnforcementUSMarshalsService is Military/Civilian / Law Enforcement / US Marshals Service.
+	EntityLandInstallation_MilitaryCivilianLawEnforcementUSMarshalsService Entity = 112112
+
+	// EntityLandInstallation_MilitaryCivilianEmergencyOperation is Military/Civilian / Emergency Operation.
+	EntityLandInstallation_MilitaryCivilianEmergencyOperation Entity = 112200
+
+	// EntityLandInstallation_MilitaryCivilianEmergencyOperationFireStation is Military/Civilian / Emergency Operation / Fire Station.
+	EntityLandInstallation_MilitaryCivilianEmergencyOperationFireStation Entity = 112201
+
+	// EntityLandInstallation_MilitaryCivilianEmergencyOperationEmergencyMedicalOperation is Military/Civilian / Emergency Operation / Emergency Medical Operation.
+	EntityLandInstallation_MilitaryCivilianEmergencyOperationEmergencyMedicalOperation Entity = 112202
+
+	// EntityLandInstallation_MilitaryCivilianHomeHouse is Military/Civilian / Home/House.
+	EntityLandInstallation_MilitaryCivilianHomeHouse Entity = 112300
+
+	// EntityLandInstallation_Infrastructure is Infrastructure.
+	EntityLandInstallation_Infrastructure Entity = 120000
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFood is Infrastructure / Agriculture and Food.
+	EntityLandInstallation_InfrastructureAgricultureAndFood Entity = 120100
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodAgricultureLaboratory is Infrastructure / Agriculture and Food / Agriculture Laboratory.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodAgricultureLaboratory Entity = 120101
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodAnimalFeedlot is Infrastructure / Agriculture and Food / Animal Feedlot.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodAnimalFeedlot Entity = 120102
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodCommercialFoodDistributionCenter is Infrastructure / Agriculture and Food / Commercial Food Distribution Center.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodCommercialFoodDistributionCenter Entity = 120103
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodFarmRanch is Infrastructure / Agriculture and Food / Farm/Ranch.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodFarmRanch Entity = 120104
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodFoodDistribution is Infrastructure / Agriculture and Food / Food Distribution.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodFoodDistribution Entity = 120105
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodFoodProductionCenter is Infrastructure / Agriculture and Food / Food Production Center.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodFoodProductionCenter Entity = 120106
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodFoodRetail is Infrastructure / Agriculture and Food / Food Retail.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodFoodRetail Entity = 120107
+
+	// EntityLandInstallation_InfrastructureAgricultureAndFoodGrainStorage is Infrastructure / Agriculture and Food / Grain Storage.
+	EntityLandInstallation_InfrastructureAgricultureAndFoodGrainStorage Entity = 120108
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsurance is Infrastructure / Banking Finance and Insurance.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsurance Entity = 120200
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceATM is Infrastructure / Banking Finance and Insurance / ATM.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceATM Entity = 120201
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceBank is Infrastructure / Banking Finance and Insurance / Bank.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceBank Entity = 120202
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceBullionStorage is Infrastructure / Banking Finance and Insurance / Bullion Storage.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceBullionStorage Entity = 120203
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceEconomicInfrastructureAsset is Infrastructure / Banking Finance and Insurance / Economic Infrastructure Asset.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceEconomicInfrastructureAsset Entity = 120204
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFederalReserveBank is Infrastructure / Banking Finance and Insurance / Federal Reserve Bank.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFederalReserveBank Entity = 120205
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFinancialExchange is Infrastructure / Banking Finance and Insurance / Financial Exchange.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFinancialExchange Entity = 120206
+
+	// EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFinancialServicesOther is Infrastructure / Banking Finance and Insurance / Financial Services, Other.
+	EntityLandInstallation_InfrastructureBankingFinanceAndInsuranceFinancialServicesOther Entity = 120207
+
+	// EntityLandInstallation_InfrastructureCommercial is Infrastructure / Commercial.
+	EntityLandInstallation_InfrastructureCommercial Entity = 120300
+
+	// EntityLandInstallation_InfrastructureCommercialChemicalPlant is Infrastructure / Commercial / Chemical Plant.
+	EntityLandInstallation_InfrastructureCommercialChemicalPlant Entity = 120301
+
+	// EntityLandInstallation_InfrastructureCommercialFirearmsManufacturer is Infrastructure / Commercial / Firearms Manufacturer.
+	EntityLandInstallation_InfrastructureCommercialFirearmsManufacturer Entity = 120302
+
+	// EntityLandInstallation_InfrastructureCommercialFirearmsRetailer is Infrastructure / Commercial / Firearms Retailer.
+	EntityLandInstallation_InfrastructureCommercialFirearmsRetailer Entity = 120303
+
+	// EntityLandInstallation_InfrastructureCommercialHazardousMaterialProduction is Infrastructure / Commercial / Hazardous Material Production.
+	EntityLandInstallation_InfrastructureCommercialHazardousMaterialProduction Entity = 120304
+
+	// EntityLandInstallation_InfrastructureCommercialHazardousMaterialStorage is Infrastructure / Commercial / Hazardous Material Storage.
+	EntityLandInstallation_InfrastructureCommercialHazardousMaterialStorage Entity = 120305
+
+	// EntityLandInstallation_InfrastructureCommercialIndustrialSite is Infrastructure / Commercial / Industrial Site.
+	EntityLandInstallation_InfrastructureCommercialIndustrialSite Entity = 120306
+
+	// EntityLandInstallation_InfrastructureCommercialLandfill is Infrastructure / Commercial / Landfill.
+	EntityLandInstallation_InfrastructureCommercialLandfill Entity = 120307
+
+	// EntityLandInstallation_InfrastructureCommercialPharmaceuticalManufacturer is Infrastructure / Commercial / Pharmaceutical Manufacturer.
+	EntityLandInstallation_InfrastructureCommercialPharmaceuticalManufacturer Entity = 120308
+
+	// EntityLandInstallation_InfrastructureCommercialContaminatedHazardousWasteSite is Infrastructure / Commercial / Contaminated Hazardous Waste Site.
+	EntityLandInstallation_InfrastructureCommercialContaminatedHazardousWasteSite Entity = 120309
+
+	// EntityLandInstallation_InfrastructureCommercialToxicReleaseInventory is Infrastructure / Commercial / Toxic Release Inventory.
+	EntityLandInstallation_InfrastructureCommercialToxicReleaseInventory Entity = 120310
+
+	// EntityLandInstallation_InfrastructureEducationalFacilities is Infrastructure / Educational Facilities.
+	EntityLandInstallation_InfrastructureEducationalFacilities Entity = 120400
+
+	// EntityLandInstallation_InfrastructureEducationalFacilitiesCollegeUniversity is Infrastructure / Educational Facilities / College/University.
+	EntityLandInstallation_InfrastructureEducationalFacilitiesCollegeUniversity Entity = 120401
+
+	// EntityLandInstallation_InfrastructureEducationalFacilitiesSchool is Infrastructure / Educational Facilities / School.
+	EntityLandInstallation_InfrastructureEducationalFacilitiesSchool Entity = 120402
+
+	// EntityLandInstallation_InfrastructureEnergyFacility is Infrastructure / Energy Facility.
+	EntityLandInstallation_InfrastructureEnergyFacility Entity = 120500
+
+	// EntityLandInstallation_InfrastructureEnergyFacilityElectricPower is Infrastructure / Energy Facility / Electric Power.
+	EntityLandInstallation_InfrastructureEnergyFacilityElectricPower Entity = 120501
+
+	// EntityLandInstallation_InfrastructureEnergyFacilityGenerationStation is Infrastructure / Energy Facility / Generation Station.
+	EntityLandInstallation_InfrastructureEnergyFacilityGenerationStation Entity = 120502
+
+	// EntityLandInstallation_InfrastructureEnergyFacilityNaturalGasFacility is Infrastructure / Energy Facility / Natural Gas Facility.
+	EntityLandInstallation_InfrastructureEnergyFacilityNaturalGasFacility Entity = 120503
+
+	// EntityLandInstallation_InfrastructureEnergyFacilityDisused is Infrastructure / Energy Facility / {Disused}.
+	EntityLandInstallation_InfrastructureEnergyFacilityDisused Entity = 120504
+
+	// EntityLandInstallation_InfrastructureEnergyFacilityPetroleumGasOil is Infrastructure / Energy Facility / Petroleum/Gas/Oil.
+	EntityLandInstallation_InfrastructureEnergyFacilityPetroleumGasOil Entity = 120505
+
+	// EntityLandInstallation_InfrastructureEnergyFacilityPropaneFacility is Infrastructure / Energy Facility / Propane Facility.
+	EntityLandInstallation_InfrastructureEnergyFacilityPropaneFacility Entity = 120506
+
+	// EntityLandInstallation_InfrastructureGovernmentSite is Infrastructure / Government Site.
+	EntityLandInstallation_InfrastructureGovernmentSite Entity = 120600
+
+	// EntityLandInstallation_InfrastructureMedical is Infrastructure / Medical.
+	EntityLandInstallation_InfrastructureMedical Entity = 120700
+
+	// EntityLandInstallation_InfrastructureMedicalMedical is Infrastructure / Medical / Medical.
+	EntityLandInstallation_InfrastructureMedicalMedical Entity = 120701
+
+	// EntityLandInstallation_InfrastructureMedicalMedicalTreatmentFacilityHospital is Infrastructure / Medical / Medical Treatment Facility (Hospital).
+	EntityLandInstallation_InfrastructureMedicalMedicalTreatmentFacilityHospital Entity = 120702
+
+	// EntityLandInstallation_InfrastructureMilitary is Infrastructure / Military.
+	EntityLandInstallation_InfrastructureMilitary Entity = 120800
+
+	// EntityLandInstallation_InfrastructureMilitaryMilitaryArmory is Infrastructure / Military / Military Armory.
+	EntityLandInstallation_InfrastructureMilitaryMilitaryArmory Entity = 120801
+
+	// EntityLandInstallation_InfrastructureMilitaryMilitaryBase is Infrastructure / Military / Military Base.
+	EntityLandInstallation_InfrastructureMilitaryMilitaryBase Entity = 120802
+
+	// EntityLandInstallation_InfrastructureMilitaryAirportAirBase is Infrastructure / Military / Airport/Air Base.
+	EntityLandInstallation_InfrastructureMilitaryAirportAirBase Entity = 120803
+
+	// EntityLandInstallation_InfrastructurePostalServices is Infrastructure / Postal Services.
+	EntityLandInstallation_InfrastructurePostalServices Entity = 120900
+
+	// EntityLandInstallation_InfrastructurePostalServicesPostalDistributionCenter is Infrastructure / Postal Services / Postal Distribution Center.
+	EntityLandInstallation_InfrastructurePostalServicesPostalDistributionCenter Entity = 120901
+
+	// EntityLandInstallation_InfrastructurePostalServicesPostOffice is Infrastructure / Postal Services / Post Office.
+	EntityLandInstallation_InfrastructurePostalServicesPostOffice Entity = 120902
+
+	// EntityLandInstallation_InfrastructurePublicVenues is Infrastructure / Public Venues.
+	EntityLandInstallation_InfrastructurePublicVenues Entity = 121000
+
+	// EntityLandInstallation_InfrastructurePublicVenuesEnclosedFacilityPublicVenue is Infrastructure / Public Venues / Enclosed Facility (Public Venue).
+	EntityLandInstallation_InfrastructurePublicVenuesEnclosedFacilityPublicVenue Entity = 121001
+
+	// EntityLandInstallation_InfrastructurePublicVenuesOpenFacilityPublicVenue is Infrastructure / Public Venues / Open Facility (Public Venue).
+	EntityLandInstallation_InfrastructurePublicVenuesOpenFacilityPublicVenue Entity = 121002
+
+	// EntityLandInstallation_InfrastructurePublicVenuesRecreationalArea is Infrastructure / Public Venues / Recreational Area.
+	EntityLandInstallation_InfrastructurePublicVenuesRecreationalArea Entity = 121003
+
+	// EntityLandInstallation_InfrastructurePublicVenuesReligiousInstitution is Infrastructure / Public Venues / Religious Institution.
+	EntityLandInstallation_InfrastructurePublicVenuesReligiousInstitution Entity = 121004
+
+	// EntityLandInstallation_InfrastructureSpecialNeeds is Infrastructure / Special Needs.
+	EntityLandInstallation_InfrastructureSpecialNeeds Entity = 121100
+
+	// EntityLandInstallation_InfrastructureSpecialNeedsAdultDayCare is Infrastructure / Special Needs / Adult Day Care.
+	EntityLandInstallation_InfrastructureSpecialNeedsAdultDayCare Entity = 121101
+
+	// EntityLandInstallation_InfrastructureSpecialNeedsChildDayCare is Infrastructure / Special Needs / Child Day Care.
+	EntityLandInstallation_InfrastructureSpecialNeedsChildDayCare Entity = 121102
+
+	// EntityLandInstallation_InfrastructureSpecialNeedsElderCare is Infrastructure / Special Needs / Elder Care.
+	EntityLandInstallation_InfrastructureSpecialNeedsElderCare Entity = 121103
+
+	// EntityLandInstallation_InfrastructureTelecommunications is Infrastructure / Telecommunications.
+	EntityLandInstallation_InfrastructureTelecommunications Entity = 121200
+
+	// EntityLandInstallation_InfrastructureTelecommunicationsBroadcastTransmitterAntennae is Infrastructure / Telecommunications / Broadcast Transmitter Antennae.
+	EntityLandInstallation_InfrastructureTelecommunicationsBroadcastTransmitterAntennae Entity = 121201
+
+	// EntityLandInstallation_InfrastructureTelecommunicationsTelecommunications is Infrastructure / Telecommunications / Telecommunications.
+	EntityLandInstallation_InfrastructureTelecommunicationsTelecommunications Entity = 121202
+
+	// EntityLandInstallation_InfrastructureTelecommunicationsTelecommunicationsTower is Infrastructure / Telecommunications / Telecommunications Tower.
+	EntityLandInstallation_InfrastructureTelecommunicationsTelecommunicationsTower Entity = 121203
+
+	// EntityLandInstallation_InfrastructureTransportation is Infrastructure / Transportation.
+	EntityLandInstallation_InfrastructureTransportation Entity = 121300
+
+	// EntityLandInstallation_InfrastructureTransportationAerialPortOfDebarkationAerialPortOfEmbarkation is Infrastructure / Transportation / Aerial Port of Debarkation/Aerial Port of Embarkation.
+	EntityLandInstallation_InfrastructureTransportationAerialPortOfDebarkationAerialPortOfEmbarkation Entity = 121301
+
+	// EntityLandInstallation_InfrastructureTransportationAirTrafficControlFacility is Infrastructure / Transportation / Air Traffic Control Facility.
+	EntityLandInstallation_InfrastructureTransportationAirTrafficControlFacility Entity = 121302
+
+	// EntityLandInstallation_InfrastructureTransportationBusStation is Infrastructure / Transportation / Bus Station.
+	EntityLandInstallation_InfrastructureTransportationBusStation Entity = 121303
+
+	// EntityLandInstallation_InfrastructureTransportationFerryTerminal is Infrastructure / Transportation / Ferry Terminal.
+	EntityLandInstallation_InfrastructureTransportationFerryTerminal Entity = 121304
+
+	// EntityLandInstallation_InfrastructureTransportationHelicopterLandingSite is Infrastructure / Transportation / Helicopter Landing Site.
+	EntityLandInstallation_InfrastructureTransportationHelicopterLandingSite Entity = 121305
+
+	// EntityLandInstallation_InfrastructureTransportationMaintenanceFacility is Infrastructure / Transportation / Maintenance Facility.
+	EntityLandInstallation_InfrastructureTransportationMaintenanceFacility Entity = 121306
+
+	// EntityLandInstallation_InfrastructureTransportationRailheadRailroadStation is Infrastructure / Transportation / Railhead/Railroad Station.
+	EntityLandInstallation_InfrastructureTransportationRailheadRailroadStation Entity = 121307
+
+	// EntityLandInstallation_InfrastructureTransportationRestStop is Infrastructure / Transportation / Rest Stop.
+	EntityLandInstallation_InfrastructureTransportationRestStop Entity = 121308
+
+	// EntityLandInstallation_InfrastructureTransportationSeaPortNavalBase is Infrastructure / Transportation / Sea Port/Naval Base.
+	EntityLandInstallation_InfrastructureTransportationSeaPortNavalBase Entity = 121309
+
+	// EntityLandInstallation_InfrastructureTransportationShipYard is Infrastructure / Transportation / Ship Yard.
+	EntityLandInstallation_InfrastructureTransportationShipYard Entity = 121310
+
+	// EntityLandInstallation_InfrastructureTransportationTollFacility is Infrastructure / Transportation / Toll Facility.
+	EntityLandInstallation_InfrastructureTransportationTollFacility Entity = 121311
+
+	// EntityLandInstallation_InfrastructureTransportationTrafficInspectionFacility is Infrastructure / Transportation / Traffic Inspection Facility.
+	EntityLandInstallation_InfrastructureTransportationTrafficInspectionFacility Entity = 121312
+
+	// EntityLandInstallation_InfrastructureTransportationTunnel is Infrastructure / Transportation / Tunnel.
+	EntityLandInstallation_InfrastructureTransportationTunnel Entity = 121313
+
+	// EntityLandInstallation_InfrastructureWaterSupply is Infrastructure / Water Supply.
+	EntityLandInstallation_InfrastructureWaterSupply Entity = 121400
+
+	// EntityLandInstallation_InfrastructureWaterSupplyControlValve is Infrastructure / Water Supply / Control Valve.
+	EntityLandInstallation_InfrastructureWaterSupplyControlValve Entity = 121401
+
+	// EntityLandInstallation_InfrastructureWaterSupplyDam is Infrastructure / Water Supply / Dam.
+	EntityLandInstallation_InfrastructureWaterSupplyDam Entity = 121402
+
+	// EntityLandInstallation_InfrastructureWaterSupplyDischargeOutfall is Infrastructure / Water Supply / Discharge Outfall.
+	EntityLandInstallation_InfrastructureWaterSupplyDischargeOutfall Entity = 121403
+
+	// EntityLandInstallation_InfrastructureWaterSupplyGroundWaterWell is Infrastructure / Water Supply / Ground Water Well.
+	EntityLandInstallation_InfrastructureWaterSupplyGroundWaterWell Entity = 121404
+
+	// EntityLandInstallation_InfrastructureWaterSupplyPumpingStation is Infrastructure / Water Supply / Pumping Station.
+	EntityLandInstallation_InfrastructureWaterSupplyPumpingStation Entity = 121405
+
+	// EntityLandInstallation_InfrastructureWaterSupplyReservoir is Infrastructure / Water Supply / Reservoir.
+	EntityLandInstallation_InfrastructureWaterSupplyReservoir Entity = 121406
+
+	// EntityLandInstallation_InfrastructureWaterSupplyStorageTower is Infrastructure / Water Supply / Storage Tower.
+	EntityLandInstallation_InfrastructureWaterSupplyStorageTower Entity = 121407
+
+	// EntityLandInstallation_InfrastructureWaterSupplySurfaceWaterIntake is Infrastructure / Water Supply / Surface Water Intake.
+	EntityLandInstallation_InfrastructureWaterSupplySurfaceWaterIntake Entity = 121408
+
+	// EntityLandInstallation_InfrastructureWaterSupplyWastewaterTreatmentFacility is Infrastructure / Water Supply / Wastewater Treatment Facility.
+	EntityLandInstallation_InfrastructureWaterSupplyWastewaterTreatmentFacility Entity = 121409
+
+	// EntityLandInstallation_InfrastructureWaterSupplyWater is Infrastructure / Water Supply / Water.
+	EntityLandInstallation_InfrastructureWaterSupplyWater Entity = 121410
+
+	// EntityLandInstallation_InfrastructureWaterSupplyWaterTreatment is Infrastructure / Water Supply / Water Treatment.
+	EntityLandInstallation_InfrastructureWaterSupplyWaterTreatment Entity = 121411
 )

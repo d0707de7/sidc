@@ -5,40 +5,111 @@ package app6d
 
 // Entity constants for symbol set 05 (Space).
 const (
-	EntitySpace_Military                          Entity = 110000 // Military
-	EntitySpace_MilitarySpaceVehicle              Entity = 110100 // Military / Space Vehicle
-	EntitySpace_MilitaryReEntryVehicle            Entity = 110200 // Military / Re–Entry Vehicle
-	EntitySpace_MilitaryPlanetLander              Entity = 110300 // Military / Planet Lander
-	EntitySpace_MilitaryOrbiterShuttle            Entity = 110400 // Military / Orbiter Shuttle
-	EntitySpace_MilitaryCapsule                   Entity = 110500 // Military / Capsule
-	EntitySpace_MilitarySatelliteGeneral          Entity = 110600 // Military / Satellite, General
-	EntitySpace_MilitarySatellite                 Entity = 110700 // Military / Satellite
-	EntitySpace_MilitaryAntisatelliteWeapon       Entity = 110800 // Military / Antisatellite Weapon
-	EntitySpace_MilitaryAstronomicalSatellite     Entity = 110900 // Military / Astronomical Satellite
-	EntitySpace_MilitaryBiosatellite              Entity = 111000 // Military / Biosatellite
-	EntitySpace_MilitaryCommunicationsSatellite   Entity = 111100 // Military / Communications Satellite
-	EntitySpace_MilitaryEarthObservationSatellite Entity = 111200 // Military / Earth Observation Satellite
-	EntitySpace_MilitaryMiniaturizedSatellite     Entity = 111300 // Military / Miniaturized Satellite
-	EntitySpace_MilitaryNavigationalSatellite     Entity = 111400 // Military / Navigational Satellite
-	EntitySpace_MilitaryReconnaissanceSatellite   Entity = 111500 // Military / Reconnaissance Satellite
-	EntitySpace_MilitarySpaceStation              Entity = 111600 // Military / Space Station
-	EntitySpace_MilitaryTetheredSatellite         Entity = 111700 // Military / Tethered Satellite
-	EntitySpace_MilitaryWeatherSatellite          Entity = 111800 // Military / Weather Satellite
-	EntitySpace_MilitarySpaceLaunchedVehicleSLV   Entity = 111900 // Military / Space Launched Vehicle (SLV)
-	EntitySpace_Civilian                          Entity = 120000 // Civilian
-	EntitySpace_CivilianOrbiterShuttle            Entity = 120100 // Civilian / Orbiter Shuttle
-	EntitySpace_CivilianCapsule                   Entity = 120200 // Civilian / Capsule
-	EntitySpace_CivilianSatellite                 Entity = 120300 // Civilian / Satellite
-	EntitySpace_CivilianAstronomicalSatellite     Entity = 120400 // Civilian / Astronomical Satellite
-	EntitySpace_CivilianBiosatellite              Entity = 120500 // Civilian / Biosatellite
-	EntitySpace_CivilianCommunicationsSatellite   Entity = 120600 // Civilian / Communications Satellite
-	EntitySpace_CivilianEarthObservationSatellite Entity = 120700 // Civilian / Earth Observation Satellite
-	EntitySpace_CivilianMiniaturizedSatellite     Entity = 120800 // Civilian / Miniaturized Satellite
-	EntitySpace_CivilianNavigationalSatellite     Entity = 120900 // Civilian / Navigational Satellite
-	EntitySpace_CivilianSpaceStation              Entity = 121000 // Civilian / Space Station
-	EntitySpace_CivilianTetheredSatellite         Entity = 121100 // Civilian / Tethered Satellite
-	EntitySpace_CivilianWeatherSatellite          Entity = 121200 // Civilian / Weather Satellite
-	EntitySpace_CivilianPlanetaryLander           Entity = 121300 // Civilian / Planetary Lander
-	EntitySpace_CivilianSpaceVehicle              Entity = 121400 // Civilian / Space Vehicle
-	EntitySpace_ManualTrack                       Entity = 130000 // Manual Track
+	// EntitySpace_Military is Military.
+	EntitySpace_Military Entity = 110000
+
+	// EntitySpace_MilitarySpaceVehicle is Military / Space Vehicle.
+	EntitySpace_MilitarySpaceVehicle Entity = 110100
+
+	// EntitySpace_MilitaryReEntryVehicle is Military / Re–Entry Vehicle.
+	EntitySpace_MilitaryReEntryVehicle Entity = 110200
+
+	// EntitySpace_MilitaryPlanetLander is Military / Planet Lander.
+	EntitySpace_MilitaryPlanetLander Entity = 110300
+
+	// EntitySpace_MilitaryOrbiterShuttle is Military / Orbiter Shuttle.
+	EntitySpace_MilitaryOrbiterShuttle Entity = 110400
+
+	// EntitySpace_MilitaryCapsule is Military / Capsule.
+	EntitySpace_MilitaryCapsule Entity = 110500
+
+	// EntitySpace_MilitarySatelliteGeneral is Military / Satellite, General.
+	EntitySpace_MilitarySatelliteGeneral Entity = 110600
+
+	// EntitySpace_MilitarySatellite is Military / Satellite.
+	EntitySpace_MilitarySatellite Entity = 110700
+
+	// EntitySpace_MilitaryAntisatelliteWeapon is Military / Antisatellite Weapon.
+	EntitySpace_MilitaryAntisatelliteWeapon Entity = 110800
+
+	// EntitySpace_MilitaryAstronomicalSatellite is Military / Astronomical Satellite.
+	EntitySpace_MilitaryAstronomicalSatellite Entity = 110900
+
+	// EntitySpace_MilitaryBiosatellite is Military / Biosatellite.
+	EntitySpace_MilitaryBiosatellite Entity = 111000
+
+	// EntitySpace_MilitaryCommunicationsSatellite is Military / Communications Satellite.
+	EntitySpace_MilitaryCommunicationsSatellite Entity = 111100
+
+	// EntitySpace_MilitaryEarthObservationSatellite is Military / Earth Observation Satellite.
+	EntitySpace_MilitaryEarthObservationSatellite Entity = 111200
+
+	// EntitySpace_MilitaryMiniaturizedSatellite is Military / Miniaturized Satellite.
+	EntitySpace_MilitaryMiniaturizedSatellite Entity = 111300
+
+	// EntitySpace_MilitaryNavigationalSatellite is Military / Navigational Satellite.
+	EntitySpace_MilitaryNavigationalSatellite Entity = 111400
+
+	// EntitySpace_MilitaryReconnaissanceSatellite is Military / Reconnaissance Satellite.
+	EntitySpace_MilitaryReconnaissanceSatellite Entity = 111500
+
+	// EntitySpace_MilitarySpaceStation is Military / Space Station.
+	EntitySpace_MilitarySpaceStation Entity = 111600
+
+	// EntitySpace_MilitaryTetheredSatellite is Military / Tethered Satellite.
+	EntitySpace_MilitaryTetheredSatellite Entity = 111700
+
+	// EntitySpace_MilitaryWeatherSatellite is Military / Weather Satellite.
+	EntitySpace_MilitaryWeatherSatellite Entity = 111800
+
+	// EntitySpace_MilitarySpaceLaunchedVehicleSLV is Military / Space Launched Vehicle (SLV).
+	EntitySpace_MilitarySpaceLaunchedVehicleSLV Entity = 111900
+
+	// EntitySpace_Civilian is Civilian.
+	EntitySpace_Civilian Entity = 120000
+
+	// EntitySpace_CivilianOrbiterShuttle is Civilian / Orbiter Shuttle.
+	EntitySpace_CivilianOrbiterShuttle Entity = 120100
+
+	// EntitySpace_CivilianCapsule is Civilian / Capsule.
+	EntitySpace_CivilianCapsule Entity = 120200
+
+	// EntitySpace_CivilianSatellite is Civilian / Satellite.
+	EntitySpace_CivilianSatellite Entity = 120300
+
+	// EntitySpace_CivilianAstronomicalSatellite is Civilian / Astronomical Satellite.
+	EntitySpace_CivilianAstronomicalSatellite Entity = 120400
+
+	// EntitySpace_CivilianBiosatellite is Civilian / Biosatellite.
+	EntitySpace_CivilianBiosatellite Entity = 120500
+
+	// EntitySpace_CivilianCommunicationsSatellite is Civilian / Communications Satellite.
+	EntitySpace_CivilianCommunicationsSatellite Entity = 120600
+
+	// EntitySpace_CivilianEarthObservationSatellite is Civilian / Earth Observation Satellite.
+	EntitySpace_CivilianEarthObservationSatellite Entity = 120700
+
+	// EntitySpace_CivilianMiniaturizedSatellite is Civilian / Miniaturized Satellite.
+	EntitySpace_CivilianMiniaturizedSatellite Entity = 120800
+
+	// EntitySpace_CivilianNavigationalSatellite is Civilian / Navigational Satellite.
+	EntitySpace_CivilianNavigationalSatellite Entity = 120900
+
+	// EntitySpace_CivilianSpaceStation is Civilian / Space Station.
+	EntitySpace_CivilianSpaceStation Entity = 121000
+
+	// EntitySpace_CivilianTetheredSatellite is Civilian / Tethered Satellite.
+	EntitySpace_CivilianTetheredSatellite Entity = 121100
+
+	// EntitySpace_CivilianWeatherSatellite is Civilian / Weather Satellite.
+	EntitySpace_CivilianWeatherSatellite Entity = 121200
+
+	// EntitySpace_CivilianPlanetaryLander is Civilian / Planetary Lander.
+	EntitySpace_CivilianPlanetaryLander Entity = 121300
+
+	// EntitySpace_CivilianSpaceVehicle is Civilian / Space Vehicle.
+	EntitySpace_CivilianSpaceVehicle Entity = 121400
+
+	// EntitySpace_ManualTrack is Manual Track.
+	EntitySpace_ManualTrack Entity = 130000
 )

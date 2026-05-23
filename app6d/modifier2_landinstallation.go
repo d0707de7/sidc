@@ -5,14 +5,33 @@ package app6d
 
 // Modifier 2 constants for symbol set 20 (Land installation).
 const (
-	Modifier2LandInstallation_BiologicalWarfareProduction   Modifier2 = 1  // Biological Warfare Production
-	Modifier2LandInstallation_ChemicalWarfareProduction     Modifier2 = 2  // Chemical Warfare Production
-	Modifier2LandInstallation_NuclearWarfareProduction      Modifier2 = 3  // Nuclear Warfare Production
-	Modifier2LandInstallation_RadiologicalWarfareProduction Modifier2 = 4  // Radiological Warfare Production
-	Modifier2LandInstallation_AtomicEnergyReactor           Modifier2 = 5  // Atomic Energy Reactor
-	Modifier2LandInstallation_NuclearMaterialProduction     Modifier2 = 6  // Nuclear Material Production
-	Modifier2LandInstallation_NuclearMaterialStorage        Modifier2 = 7  // Nuclear Material Storage
-	Modifier2LandInstallation_WeaponsGradeProduction        Modifier2 = 8  // Weapons Grade Production
-	Modifier2LandInstallation_Disused                       Modifier2 = 9  // {Disused}
-	Modifier2LandInstallation_Transportation                Modifier2 = 10 // Transportation
+	// Modifier2LandInstallation_BiologicalWarfareProduction is Biological Warfare Production.
+	Modifier2LandInstallation_BiologicalWarfareProduction Modifier2 = 1
+
+	// Modifier2LandInstallation_ChemicalWarfareProduction is Chemical Warfare Production.
+	Modifier2LandInstallation_ChemicalWarfareProduction Modifier2 = 2
+
+	// Modifier2LandInstallation_NuclearWarfareProduction is Nuclear Warfare Production.
+	Modifier2LandInstallation_NuclearWarfareProduction Modifier2 = 3
+
+	// Modifier2LandInstallation_RadiologicalWarfareProduction is Radiological Warfare Production.
+	Modifier2LandInstallation_RadiologicalWarfareProduction Modifier2 = 4
+
+	// Modifier2LandInstallation_AtomicEnergyReactor is Atomic Energy Reactor.
+	Modifier2LandInstallation_AtomicEnergyReactor Modifier2 = 5
+
+	// Modifier2LandInstallation_NuclearMaterialProduction is Nuclear Material Production.
+	Modifier2LandInstallation_NuclearMaterialProduction Modifier2 = 6
+
+	// Modifier2LandInstallation_NuclearMaterialStorage is Nuclear Material Storage.
+	Modifier2LandInstallation_NuclearMaterialStorage Modifier2 = 7
+
+	// Modifier2LandInstallation_WeaponsGradeProduction is Weapons Grade Production.
+	Modifier2LandInstallation_WeaponsGradeProduction Modifier2 = 8
+
+	// Modifier2LandInstallation_Disused is {Disused}.
+	Modifier2LandInstallation_Disused Modifier2 = 9
+
+	// Modifier2LandInstallation_Transportation is Transportation.
+	Modifier2LandInstallation_Transportation Modifier2 = 10
 )

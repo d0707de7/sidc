@@ -5,17 +5,42 @@ package app6d
 
 // Modifier 1 constants for symbol set 60 (Cyberspace).
 const (
-	Modifier1Cyberspace_DefensiveCyberspace        Modifier1 = 1  // Defensive Cyberspace
-	Modifier1Cyberspace_OffensiveCyberspace        Modifier1 = 2  // Offensive Cyberspace
-	Modifier1Cyberspace_Social                     Modifier1 = 3  // Social
-	Modifier1Cyberspace_Wired                      Modifier1 = 4  // Wired
-	Modifier1Cyberspace_Wireless                   Modifier1 = 5  // Wireless
-	Modifier1Cyberspace_RadioFrequency             Modifier1 = 6  // Radio Frequency
-	Modifier1Cyberspace_OperatingSystem            Modifier1 = 7  // Operating System
-	Modifier1Cyberspace_ContinuityOfOperations     Modifier1 = 8  // Continuity of Operations
-	Modifier1Cyberspace_InternetServiceProviderISP Modifier1 = 9  // Internet Service Provider (ISP)
-	Modifier1Cyberspace_Finance                    Modifier1 = 10 // Finance
-	Modifier1Cyberspace_OutOfBand                  Modifier1 = 11 // Out of Band
-	Modifier1Cyberspace_Cloud                      Modifier1 = 12 // Cloud
-	Modifier1Cyberspace_Data                       Modifier1 = 13 // Data
+	// Modifier1Cyberspace_DefensiveCyberspace is Defensive Cyberspace.
+	Modifier1Cyberspace_DefensiveCyberspace Modifier1 = 1
+
+	// Modifier1Cyberspace_OffensiveCyberspace is Offensive Cyberspace.
+	Modifier1Cyberspace_OffensiveCyberspace Modifier1 = 2
+
+	// Modifier1Cyberspace_Social is Social.
+	Modifier1Cyberspace_Social Modifier1 = 3
+
+	// Modifier1Cyberspace_Wired is Wired.
+	Modifier1Cyberspace_Wired Modifier1 = 4
+
+	// Modifier1Cyberspace_Wireless is Wireless.
+	Modifier1Cyberspace_Wireless Modifier1 = 5
+
+	// Modifier1Cyberspace_RadioFrequency is Radio Frequency.
+	Modifier1Cyberspace_RadioFrequency Modifier1 = 6
+
+	// Modifier1Cyberspace_OperatingSystem is Operating System.
+	Modifier1Cyberspace_OperatingSystem Modifier1 = 7
+
+	// Modifier1Cyberspace_ContinuityOfOperations is Continuity of Operations.
+	Modifier1Cyberspace_ContinuityOfOperations Modifier1 = 8
+
+	// Modifier1Cyberspace_InternetServiceProviderISP is Internet Service Provider (ISP).
+	Modifier1Cyberspace_InternetServiceProviderISP Modifier1 = 9
+
+	// Modifier1Cyberspace_Finance is Finance.
+	Modifier1Cyberspace_Finance Modifier1 = 10
+
+	// Modifier1Cyberspace_OutOfBand is Out of Band.
+	Modifier1Cyberspace_OutOfBand Modifier1 = 11
+
+	// Modifier1Cyberspace_Cloud is Cloud.
+	Modifier1Cyberspace_Cloud Modifier1 = 12
+
+	// Modifier1Cyberspace_Data is Data.
+	Modifier1Cyberspace_Data Modifier1 = 13
 )

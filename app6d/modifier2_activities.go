@@ -5,6 +5,9 @@ package app6d
 
 // Modifier 2 constants for symbol set 40 (Activities).
 const (
-	Modifier2Activities_Disused    Modifier2 = 1 // {Disused}
-	Modifier2Activities_Disused_02 Modifier2 = 2 // {Disused}
+	// Modifier2Activities_Disused is {Disused}.
+	Modifier2Activities_Disused Modifier2 = 1
+
+	// Modifier2Activities_Disused_02 is {Disused}.
+	Modifier2Activities_Disused_02 Modifier2 = 2
 )

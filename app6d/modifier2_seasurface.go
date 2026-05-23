@@ -5,20 +5,51 @@ package app6d
 
 // Modifier 2 constants for symbol set 30 (Sea surface).
 const (
-	Modifier2SeaSurface_NuclearPowered   Modifier2 = 1  // Nuclear Powered
-	Modifier2SeaSurface_Disused          Modifier2 = 2  // {Disused}
-	Modifier2SeaSurface_Disused_03       Modifier2 = 3  // {Disused}
-	Modifier2SeaSurface_Disused_04       Modifier2 = 4  // {Disused}
-	Modifier2SeaSurface_Dock             Modifier2 = 5  // Dock
-	Modifier2SeaSurface_Logistics        Modifier2 = 6  // Logistics
-	Modifier2SeaSurface_Tank             Modifier2 = 7  // Tank
-	Modifier2SeaSurface_Vehicle          Modifier2 = 8  // Vehicle
-	Modifier2SeaSurface_Fast             Modifier2 = 9  // Fast
-	Modifier2SeaSurface_AirCushionedUS   Modifier2 = 10 // Air–Cushioned (US)
-	Modifier2SeaSurface_AirCushionedNATO Modifier2 = 11 // Air–Cushioned (NATO)
-	Modifier2SeaSurface_Hydrofoil        Modifier2 = 12 // Hydrofoil
-	Modifier2SeaSurface_Disused_13       Modifier2 = 13 // {Disused}
-	Modifier2SeaSurface_Disused_14       Modifier2 = 14 // {Disused}
-	Modifier2SeaSurface_Disused_15       Modifier2 = 15 // {Disused}
-	Modifier2SeaSurface_Disused_16       Modifier2 = 16 // {Disused}
+	// Modifier2SeaSurface_NuclearPowered is Nuclear Powered.
+	Modifier2SeaSurface_NuclearPowered Modifier2 = 1
+
+	// Modifier2SeaSurface_Disused is {Disused}.
+	Modifier2SeaSurface_Disused Modifier2 = 2
+
+	// Modifier2SeaSurface_Disused_03 is {Disused}.
+	Modifier2SeaSurface_Disused_03 Modifier2 = 3
+
+	// Modifier2SeaSurface_Disused_04 is {Disused}.
+	Modifier2SeaSurface_Disused_04 Modifier2 = 4
+
+	// Modifier2SeaSurface_Dock is Dock.
+	Modifier2SeaSurface_Dock Modifier2 = 5
+
+	// Modifier2SeaSurface_Logistics is Logistics.
+	Modifier2SeaSurface_Logistics Modifier2 = 6
+
+	// Modifier2SeaSurface_Tank is Tank.
+	Modifier2SeaSurface_Tank Modifier2 = 7
+
+	// Modifier2SeaSurface_Vehicle is Vehicle.
+	Modifier2SeaSurface_Vehicle Modifier2 = 8
+
+	// Modifier2SeaSurface_Fast is Fast.
+	Modifier2SeaSurface_Fast Modifier2 = 9
+
+	// Modifier2SeaSurface_AirCushionedUS is Air–Cushioned (US).
+	Modifier2SeaSurface_AirCushionedUS Modifier2 = 10
+
+	// Modifier2SeaSurface_AirCushionedNATO is Air–Cushioned (NATO).
+	Modifier2SeaSurface_AirCushionedNATO Modifier2 = 11
+
+	// Modifier2SeaSurface_Hydrofoil is Hydrofoil.
+	Modifier2SeaSurface_Hydrofoil Modifier2 = 12
+
+	// Modifier2SeaSurface_Disused_13 is {Disused}.
+	Modifier2SeaSurface_Disused_13 Modifier2 = 13
+
+	// Modifier2SeaSurface_Disused_14 is {Disused}.
+	Modifier2SeaSurface_Disused_14 Modifier2 = 14
+
+	// Modifier2SeaSurface_Disused_15 is {Disused}.
+	Modifier2SeaSurface_Disused_15 Modifier2 = 15
+
+	// Modifier2SeaSurface_Disused_16 is {Disused}.
+	Modifier2SeaSurface_Disused_16 Modifier2 = 16
 )

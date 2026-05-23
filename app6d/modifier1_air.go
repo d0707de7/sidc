@@ -5,45 +5,126 @@ package app6d
 
 // Modifier 1 constants for symbol set 01 (Air).
 const (
-	Modifier1Air_Disused                         Modifier1 = 1  // {Disused}
-	Modifier1Air_Bomber                          Modifier1 = 2  // Bomber
-	Modifier1Air_Disused_03                      Modifier1 = 3  // {Disused}
-	Modifier1Air_Fighter                         Modifier1 = 4  // Fighter
-	Modifier1Air_Interceptor                     Modifier1 = 5  // Interceptor
-	Modifier1Air_Tanker                          Modifier1 = 6  // Tanker
-	Modifier1Air_Disused_07                      Modifier1 = 7  // {Disused}
-	Modifier1Air_Disused_08                      Modifier1 = 8  // {Disused}
-	Modifier1Air_Passenger                       Modifier1 = 9  // Passenger
-	Modifier1Air_UltraLight                      Modifier1 = 10 // Ultra Light
-	Modifier1Air_AirborneCommandPostACP          Modifier1 = 11 // Airborne Command Post (ACP)
-	Modifier1Air_AirborneEarlyWarningAEW         Modifier1 = 12 // Airborne Early Warning (AEW)
-	Modifier1Air_Government                      Modifier1 = 13 // Government
-	Modifier1Air_Disused_14                      Modifier1 = 14 // {Disused}
-	Modifier1Air_Disused_15                      Modifier1 = 15 // {Disused}
-	Modifier1Air_ElectronicCombatECJammer        Modifier1 = 16 // Electronic Combat (EC)/Jammer
-	Modifier1Air_Patrol                          Modifier1 = 17 // Patrol
-	Modifier1Air_Reconnaissance                  Modifier1 = 18 // Reconnaissance
-	Modifier1Air_Trainer                         Modifier1 = 19 // Trainer
-	Modifier1Air_PhotographicReconnaissance      Modifier1 = 20 // Photographic (Reconnaissance)
-	Modifier1Air_PersonnelRecovery               Modifier1 = 21 // Personnel Recovery
-	Modifier1Air_Disused_22                      Modifier1 = 22 // {Disused}
-	Modifier1Air_Communications                  Modifier1 = 23 // Communications
-	Modifier1Air_ElectronicSupportES             Modifier1 = 24 // Electronic Support (ES)
-	Modifier1Air_Disused_25                      Modifier1 = 25 // {Disused}
-	Modifier1Air_Disused_26                      Modifier1 = 26 // {Disused}
-	Modifier1Air_Disused_27                      Modifier1 = 27 // {Disused}
-	Modifier1Air_Disused_28                      Modifier1 = 28 // {Disused}
-	Modifier1Air_VeryImportantPersonVIPTransport Modifier1 = 29 // Very Important Person (VIP) Transport
-	Modifier1Air_CombatSearchAndRescueCSAR       Modifier1 = 30 // Combat Search and Rescue (CSAR)
-	Modifier1Air_SuppressionOfEnemyAirDefenses   Modifier1 = 31 // Suppression of Enemy Air Defenses
-	Modifier1Air_AntisurfaceWarfare              Modifier1 = 32 // Antisurface Warfare
-	Modifier1Air_FighterBomber                   Modifier1 = 33 // Fighter/Bomber
-	Modifier1Air_IntensiveCare                   Modifier1 = 34 // Intensive Care
-	Modifier1Air_ElectronicAttackEA              Modifier1 = 35 // Electronic Attack (EA)
-	Modifier1Air_MultiMission                    Modifier1 = 36 // Multi-Mission
-	Modifier1Air_Disused_37                      Modifier1 = 37 // {Disused}
-	Modifier1Air_ASWHeloLAMPS                    Modifier1 = 38 // ASW Helo- LAMPS
-	Modifier1Air_ASWHeloSH60R                    Modifier1 = 39 // ASW Helo- SH-60R
-	Modifier1Air_Disused_40                      Modifier1 = 40 // {Disused}
-	Modifier1Air_Disused_41                      Modifier1 = 41 // {Disused}
+	// Modifier1Air_Disused is {Disused}.
+	Modifier1Air_Disused Modifier1 = 1
+
+	// Modifier1Air_Bomber is Bomber.
+	Modifier1Air_Bomber Modifier1 = 2
+
+	// Modifier1Air_Disused_03 is {Disused}.
+	Modifier1Air_Disused_03 Modifier1 = 3
+
+	// Modifier1Air_Fighter is Fighter.
+	Modifier1Air_Fighter Modifier1 = 4
+
+	// Modifier1Air_Interceptor is Interceptor.
+	Modifier1Air_Interceptor Modifier1 = 5
+
+	// Modifier1Air_Tanker is Tanker.
+	Modifier1Air_Tanker Modifier1 = 6
+
+	// Modifier1Air_Disused_07 is {Disused}.
+	Modifier1Air_Disused_07 Modifier1 = 7
+
+	// Modifier1Air_Disused_08 is {Disused}.
+	Modifier1Air_Disused_08 Modifier1 = 8
+
+	// Modifier1Air_Passenger is Passenger.
+	Modifier1Air_Passenger Modifier1 = 9
+
+	// Modifier1Air_UltraLight is Ultra Light.
+	Modifier1Air_UltraLight Modifier1 = 10
+
+	// Modifier1Air_AirborneCommandPostACP is Airborne Command Post (ACP).
+	Modifier1Air_AirborneCommandPostACP Modifier1 = 11
+
+	// Modifier1Air_AirborneEarlyWarningAEW is Airborne Early Warning (AEW).
+	Modifier1Air_AirborneEarlyWarningAEW Modifier1 = 12
+
+	// Modifier1Air_Government is Government.
+	Modifier1Air_Government Modifier1 = 13
+
+	// Modifier1Air_Disused_14 is {Disused}.
+	Modifier1Air_Disused_14 Modifier1 = 14
+
+	// Modifier1Air_Disused_15 is {Disused}.
+	Modifier1Air_Disused_15 Modifier1 = 15
+
+	// Modifier1Air_ElectronicCombatECJammer is Electronic Combat (EC)/Jammer.
+	Modifier1Air_ElectronicCombatECJammer Modifier1 = 16
+
+	// Modifier1Air_Patrol is Patrol.
+	Modifier1Air_Patrol Modifier1 = 17
+
+	// Modifier1Air_Reconnaissance is Reconnaissance.
+	Modifier1Air_Reconnaissance Modifier1 = 18
+
+	// Modifier1Air_Trainer is Trainer.
+	Modifier1Air_Trainer Modifier1 = 19
+
+	// Modifier1Air_PhotographicReconnaissance is Photographic (Reconnaissance).
+	Modifier1Air_PhotographicReconnaissance Modifier1 = 20
+
+	// Modifier1Air_PersonnelRecovery is Personnel Recovery.
+	Modifier1Air_PersonnelRecovery Modifier1 = 21
+
+	// Modifier1Air_Disused_22 is {Disused}.
+	Modifier1Air_Disused_22 Modifier1 = 22
+
+	// Modifier1Air_Communications is Communications.
+	Modifier1Air_Communications Modifier1 = 23
+
+	// Modifier1Air_ElectronicSupportES is Electronic Support (ES).
+	Modifier1Air_ElectronicSupportES Modifier1 = 24
+
+	// Modifier1Air_Disused_25 is {Disused}.
+	Modifier1Air_Disused_25 Modifier1 = 25
+
+	// Modifier1Air_Disused_26 is {Disused}.
+	Modifier1Air_Disused_26 Modifier1 = 26
+
+	// Modifier1Air_Disused_27 is {Disused}.
+	Modifier1Air_Disused_27 Modifier1 = 27
+
+	// Modifier1Air_Disused_28 is {Disused}.
+	Modifier1Air_Disused_28 Modifier1 = 28
+
+	// Modifier1Air_VeryImportantPersonVIPTransport is Very Important Person (VIP) Transport.
+	Modifier1Air_VeryImportantPersonVIPTransport Modifier1 = 29
+
+	// Modifier1Air_CombatSearchAndRescueCSAR is Combat Search and Rescue (CSAR).
+	Modifier1Air_CombatSearchAndRescueCSAR Modifier1 = 30
+
+	// Modifier1Air_SuppressionOfEnemyAirDefenses is Suppression of Enemy Air Defenses.
+	Modifier1Air_SuppressionOfEnemyAirDefenses Modifier1 = 31
+
+	// Modifier1Air_AntisurfaceWarfare is Antisurface Warfare.
+	Modifier1Air_AntisurfaceWarfare Modifier1 = 32
+
+	// Modifier1Air_FighterBomber is Fighter/Bomber.
+	Modifier1Air_FighterBomber Modifier1 = 33
+
+	// Modifier1Air_IntensiveCare is Intensive Care.
+	Modifier1Air_IntensiveCare Modifier1 = 34
+
+	// Modifier1Air_ElectronicAttackEA is Electronic Attack (EA).
+	Modifier1Air_ElectronicAttackEA Modifier1 = 35
+
+	// Modifier1Air_MultiMission is Multi-Mission.
+	Modifier1Air_MultiMission Modifier1 = 36
+
+	// Modifier1Air_Disused_37 is {Disused}.
+	Modifier1Air_Disused_37 Modifier1 = 37
+
+	// Modifier1Air_ASWHeloLAMPS is ASW Helo- LAMPS.
+	Modifier1Air_ASWHeloLAMPS Modifier1 = 38
+
+	// Modifier1Air_ASWHeloSH60R is ASW Helo- SH-60R.
+	Modifier1Air_ASWHeloSH60R Modifier1 = 39
+
+	// Modifier1Air_Disused_40 is {Disused}.
+	Modifier1Air_Disused_40 Modifier1 = 40
+
+	// Modifier1Air_Disused_41 is {Disused}.
+	Modifier1Air_Disused_41 Modifier1 = 41
 )

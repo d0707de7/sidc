@@ -5,26 +5,69 @@ package app6d
 
 // Modifier 1 constants for symbol set 35 (Sea subsurface).
 const (
-	Modifier1SeaSubsurface_Disused                Modifier1 = 1  // {Disused}
-	Modifier1SeaSubsurface_Auxiliary              Modifier1 = 2  // Auxiliary
-	Modifier1SeaSubsurface_Disused_03             Modifier1 = 3  // {Disused}
-	Modifier1SeaSubsurface_Disused_04             Modifier1 = 4  // {Disused}
-	Modifier1SeaSubsurface_Disused_05             Modifier1 = 5  // {Disused}
-	Modifier1SeaSubsurface_Disused_06             Modifier1 = 6  // {Disused}
-	Modifier1SeaSubsurface_Disused_07             Modifier1 = 7  // {Disused}
-	Modifier1SeaSubsurface_Disused_08             Modifier1 = 8  // {Disused}
-	Modifier1SeaSubsurface_Disused_09             Modifier1 = 9  // {Disused}
-	Modifier1SeaSubsurface_Disused_10             Modifier1 = 10 // {Disused}
-	Modifier1SeaSubsurface_Disused_11             Modifier1 = 11 // {Disused}
-	Modifier1SeaSubsurface_Disused_12             Modifier1 = 12 // {Disused}
-	Modifier1SeaSubsurface_PossibleSubmarineLow1  Modifier1 = 13 // Possible Submarine Low 1
-	Modifier1SeaSubsurface_PossibleSubmarineLow2  Modifier1 = 14 // Possible Submarine Low 2
-	Modifier1SeaSubsurface_PossibleSubmarineHigh3 Modifier1 = 15 // Possible Submarine High 3
-	Modifier1SeaSubsurface_PossibleSubmarineHigh4 Modifier1 = 16 // Possible Submarine High 4
-	Modifier1SeaSubsurface_ProbableSubmarine      Modifier1 = 17 // Probable Submarine
-	Modifier1SeaSubsurface_CertainSubmarine       Modifier1 = 18 // Certain Submarine
-	Modifier1SeaSubsurface_AntiTorpedoTorpedo     Modifier1 = 19 // Anti-torpedo Torpedo
-	Modifier1SeaSubsurface_Disused_20             Modifier1 = 20 // {Disused}
-	Modifier1SeaSubsurface_Disused_21             Modifier1 = 21 // {Disused}
-	Modifier1SeaSubsurface_Disused_22             Modifier1 = 22 // {Disused}
+	// Modifier1SeaSubsurface_Disused is {Disused}.
+	Modifier1SeaSubsurface_Disused Modifier1 = 1
+
+	// Modifier1SeaSubsurface_Auxiliary is Auxiliary.
+	Modifier1SeaSubsurface_Auxiliary Modifier1 = 2
+
+	// Modifier1SeaSubsurface_Disused_03 is {Disused}.
+	Modifier1SeaSubsurface_Disused_03 Modifier1 = 3
+
+	// Modifier1SeaSubsurface_Disused_04 is {Disused}.
+	Modifier1SeaSubsurface_Disused_04 Modifier1 = 4
+
+	// Modifier1SeaSubsurface_Disused_05 is {Disused}.
+	Modifier1SeaSubsurface_Disused_05 Modifier1 = 5
+
+	// Modifier1SeaSubsurface_Disused_06 is {Disused}.
+	Modifier1SeaSubsurface_Disused_06 Modifier1 = 6
+
+	// Modifier1SeaSubsurface_Disused_07 is {Disused}.
+	Modifier1SeaSubsurface_Disused_07 Modifier1 = 7
+
+	// Modifier1SeaSubsurface_Disused_08 is {Disused}.
+	Modifier1SeaSubsurface_Disused_08 Modifier1 = 8
+
+	// Modifier1SeaSubsurface_Disused_09 is {Disused}.
+	Modifier1SeaSubsurface_Disused_09 Modifier1 = 9
+
+	// Modifier1SeaSubsurface_Disused_10 is {Disused}.
+	Modifier1SeaSubsurface_Disused_10 Modifier1 = 10
+
+	// Modifier1SeaSubsurface_Disused_11 is {Disused}.
+	Modifier1SeaSubsurface_Disused_11 Modifier1 = 11
+
+	// Modifier1SeaSubsurface_Disused_12 is {Disused}.
+	Modifier1SeaSubsurface_Disused_12 Modifier1 = 12
+
+	// Modifier1SeaSubsurface_PossibleSubmarineLow1 is Possible Submarine Low 1.
+	Modifier1SeaSubsurface_PossibleSubmarineLow1 Modifier1 = 13
+
+	// Modifier1SeaSubsurface_PossibleSubmarineLow2 is Possible Submarine Low 2.
+	Modifier1SeaSubsurface_PossibleSubmarineLow2 Modifier1 = 14
+
+	// Modifier1SeaSubsurface_PossibleSubmarineHigh3 is Possible Submarine High 3.
+	Modifier1SeaSubsurface_PossibleSubmarineHigh3 Modifier1 = 15
+
+	// Modifier1SeaSubsurface_PossibleSubmarineHigh4 is Possible Submarine High 4.
+	Modifier1SeaSubsurface_PossibleSubmarineHigh4 Modifier1 = 16
+
+	// Modifier1SeaSubsurface_ProbableSubmarine is Probable Submarine.
+	Modifier1SeaSubsurface_ProbableSubmarine Modifier1 = 17
+
+	// Modifier1SeaSubsurface_CertainSubmarine is Certain Submarine.
+	Modifier1SeaSubsurface_CertainSubmarine Modifier1 = 18
+
+	// Modifier1SeaSubsurface_AntiTorpedoTorpedo is Anti-torpedo Torpedo.
+	Modifier1SeaSubsurface_AntiTorpedoTorpedo Modifier1 = 19
+
+	// Modifier1SeaSubsurface_Disused_20 is {Disused}.
+	Modifier1SeaSubsurface_Disused_20 Modifier1 = 20
+
+	// Modifier1SeaSubsurface_Disused_21 is {Disused}.
+	Modifier1SeaSubsurface_Disused_21 Modifier1 = 21
+
+	// Modifier1SeaSubsurface_Disused_22 is {Disused}.
+	Modifier1SeaSubsurface_Disused_22 Modifier1 = 22
 )

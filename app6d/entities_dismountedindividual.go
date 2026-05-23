@@ -5,49 +5,138 @@ package app6d
 
 // Entity constants for symbol set 27 (Dismounted individual).
 const (
-	EntityDismountedIndividual_Military                                         Entity = 110000 // Military
-	EntityDismountedIndividual_MilitaryDisused                                  Entity = 110100 // Military / {Disused}
-	EntityDismountedIndividual_MilitaryActivityTask                             Entity = 110200 // Military / Activity/Task
-	EntityDismountedIndividual_MilitaryActivityTaskExplosiveOrdnanceDisposal    Entity = 110201 // Military / Activity/Task / Explosive Ordnance Disposal
-	EntityDismountedIndividual_MilitaryActivityTaskFieldArtilleryObserver       Entity = 110202 // Military / Activity/Task / Field Artillery Observer
-	EntityDismountedIndividual_MilitaryActivityTaskJointFireSupport             Entity = 110203 // Military / Activity/Task / Joint Fire Support
-	EntityDismountedIndividual_MilitaryActivityTaskLiaison                      Entity = 110204 // Military / Activity/Task / Liaison
-	EntityDismountedIndividual_MilitaryActivityTaskMessenger                    Entity = 110205 // Military / Activity/Task / Messenger
-	EntityDismountedIndividual_MilitaryActivityTaskMilitaryPolice               Entity = 110206 // Military / Activity/Task / Military Police
-	EntityDismountedIndividual_MilitaryActivityTaskObserver                     Entity = 110207 // Military / Activity/Task / Observer
-	EntityDismountedIndividual_MilitaryActivityTaskSecurity                     Entity = 110208 // Military / Activity/Task / Security
-	EntityDismountedIndividual_MilitaryActivityTaskSniper                       Entity = 110209 // Military / Activity/Task / Sniper
-	EntityDismountedIndividual_MilitaryActivityTaskSpecialOperationForces       Entity = 110210 // Military / Activity/Task / Special Operation Forces
-	EntityDismountedIndividual_MilitaryActivityTaskDesignatedMarksman           Entity = 110211 // Military / Activity/Task / Designated Marksman
-	EntityDismountedIndividual_MilitaryActivityTaskMedic                        Entity = 110212 // Military / Activity/Task / Medic
-	EntityDismountedIndividual_MilitaryActivityTaskSignaler                     Entity = 110213 // Military / Activity/Task / Signaler
-	EntityDismountedIndividual_MilitaryActivityTaskReconnaissance               Entity = 110214 // Military / Activity/Task / Reconnaissance
-	EntityDismountedIndividual_MilitaryActivityTaskInfantry                     Entity = 110215 // Military / Activity/Task / Infantry
-	EntityDismountedIndividual_MilitaryActivityTaskCloseProtection              Entity = 110216 // Military / Activity/Task / Close Protection
-	EntityDismountedIndividual_MilitaryActivityTaskCrowdAndRiotControl          Entity = 110217 // Military / Activity/Task / Crowd and Riot Control
-	EntityDismountedIndividual_MilitaryActivityTaskSWAT                         Entity = 110218 // Military / Activity/Task / SWAT
-	EntityDismountedIndividual_MilitaryActivityTaskDemolition                   Entity = 110219 // Military / Activity/Task / Demolition
-	EntityDismountedIndividual_MilitaryActivityTaskCommanderCDR                 Entity = 110220 // Military / Activity/Task / Commander  (CDR)
-	EntityDismountedIndividual_MilitaryActivityTaskSecondInCommandSIC           Entity = 110221 // Military / Activity/Task / Second In Command  (SIC)
-	EntityDismountedIndividual_MilitaryLethalWeapons                            Entity = 110300 // Military / Lethal Weapons
-	EntityDismountedIndividual_MilitaryLethalWeaponsRifle                       Entity = 110301 // Military / Lethal Weapons / Rifle
-	EntityDismountedIndividual_MilitaryLethalWeaponsSingleShotRifle             Entity = 110302 // Military / Lethal Weapons / Single Shot Rifle
-	EntityDismountedIndividual_MilitaryLethalWeaponsSemiautomaticRifle          Entity = 110303 // Military / Lethal Weapons / Semiautomatic Rifle
-	EntityDismountedIndividual_MilitaryLethalWeaponsAutomaticRifle              Entity = 110304 // Military / Lethal Weapons / Automatic Rifle
-	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGun                  Entity = 110305 // Military / Lethal Weapons / Machine Gun
-	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunLight             Entity = 110306 // Military / Lethal Weapons / Machine Gun - Light
-	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunMedium            Entity = 110307 // Military / Lethal Weapons / Machine Gun - Medium
-	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunHeavy             Entity = 110308 // Military / Lethal Weapons / Machine Gun - Heavy
-	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncher             Entity = 110309 // Military / Lethal Weapons / Grenade Launcher
-	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherLight        Entity = 110310 // Military / Lethal Weapons / Grenade Launcher - Light
-	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherMedium       Entity = 110311 // Military / Lethal Weapons / Grenade Launcher - Medium
-	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherHeavy        Entity = 110312 // Military / Lethal Weapons / Grenade Launcher - Heavy
-	EntityDismountedIndividual_MilitaryLethalWeaponsFlameThrower                Entity = 110313 // Military / Lethal Weapons / Flame Thrower
-	EntityDismountedIndividual_MilitaryLethalWeaponsMortar                      Entity = 110314 // Military / Lethal Weapons / Mortar
-	EntityDismountedIndividual_MilitaryLethalWeaponsSingleRocketLauncher        Entity = 110315 // Military / Lethal Weapons / Single Rocket Launcher
-	EntityDismountedIndividual_MilitaryLethalWeaponsAntitankRocketLauncher      Entity = 110316 // Military / Lethal Weapons / Antitank Rocket Launcher
-	EntityDismountedIndividual_MilitaryNonLethalWeapons                         Entity = 110400 // Military / Non-Lethal Weapons
-	EntityDismountedIndividual_MilitaryNonLethalWeaponsNonLethalWeapon          Entity = 110401 // Military / Non-Lethal Weapons / Non-Lethal Weapon
-	EntityDismountedIndividual_MilitaryNonLethalWeaponsNonLethalGrenadeLauncher Entity = 110402 // Military / Non-Lethal Weapons / Non-Lethal Grenade Launcher
-	EntityDismountedIndividual_MilitaryNonLethalWeaponsTaser                    Entity = 110403 // Military / Non-Lethal Weapons / Taser
+	// EntityDismountedIndividual_Military is Military.
+	EntityDismountedIndividual_Military Entity = 110000
+
+	// EntityDismountedIndividual_MilitaryDisused is Military / {Disused}.
+	EntityDismountedIndividual_MilitaryDisused Entity = 110100
+
+	// EntityDismountedIndividual_MilitaryActivityTask is Military / Activity/Task.
+	EntityDismountedIndividual_MilitaryActivityTask Entity = 110200
+
+	// EntityDismountedIndividual_MilitaryActivityTaskExplosiveOrdnanceDisposal is Military / Activity/Task / Explosive Ordnance Disposal.
+	EntityDismountedIndividual_MilitaryActivityTaskExplosiveOrdnanceDisposal Entity = 110201
+
+	// EntityDismountedIndividual_MilitaryActivityTaskFieldArtilleryObserver is Military / Activity/Task / Field Artillery Observer.
+	EntityDismountedIndividual_MilitaryActivityTaskFieldArtilleryObserver Entity = 110202
+
+	// EntityDismountedIndividual_MilitaryActivityTaskJointFireSupport is Military / Activity/Task / Joint Fire Support.
+	EntityDismountedIndividual_MilitaryActivityTaskJointFireSupport Entity = 110203
+
+	// EntityDismountedIndividual_MilitaryActivityTaskLiaison is Military / Activity/Task / Liaison.
+	EntityDismountedIndividual_MilitaryActivityTaskLiaison Entity = 110204
+
+	// EntityDismountedIndividual_MilitaryActivityTaskMessenger is Military / Activity/Task / Messenger.
+	EntityDismountedIndividual_MilitaryActivityTaskMessenger Entity = 110205
+
+	// EntityDismountedIndividual_MilitaryActivityTaskMilitaryPolice is Military / Activity/Task / Military Police.
+	EntityDismountedIndividual_MilitaryActivityTaskMilitaryPolice Entity = 110206
+
+	// EntityDismountedIndividual_MilitaryActivityTaskObserver is Military / Activity/Task / Observer.
+	EntityDismountedIndividual_MilitaryActivityTaskObserver Entity = 110207
+
+	// EntityDismountedIndividual_MilitaryActivityTaskSecurity is Military / Activity/Task / Security.
+	EntityDismountedIndividual_MilitaryActivityTaskSecurity Entity = 110208
+
+	// EntityDismountedIndividual_MilitaryActivityTaskSniper is Military / Activity/Task / Sniper.
+	EntityDismountedIndividual_MilitaryActivityTaskSniper Entity = 110209
+
+	// EntityDismountedIndividual_MilitaryActivityTaskSpecialOperationForces is Military / Activity/Task / Special Operation Forces.
+	EntityDismountedIndividual_MilitaryActivityTaskSpecialOperationForces Entity = 110210
+
+	// EntityDismountedIndividual_MilitaryActivityTaskDesignatedMarksman is Military / Activity/Task / Designated Marksman.
+	EntityDismountedIndividual_MilitaryActivityTaskDesignatedMarksman Entity = 110211
+
+	// EntityDismountedIndividual_MilitaryActivityTaskMedic is Military / Activity/Task / Medic.
+	EntityDismountedIndividual_MilitaryActivityTaskMedic Entity = 110212
+
+	// EntityDismountedIndividual_MilitaryActivityTaskSignaler is Military / Activity/Task / Signaler.
+	EntityDismountedIndividual_MilitaryActivityTaskSignaler Entity = 110213
+
+	// EntityDismountedIndividual_MilitaryActivityTaskReconnaissance is Military / Activity/Task / Reconnaissance.
+	EntityDismountedIndividual_MilitaryActivityTaskReconnaissance Entity = 110214
+
+	// EntityDismountedIndividual_MilitaryActivityTaskInfantry is Military / Activity/Task / Infantry.
+	EntityDismountedIndividual_MilitaryActivityTaskInfantry Entity = 110215
+
+	// EntityDismountedIndividual_MilitaryActivityTaskCloseProtection is Military / Activity/Task / Close Protection.
+	EntityDismountedIndividual_MilitaryActivityTaskCloseProtection Entity = 110216
+
+	// EntityDismountedIndividual_MilitaryActivityTaskCrowdAndRiotControl is Military / Activity/Task / Crowd and Riot Control.
+	EntityDismountedIndividual_MilitaryActivityTaskCrowdAndRiotControl Entity = 110217
+
+	// EntityDismountedIndividual_MilitaryActivityTaskSWAT is Military / Activity/Task / SWAT.
+	EntityDismountedIndividual_MilitaryActivityTaskSWAT Entity = 110218
+
+	// EntityDismountedIndividual_MilitaryActivityTaskDemolition is Military / Activity/Task / Demolition.
+	EntityDismountedIndividual_MilitaryActivityTaskDemolition Entity = 110219
+
+	// EntityDismountedIndividual_MilitaryActivityTaskCommanderCDR is Military / Activity/Task / Commander  (CDR).
+	EntityDismountedIndividual_MilitaryActivityTaskCommanderCDR Entity = 110220
+
+	// EntityDismountedIndividual_MilitaryActivityTaskSecondInCommandSIC is Military / Activity/Task / Second In Command  (SIC).
+	EntityDismountedIndividual_MilitaryActivityTaskSecondInCommandSIC Entity = 110221
+
+	// EntityDismountedIndividual_MilitaryLethalWeapons is Military / Lethal Weapons.
+	EntityDismountedIndividual_MilitaryLethalWeapons Entity = 110300
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsRifle is Military / Lethal Weapons / Rifle.
+	EntityDismountedIndividual_MilitaryLethalWeaponsRifle Entity = 110301
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsSingleShotRifle is Military / Lethal Weapons / Single Shot Rifle.
+	EntityDismountedIndividual_MilitaryLethalWeaponsSingleShotRifle Entity = 110302
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsSemiautomaticRifle is Military / Lethal Weapons / Semiautomatic Rifle.
+	EntityDismountedIndividual_MilitaryLethalWeaponsSemiautomaticRifle Entity = 110303
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsAutomaticRifle is Military / Lethal Weapons / Automatic Rifle.
+	EntityDismountedIndividual_MilitaryLethalWeaponsAutomaticRifle Entity = 110304
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsMachineGun is Military / Lethal Weapons / Machine Gun.
+	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGun Entity = 110305
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunLight is Military / Lethal Weapons / Machine Gun - Light.
+	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunLight Entity = 110306
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunMedium is Military / Lethal Weapons / Machine Gun - Medium.
+	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunMedium Entity = 110307
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunHeavy is Military / Lethal Weapons / Machine Gun - Heavy.
+	EntityDismountedIndividual_MilitaryLethalWeaponsMachineGunHeavy Entity = 110308
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncher is Military / Lethal Weapons / Grenade Launcher.
+	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncher Entity = 110309
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherLight is Military / Lethal Weapons / Grenade Launcher - Light.
+	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherLight Entity = 110310
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherMedium is Military / Lethal Weapons / Grenade Launcher - Medium.
+	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherMedium Entity = 110311
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherHeavy is Military / Lethal Weapons / Grenade Launcher - Heavy.
+	EntityDismountedIndividual_MilitaryLethalWeaponsGrenadeLauncherHeavy Entity = 110312
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsFlameThrower is Military / Lethal Weapons / Flame Thrower.
+	EntityDismountedIndividual_MilitaryLethalWeaponsFlameThrower Entity = 110313
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsMortar is Military / Lethal Weapons / Mortar.
+	EntityDismountedIndividual_MilitaryLethalWeaponsMortar Entity = 110314
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsSingleRocketLauncher is Military / Lethal Weapons / Single Rocket Launcher.
+	EntityDismountedIndividual_MilitaryLethalWeaponsSingleRocketLauncher Entity = 110315
+
+	// EntityDismountedIndividual_MilitaryLethalWeaponsAntitankRocketLauncher is Military / Lethal Weapons / Antitank Rocket Launcher.
+	EntityDismountedIndividual_MilitaryLethalWeaponsAntitankRocketLauncher Entity = 110316
+
+	// EntityDismountedIndividual_MilitaryNonLethalWeapons is Military / Non-Lethal Weapons.
+	EntityDismountedIndividual_MilitaryNonLethalWeapons Entity = 110400
+
+	// EntityDismountedIndividual_MilitaryNonLethalWeaponsNonLethalWeapon is Military / Non-Lethal Weapons / Non-Lethal Weapon.
+	EntityDismountedIndividual_MilitaryNonLethalWeaponsNonLethalWeapon Entity = 110401
+
+	// EntityDismountedIndividual_MilitaryNonLethalWeaponsNonLethalGrenadeLauncher is Military / Non-Lethal Weapons / Non-Lethal Grenade Launcher.
+	EntityDismountedIndividual_MilitaryNonLethalWeaponsNonLethalGrenadeLauncher Entity = 110402
+
+	// EntityDismountedIndividual_MilitaryNonLethalWeaponsTaser is Military / Non-Lethal Weapons / Taser.
+	EntityDismountedIndividual_MilitaryNonLethalWeaponsTaser Entity = 110403
 )

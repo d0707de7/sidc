@@ -8,9 +8,13 @@ import (
 
 // SIDC is a parsed 20-digit Symbol Identification Code for APP-6 D or E.
 //
-// The zero value is the string "10000000000000000000": APP-6 D version 10,
-// reality, pending affiliation, unknown symbol set, present, no amplifier,
-// no entity, no modifiers. Use a composite literal for non-default values.
+// SIDC deliberately does not implement fmt.Stringer. Rendering a SIDC to
+// its string form can fail (the field values must name a real symbol), and
+// the API surfaces that by requiring callers to use the Value method, which
+// returns (string, error). This means fmt.Println(s) and similar print the
+// struct dump rather than a SIDC string; that's intentional — there is no
+// safe way to render an arbitrary composite literal without first validating
+// it.
 type SIDC struct {
 	Version     Version
 	Context     Context
@@ -33,35 +37,69 @@ var ErrInvalidLength = errors.New("sidc: invalid length, expected 20 characters"
 // ErrInvalidCharacter indicates a non-digit was found in the input.
 var ErrInvalidCharacter = errors.New("sidc: invalid character, expected digits only")
 
-// String returns the canonical 20-digit SIDC representation. It never fails;
-// values out of range for a field's width are masked to fit.
-func (s SIDC) String() string {
-	var buf [SIDCLength]byte
-	writeDigits(buf[0:2], uint64(s.Version)%100)
-	writeDigits(buf[2:3], uint64(s.Context)%10)
-	writeDigits(buf[3:4], uint64(s.Affiliation)%10)
-	writeDigits(buf[4:6], uint64(s.SymbolSet)%100)
-	writeDigits(buf[6:7], uint64(s.Status)%10)
-	writeDigits(buf[7:8], uint64(s.HQTFD)%10)
-	writeDigits(buf[8:10], uint64(s.Amplifier)%100)
-	writeDigits(buf[10:16], uint64(s.Entity)%1000000)
-	writeDigits(buf[16:18], uint64(s.Modifier1)%100)
-	writeDigits(buf[18:20], uint64(s.Modifier2)%100)
-	return string(buf[:])
-}
-
-// writeDigits writes v zero-padded into b, least-significant digit last.
-func writeDigits(b []byte, v uint64) {
-	for i := len(b) - 1; i >= 0; i-- {
-		b[i] = '0' + byte(v%10)
-		v /= 10
+// Value returns the canonical 20-digit SIDC representation. It calls
+// Validate first; if Validate returns an error, Value returns that error
+// and the empty string. On success the result is guaranteed to be exactly
+// 20 ASCII digits.
+//
+// Use Value (not a String method, which doesn't exist) any time you want
+// the wire-format SIDC. The two-result signature exists so that callers
+// cannot accidentally ship an invalid SIDC.
+func (s SIDC) Value() (string, error) {
+	if err := s.Validate(); err != nil {
+		return "", err
 	}
+	return s.render(), nil
 }
 
-// Parse parses a 20-digit SIDC string into its component fields. The input
-// must be exactly 20 ASCII digits. Parse performs structural validation only;
-// it does not check that the entity exists in the symbol set, nor that the
-// symbol set is valid for the version. Use Validate for those checks.
+// MarshalText implements encoding.TextMarshaler. It calls Value, so encoding
+// a SIDC to JSON, XML, or any other text-based format will fail if the SIDC
+// is not valid. encoding/json and encoding/xml both honour this interface,
+// so no separate MarshalJSON is needed.
+func (s SIDC) MarshalText() ([]byte, error) {
+	v, err := s.Value()
+	if err != nil {
+		return nil, err
+	}
+	return []byte(v), nil
+}
+
+// UnmarshalText implements encoding.TextUnmarshaler. The input must be a
+// structurally valid SIDC (Parse). Callers that want stricter semantic
+// validation should call Validate on the result.
+func (s *SIDC) UnmarshalText(text []byte) error {
+	parsed, err := Parse(string(text))
+	if err != nil {
+		return err
+	}
+	*s = parsed
+	return nil
+}
+
+// render produces the canonical encoding without validating. It is the raw
+// rendering used by Value once validation has passed. Kept unexported so
+// that the only public path to a SIDC string forces validation.
+func (s SIDC) render() string {
+	return fmt.Sprintf(
+		"%02d%01d%01d%02d%01d%01d%02d%06d%02d%02d",
+		uint8(s.Version),
+		uint8(s.Context),
+		uint8(s.Affiliation),
+		uint8(s.SymbolSet),
+		uint8(s.Status),
+		uint8(s.HQTFD),
+		uint8(s.Amplifier),
+		uint32(s.Entity),
+		uint8(s.Modifier1),
+		uint8(s.Modifier2),
+	)
+}
+
+// Parse parses a 20-digit SIDC string into its component fields. It checks
+// the structure of the input — length, and that every byte is an ASCII digit —
+// but does not check that field values are meaningful. Call Validate on the
+// result to check that enum values are in range, that the entity is defined
+// for its symbol set, and so on.
 func Parse(s string) (sidc SIDC, err error) {
 	if len(s) != SIDCLength {
 		return SIDC{}, fmt.Errorf("%w: got %d", ErrInvalidLength, len(s))

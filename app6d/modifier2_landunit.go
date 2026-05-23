@@ -5,93 +5,270 @@ package app6d
 
 // Modifier 2 constants for symbol set 10 (Land unit).
 const (
-	Modifier2LandUnit_Disused                                      Modifier2 = 1  // {Disused}
-	Modifier2LandUnit_Arctic                                       Modifier2 = 2  // Arctic
-	Modifier2LandUnit_BattleDamageRepair                           Modifier2 = 3  // Battle Damage Repair
-	Modifier2LandUnit_Disused_04                                   Modifier2 = 4  // {Disused}
-	Modifier2LandUnit_CasualtyStaging                              Modifier2 = 5  // Casualty Staging
-	Modifier2LandUnit_Clearing                                     Modifier2 = 6  // Clearing
-	Modifier2LandUnit_Disused_07                                   Modifier2 = 7  // {Disused}
-	Modifier2LandUnit_Control                                      Modifier2 = 8  // Control
-	Modifier2LandUnit_Decontamination                              Modifier2 = 9  // Decontamination
-	Modifier2LandUnit_Demolition                                   Modifier2 = 10 // Demolition
-	Modifier2LandUnit_Dental                                       Modifier2 = 11 // Dental
-	Modifier2LandUnit_Digital                                      Modifier2 = 12 // Digital
-	Modifier2LandUnit_EnhancedPositionLocationReportingSystemEPLRS Modifier2 = 13 // Enhanced Position Location Reporting System (EPLRS)
-	Modifier2LandUnit_Equipment                                    Modifier2 = 14 // Equipment
-	Modifier2LandUnit_Disused_15                                   Modifier2 = 15 // {Disused}
-	Modifier2LandUnit_HighAltitude                                 Modifier2 = 16 // High Altitude
-	Modifier2LandUnit_Intermodal                                   Modifier2 = 17 // Intermodal
-	Modifier2LandUnit_IntensiveCare                                Modifier2 = 18 // Intensive Care
-	Modifier2LandUnit_Disused_19                                   Modifier2 = 19 // {Disused}
-	Modifier2LandUnit_Laboratory                                   Modifier2 = 20 // Laboratory
-	Modifier2LandUnit_Launcher                                     Modifier2 = 21 // Launcher
-	Modifier2LandUnit_Disused_22                                   Modifier2 = 22 // {Disused}
-	Modifier2LandUnit_LowAltitude                                  Modifier2 = 23 // Low Altitude
-	Modifier2LandUnit_Disused_24                                   Modifier2 = 24 // {Disused}
-	Modifier2LandUnit_MediumAltitude                               Modifier2 = 25 // Medium Altitude
-	Modifier2LandUnit_Disused_26                                   Modifier2 = 26 // {Disused}
-	Modifier2LandUnit_Disused_27                                   Modifier2 = 27 // {Disused}
-	Modifier2LandUnit_HighToMediumAltitude                         Modifier2 = 28 // High to Medium Altitude
-	Modifier2LandUnit_MultiChannel                                 Modifier2 = 29 // Multi–Channel
-	Modifier2LandUnit_OpticalFlash                                 Modifier2 = 30 // Optical (Flash)
-	Modifier2LandUnit_PackAnimal                                   Modifier2 = 31 // Pack Animal
-	Modifier2LandUnit_PatientEvacuationCoordination                Modifier2 = 32 // Patient Evacuation Coordination
-	Modifier2LandUnit_PreventiveMaintenance                        Modifier2 = 33 // Preventive Maintenance
-	Modifier2LandUnit_Psychological                                Modifier2 = 34 // Psychological
-	Modifier2LandUnit_RadioRelayLineOfSight                        Modifier2 = 35 // Radio Relay Line of Sight
-	Modifier2LandUnit_Disused_36                                   Modifier2 = 36 // {Disused}
-	Modifier2LandUnit_RecoveryUnmannedSystems                      Modifier2 = 37 // Recovery (Unmanned Systems)
-	Modifier2LandUnit_RecoveryMaintenance                          Modifier2 = 38 // Recovery (Maintenance)
-	Modifier2LandUnit_RescueCoordinationCenter                     Modifier2 = 39 // Rescue Coordination Center
-	Modifier2LandUnit_Riverine                                     Modifier2 = 40 // Riverine
-	Modifier2LandUnit_SingleChannel                                Modifier2 = 41 // Single Channel
-	Modifier2LandUnit_Disused_42                                   Modifier2 = 42 // {Disused}
-	Modifier2LandUnit_Disused_43                                   Modifier2 = 43 // {Disused}
-	Modifier2LandUnit_Strategic                                    Modifier2 = 44 // Strategic
-	Modifier2LandUnit_Support                                      Modifier2 = 45 // Support
-	Modifier2LandUnit_Tactical                                     Modifier2 = 46 // Tactical
-	Modifier2LandUnit_Towed                                        Modifier2 = 47 // Towed
-	Modifier2LandUnit_Troop                                        Modifier2 = 48 // Troop
-	Modifier2LandUnit_VerticalOrShortTakeOffAndLandingVTOLVSTOL    Modifier2 = 49 // Vertical or Short Take–Off and Landing (VTOL/VSTOL)
-	Modifier2LandUnit_Veterinary                                   Modifier2 = 50 // Veterinary
-	Modifier2LandUnit_Disused_51                                   Modifier2 = 51 // {Disused}
-	Modifier2LandUnit_HighToLowAltitude                            Modifier2 = 52 // High to Low Altitude
-	Modifier2LandUnit_MediumToLowAltitude                          Modifier2 = 53 // Medium to Low Altitude
-	Modifier2LandUnit_Attack                                       Modifier2 = 54 // Attack
-	Modifier2LandUnit_Refuel                                       Modifier2 = 55 // Refuel
-	Modifier2LandUnit_Utility                                      Modifier2 = 56 // Utility
-	Modifier2LandUnit_CombatSearchAndRescue                        Modifier2 = 57 // Combat Search and Rescue
-	Modifier2LandUnit_Guerilla                                     Modifier2 = 58 // Guerilla
-	Modifier2LandUnit_AirAssault                                   Modifier2 = 59 // Air Assault
-	Modifier2LandUnit_Amphibious                                   Modifier2 = 60 // Amphibious
-	Modifier2LandUnit_VeryHeavy                                    Modifier2 = 61 // Very Heavy
-	Modifier2LandUnit_Supply                                       Modifier2 = 62 // Supply
-	Modifier2LandUnit_Disused_63                                   Modifier2 = 63 // {Disused}
-	Modifier2LandUnit_NavyBargeSelfPropelled                       Modifier2 = 64 // Navy Barge, Self-Propelled
-	Modifier2LandUnit_NavyBargeNotSelfPropelled                    Modifier2 = 65 // Navy Barge, Not Self-Propelled
-	Modifier2LandUnit_Launch                                       Modifier2 = 66 // Launch
-	Modifier2LandUnit_LandingCraft                                 Modifier2 = 67 // Landing Craft
-	Modifier2LandUnit_LandingShip                                  Modifier2 = 68 // Landing Ship
-	Modifier2LandUnit_ServiceCraftYard                             Modifier2 = 69 // Service Craft/Yard
-	Modifier2LandUnit_TugHarbor                                    Modifier2 = 70 // Tug Harbor
-	Modifier2LandUnit_OceanGoingTugBoat                            Modifier2 = 71 // Ocean Going Tug Boat
-	Modifier2LandUnit_SurfaceDeploymentAndDistributionCommand      Modifier2 = 72 // Surface Deployment and Distribution Command
-	Modifier2LandUnit_NoncombatantGenericVessel                    Modifier2 = 73 // Noncombatant Generic Vessel
-	Modifier2LandUnit_Composite                                    Modifier2 = 74 // Composite
-	Modifier2LandUnit_Shelter                                      Modifier2 = 75 // Shelter
-	Modifier2LandUnit_Disused_76                                   Modifier2 = 76 // {Disused}
-	Modifier2LandUnit_Disused_77                                   Modifier2 = 77 // {Disused}
-	Modifier2LandUnit_Disused_78                                   Modifier2 = 78 // {Disused}
-	Modifier2LandUnit_Disused_79                                   Modifier2 = 79 // {Disused}
-	Modifier2LandUnit_Disused_80                                   Modifier2 = 80 // {Disused}
-	Modifier2LandUnit_Surgical                                     Modifier2 = 81 // Surgical
-	Modifier2LandUnit_Blood                                        Modifier2 = 82 // Blood
-	Modifier2LandUnit_CombatAndOperationalStressControl            Modifier2 = 83 // Combat and Operational Stress Control
-	Modifier2LandUnit_Jamming                                      Modifier2 = 84 // Jamming
-	Modifier2LandUnit_Disused_85                                   Modifier2 = 85 // {Disused}
-	Modifier2LandUnit_Optometry                                    Modifier2 = 86 // Optometry
-	Modifier2LandUnit_PreventiveMedicine                           Modifier2 = 87 // Preventive Medicine
-	Modifier2LandUnit_Disused_88                                   Modifier2 = 88 // {Disused}
-	Modifier2LandUnit_AirDefense                                   Modifier2 = 89 // Air Defense
+	// Modifier2LandUnit_Disused is {Disused}.
+	Modifier2LandUnit_Disused Modifier2 = 1
+
+	// Modifier2LandUnit_Arctic is Arctic.
+	Modifier2LandUnit_Arctic Modifier2 = 2
+
+	// Modifier2LandUnit_BattleDamageRepair is Battle Damage Repair.
+	Modifier2LandUnit_BattleDamageRepair Modifier2 = 3
+
+	// Modifier2LandUnit_Disused_04 is {Disused}.
+	Modifier2LandUnit_Disused_04 Modifier2 = 4
+
+	// Modifier2LandUnit_CasualtyStaging is Casualty Staging.
+	Modifier2LandUnit_CasualtyStaging Modifier2 = 5
+
+	// Modifier2LandUnit_Clearing is Clearing.
+	Modifier2LandUnit_Clearing Modifier2 = 6
+
+	// Modifier2LandUnit_Disused_07 is {Disused}.
+	Modifier2LandUnit_Disused_07 Modifier2 = 7
+
+	// Modifier2LandUnit_Control is Control.
+	Modifier2LandUnit_Control Modifier2 = 8
+
+	// Modifier2LandUnit_Decontamination is Decontamination.
+	Modifier2LandUnit_Decontamination Modifier2 = 9
+
+	// Modifier2LandUnit_Demolition is Demolition.
+	Modifier2LandUnit_Demolition Modifier2 = 10
+
+	// Modifier2LandUnit_Dental is Dental.
+	Modifier2LandUnit_Dental Modifier2 = 11
+
+	// Modifier2LandUnit_Digital is Digital.
+	Modifier2LandUnit_Digital Modifier2 = 12
+
+	// Modifier2LandUnit_EnhancedPositionLocationReportingSystemEPLRS is Enhanced Position Location Reporting System (EPLRS).
+	Modifier2LandUnit_EnhancedPositionLocationReportingSystemEPLRS Modifier2 = 13
+
+	// Modifier2LandUnit_Equipment is Equipment.
+	Modifier2LandUnit_Equipment Modifier2 = 14
+
+	// Modifier2LandUnit_Disused_15 is {Disused}.
+	Modifier2LandUnit_Disused_15 Modifier2 = 15
+
+	// Modifier2LandUnit_HighAltitude is High Altitude.
+	Modifier2LandUnit_HighAltitude Modifier2 = 16
+
+	// Modifier2LandUnit_Intermodal is Intermodal.
+	Modifier2LandUnit_Intermodal Modifier2 = 17
+
+	// Modifier2LandUnit_IntensiveCare is Intensive Care.
+	Modifier2LandUnit_IntensiveCare Modifier2 = 18
+
+	// Modifier2LandUnit_Disused_19 is {Disused}.
+	Modifier2LandUnit_Disused_19 Modifier2 = 19
+
+	// Modifier2LandUnit_Laboratory is Laboratory.
+	Modifier2LandUnit_Laboratory Modifier2 = 20
+
+	// Modifier2LandUnit_Launcher is Launcher.
+	Modifier2LandUnit_Launcher Modifier2 = 21
+
+	// Modifier2LandUnit_Disused_22 is {Disused}.
+	Modifier2LandUnit_Disused_22 Modifier2 = 22
+
+	// Modifier2LandUnit_LowAltitude is Low Altitude.
+	Modifier2LandUnit_LowAltitude Modifier2 = 23
+
+	// Modifier2LandUnit_Disused_24 is {Disused}.
+	Modifier2LandUnit_Disused_24 Modifier2 = 24
+
+	// Modifier2LandUnit_MediumAltitude is Medium Altitude.
+	Modifier2LandUnit_MediumAltitude Modifier2 = 25
+
+	// Modifier2LandUnit_Disused_26 is {Disused}.
+	Modifier2LandUnit_Disused_26 Modifier2 = 26
+
+	// Modifier2LandUnit_Disused_27 is {Disused}.
+	Modifier2LandUnit_Disused_27 Modifier2 = 27
+
+	// Modifier2LandUnit_HighToMediumAltitude is High to Medium Altitude.
+	Modifier2LandUnit_HighToMediumAltitude Modifier2 = 28
+
+	// Modifier2LandUnit_MultiChannel is Multi–Channel.
+	Modifier2LandUnit_MultiChannel Modifier2 = 29
+
+	// Modifier2LandUnit_OpticalFlash is Optical (Flash).
+	Modifier2LandUnit_OpticalFlash Modifier2 = 30
+
+	// Modifier2LandUnit_PackAnimal is Pack Animal.
+	Modifier2LandUnit_PackAnimal Modifier2 = 31
+
+	// Modifier2LandUnit_PatientEvacuationCoordination is Patient Evacuation Coordination.
+	Modifier2LandUnit_PatientEvacuationCoordination Modifier2 = 32
+
+	// Modifier2LandUnit_PreventiveMaintenance is Preventive Maintenance.
+	Modifier2LandUnit_PreventiveMaintenance Modifier2 = 33
+
+	// Modifier2LandUnit_Psychological is Psychological.
+	Modifier2LandUnit_Psychological Modifier2 = 34
+
+	// Modifier2LandUnit_RadioRelayLineOfSight is Radio Relay Line of Sight.
+	Modifier2LandUnit_RadioRelayLineOfSight Modifier2 = 35
+
+	// Modifier2LandUnit_Disused_36 is {Disused}.
+	Modifier2LandUnit_Disused_36 Modifier2 = 36
+
+	// Modifier2LandUnit_RecoveryUnmannedSystems is Recovery (Unmanned Systems).
+	Modifier2LandUnit_RecoveryUnmannedSystems Modifier2 = 37
+
+	// Modifier2LandUnit_RecoveryMaintenance is Recovery (Maintenance).
+	Modifier2LandUnit_RecoveryMaintenance Modifier2 = 38
+
+	// Modifier2LandUnit_RescueCoordinationCenter is Rescue Coordination Center.
+	Modifier2LandUnit_RescueCoordinationCenter Modifier2 = 39
+
+	// Modifier2LandUnit_Riverine is Riverine.
+	Modifier2LandUnit_Riverine Modifier2 = 40
+
+	// Modifier2LandUnit_SingleChannel is Single Channel.
+	Modifier2LandUnit_SingleChannel Modifier2 = 41
+
+	// Modifier2LandUnit_Disused_42 is {Disused}.
+	Modifier2LandUnit_Disused_42 Modifier2 = 42
+
+	// Modifier2LandUnit_Disused_43 is {Disused}.
+	Modifier2LandUnit_Disused_43 Modifier2 = 43
+
+	// Modifier2LandUnit_Strategic is Strategic.
+	Modifier2LandUnit_Strategic Modifier2 = 44
+
+	// Modifier2LandUnit_Support is Support.
+	Modifier2LandUnit_Support Modifier2 = 45
+
+	// Modifier2LandUnit_Tactical is Tactical.
+	Modifier2LandUnit_Tactical Modifier2 = 46
+
+	// Modifier2LandUnit_Towed is Towed.
+	Modifier2LandUnit_Towed Modifier2 = 47
+
+	// Modifier2LandUnit_Troop is Troop.
+	Modifier2LandUnit_Troop Modifier2 = 48
+
+	// Modifier2LandUnit_VerticalOrShortTakeOffAndLandingVTOLVSTOL is Vertical or Short Take–Off and Landing (VTOL/VSTOL).
+	Modifier2LandUnit_VerticalOrShortTakeOffAndLandingVTOLVSTOL Modifier2 = 49
+
+	// Modifier2LandUnit_Veterinary is Veterinary.
+	Modifier2LandUnit_Veterinary Modifier2 = 50
+
+	// Modifier2LandUnit_Disused_51 is {Disused}.
+	Modifier2LandUnit_Disused_51 Modifier2 = 51
+
+	// Modifier2LandUnit_HighToLowAltitude is High to Low Altitude.
+	Modifier2LandUnit_HighToLowAltitude Modifier2 = 52
+
+	// Modifier2LandUnit_MediumToLowAltitude is Medium to Low Altitude.
+	Modifier2LandUnit_MediumToLowAltitude Modifier2 = 53
+
+	// Modifier2LandUnit_Attack is Attack.
+	Modifier2LandUnit_Attack Modifier2 = 54
+
+	// Modifier2LandUnit_Refuel is Refuel.
+	Modifier2LandUnit_Refuel Modifier2 = 55
+
+	// Modifier2LandUnit_Utility is Utility.
+	Modifier2LandUnit_Utility Modifier2 = 56
+
+	// Modifier2LandUnit_CombatSearchAndRescue is Combat Search and Rescue.
+	Modifier2LandUnit_CombatSearchAndRescue Modifier2 = 57
+
+	// Modifier2LandUnit_Guerilla is Guerilla.
+	Modifier2LandUnit_Guerilla Modifier2 = 58
+
+	// Modifier2LandUnit_AirAssault is Air Assault.
+	Modifier2LandUnit_AirAssault Modifier2 = 59
+
+	// Modifier2LandUnit_Amphibious is Amphibious.
+	Modifier2LandUnit_Amphibious Modifier2 = 60
+
+	// Modifier2LandUnit_VeryHeavy is Very Heavy.
+	Modifier2LandUnit_VeryHeavy Modifier2 = 61
+
+	// Modifier2LandUnit_Supply is Supply.
+	Modifier2LandUnit_Supply Modifier2 = 62
+
+	// Modifier2LandUnit_Disused_63 is {Disused}.
+	Modifier2LandUnit_Disused_63 Modifier2 = 63
+
+	// Modifier2LandUnit_NavyBargeSelfPropelled is Navy Barge, Self-Propelled.
+	Modifier2LandUnit_NavyBargeSelfPropelled Modifier2 = 64
+
+	// Modifier2LandUnit_NavyBargeNotSelfPropelled is Navy Barge, Not Self-Propelled.
+	Modifier2LandUnit_NavyBargeNotSelfPropelled Modifier2 = 65
+
+	// Modifier2LandUnit_Launch is Launch.
+	Modifier2LandUnit_Launch Modifier2 = 66
+
+	// Modifier2LandUnit_LandingCraft is Landing Craft.
+	Modifier2LandUnit_LandingCraft Modifier2 = 67
+
+	// Modifier2LandUnit_LandingShip is Landing Ship.
+	Modifier2LandUnit_LandingShip Modifier2 = 68
+
+	// Modifier2LandUnit_ServiceCraftYard is Service Craft/Yard.
+	Modifier2LandUnit_ServiceCraftYard Modifier2 = 69
+
+	// Modifier2LandUnit_TugHarbor is Tug Harbor.
+	Modifier2LandUnit_TugHarbor Modifier2 = 70
+
+	// Modifier2LandUnit_OceanGoingTugBoat is Ocean Going Tug Boat.
+	Modifier2LandUnit_OceanGoingTugBoat Modifier2 = 71
+
+	// Modifier2LandUnit_SurfaceDeploymentAndDistributionCommand is Surface Deployment and Distribution Command.
+	Modifier2LandUnit_SurfaceDeploymentAndDistributionCommand Modifier2 = 72
+
+	// Modifier2LandUnit_NoncombatantGenericVessel is Noncombatant Generic Vessel.
+	Modifier2LandUnit_NoncombatantGenericVessel Modifier2 = 73
+
+	// Modifier2LandUnit_Composite is Composite.
+	Modifier2LandUnit_Composite Modifier2 = 74
+
+	// Modifier2LandUnit_Shelter is Shelter.
+	Modifier2LandUnit_Shelter Modifier2 = 75
+
+	// Modifier2LandUnit_Disused_76 is {Disused}.
+	Modifier2LandUnit_Disused_76 Modifier2 = 76
+
+	// Modifier2LandUnit_Disused_77 is {Disused}.
+	Modifier2LandUnit_Disused_77 Modifier2 = 77
+
+	// Modifier2LandUnit_Disused_78 is {Disused}.
+	Modifier2LandUnit_Disused_78 Modifier2 = 78
+
+	// Modifier2LandUnit_Disused_79 is {Disused}.
+	Modifier2LandUnit_Disused_79 Modifier2 = 79
+
+	// Modifier2LandUnit_Disused_80 is {Disused}.
+	Modifier2LandUnit_Disused_80 Modifier2 = 80
+
+	// Modifier2LandUnit_Surgical is Surgical.
+	Modifier2LandUnit_Surgical Modifier2 = 81
+
+	// Modifier2LandUnit_Blood is Blood.
+	Modifier2LandUnit_Blood Modifier2 = 82
+
+	// Modifier2LandUnit_CombatAndOperationalStressControl is Combat and Operational Stress Control.
+	Modifier2LandUnit_CombatAndOperationalStressControl Modifier2 = 83
+
+	// Modifier2LandUnit_Jamming is Jamming.
+	Modifier2LandUnit_Jamming Modifier2 = 84
+
+	// Modifier2LandUnit_Disused_85 is {Disused}.
+	Modifier2LandUnit_Disused_85 Modifier2 = 85
+
+	// Modifier2LandUnit_Optometry is Optometry.
+	Modifier2LandUnit_Optometry Modifier2 = 86
+
+	// Modifier2LandUnit_PreventiveMedicine is Preventive Medicine.
+	Modifier2LandUnit_PreventiveMedicine Modifier2 = 87
+
+	// Modifier2LandUnit_Disused_88 is {Disused}.
+	Modifier2LandUnit_Disused_88 Modifier2 = 88
+
+	// Modifier2LandUnit_AirDefense is Air Defense.
+	Modifier2LandUnit_AirDefense Modifier2 = 89
 )

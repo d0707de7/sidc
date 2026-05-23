@@ -5,218 +5,645 @@ package app6d
 
 // Entity constants for symbol set 10 (Land unit).
 const (
-	EntityLandUnit_CommandAndControl                                                                                                 Entity = 110000 // Command and Control
-	EntityLandUnit_CommandAndControlBroadcastTransmitterAntennae                                                                     Entity = 110100 // Command and Control / Broadcast Transmitter Antennae
-	EntityLandUnit_CommandAndControlCivilAffairs                                                                                     Entity = 110200 // Command and Control / Civil Affairs
-	EntityLandUnit_CommandAndControlCivilMilitaryCooperation                                                                         Entity = 110300 // Command and Control / Civil–Military Cooperation
-	EntityLandUnit_CommandAndControlInformationOperations                                                                            Entity = 110400 // Command and Control / Information Operations
-	EntityLandUnit_CommandAndControlLiaison                                                                                          Entity = 110500 // Command and Control / Liaison
-	EntityLandUnit_CommandAndControlLiaisonReconnaissanceAndLiaisonElement                                                           Entity = 110501 // Command and Control / Liaison / Reconnaissance and Liaison Element
-	EntityLandUnit_CommandAndControlMilitaryInformationSupportOperationsMISO                                                         Entity = 110600 // Command and Control / Military Information Support Operations (MISO)
-	EntityLandUnit_CommandAndControlMilitaryInformationSupportOperationsMISOBroadcastTransmitterAntennae                             Entity = 110601 // Command and Control / Military Information Support Operations (MISO) / Broadcast Transmitter Antennae
-	EntityLandUnit_CommandAndControlRadio                                                                                            Entity = 110700 // Command and Control / Radio
-	EntityLandUnit_CommandAndControlRadioRelay                                                                                       Entity = 110800 // Command and Control / Radio Relay
-	EntityLandUnit_CommandAndControlRadioTeletypeCenter                                                                              Entity = 110900 // Command and Control / Radio Teletype Center
-	EntityLandUnit_CommandAndControlSignal                                                                                           Entity = 111000 // Command and Control / Signal
-	EntityLandUnit_CommandAndControlSignalRadio                                                                                      Entity = 111001 // Command and Control / Signal / Radio
-	EntityLandUnit_CommandAndControlSignalRadioRelay                                                                                 Entity = 111002 // Command and Control / Signal / Radio Relay
-	EntityLandUnit_CommandAndControlSignalTeletype                                                                                   Entity = 111003 // Command and Control / Signal / Teletype
-	EntityLandUnit_CommandAndControlSignalDisused                                                                                    Entity = 111004 // Command and Control / Signal / {Disused}
-	EntityLandUnit_CommandAndControlSignalVideoImageryCombatCamera                                                                   Entity = 111005 // Command and Control / Signal / Video Imagery (Combat Camera)
-	EntityLandUnit_CommandAndControlDisused                                                                                          Entity = 111100 // Command and Control / {Disused}
-	EntityLandUnit_CommandAndControlVideoImageryCombatCamera                                                                         Entity = 111200 // Command and Control / Video Imagery (Combat Camera)
-	EntityLandUnit_CommandAndControlSpace                                                                                            Entity = 111300 // Command and Control / Space
-	EntityLandUnit_CommandAndControlSpecialTroops                                                                                    Entity = 111400 // Command and Control / Special Troops
-	EntityLandUnit_CommandAndControlMultiDomainOperations                                                                            Entity = 111500 // Command and Control / Multi-Domain Operations
-	EntityLandUnit_MovementAndManeuver                                                                                               Entity = 120000 // Movement and Maneuver
-	EntityLandUnit_MovementAndManeuverAirAssaultWithOrganicLift                                                                      Entity = 120100 // Movement and Maneuver / Air Assault with Organic Lift
-	EntityLandUnit_MovementAndManeuverAirTrafficServicesAirfieldOperations                                                           Entity = 120200 // Movement and Maneuver / Air Traffic Services/Airfield Operations
-	EntityLandUnit_MovementAndManeuverDisused                                                                                        Entity = 120300 // Movement and Maneuver / {Disused}
-	EntityLandUnit_MovementAndManeuverAntitankAntiarmor                                                                              Entity = 120400 // Movement and Maneuver / Antitank/Antiarmor
-	EntityLandUnit_MovementAndManeuverAntitankAntiarmorArmored                                                                       Entity = 120401 // Movement and Maneuver / Antitank/Antiarmor / Armored
-	EntityLandUnit_MovementAndManeuverAntitankAntiarmorMotorized                                                                     Entity = 120402 // Movement and Maneuver / Antitank/Antiarmor / Motorized
-	EntityLandUnit_MovementAndManeuverArmorMechanized                                                                                Entity = 120500 // Movement and Maneuver / Armor /Mechanized
-	EntityLandUnit_MovementAndManeuverArmorMechanizedReconnaissanceCavalryScout                                                      Entity = 120501 // Movement and Maneuver / Armor /Mechanized / Reconnaissance/Cavalry/Scout
-	EntityLandUnit_MovementAndManeuverArmorMechanizedAmphibious                                                                      Entity = 120502 // Movement and Maneuver / Armor /Mechanized / Amphibious
-	EntityLandUnit_MovementAndManeuverArmyAviationAviationRotaryWing                                                                 Entity = 120600 // Movement and Maneuver / Army Aviation/Aviation Rotary Wing
-	EntityLandUnit_MovementAndManeuverArmyAviationAviationRotaryWingReconnaissance                                                   Entity = 120601 // Movement and Maneuver / Army Aviation/Aviation Rotary Wing / Reconnaissance
-	EntityLandUnit_MovementAndManeuverAviationComposite                                                                              Entity = 120700 // Movement and Maneuver / Aviation Composite
-	EntityLandUnit_MovementAndManeuverAviationFixedWing                                                                              Entity = 120800 // Movement and Maneuver / Aviation Fixed Wing
-	EntityLandUnit_MovementAndManeuverAviationFixedWingReconnaissance                                                                Entity = 120801 // Movement and Maneuver / Aviation Fixed Wing / Reconnaissance
-	EntityLandUnit_MovementAndManeuverCombat                                                                                         Entity = 120900 // Movement and Maneuver / Combat
-	EntityLandUnit_MovementAndManeuverCombinedArms                                                                                   Entity = 121000 // Movement and Maneuver / Combined Arms
-	EntityLandUnit_MovementAndManeuverInfantry                                                                                       Entity = 121100 // Movement and Maneuver / Infantry
-	EntityLandUnit_MovementAndManeuverInfantryAmphibious                                                                             Entity = 121101 // Movement and Maneuver / Infantry / Amphibious
-	EntityLandUnit_MovementAndManeuverInfantryArmoredMechanizedTracked                                                               Entity = 121102 // Movement and Maneuver / Infantry / Armored/Mechanized/Tracked
-	EntityLandUnit_MovementAndManeuverInfantryMainGunSystem                                                                          Entity = 121103 // Movement and Maneuver / Infantry / Main Gun System
-	EntityLandUnit_MovementAndManeuverInfantryMotorized                                                                              Entity = 121104 // Movement and Maneuver / Infantry / Motorized
-	EntityLandUnit_MovementAndManeuverInfantryInfantryFightingVehicle                                                                Entity = 121105 // Movement and Maneuver / Infantry / Infantry Fighting Vehicle
-	EntityLandUnit_MovementAndManeuverInfantryMobileGunSystem                                                                        Entity = 121106 // Movement and Maneuver / Infantry / Mobile Gun System
-	EntityLandUnit_MovementAndManeuverObserver                                                                                       Entity = 121200 // Movement and Maneuver / Observer
-	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScout                                                                     Entity = 121300 // Movement and Maneuver / Reconnaissance/Cavalry/Scout
-	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutReconnaissanceAndSurveillance                                        Entity = 121301 // Movement and Maneuver / Reconnaissance/Cavalry/Scout / Reconnaissance and Surveillance
-	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutMarine                                                               Entity = 121302 // Movement and Maneuver / Reconnaissance/Cavalry/Scout / Marine
-	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutMotorized                                                            Entity = 121303 // Movement and Maneuver / Reconnaissance/Cavalry/Scout / Motorized
-	EntityLandUnit_MovementAndManeuverSeaAirLandSEAL                                                                                 Entity = 121400 // Movement and Maneuver / Sea Air Land (SEAL)
-	EntityLandUnit_MovementAndManeuverSniper                                                                                         Entity = 121500 // Movement and Maneuver / Sniper
-	EntityLandUnit_MovementAndManeuverSurveillance                                                                                   Entity = 121600 // Movement and Maneuver / Surveillance
-	EntityLandUnit_MovementAndManeuverSpecialForces                                                                                  Entity = 121700 // Movement and Maneuver / Special Forces
-	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOF                                                                     Entity = 121800 // Movement and Maneuver / Special Operations Forces (SOF)
-	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFFixedWingMISO                                                        Entity = 121801 // Movement and Maneuver / Special Operations Forces (SOF) / Fixed Wing MISO
-	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFGround                                                               Entity = 121802 // Movement and Maneuver / Special Operations Forces (SOF) / Ground
-	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFDisused                                                              Entity = 121803 // Movement and Maneuver / Special Operations Forces (SOF) / {Disused}
-	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFDisused_121804                                                       Entity = 121804 // Movement and Maneuver / Special Operations Forces (SOF) / {Disused}
-	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFUnderwaterDemolition                                                 Entity = 121805 // Movement and Maneuver / Special Operations Forces (SOF) / Underwater Demolition
-	EntityLandUnit_MovementAndManeuverUnmannedAerialSystems                                                                          Entity = 121900 // Movement and Maneuver / Unmanned Aerial Systems
-	EntityLandUnit_MovementAndManeuverRanger                                                                                         Entity = 122000 // Movement and Maneuver / Ranger
-	EntityLandUnit_Fires                                                                                                             Entity = 130000 // Fires
-	EntityLandUnit_FiresAirDefense                                                                                                   Entity = 130100 // Fires / Air Defense
-	EntityLandUnit_FiresAirDefenseMainGunSystem                                                                                      Entity = 130101 // Fires / Air Defense / Main Gun System
-	EntityLandUnit_FiresAirDefenseMissile                                                                                            Entity = 130102 // Fires / Air Defense / Missile
-	EntityLandUnit_FiresAirDefenseAirAndMissileDefense                                                                               Entity = 130103 // Fires / Air Defense / Air and Missile Defense
-	EntityLandUnit_FiresAirLandNavalGunfireLiaison                                                                                   Entity = 130200 // Fires / Air/Land Naval Gunfire Liaison
-	EntityLandUnit_FiresFieldArtillery                                                                                               Entity = 130300 // Fires / Field Artillery
-	EntityLandUnit_FiresFieldArtilleryObserver                                                                                       Entity = 130400 // Fires / Field Artillery Observer
-	EntityLandUnit_FiresJointFireSupport                                                                                             Entity = 130500 // Fires / Joint Fire Support
-	EntityLandUnit_FiresMeteorological                                                                                               Entity = 130600 // Fires / Meteorological
-	EntityLandUnit_FiresMissile                                                                                                      Entity = 130700 // Fires / Missile
-	EntityLandUnit_FiresMortar                                                                                                       Entity = 130800 // Fires / Mortar
-	EntityLandUnit_FiresMortarDisused                                                                                                Entity = 130801 // Fires / Mortar / {Disused}
-	EntityLandUnit_FiresMortarSelfPropelledWheeled                                                                                   Entity = 130802 // Fires / Mortar / Self-Propelled Wheeled
-	EntityLandUnit_FiresSurvey                                                                                                       Entity = 130900 // Fires / Survey
-	EntityLandUnit_Protection                                                                                                        Entity = 140000 // Protection
-	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefense                                                            Entity = 140100 // Protection / Chemical Biological Radiological Nuclear Defense
-	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseDisused                                                     Entity = 140101 // Protection / Chemical Biological Radiological Nuclear Defense / {Disused}
-	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseMotorized                                                   Entity = 140102 // Protection / Chemical Biological Radiological Nuclear Defense / Motorized
-	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseReconnaissance                                              Entity = 140103 // Protection / Chemical Biological Radiological Nuclear Defense / Reconnaissance
-	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseDisused_140104                                              Entity = 140104 // Protection / Chemical Biological Radiological Nuclear Defense / {Disused}
-	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseReconnaissanceEquipped                                      Entity = 140105 // Protection / Chemical Biological Radiological Nuclear Defense / Reconnaissance Equipped
-	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseChemicalBiologicalRadiologicalNuclearAndHighYieldExplosives Entity = 140106 // Protection / Chemical Biological Radiological Nuclear Defense / Chemical, Biological, Radiological, Nuclear, and High-Yield Explosives
-	EntityLandUnit_ProtectionCombatSupportManeuverEnhancement                                                                        Entity = 140200 // Protection / Combat Support (Maneuver Enhancement)
-	EntityLandUnit_ProtectionCriminalInvestigationDivision                                                                           Entity = 140300 // Protection / Criminal Investigation Division
-	EntityLandUnit_ProtectionDiving                                                                                                  Entity = 140400 // Protection / Diving
-	EntityLandUnit_ProtectionDog                                                                                                     Entity = 140500 // Protection / Dog
-	EntityLandUnit_ProtectionDrilling                                                                                                Entity = 140600 // Protection / Drilling
-	EntityLandUnit_ProtectionEngineer                                                                                                Entity = 140700 // Protection / Engineer
-	EntityLandUnit_ProtectionEngineerMechanized                                                                                      Entity = 140701 // Protection / Engineer / Mechanized
-	EntityLandUnit_ProtectionEngineerMotorized                                                                                       Entity = 140702 // Protection / Engineer / Motorized
-	EntityLandUnit_ProtectionEngineerReconnaissance                                                                                  Entity = 140703 // Protection / Engineer / Reconnaissance
-	EntityLandUnit_ProtectionExplosiveOrdnanceDisposalEOD                                                                            Entity = 140800 // Protection / Explosive Ordnance Disposal (EOD)
-	EntityLandUnit_ProtectionFieldCampConstruction                                                                                   Entity = 140900 // Protection / Field Camp Construction
-	EntityLandUnit_ProtectionFireFightingFireProtection                                                                              Entity = 141000 // Protection / Fire Fighting/Fire Protection
-	EntityLandUnit_ProtectionGeospatialSupportGeospatialInformationSupport                                                           Entity = 141100 // Protection / Geospatial Support/Geospatial Information Support
-	EntityLandUnit_ProtectionMilitaryPolice                                                                                          Entity = 141200 // Protection / Military Police
-	EntityLandUnit_ProtectionMine                                                                                                    Entity = 141300 // Protection / Mine
-	EntityLandUnit_ProtectionMineClearing                                                                                            Entity = 141400 // Protection / Mine Clearing
-	EntityLandUnit_ProtectionMineLaunching                                                                                           Entity = 141500 // Protection / Mine Launching
-	EntityLandUnit_ProtectionMineLaying                                                                                              Entity = 141600 // Protection / Mine Laying
-	EntityLandUnit_ProtectionSecurity                                                                                                Entity = 141700 // Protection / Security
-	EntityLandUnit_ProtectionSecurityDisused                                                                                         Entity = 141701 // Protection / Security / {Disused}
-	EntityLandUnit_ProtectionSecurityMotorized                                                                                       Entity = 141702 // Protection / Security / Motorized
-	EntityLandUnit_ProtectionSearchAndRescue                                                                                         Entity = 141800 // Protection / Search and Rescue
-	EntityLandUnit_ProtectionSearchAndRescueIsolatedPersonnel                                                                        Entity = 141801 // Protection / Search and Rescue / Isolated Personnel
-	EntityLandUnit_ProtectionDisused                                                                                                 Entity = 141900 // Protection / {Disused}
-	EntityLandUnit_ProtectionShorePatrolSecurityPolice                                                                               Entity = 142000 // Protection / Shore Patrol/Security Police
-	EntityLandUnit_ProtectionTopographicGeospatial                                                                                   Entity = 142100 // Protection / Topographic/Geospatial
-	EntityLandUnit_ProtectionMissileDefense                                                                                          Entity = 142200 // Protection / Missile Defense
-	EntityLandUnit_Intelligence                                                                                                      Entity = 150000 // Intelligence
-	EntityLandUnit_IntelligenceAnalysis                                                                                              Entity = 150100 // Intelligence / Analysis
-	EntityLandUnit_IntelligenceCounterintelligence                                                                                   Entity = 150200 // Intelligence / Counterintelligence
-	EntityLandUnit_IntelligenceDirectionFinding                                                                                      Entity = 150300 // Intelligence / Direction Finding
-	EntityLandUnit_IntelligenceElectronicRanging                                                                                     Entity = 150400 // Intelligence / Electronic Ranging
-	EntityLandUnit_IntelligenceElectronicWarfare                                                                                     Entity = 150500 // Intelligence / Electronic Warfare
-	EntityLandUnit_IntelligenceElectronicWarfareAnalysis                                                                             Entity = 150501 // Intelligence / Electronic Warfare / Analysis
-	EntityLandUnit_IntelligenceElectronicWarfareDirectionFinding                                                                     Entity = 150502 // Intelligence / Electronic Warfare / Direction Finding
-	EntityLandUnit_IntelligenceElectronicWarfareIntercept                                                                            Entity = 150503 // Intelligence / Electronic Warfare / Intercept
-	EntityLandUnit_IntelligenceElectronicWarfareJamming                                                                              Entity = 150504 // Intelligence / Electronic Warfare / Jamming
-	EntityLandUnit_IntelligenceElectronicWarfareSearch                                                                               Entity = 150505 // Intelligence / Electronic Warfare / Search
-	EntityLandUnit_IntelligenceInterceptSearchAndRecording                                                                           Entity = 150600 // Intelligence / Intercept (Search and Recording)
-	EntityLandUnit_IntelligenceInterrogation                                                                                         Entity = 150700 // Intelligence / Interrogation
-	EntityLandUnit_IntelligenceJamming                                                                                               Entity = 150800 // Intelligence / Jamming
-	EntityLandUnit_IntelligenceJointIntelligenceCenter                                                                               Entity = 150900 // Intelligence / Joint Intelligence Center
-	EntityLandUnit_IntelligenceMilitaryIntelligence                                                                                  Entity = 151000 // Intelligence / Military Intelligence
-	EntityLandUnit_IntelligenceSearch                                                                                                Entity = 151100 // Intelligence / Search
-	EntityLandUnit_IntelligenceSensor                                                                                                Entity = 151200 // Intelligence / Sensor
-	EntityLandUnit_IntelligenceMilitaryHistory                                                                                       Entity = 151300 // Intelligence / Military History
-	EntityLandUnit_Sustainment                                                                                                       Entity = 160000 // Sustainment
-	EntityLandUnit_SustainmentAdministrative                                                                                         Entity = 160100 // Sustainment / Administrative
-	EntityLandUnit_SustainmentAllClassesOfSupply                                                                                     Entity = 160200 // Sustainment / All Classes of Supply
-	EntityLandUnit_SustainmentDisused                                                                                                Entity = 160300 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentAmmunition                                                                                             Entity = 160400 // Sustainment / Ammunition
-	EntityLandUnit_SustainmentBand                                                                                                   Entity = 160500 // Sustainment / Band
-	EntityLandUnit_SustainmentBandArmyMusic                                                                                          Entity = 160501 // Sustainment / Band / Army Music
-	EntityLandUnit_SustainmentCombatServiceSupport                                                                                   Entity = 160600 // Sustainment / Combat Service Support
-	EntityLandUnit_SustainmentFinance                                                                                                Entity = 160700 // Sustainment / Finance
-	EntityLandUnit_SustainmentJudgeAdvocateGeneral                                                                                   Entity = 160800 // Sustainment / Judge Advocate General
-	EntityLandUnit_SustainmentLabor                                                                                                  Entity = 160900 // Sustainment / Labor
-	EntityLandUnit_SustainmentLaundryBath                                                                                            Entity = 161000 // Sustainment / Laundry/Bath
-	EntityLandUnit_SustainmentMaintenance                                                                                            Entity = 161100 // Sustainment / Maintenance
-	EntityLandUnit_SustainmentMaterial                                                                                               Entity = 161200 // Sustainment / Material
-	EntityLandUnit_SustainmentMedical                                                                                                Entity = 161300 // Sustainment / Medical
-	EntityLandUnit_SustainmentMedicalTreatmentFacility                                                                               Entity = 161400 // Sustainment / Medical Treatment Facility
-	EntityLandUnit_SustainmentMoraleWelfareAndRecreation                                                                             Entity = 161500 // Sustainment / Morale, Welfare and Recreation
-	EntityLandUnit_SustainmentMortuaryAffairs                                                                                        Entity = 161600 // Sustainment / Mortuary Affairs
-	EntityLandUnit_SustainmentMultipleClassesOfSupply                                                                                Entity = 161700 // Sustainment / Multiple Classes of Supply
-	EntityLandUnit_SustainmentNATOSupplyClassI                                                                                       Entity = 161800 // Sustainment / NATO Supply Class I
-	EntityLandUnit_SustainmentNATOSupplyClassII                                                                                      Entity = 161900 // Sustainment / NATO Supply Class II
-	EntityLandUnit_SustainmentNATOSupplyClassIII                                                                                     Entity = 162000 // Sustainment / NATO Supply Class III
-	EntityLandUnit_SustainmentNATOSupplyClassIV                                                                                      Entity = 162100 // Sustainment / NATO Supply Class IV
-	EntityLandUnit_SustainmentNATOSupplyClassV                                                                                       Entity = 162200 // Sustainment / NATO Supply Class V
-	EntityLandUnit_SustainmentOrdnance                                                                                               Entity = 162300 // Sustainment / Ordnance
-	EntityLandUnit_SustainmentPersonnelServices                                                                                      Entity = 162400 // Sustainment / Personnel Services
-	EntityLandUnit_SustainmentPetroleumOilAndLubricants                                                                              Entity = 162500 // Sustainment / Petroleum, Oil and Lubricants
-	EntityLandUnit_SustainmentDisused_162600                                                                                         Entity = 162600 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentDisused_162700                                                                                         Entity = 162700 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentPublicAffairsPublicInformation                                                                         Entity = 162800 // Sustainment / Public Affairs/Public Information
-	EntityLandUnit_SustainmentQuartermaster                                                                                          Entity = 162900 // Sustainment / Quartermaster
-	EntityLandUnit_SustainmentDisused_163000                                                                                         Entity = 163000 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentReligiousSupport                                                                                       Entity = 163100 // Sustainment / Religious Support
-	EntityLandUnit_SustainmentReplacementHoldingUnit                                                                                 Entity = 163200 // Sustainment / Replacement Holding Unit
-	EntityLandUnit_SustainmentDisused_163300                                                                                         Entity = 163300 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentDisused_163400                                                                                         Entity = 163400 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentJointInformationBureauJIB                                                                              Entity = 163500 // Sustainment / Joint Information Bureau (JIB)
-	EntityLandUnit_SustainmentTransportation                                                                                         Entity = 163600 // Sustainment / Transportation
-	EntityLandUnit_SustainmentUSSupplyClassI                                                                                         Entity = 163700 // Sustainment / US Supply Class I
-	EntityLandUnit_SustainmentDisused_163800                                                                                         Entity = 163800 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentDisused_163900                                                                                         Entity = 163900 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentUSSupplyClassIV                                                                                        Entity = 164000 // Sustainment / US Supply Class IV
-	EntityLandUnit_SustainmentDisused_164100                                                                                         Entity = 164100 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentUSSupplyClassVI                                                                                        Entity = 164200 // Sustainment / US Supply Class VI
-	EntityLandUnit_SustainmentUSSupplyClassVII                                                                                       Entity = 164300 // Sustainment / US Supply Class VII
-	EntityLandUnit_SustainmentUSSupplyClassVIII                                                                                      Entity = 164400 // Sustainment / US Supply Class VIII
-	EntityLandUnit_SustainmentUSSupplyClassIX                                                                                        Entity = 164500 // Sustainment / US Supply Class IX
-	EntityLandUnit_SustainmentUSSupplyClassX                                                                                         Entity = 164600 // Sustainment / US Supply Class X
-	EntityLandUnit_SustainmentDisused_164700                                                                                         Entity = 164700 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentWaterPurification                                                                                      Entity = 164800 // Sustainment / Water Purification
-	EntityLandUnit_SustainmentBroadcast                                                                                              Entity = 164900 // Sustainment / Broadcast
-	EntityLandUnit_SustainmentDisused_165000                                                                                         Entity = 165000 // Sustainment / {Disused}
-	EntityLandUnit_SustainmentInterpreterTranslator                                                                                  Entity = 165100 // Sustainment / Interpreter/Translator
-	EntityLandUnit_SustainmentSupport                                                                                                Entity = 165200 // Sustainment / Support
-	EntityLandUnit_SustainmentArmyFieldSupport                                                                                       Entity = 165300 // Sustainment / Army Field Support
-	EntityLandUnit_SustainmentContractingServices                                                                                    Entity = 165400 // Sustainment / Contracting Services
-	EntityLandUnit_SustainmentParachuteRigger                                                                                        Entity = 165500 // Sustainment / Parachute Rigger
-	EntityLandUnit_SustainmentHumanResources                                                                                         Entity = 165600 // Sustainment / Human Resources
-	EntityLandUnit_Naval                                                                                                             Entity = 170000 // Naval
-	EntityLandUnit_NavalNaval                                                                                                        Entity = 170100 // Naval / Naval
-	EntityLandUnit_NamedHeadquarters                                                                                                 Entity = 180000 // Named Headquarters
-	EntityLandUnit_NamedHeadquartersAlliedCommandEuropeRapidReactionCorpsARRC                                                        Entity = 180100 // Named Headquarters / Allied Command Europe Rapid Reaction Corps (ARRC)
-	EntityLandUnit_NamedHeadquartersAlliedCommandOperations                                                                          Entity = 180200 // Named Headquarters / Allied Command Operations
-	EntityLandUnit_NamedHeadquartersInternationalSecurityAssistanceForceISAF                                                         Entity = 180300 // Named Headquarters / International Security Assistance Force (ISAF)
-	EntityLandUnit_NamedHeadquartersMultinationalMN                                                                                  Entity = 180400 // Named Headquarters / Multinational (MN)
-	EntityLandUnit_EmergencyOperation                                                                                                Entity = 190000 // Emergency Operation
-	EntityLandUnit_LawEnforcement                                                                                                    Entity = 200000 // Law Enforcement
-	EntityLandUnit_LawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice                                   Entity = 200100 // Law Enforcement / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice)
-	EntityLandUnit_LawEnforcementBorderPatrol                                                                                        Entity = 200200 // Law Enforcement / Border Patrol
-	EntityLandUnit_LawEnforcementCustomsService                                                                                      Entity = 200300 // Law Enforcement / Customs Service
-	EntityLandUnit_LawEnforcementDrugEnforcementAdministrationDEA                                                                    Entity = 200400 // Law Enforcement / Drug Enforcement Administration (DEA)
-	EntityLandUnit_LawEnforcementDepartmentOfJusticeDOJ                                                                              Entity = 200500 // Law Enforcement / Department of Justice (DOJ)
-	EntityLandUnit_LawEnforcementFederalBureauOfInvestigationFBI                                                                     Entity = 200600 // Law Enforcement / Federal Bureau of Investigation (FBI)
-	EntityLandUnit_LawEnforcementPolice                                                                                              Entity = 200700 // Law Enforcement / Police
-	EntityLandUnit_LawEnforcementPrison                                                                                              Entity = 200800 // Law Enforcement / Prison
-	EntityLandUnit_LawEnforcementUnitedStatesSecretServiceTreasUSSS                                                                  Entity = 200900 // Law Enforcement / United States Secret Service (Treas) (USSS)
-	EntityLandUnit_LawEnforcementTransportationSecurityAdministrationTSA                                                             Entity = 201000 // Law Enforcement / Transportation Security Administration (TSA)
-	EntityLandUnit_LawEnforcementCoastGuard                                                                                          Entity = 201100 // Law Enforcement / Coast Guard
-	EntityLandUnit_LawEnforcementUSMarshalsService                                                                                   Entity = 201200 // Law Enforcement / US Marshals Service
-	EntityLandUnit_LawEnforcementInternalSecurityForce                                                                               Entity = 201300 // Law Enforcement / Internal Security Force
-	EntityLandUnit_Cyber                                                                                                             Entity = 210000 // Cyber
+	// EntityLandUnit_CommandAndControl is Command and Control.
+	EntityLandUnit_CommandAndControl Entity = 110000
+
+	// EntityLandUnit_CommandAndControlBroadcastTransmitterAntennae is Command and Control / Broadcast Transmitter Antennae.
+	EntityLandUnit_CommandAndControlBroadcastTransmitterAntennae Entity = 110100
+
+	// EntityLandUnit_CommandAndControlCivilAffairs is Command and Control / Civil Affairs.
+	EntityLandUnit_CommandAndControlCivilAffairs Entity = 110200
+
+	// EntityLandUnit_CommandAndControlCivilMilitaryCooperation is Command and Control / Civil–Military Cooperation.
+	EntityLandUnit_CommandAndControlCivilMilitaryCooperation Entity = 110300
+
+	// EntityLandUnit_CommandAndControlInformationOperations is Command and Control / Information Operations.
+	EntityLandUnit_CommandAndControlInformationOperations Entity = 110400
+
+	// EntityLandUnit_CommandAndControlLiaison is Command and Control / Liaison.
+	EntityLandUnit_CommandAndControlLiaison Entity = 110500
+
+	// EntityLandUnit_CommandAndControlLiaisonReconnaissanceAndLiaisonElement is Command and Control / Liaison / Reconnaissance and Liaison Element.
+	EntityLandUnit_CommandAndControlLiaisonReconnaissanceAndLiaisonElement Entity = 110501
+
+	// EntityLandUnit_CommandAndControlMilitaryInformationSupportOperationsMISO is Command and Control / Military Information Support Operations (MISO).
+	EntityLandUnit_CommandAndControlMilitaryInformationSupportOperationsMISO Entity = 110600
+
+	// EntityLandUnit_CommandAndControlMilitaryInformationSupportOperationsMISOBroadcastTransmitterAntennae is Command and Control / Military Information Support Operations (MISO) / Broadcast Transmitter Antennae.
+	EntityLandUnit_CommandAndControlMilitaryInformationSupportOperationsMISOBroadcastTransmitterAntennae Entity = 110601
+
+	// EntityLandUnit_CommandAndControlRadio is Command and Control / Radio.
+	EntityLandUnit_CommandAndControlRadio Entity = 110700
+
+	// EntityLandUnit_CommandAndControlRadioRelay is Command and Control / Radio Relay.
+	EntityLandUnit_CommandAndControlRadioRelay Entity = 110800
+
+	// EntityLandUnit_CommandAndControlRadioTeletypeCenter is Command and Control / Radio Teletype Center.
+	EntityLandUnit_CommandAndControlRadioTeletypeCenter Entity = 110900
+
+	// EntityLandUnit_CommandAndControlSignal is Command and Control / Signal.
+	EntityLandUnit_CommandAndControlSignal Entity = 111000
+
+	// EntityLandUnit_CommandAndControlSignalRadio is Command and Control / Signal / Radio.
+	EntityLandUnit_CommandAndControlSignalRadio Entity = 111001
+
+	// EntityLandUnit_CommandAndControlSignalRadioRelay is Command and Control / Signal / Radio Relay.
+	EntityLandUnit_CommandAndControlSignalRadioRelay Entity = 111002
+
+	// EntityLandUnit_CommandAndControlSignalTeletype is Command and Control / Signal / Teletype.
+	EntityLandUnit_CommandAndControlSignalTeletype Entity = 111003
+
+	// EntityLandUnit_CommandAndControlSignalDisused is Command and Control / Signal / {Disused}.
+	EntityLandUnit_CommandAndControlSignalDisused Entity = 111004
+
+	// EntityLandUnit_CommandAndControlSignalVideoImageryCombatCamera is Command and Control / Signal / Video Imagery (Combat Camera).
+	EntityLandUnit_CommandAndControlSignalVideoImageryCombatCamera Entity = 111005
+
+	// EntityLandUnit_CommandAndControlDisused is Command and Control / {Disused}.
+	EntityLandUnit_CommandAndControlDisused Entity = 111100
+
+	// EntityLandUnit_CommandAndControlVideoImageryCombatCamera is Command and Control / Video Imagery (Combat Camera).
+	EntityLandUnit_CommandAndControlVideoImageryCombatCamera Entity = 111200
+
+	// EntityLandUnit_CommandAndControlSpace is Command and Control / Space.
+	EntityLandUnit_CommandAndControlSpace Entity = 111300
+
+	// EntityLandUnit_CommandAndControlSpecialTroops is Command and Control / Special Troops.
+	EntityLandUnit_CommandAndControlSpecialTroops Entity = 111400
+
+	// EntityLandUnit_CommandAndControlMultiDomainOperations is Command and Control / Multi-Domain Operations.
+	EntityLandUnit_CommandAndControlMultiDomainOperations Entity = 111500
+
+	// EntityLandUnit_MovementAndManeuver is Movement and Maneuver.
+	EntityLandUnit_MovementAndManeuver Entity = 120000
+
+	// EntityLandUnit_MovementAndManeuverAirAssaultWithOrganicLift is Movement and Maneuver / Air Assault with Organic Lift.
+	EntityLandUnit_MovementAndManeuverAirAssaultWithOrganicLift Entity = 120100
+
+	// EntityLandUnit_MovementAndManeuverAirTrafficServicesAirfieldOperations is Movement and Maneuver / Air Traffic Services/Airfield Operations.
+	EntityLandUnit_MovementAndManeuverAirTrafficServicesAirfieldOperations Entity = 120200
+
+	// EntityLandUnit_MovementAndManeuverDisused is Movement and Maneuver / {Disused}.
+	EntityLandUnit_MovementAndManeuverDisused Entity = 120300
+
+	// EntityLandUnit_MovementAndManeuverAntitankAntiarmor is Movement and Maneuver / Antitank/Antiarmor.
+	EntityLandUnit_MovementAndManeuverAntitankAntiarmor Entity = 120400
+
+	// EntityLandUnit_MovementAndManeuverAntitankAntiarmorArmored is Movement and Maneuver / Antitank/Antiarmor / Armored.
+	EntityLandUnit_MovementAndManeuverAntitankAntiarmorArmored Entity = 120401
+
+	// EntityLandUnit_MovementAndManeuverAntitankAntiarmorMotorized is Movement and Maneuver / Antitank/Antiarmor / Motorized.
+	EntityLandUnit_MovementAndManeuverAntitankAntiarmorMotorized Entity = 120402
+
+	// EntityLandUnit_MovementAndManeuverArmorMechanized is Movement and Maneuver / Armor /Mechanized.
+	EntityLandUnit_MovementAndManeuverArmorMechanized Entity = 120500
+
+	// EntityLandUnit_MovementAndManeuverArmorMechanizedReconnaissanceCavalryScout is Movement and Maneuver / Armor /Mechanized / Reconnaissance/Cavalry/Scout.
+	EntityLandUnit_MovementAndManeuverArmorMechanizedReconnaissanceCavalryScout Entity = 120501
+
+	// EntityLandUnit_MovementAndManeuverArmorMechanizedAmphibious is Movement and Maneuver / Armor /Mechanized / Amphibious.
+	EntityLandUnit_MovementAndManeuverArmorMechanizedAmphibious Entity = 120502
+
+	// EntityLandUnit_MovementAndManeuverArmyAviationAviationRotaryWing is Movement and Maneuver / Army Aviation/Aviation Rotary Wing.
+	EntityLandUnit_MovementAndManeuverArmyAviationAviationRotaryWing Entity = 120600
+
+	// EntityLandUnit_MovementAndManeuverArmyAviationAviationRotaryWingReconnaissance is Movement and Maneuver / Army Aviation/Aviation Rotary Wing / Reconnaissance.
+	EntityLandUnit_MovementAndManeuverArmyAviationAviationRotaryWingReconnaissance Entity = 120601
+
+	// EntityLandUnit_MovementAndManeuverAviationComposite is Movement and Maneuver / Aviation Composite.
+	EntityLandUnit_MovementAndManeuverAviationComposite Entity = 120700
+
+	// EntityLandUnit_MovementAndManeuverAviationFixedWing is Movement and Maneuver / Aviation Fixed Wing.
+	EntityLandUnit_MovementAndManeuverAviationFixedWing Entity = 120800
+
+	// EntityLandUnit_MovementAndManeuverAviationFixedWingReconnaissance is Movement and Maneuver / Aviation Fixed Wing / Reconnaissance.
+	EntityLandUnit_MovementAndManeuverAviationFixedWingReconnaissance Entity = 120801
+
+	// EntityLandUnit_MovementAndManeuverCombat is Movement and Maneuver / Combat.
+	EntityLandUnit_MovementAndManeuverCombat Entity = 120900
+
+	// EntityLandUnit_MovementAndManeuverCombinedArms is Movement and Maneuver / Combined Arms.
+	EntityLandUnit_MovementAndManeuverCombinedArms Entity = 121000
+
+	// EntityLandUnit_MovementAndManeuverInfantry is Movement and Maneuver / Infantry.
+	EntityLandUnit_MovementAndManeuverInfantry Entity = 121100
+
+	// EntityLandUnit_MovementAndManeuverInfantryAmphibious is Movement and Maneuver / Infantry / Amphibious.
+	EntityLandUnit_MovementAndManeuverInfantryAmphibious Entity = 121101
+
+	// EntityLandUnit_MovementAndManeuverInfantryArmoredMechanizedTracked is Movement and Maneuver / Infantry / Armored/Mechanized/Tracked.
+	EntityLandUnit_MovementAndManeuverInfantryArmoredMechanizedTracked Entity = 121102
+
+	// EntityLandUnit_MovementAndManeuverInfantryMainGunSystem is Movement and Maneuver / Infantry / Main Gun System.
+	EntityLandUnit_MovementAndManeuverInfantryMainGunSystem Entity = 121103
+
+	// EntityLandUnit_MovementAndManeuverInfantryMotorized is Movement and Maneuver / Infantry / Motorized.
+	EntityLandUnit_MovementAndManeuverInfantryMotorized Entity = 121104
+
+	// EntityLandUnit_MovementAndManeuverInfantryInfantryFightingVehicle is Movement and Maneuver / Infantry / Infantry Fighting Vehicle.
+	EntityLandUnit_MovementAndManeuverInfantryInfantryFightingVehicle Entity = 121105
+
+	// EntityLandUnit_MovementAndManeuverInfantryMobileGunSystem is Movement and Maneuver / Infantry / Mobile Gun System.
+	EntityLandUnit_MovementAndManeuverInfantryMobileGunSystem Entity = 121106
+
+	// EntityLandUnit_MovementAndManeuverObserver is Movement and Maneuver / Observer.
+	EntityLandUnit_MovementAndManeuverObserver Entity = 121200
+
+	// EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScout is Movement and Maneuver / Reconnaissance/Cavalry/Scout.
+	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScout Entity = 121300
+
+	// EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutReconnaissanceAndSurveillance is Movement and Maneuver / Reconnaissance/Cavalry/Scout / Reconnaissance and Surveillance.
+	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutReconnaissanceAndSurveillance Entity = 121301
+
+	// EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutMarine is Movement and Maneuver / Reconnaissance/Cavalry/Scout / Marine.
+	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutMarine Entity = 121302
+
+	// EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutMotorized is Movement and Maneuver / Reconnaissance/Cavalry/Scout / Motorized.
+	EntityLandUnit_MovementAndManeuverReconnaissanceCavalryScoutMotorized Entity = 121303
+
+	// EntityLandUnit_MovementAndManeuverSeaAirLandSEAL is Movement and Maneuver / Sea Air Land (SEAL).
+	EntityLandUnit_MovementAndManeuverSeaAirLandSEAL Entity = 121400
+
+	// EntityLandUnit_MovementAndManeuverSniper is Movement and Maneuver / Sniper.
+	EntityLandUnit_MovementAndManeuverSniper Entity = 121500
+
+	// EntityLandUnit_MovementAndManeuverSurveillance is Movement and Maneuver / Surveillance.
+	EntityLandUnit_MovementAndManeuverSurveillance Entity = 121600
+
+	// EntityLandUnit_MovementAndManeuverSpecialForces is Movement and Maneuver / Special Forces.
+	EntityLandUnit_MovementAndManeuverSpecialForces Entity = 121700
+
+	// EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOF is Movement and Maneuver / Special Operations Forces (SOF).
+	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOF Entity = 121800
+
+	// EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFFixedWingMISO is Movement and Maneuver / Special Operations Forces (SOF) / Fixed Wing MISO.
+	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFFixedWingMISO Entity = 121801
+
+	// EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFGround is Movement and Maneuver / Special Operations Forces (SOF) / Ground.
+	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFGround Entity = 121802
+
+	// EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFDisused is Movement and Maneuver / Special Operations Forces (SOF) / {Disused}.
+	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFDisused Entity = 121803
+
+	// EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFDisused_121804 is Movement and Maneuver / Special Operations Forces (SOF) / {Disused}.
+	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFDisused_121804 Entity = 121804
+
+	// EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFUnderwaterDemolition is Movement and Maneuver / Special Operations Forces (SOF) / Underwater Demolition.
+	EntityLandUnit_MovementAndManeuverSpecialOperationsForcesSOFUnderwaterDemolition Entity = 121805
+
+	// EntityLandUnit_MovementAndManeuverUnmannedAerialSystems is Movement and Maneuver / Unmanned Aerial Systems.
+	EntityLandUnit_MovementAndManeuverUnmannedAerialSystems Entity = 121900
+
+	// EntityLandUnit_MovementAndManeuverRanger is Movement and Maneuver / Ranger.
+	EntityLandUnit_MovementAndManeuverRanger Entity = 122000
+
+	// EntityLandUnit_Fires is Fires.
+	EntityLandUnit_Fires Entity = 130000
+
+	// EntityLandUnit_FiresAirDefense is Fires / Air Defense.
+	EntityLandUnit_FiresAirDefense Entity = 130100
+
+	// EntityLandUnit_FiresAirDefenseMainGunSystem is Fires / Air Defense / Main Gun System.
+	EntityLandUnit_FiresAirDefenseMainGunSystem Entity = 130101
+
+	// EntityLandUnit_FiresAirDefenseMissile is Fires / Air Defense / Missile.
+	EntityLandUnit_FiresAirDefenseMissile Entity = 130102
+
+	// EntityLandUnit_FiresAirDefenseAirAndMissileDefense is Fires / Air Defense / Air and Missile Defense.
+	EntityLandUnit_FiresAirDefenseAirAndMissileDefense Entity = 130103
+
+	// EntityLandUnit_FiresAirLandNavalGunfireLiaison is Fires / Air/Land Naval Gunfire Liaison.
+	EntityLandUnit_FiresAirLandNavalGunfireLiaison Entity = 130200
+
+	// EntityLandUnit_FiresFieldArtillery is Fires / Field Artillery.
+	EntityLandUnit_FiresFieldArtillery Entity = 130300
+
+	// EntityLandUnit_FiresFieldArtilleryObserver is Fires / Field Artillery Observer.
+	EntityLandUnit_FiresFieldArtilleryObserver Entity = 130400
+
+	// EntityLandUnit_FiresJointFireSupport is Fires / Joint Fire Support.
+	EntityLandUnit_FiresJointFireSupport Entity = 130500
+
+	// EntityLandUnit_FiresMeteorological is Fires / Meteorological.
+	EntityLandUnit_FiresMeteorological Entity = 130600
+
+	// EntityLandUnit_FiresMissile is Fires / Missile.
+	EntityLandUnit_FiresMissile Entity = 130700
+
+	// EntityLandUnit_FiresMortar is Fires / Mortar.
+	EntityLandUnit_FiresMortar Entity = 130800
+
+	// EntityLandUnit_FiresMortarDisused is Fires / Mortar / {Disused}.
+	EntityLandUnit_FiresMortarDisused Entity = 130801
+
+	// EntityLandUnit_FiresMortarSelfPropelledWheeled is Fires / Mortar / Self-Propelled Wheeled.
+	EntityLandUnit_FiresMortarSelfPropelledWheeled Entity = 130802
+
+	// EntityLandUnit_FiresSurvey is Fires / Survey.
+	EntityLandUnit_FiresSurvey Entity = 130900
+
+	// EntityLandUnit_Protection is Protection.
+	EntityLandUnit_Protection Entity = 140000
+
+	// EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefense is Protection / Chemical Biological Radiological Nuclear Defense.
+	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefense Entity = 140100
+
+	// EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseDisused is Protection / Chemical Biological Radiological Nuclear Defense / {Disused}.
+	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseDisused Entity = 140101
+
+	// EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseMotorized is Protection / Chemical Biological Radiological Nuclear Defense / Motorized.
+	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseMotorized Entity = 140102
+
+	// EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseReconnaissance is Protection / Chemical Biological Radiological Nuclear Defense / Reconnaissance.
+	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseReconnaissance Entity = 140103
+
+	// EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseDisused_140104 is Protection / Chemical Biological Radiological Nuclear Defense / {Disused}.
+	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseDisused_140104 Entity = 140104
+
+	// EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseReconnaissanceEquipped is Protection / Chemical Biological Radiological Nuclear Defense / Reconnaissance Equipped.
+	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseReconnaissanceEquipped Entity = 140105
+
+	// EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseChemicalBiologicalRadiologicalNuclearAndHighYieldExplosives is Protection / Chemical Biological Radiological Nuclear Defense / Chemical, Biological, Radiological, Nuclear, and High-Yield Explosives.
+	EntityLandUnit_ProtectionChemicalBiologicalRadiologicalNuclearDefenseChemicalBiologicalRadiologicalNuclearAndHighYieldExplosives Entity = 140106
+
+	// EntityLandUnit_ProtectionCombatSupportManeuverEnhancement is Protection / Combat Support (Maneuver Enhancement).
+	EntityLandUnit_ProtectionCombatSupportManeuverEnhancement Entity = 140200
+
+	// EntityLandUnit_ProtectionCriminalInvestigationDivision is Protection / Criminal Investigation Division.
+	EntityLandUnit_ProtectionCriminalInvestigationDivision Entity = 140300
+
+	// EntityLandUnit_ProtectionDiving is Protection / Diving.
+	EntityLandUnit_ProtectionDiving Entity = 140400
+
+	// EntityLandUnit_ProtectionDog is Protection / Dog.
+	EntityLandUnit_ProtectionDog Entity = 140500
+
+	// EntityLandUnit_ProtectionDrilling is Protection / Drilling.
+	EntityLandUnit_ProtectionDrilling Entity = 140600
+
+	// EntityLandUnit_ProtectionEngineer is Protection / Engineer.
+	EntityLandUnit_ProtectionEngineer Entity = 140700
+
+	// EntityLandUnit_ProtectionEngineerMechanized is Protection / Engineer / Mechanized.
+	EntityLandUnit_ProtectionEngineerMechanized Entity = 140701
+
+	// EntityLandUnit_ProtectionEngineerMotorized is Protection / Engineer / Motorized.
+	EntityLandUnit_ProtectionEngineerMotorized Entity = 140702
+
+	// EntityLandUnit_ProtectionEngineerReconnaissance is Protection / Engineer / Reconnaissance.
+	EntityLandUnit_ProtectionEngineerReconnaissance Entity = 140703
+
+	// EntityLandUnit_ProtectionExplosiveOrdnanceDisposalEOD is Protection / Explosive Ordnance Disposal (EOD).
+	EntityLandUnit_ProtectionExplosiveOrdnanceDisposalEOD Entity = 140800
+
+	// EntityLandUnit_ProtectionFieldCampConstruction is Protection / Field Camp Construction.
+	EntityLandUnit_ProtectionFieldCampConstruction Entity = 140900
+
+	// EntityLandUnit_ProtectionFireFightingFireProtection is Protection / Fire Fighting/Fire Protection.
+	EntityLandUnit_ProtectionFireFightingFireProtection Entity = 141000
+
+	// EntityLandUnit_ProtectionGeospatialSupportGeospatialInformationSupport is Protection / Geospatial Support/Geospatial Information Support.
+	EntityLandUnit_ProtectionGeospatialSupportGeospatialInformationSupport Entity = 141100
+
+	// EntityLandUnit_ProtectionMilitaryPolice is Protection / Military Police.
+	EntityLandUnit_ProtectionMilitaryPolice Entity = 141200
+
+	// EntityLandUnit_ProtectionMine is Protection / Mine.
+	EntityLandUnit_ProtectionMine Entity = 141300
+
+	// EntityLandUnit_ProtectionMineClearing is Protection / Mine Clearing.
+	EntityLandUnit_ProtectionMineClearing Entity = 141400
+
+	// EntityLandUnit_ProtectionMineLaunching is Protection / Mine Launching.
+	EntityLandUnit_ProtectionMineLaunching Entity = 141500
+
+	// EntityLandUnit_ProtectionMineLaying is Protection / Mine Laying.
+	EntityLandUnit_ProtectionMineLaying Entity = 141600
+
+	// EntityLandUnit_ProtectionSecurity is Protection / Security.
+	EntityLandUnit_ProtectionSecurity Entity = 141700
+
+	// EntityLandUnit_ProtectionSecurityDisused is Protection / Security / {Disused}.
+	EntityLandUnit_ProtectionSecurityDisused Entity = 141701
+
+	// EntityLandUnit_ProtectionSecurityMotorized is Protection / Security / Motorized.
+	EntityLandUnit_ProtectionSecurityMotorized Entity = 141702
+
+	// EntityLandUnit_ProtectionSearchAndRescue is Protection / Search and Rescue.
+	EntityLandUnit_ProtectionSearchAndRescue Entity = 141800
+
+	// EntityLandUnit_ProtectionSearchAndRescueIsolatedPersonnel is Protection / Search and Rescue / Isolated Personnel.
+	EntityLandUnit_ProtectionSearchAndRescueIsolatedPersonnel Entity = 141801
+
+	// EntityLandUnit_ProtectionDisused is Protection / {Disused}.
+	EntityLandUnit_ProtectionDisused Entity = 141900
+
+	// EntityLandUnit_ProtectionShorePatrolSecurityPolice is Protection / Shore Patrol/Security Police.
+	EntityLandUnit_ProtectionShorePatrolSecurityPolice Entity = 142000
+
+	// EntityLandUnit_ProtectionTopographicGeospatial is Protection / Topographic/Geospatial.
+	EntityLandUnit_ProtectionTopographicGeospatial Entity = 142100
+
+	// EntityLandUnit_ProtectionMissileDefense is Protection / Missile Defense.
+	EntityLandUnit_ProtectionMissileDefense Entity = 142200
+
+	// EntityLandUnit_Intelligence is Intelligence.
+	EntityLandUnit_Intelligence Entity = 150000
+
+	// EntityLandUnit_IntelligenceAnalysis is Intelligence / Analysis.
+	EntityLandUnit_IntelligenceAnalysis Entity = 150100
+
+	// EntityLandUnit_IntelligenceCounterintelligence is Intelligence / Counterintelligence.
+	EntityLandUnit_IntelligenceCounterintelligence Entity = 150200
+
+	// EntityLandUnit_IntelligenceDirectionFinding is Intelligence / Direction Finding.
+	EntityLandUnit_IntelligenceDirectionFinding Entity = 150300
+
+	// EntityLandUnit_IntelligenceElectronicRanging is Intelligence / Electronic Ranging.
+	EntityLandUnit_IntelligenceElectronicRanging Entity = 150400
+
+	// EntityLandUnit_IntelligenceElectronicWarfare is Intelligence / Electronic Warfare.
+	EntityLandUnit_IntelligenceElectronicWarfare Entity = 150500
+
+	// EntityLandUnit_IntelligenceElectronicWarfareAnalysis is Intelligence / Electronic Warfare / Analysis.
+	EntityLandUnit_IntelligenceElectronicWarfareAnalysis Entity = 150501
+
+	// EntityLandUnit_IntelligenceElectronicWarfareDirectionFinding is Intelligence / Electronic Warfare / Direction Finding.
+	EntityLandUnit_IntelligenceElectronicWarfareDirectionFinding Entity = 150502
+
+	// EntityLandUnit_IntelligenceElectronicWarfareIntercept is Intelligence / Electronic Warfare / Intercept.
+	EntityLandUnit_IntelligenceElectronicWarfareIntercept Entity = 150503
+
+	// EntityLandUnit_IntelligenceElectronicWarfareJamming is Intelligence / Electronic Warfare / Jamming.
+	EntityLandUnit_IntelligenceElectronicWarfareJamming Entity = 150504
+
+	// EntityLandUnit_IntelligenceElectronicWarfareSearch is Intelligence / Electronic Warfare / Search.
+	EntityLandUnit_IntelligenceElectronicWarfareSearch Entity = 150505
+
+	// EntityLandUnit_IntelligenceInterceptSearchAndRecording is Intelligence / Intercept (Search and Recording).
+	EntityLandUnit_IntelligenceInterceptSearchAndRecording Entity = 150600
+
+	// EntityLandUnit_IntelligenceInterrogation is Intelligence / Interrogation.
+	EntityLandUnit_IntelligenceInterrogation Entity = 150700
+
+	// EntityLandUnit_IntelligenceJamming is Intelligence / Jamming.
+	EntityLandUnit_IntelligenceJamming Entity = 150800
+
+	// EntityLandUnit_IntelligenceJointIntelligenceCenter is Intelligence / Joint Intelligence Center.
+	EntityLandUnit_IntelligenceJointIntelligenceCenter Entity = 150900
+
+	// EntityLandUnit_IntelligenceMilitaryIntelligence is Intelligence / Military Intelligence.
+	EntityLandUnit_IntelligenceMilitaryIntelligence Entity = 151000
+
+	// EntityLandUnit_IntelligenceSearch is Intelligence / Search.
+	EntityLandUnit_IntelligenceSearch Entity = 151100
+
+	// EntityLandUnit_IntelligenceSensor is Intelligence / Sensor.
+	EntityLandUnit_IntelligenceSensor Entity = 151200
+
+	// EntityLandUnit_IntelligenceMilitaryHistory is Intelligence / Military History.
+	EntityLandUnit_IntelligenceMilitaryHistory Entity = 151300
+
+	// EntityLandUnit_Sustainment is Sustainment.
+	EntityLandUnit_Sustainment Entity = 160000
+
+	// EntityLandUnit_SustainmentAdministrative is Sustainment / Administrative.
+	EntityLandUnit_SustainmentAdministrative Entity = 160100
+
+	// EntityLandUnit_SustainmentAllClassesOfSupply is Sustainment / All Classes of Supply.
+	EntityLandUnit_SustainmentAllClassesOfSupply Entity = 160200
+
+	// EntityLandUnit_SustainmentDisused is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused Entity = 160300
+
+	// EntityLandUnit_SustainmentAmmunition is Sustainment / Ammunition.
+	EntityLandUnit_SustainmentAmmunition Entity = 160400
+
+	// EntityLandUnit_SustainmentBand is Sustainment / Band.
+	EntityLandUnit_SustainmentBand Entity = 160500
+
+	// EntityLandUnit_SustainmentBandArmyMusic is Sustainment / Band / Army Music.
+	EntityLandUnit_SustainmentBandArmyMusic Entity = 160501
+
+	// EntityLandUnit_SustainmentCombatServiceSupport is Sustainment / Combat Service Support.
+	EntityLandUnit_SustainmentCombatServiceSupport Entity = 160600
+
+	// EntityLandUnit_SustainmentFinance is Sustainment / Finance.
+	EntityLandUnit_SustainmentFinance Entity = 160700
+
+	// EntityLandUnit_SustainmentJudgeAdvocateGeneral is Sustainment / Judge Advocate General.
+	EntityLandUnit_SustainmentJudgeAdvocateGeneral Entity = 160800
+
+	// EntityLandUnit_SustainmentLabor is Sustainment / Labor.
+	EntityLandUnit_SustainmentLabor Entity = 160900
+
+	// EntityLandUnit_SustainmentLaundryBath is Sustainment / Laundry/Bath.
+	EntityLandUnit_SustainmentLaundryBath Entity = 161000
+
+	// EntityLandUnit_SustainmentMaintenance is Sustainment / Maintenance.
+	EntityLandUnit_SustainmentMaintenance Entity = 161100
+
+	// EntityLandUnit_SustainmentMaterial is Sustainment / Material.
+	EntityLandUnit_SustainmentMaterial Entity = 161200
+
+	// EntityLandUnit_SustainmentMedical is Sustainment / Medical.
+	EntityLandUnit_SustainmentMedical Entity = 161300
+
+	// EntityLandUnit_SustainmentMedicalTreatmentFacility is Sustainment / Medical Treatment Facility.
+	EntityLandUnit_SustainmentMedicalTreatmentFacility Entity = 161400
+
+	// EntityLandUnit_SustainmentMoraleWelfareAndRecreation is Sustainment / Morale, Welfare and Recreation.
+	EntityLandUnit_SustainmentMoraleWelfareAndRecreation Entity = 161500
+
+	// EntityLandUnit_SustainmentMortuaryAffairs is Sustainment / Mortuary Affairs.
+	EntityLandUnit_SustainmentMortuaryAffairs Entity = 161600
+
+	// EntityLandUnit_SustainmentMultipleClassesOfSupply is Sustainment / Multiple Classes of Supply.
+	EntityLandUnit_SustainmentMultipleClassesOfSupply Entity = 161700
+
+	// EntityLandUnit_SustainmentNATOSupplyClassI is Sustainment / NATO Supply Class I.
+	EntityLandUnit_SustainmentNATOSupplyClassI Entity = 161800
+
+	// EntityLandUnit_SustainmentNATOSupplyClassII is Sustainment / NATO Supply Class II.
+	EntityLandUnit_SustainmentNATOSupplyClassII Entity = 161900
+
+	// EntityLandUnit_SustainmentNATOSupplyClassIII is Sustainment / NATO Supply Class III.
+	EntityLandUnit_SustainmentNATOSupplyClassIII Entity = 162000
+
+	// EntityLandUnit_SustainmentNATOSupplyClassIV is Sustainment / NATO Supply Class IV.
+	EntityLandUnit_SustainmentNATOSupplyClassIV Entity = 162100
+
+	// EntityLandUnit_SustainmentNATOSupplyClassV is Sustainment / NATO Supply Class V.
+	EntityLandUnit_SustainmentNATOSupplyClassV Entity = 162200
+
+	// EntityLandUnit_SustainmentOrdnance is Sustainment / Ordnance.
+	EntityLandUnit_SustainmentOrdnance Entity = 162300
+
+	// EntityLandUnit_SustainmentPersonnelServices is Sustainment / Personnel Services.
+	EntityLandUnit_SustainmentPersonnelServices Entity = 162400
+
+	// EntityLandUnit_SustainmentPetroleumOilAndLubricants is Sustainment / Petroleum, Oil and Lubricants.
+	EntityLandUnit_SustainmentPetroleumOilAndLubricants Entity = 162500
+
+	// EntityLandUnit_SustainmentDisused_162600 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_162600 Entity = 162600
+
+	// EntityLandUnit_SustainmentDisused_162700 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_162700 Entity = 162700
+
+	// EntityLandUnit_SustainmentPublicAffairsPublicInformation is Sustainment / Public Affairs/Public Information.
+	EntityLandUnit_SustainmentPublicAffairsPublicInformation Entity = 162800
+
+	// EntityLandUnit_SustainmentQuartermaster is Sustainment / Quartermaster.
+	EntityLandUnit_SustainmentQuartermaster Entity = 162900
+
+	// EntityLandUnit_SustainmentDisused_163000 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_163000 Entity = 163000
+
+	// EntityLandUnit_SustainmentReligiousSupport is Sustainment / Religious Support.
+	EntityLandUnit_SustainmentReligiousSupport Entity = 163100
+
+	// EntityLandUnit_SustainmentReplacementHoldingUnit is Sustainment / Replacement Holding Unit.
+	EntityLandUnit_SustainmentReplacementHoldingUnit Entity = 163200
+
+	// EntityLandUnit_SustainmentDisused_163300 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_163300 Entity = 163300
+
+	// EntityLandUnit_SustainmentDisused_163400 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_163400 Entity = 163400
+
+	// EntityLandUnit_SustainmentJointInformationBureauJIB is Sustainment / Joint Information Bureau (JIB).
+	EntityLandUnit_SustainmentJointInformationBureauJIB Entity = 163500
+
+	// EntityLandUnit_SustainmentTransportation is Sustainment / Transportation.
+	EntityLandUnit_SustainmentTransportation Entity = 163600
+
+	// EntityLandUnit_SustainmentUSSupplyClassI is Sustainment / US Supply Class I.
+	EntityLandUnit_SustainmentUSSupplyClassI Entity = 163700
+
+	// EntityLandUnit_SustainmentDisused_163800 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_163800 Entity = 163800
+
+	// EntityLandUnit_SustainmentDisused_163900 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_163900 Entity = 163900
+
+	// EntityLandUnit_SustainmentUSSupplyClassIV is Sustainment / US Supply Class IV.
+	EntityLandUnit_SustainmentUSSupplyClassIV Entity = 164000
+
+	// EntityLandUnit_SustainmentDisused_164100 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_164100 Entity = 164100
+
+	// EntityLandUnit_SustainmentUSSupplyClassVI is Sustainment / US Supply Class VI.
+	EntityLandUnit_SustainmentUSSupplyClassVI Entity = 164200
+
+	// EntityLandUnit_SustainmentUSSupplyClassVII is Sustainment / US Supply Class VII.
+	EntityLandUnit_SustainmentUSSupplyClassVII Entity = 164300
+
+	// EntityLandUnit_SustainmentUSSupplyClassVIII is Sustainment / US Supply Class VIII.
+	EntityLandUnit_SustainmentUSSupplyClassVIII Entity = 164400
+
+	// EntityLandUnit_SustainmentUSSupplyClassIX is Sustainment / US Supply Class IX.
+	EntityLandUnit_SustainmentUSSupplyClassIX Entity = 164500
+
+	// EntityLandUnit_SustainmentUSSupplyClassX is Sustainment / US Supply Class X.
+	EntityLandUnit_SustainmentUSSupplyClassX Entity = 164600
+
+	// EntityLandUnit_SustainmentDisused_164700 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_164700 Entity = 164700
+
+	// EntityLandUnit_SustainmentWaterPurification is Sustainment / Water Purification.
+	EntityLandUnit_SustainmentWaterPurification Entity = 164800
+
+	// EntityLandUnit_SustainmentBroadcast is Sustainment / Broadcast.
+	EntityLandUnit_SustainmentBroadcast Entity = 164900
+
+	// EntityLandUnit_SustainmentDisused_165000 is Sustainment / {Disused}.
+	EntityLandUnit_SustainmentDisused_165000 Entity = 165000
+
+	// EntityLandUnit_SustainmentInterpreterTranslator is Sustainment / Interpreter/Translator.
+	EntityLandUnit_SustainmentInterpreterTranslator Entity = 165100
+
+	// EntityLandUnit_SustainmentSupport is Sustainment / Support.
+	EntityLandUnit_SustainmentSupport Entity = 165200
+
+	// EntityLandUnit_SustainmentArmyFieldSupport is Sustainment / Army Field Support.
+	EntityLandUnit_SustainmentArmyFieldSupport Entity = 165300
+
+	// EntityLandUnit_SustainmentContractingServices is Sustainment / Contracting Services.
+	EntityLandUnit_SustainmentContractingServices Entity = 165400
+
+	// EntityLandUnit_SustainmentParachuteRigger is Sustainment / Parachute Rigger.
+	EntityLandUnit_SustainmentParachuteRigger Entity = 165500
+
+	// EntityLandUnit_SustainmentHumanResources is Sustainment / Human Resources.
+	EntityLandUnit_SustainmentHumanResources Entity = 165600
+
+	// EntityLandUnit_Naval is Naval.
+	EntityLandUnit_Naval Entity = 170000
+
+	// EntityLandUnit_NavalNaval is Naval / Naval.
+	EntityLandUnit_NavalNaval Entity = 170100
+
+	// EntityLandUnit_NamedHeadquarters is Named Headquarters.
+	EntityLandUnit_NamedHeadquarters Entity = 180000
+
+	// EntityLandUnit_NamedHeadquartersAlliedCommandEuropeRapidReactionCorpsARRC is Named Headquarters / Allied Command Europe Rapid Reaction Corps (ARRC).
+	EntityLandUnit_NamedHeadquartersAlliedCommandEuropeRapidReactionCorpsARRC Entity = 180100
+
+	// EntityLandUnit_NamedHeadquartersAlliedCommandOperations is Named Headquarters / Allied Command Operations.
+	EntityLandUnit_NamedHeadquartersAlliedCommandOperations Entity = 180200
+
+	// EntityLandUnit_NamedHeadquartersInternationalSecurityAssistanceForceISAF is Named Headquarters / International Security Assistance Force (ISAF).
+	EntityLandUnit_NamedHeadquartersInternationalSecurityAssistanceForceISAF Entity = 180300
+
+	// EntityLandUnit_NamedHeadquartersMultinationalMN is Named Headquarters / Multinational (MN).
+	EntityLandUnit_NamedHeadquartersMultinationalMN Entity = 180400
+
+	// EntityLandUnit_EmergencyOperation is Emergency Operation.
+	EntityLandUnit_EmergencyOperation Entity = 190000
+
+	// EntityLandUnit_LawEnforcement is Law Enforcement.
+	EntityLandUnit_LawEnforcement Entity = 200000
+
+	// EntityLandUnit_LawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice is Law Enforcement / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice).
+	EntityLandUnit_LawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice Entity = 200100
+
+	// EntityLandUnit_LawEnforcementBorderPatrol is Law Enforcement / Border Patrol.
+	EntityLandUnit_LawEnforcementBorderPatrol Entity = 200200
+
+	// EntityLandUnit_LawEnforcementCustomsService is Law Enforcement / Customs Service.
+	EntityLandUnit_LawEnforcementCustomsService Entity = 200300
+
+	// EntityLandUnit_LawEnforcementDrugEnforcementAdministrationDEA is Law Enforcement / Drug Enforcement Administration (DEA).
+	EntityLandUnit_LawEnforcementDrugEnforcementAdministrationDEA Entity = 200400
+
+	// EntityLandUnit_LawEnforcementDepartmentOfJusticeDOJ is Law Enforcement / Department of Justice (DOJ).
+	EntityLandUnit_LawEnforcementDepartmentOfJusticeDOJ Entity = 200500
+
+	// EntityLandUnit_LawEnforcementFederalBureauOfInvestigationFBI is Law Enforcement / Federal Bureau of Investigation (FBI).
+	EntityLandUnit_LawEnforcementFederalBureauOfInvestigationFBI Entity = 200600
+
+	// EntityLandUnit_LawEnforcementPolice is Law Enforcement / Police.
+	EntityLandUnit_LawEnforcementPolice Entity = 200700
+
+	// EntityLandUnit_LawEnforcementPrison is Law Enforcement / Prison.
+	EntityLandUnit_LawEnforcementPrison Entity = 200800
+
+	// EntityLandUnit_LawEnforcementUnitedStatesSecretServiceTreasUSSS is Law Enforcement / United States Secret Service (Treas) (USSS).
+	EntityLandUnit_LawEnforcementUnitedStatesSecretServiceTreasUSSS Entity = 200900
+
+	// EntityLandUnit_LawEnforcementTransportationSecurityAdministrationTSA is Law Enforcement / Transportation Security Administration (TSA).
+	EntityLandUnit_LawEnforcementTransportationSecurityAdministrationTSA Entity = 201000
+
+	// EntityLandUnit_LawEnforcementCoastGuard is Law Enforcement / Coast Guard.
+	EntityLandUnit_LawEnforcementCoastGuard Entity = 201100
+
+	// EntityLandUnit_LawEnforcementUSMarshalsService is Law Enforcement / US Marshals Service.
+	EntityLandUnit_LawEnforcementUSMarshalsService Entity = 201200
+
+	// EntityLandUnit_LawEnforcementInternalSecurityForce is Law Enforcement / Internal Security Force.
+	EntityLandUnit_LawEnforcementInternalSecurityForce Entity = 201300
+
+	// EntityLandUnit_Cyber is Cyber.
+	EntityLandUnit_Cyber Entity = 210000
 )

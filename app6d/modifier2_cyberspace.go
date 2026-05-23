@@ -5,11 +5,24 @@ package app6d
 
 // Modifier 2 constants for symbol set 60 (Cyberspace).
 const (
-	Modifier2Cyberspace_Secured                  Modifier2 = 1 // Secured
-	Modifier2Cyberspace_Open                     Modifier2 = 2 // Open
-	Modifier2Cyberspace_ResponseActions          Modifier2 = 3 // Response Actions
-	Modifier2Cyberspace_InternalDefenseMeasures  Modifier2 = 5 // Internal Defense Measures
-	Modifier2Cyberspace_AdvancedPersistentThreat Modifier2 = 6 // Advanced Persistent Threat
-	Modifier2Cyberspace_NationState              Modifier2 = 7 // Nation State
-	Modifier2Cyberspace_NationStateSponsored     Modifier2 = 8 // Nation State Sponsored
+	// Modifier2Cyberspace_Secured is Secured.
+	Modifier2Cyberspace_Secured Modifier2 = 1
+
+	// Modifier2Cyberspace_Open is Open.
+	Modifier2Cyberspace_Open Modifier2 = 2
+
+	// Modifier2Cyberspace_ResponseActions is Response Actions.
+	Modifier2Cyberspace_ResponseActions Modifier2 = 3
+
+	// Modifier2Cyberspace_InternalDefenseMeasures is Internal Defense Measures.
+	Modifier2Cyberspace_InternalDefenseMeasures Modifier2 = 5
+
+	// Modifier2Cyberspace_AdvancedPersistentThreat is Advanced Persistent Threat.
+	Modifier2Cyberspace_AdvancedPersistentThreat Modifier2 = 6
+
+	// Modifier2Cyberspace_NationState is Nation State.
+	Modifier2Cyberspace_NationState Modifier2 = 7
+
+	// Modifier2Cyberspace_NationStateSponsored is Nation State Sponsored.
+	Modifier2Cyberspace_NationStateSponsored Modifier2 = 8
 )

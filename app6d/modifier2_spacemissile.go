@@ -5,19 +5,48 @@ package app6d
 
 // Modifier 2 constants for symbol set 06 (Space missile).
 const (
-	Modifier2SpaceMissile_ShortRange                           Modifier2 = 1  // Short Range
-	Modifier2SpaceMissile_MediumRange                          Modifier2 = 2  // Medium Range
-	Modifier2SpaceMissile_IntermediateRange                    Modifier2 = 3  // Intermediate Range
-	Modifier2SpaceMissile_LongRange                            Modifier2 = 4  // Long Range
-	Modifier2SpaceMissile_Intercontinental                     Modifier2 = 5  // Intercontinental
-	Modifier2SpaceMissile_Arrow                                Modifier2 = 6  // Arrow
-	Modifier2SpaceMissile_GroundBasedInterceptorGBI            Modifier2 = 7  // Ground-Based Interceptor (GBI)
-	Modifier2SpaceMissile_Patriot                              Modifier2 = 8  // Patriot
-	Modifier2SpaceMissile_StandardMissileTerminalPhaseSMT      Modifier2 = 9  // Standard Missile Terminal Phase (SM-T)
-	Modifier2SpaceMissile_StandardMissile3SM3                  Modifier2 = 10 // Standard Missile – 3 (SM-3)
-	Modifier2SpaceMissile_TerminalHighAltitudeAreaDefenseTHAAD Modifier2 = 11 // Terminal High Altitude Area Defense (THAAD)
-	Modifier2SpaceMissile_Space                                Modifier2 = 12 // Space
-	Modifier2SpaceMissile_CloseRangeCRBM                       Modifier2 = 13 // Close Range (CRBM)
-	Modifier2SpaceMissile_Debris                               Modifier2 = 14 // Debris
-	Modifier2SpaceMissile_Unknown                              Modifier2 = 15 // Unknown
+	// Modifier2SpaceMissile_ShortRange is Short Range.
+	Modifier2SpaceMissile_ShortRange Modifier2 = 1
+
+	// Modifier2SpaceMissile_MediumRange is Medium Range.
+	Modifier2SpaceMissile_MediumRange Modifier2 = 2
+
+	// Modifier2SpaceMissile_IntermediateRange is Intermediate Range.
+	Modifier2SpaceMissile_IntermediateRange Modifier2 = 3
+
+	// Modifier2SpaceMissile_LongRange is Long Range.
+	Modifier2SpaceMissile_LongRange Modifier2 = 4
+
+	// Modifier2SpaceMissile_Intercontinental is Intercontinental.
+	Modifier2SpaceMissile_Intercontinental Modifier2 = 5
+
+	// Modifier2SpaceMissile_Arrow is Arrow.
+	Modifier2SpaceMissile_Arrow Modifier2 = 6
+
+	// Modifier2SpaceMissile_GroundBasedInterceptorGBI is Ground-Based Interceptor (GBI).
+	Modifier2SpaceMissile_GroundBasedInterceptorGBI Modifier2 = 7
+
+	// Modifier2SpaceMissile_Patriot is Patriot.
+	Modifier2SpaceMissile_Patriot Modifier2 = 8
+
+	// Modifier2SpaceMissile_StandardMissileTerminalPhaseSMT is Standard Missile Terminal Phase (SM-T).
+	Modifier2SpaceMissile_StandardMissileTerminalPhaseSMT Modifier2 = 9
+
+	// Modifier2SpaceMissile_StandardMissile3SM3 is Standard Missile – 3 (SM-3).
+	Modifier2SpaceMissile_StandardMissile3SM3 Modifier2 = 10
+
+	// Modifier2SpaceMissile_TerminalHighAltitudeAreaDefenseTHAAD is Terminal High Altitude Area Defense (THAAD).
+	Modifier2SpaceMissile_TerminalHighAltitudeAreaDefenseTHAAD Modifier2 = 11
+
+	// Modifier2SpaceMissile_Space is Space.
+	Modifier2SpaceMissile_Space Modifier2 = 12
+
+	// Modifier2SpaceMissile_CloseRangeCRBM is Close Range (CRBM).
+	Modifier2SpaceMissile_CloseRangeCRBM Modifier2 = 13
+
+	// Modifier2SpaceMissile_Debris is Debris.
+	Modifier2SpaceMissile_Debris Modifier2 = 14
+
+	// Modifier2SpaceMissile_Unknown is Unknown.
+	Modifier2SpaceMissile_Unknown Modifier2 = 15
 )

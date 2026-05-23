@@ -5,7 +5,18 @@ import (
 	"testing"
 )
 
-func TestSIDC_String(t *testing.T) {
+// mustValue helps tests render SIDCs they know to be valid. It fails the
+// test if Validate rejects the input.
+func mustValue(t *testing.T, s SIDC) string {
+	t.Helper()
+	v, err := s.Value()
+	if err != nil {
+		t.Fatalf("expected valid SIDC, got Validate error: %v", err)
+	}
+	return v
+}
+
+func TestSIDC_Value(t *testing.T) {
 	tests := []struct {
 		name     string
 		sidc     SIDC
@@ -54,12 +65,57 @@ func TestSIDC_String(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := tt.sidc.String()
+			got, err := tt.sidc.Value()
+			if err != nil {
+				t.Fatalf("unexpected error: %v", err)
+			}
 			if got != tt.expected {
 				t.Errorf("got %q, expected %q", got, tt.expected)
 			}
 			if len(got) != SIDCLength {
 				t.Errorf("got length %d, expected %d", len(got), SIDCLength)
+			}
+		})
+	}
+}
+
+func TestSIDC_Value_RefusesNonPrintable(t *testing.T) {
+	cases := []struct {
+		name      string
+		sidc      SIDC
+		wantField string
+	}{
+		{
+			name:      "non-printable in CodingScheme is rejected",
+			sidc:      SIDC{CodingScheme: 0x01},
+			wantField: "CodingScheme",
+		},
+		{
+			name:      "non-printable in FunctionID is rejected",
+			sidc:      SIDC{FunctionID: FunctionID{0x01, 0, 0, 0, 0, 0}},
+			wantField: "FunctionID[0]",
+		},
+		{
+			name:      "non-printable in CountryCode is rejected",
+			sidc:      SIDC{CountryCode: [2]byte{'U', 0x7f}},
+			wantField: "CountryCode[1]",
+		},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			got, err := tc.sidc.Value()
+			if err == nil {
+				t.Fatalf("expected Value to refuse non-printable byte, got %q", got)
+			}
+			if got != "" {
+				t.Errorf("expected empty string on error, got %q", got)
+			}
+			var ve *ValidationError
+			if !errors.As(err, &ve) {
+				t.Fatalf("expected *ValidationError, got %T: %v", err, err)
+			}
+			if ve.Field != tc.wantField {
+				t.Errorf("got error for field %q, expected %q", ve.Field, tc.wantField)
 			}
 		})
 	}
@@ -138,7 +194,7 @@ func TestParse_Errors(t *testing.T) {
 	}
 }
 
-func TestParseStringRoundTrip(t *testing.T) {
+func TestParseValueRoundTrip(t *testing.T) {
 	inputs := []string{
 		"---------------",
 		"SFAPMFF--------",
@@ -153,7 +209,10 @@ func TestParseStringRoundTrip(t *testing.T) {
 			if err != nil {
 				t.Fatalf("unexpected error: %v", err)
 			}
-			got := parsed.String()
+			got, err := parsed.Value()
+			if err != nil {
+				t.Fatalf("Value() returned unexpected error: %v", err)
+			}
 			if got != input {
 				t.Errorf("round trip changed value: parsed %q, got back %q", input, got)
 			}

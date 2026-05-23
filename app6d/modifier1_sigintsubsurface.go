@@ -5,69 +5,198 @@ package app6d
 
 // Modifier 1 constants for symbol set 54 (Signals intelligence).
 const (
-	Modifier1SIGINTSubsurface_AntiAircraftFireControl                Modifier1 = 1  // Anti-Aircraft Fire Control
-	Modifier1SIGINTSubsurface_AirborneSearchAndBombing               Modifier1 = 2  // Airborne Search and Bombing
-	Modifier1SIGINTSubsurface_AirborneIntercept                      Modifier1 = 3  // Airborne Intercept
-	Modifier1SIGINTSubsurface_Altimeter                              Modifier1 = 4  // Altimeter
-	Modifier1SIGINTSubsurface_AirborneReconnaissanceAndMapping       Modifier1 = 5  // Airborne Reconnaissance and Mapping
-	Modifier1SIGINTSubsurface_AirTrafficControl                      Modifier1 = 6  // Air Traffic Control
-	Modifier1SIGINTSubsurface_BeaconTransponderNotIFF                Modifier1 = 7  // Beacon Transponder (not IFF)
-	Modifier1SIGINTSubsurface_BattlefieldSurveillance                Modifier1 = 8  // Battlefield Surveillance
-	Modifier1SIGINTSubsurface_ControlledApproach                     Modifier1 = 9  // Controlled Approach
-	Modifier1SIGINTSubsurface_ControlledIntercept                    Modifier1 = 10 // Controlled Intercept
-	Modifier1SIGINTSubsurface_CellularMobile                         Modifier1 = 11 // Cellular/Mobile
-	Modifier1SIGINTSubsurface_CoastalSurveillance                    Modifier1 = 12 // Coastal Surveillance
-	Modifier1SIGINTSubsurface_DecoyMimic                             Modifier1 = 13 // Decoy/Mimic
-	Modifier1SIGINTSubsurface_DataTransmission                       Modifier1 = 14 // Data Transmission
-	Modifier1SIGINTSubsurface_EarthSurveillance                      Modifier1 = 15 // Earth Surveillance
-	Modifier1SIGINTSubsurface_EarlyWarning                           Modifier1 = 16 // Early Warning
-	Modifier1SIGINTSubsurface_FireControl                            Modifier1 = 17 // Fire Control
-	Modifier1SIGINTSubsurface_GroundMapping                          Modifier1 = 18 // Ground Mapping
-	Modifier1SIGINTSubsurface_HeightFinding                          Modifier1 = 19 // Height Finding
-	Modifier1SIGINTSubsurface_HarborSurveillance                     Modifier1 = 20 // Harbor Surveillance
-	Modifier1SIGINTSubsurface_IdentificationFriendOrFoeInterrogator  Modifier1 = 21 // Identification, Friend or Foe (Interrogator)
-	Modifier1SIGINTSubsurface_InstrumentLandingSystem                Modifier1 = 22 // Instrument Landing System
-	Modifier1SIGINTSubsurface_IonosphericSounding                    Modifier1 = 23 // Ionospheric Sounding
-	Modifier1SIGINTSubsurface_IdentificationFriendOrFoeTransponder   Modifier1 = 24 // Identification, Friend or Foe (Transponder)
-	Modifier1SIGINTSubsurface_BarrageJammer                          Modifier1 = 25 // Barrage Jammer
-	Modifier1SIGINTSubsurface_ClickJammer                            Modifier1 = 26 // Click Jammer
-	Modifier1SIGINTSubsurface_DeceptiveJammer                        Modifier1 = 27 // Deceptive Jammer
-	Modifier1SIGINTSubsurface_FrequencySweptJammer                   Modifier1 = 28 // Frequency Swept Jammer
-	Modifier1SIGINTSubsurface_JammerGeneral                          Modifier1 = 29 // Jammer (general)
-	Modifier1SIGINTSubsurface_NoiseJammer                            Modifier1 = 30 // Noise Jammer
-	Modifier1SIGINTSubsurface_PulsedJammer                           Modifier1 = 31 // Pulsed Jammer
-	Modifier1SIGINTSubsurface_RepeaterJammer                         Modifier1 = 32 // Repeater Jammer
-	Modifier1SIGINTSubsurface_SpotNoiseJammer                        Modifier1 = 33 // Spot Noise Jammer
-	Modifier1SIGINTSubsurface_TransponderJammer                      Modifier1 = 34 // Transponder Jammer
-	Modifier1SIGINTSubsurface_MissileAcquisition                     Modifier1 = 35 // Missile Acquisition
-	Modifier1SIGINTSubsurface_MissileControl                         Modifier1 = 36 // Missile Control
-	Modifier1SIGINTSubsurface_MissileDownlink                        Modifier1 = 37 // Missile Downlink
-	Modifier1SIGINTSubsurface_Meteorological                         Modifier1 = 38 // Meteorological
-	Modifier1SIGINTSubsurface_MultiFunction                          Modifier1 = 39 // Multi-Function
-	Modifier1SIGINTSubsurface_MissileGuidance                        Modifier1 = 40 // Missile Guidance
-	Modifier1SIGINTSubsurface_MissileHoming                          Modifier1 = 41 // Missile Homing
-	Modifier1SIGINTSubsurface_MissileTracking                        Modifier1 = 42 // Missile Tracking
-	Modifier1SIGINTSubsurface_NavigationalGeneral                    Modifier1 = 43 // Navigational/General
-	Modifier1SIGINTSubsurface_NavigationalDistanceMeasuringEquipment Modifier1 = 44 // Navigational/Distance Measuring Equipment
-	Modifier1SIGINTSubsurface_NavigationTerrainFollowing             Modifier1 = 45 // Navigation/Terrain Following
-	Modifier1SIGINTSubsurface_NavigationalWeatherAvoidance           Modifier1 = 46 // Navigational/Weather Avoidance
-	Modifier1SIGINTSubsurface_OmniLineOfSightLOS                     Modifier1 = 47 // Omni-Line of Sight (LOS)
-	Modifier1SIGINTSubsurface_ProximityUse                           Modifier1 = 48 // Proximity Use
-	Modifier1SIGINTSubsurface_PointToPointLineOfSightLOS             Modifier1 = 49 // Point-to-Point Line of Sight (LOS)
-	Modifier1SIGINTSubsurface_Instrumentation                        Modifier1 = 50 // Instrumentation
-	Modifier1SIGINTSubsurface_RangeOnly                              Modifier1 = 51 // Range Only
-	Modifier1SIGINTSubsurface_Sonobuoy                               Modifier1 = 52 // Sonobuoy
-	Modifier1SIGINTSubsurface_SatelliteDownlink                      Modifier1 = 53 // Satellite Downlink
-	Modifier1SIGINTSubsurface_Space                                  Modifier1 = 54 // Space
-	Modifier1SIGINTSubsurface_SurfaceSearch                          Modifier1 = 55 // Surface Search
-	Modifier1SIGINTSubsurface_ShellTracking                          Modifier1 = 56 // Shell Tracking
-	Modifier1SIGINTSubsurface_SatelliteUplink                        Modifier1 = 57 // Satellite Uplink
-	Modifier1SIGINTSubsurface_TargetAcquisition                      Modifier1 = 58 // Target Acquisition
-	Modifier1SIGINTSubsurface_TargetIllumination                     Modifier1 = 59 // Target Illumination
-	Modifier1SIGINTSubsurface_TroposphericScatter                    Modifier1 = 60 // Tropospheric Scatter
-	Modifier1SIGINTSubsurface_TargetTracking                         Modifier1 = 61 // Target Tracking
-	Modifier1SIGINTSubsurface_Unknown                                Modifier1 = 62 // Unknown
-	Modifier1SIGINTSubsurface_VideoRemoting                          Modifier1 = 63 // Video Remoting
-	Modifier1SIGINTSubsurface_Experimental                           Modifier1 = 64 // Experimental
-	Modifier1SIGINTSubsurface_Disused                                Modifier1 = 65 // {Disused}
+	// Modifier1SIGINTSubsurface_AntiAircraftFireControl is Anti-Aircraft Fire Control.
+	Modifier1SIGINTSubsurface_AntiAircraftFireControl Modifier1 = 1
+
+	// Modifier1SIGINTSubsurface_AirborneSearchAndBombing is Airborne Search and Bombing.
+	Modifier1SIGINTSubsurface_AirborneSearchAndBombing Modifier1 = 2
+
+	// Modifier1SIGINTSubsurface_AirborneIntercept is Airborne Intercept.
+	Modifier1SIGINTSubsurface_AirborneIntercept Modifier1 = 3
+
+	// Modifier1SIGINTSubsurface_Altimeter is Altimeter.
+	Modifier1SIGINTSubsurface_Altimeter Modifier1 = 4
+
+	// Modifier1SIGINTSubsurface_AirborneReconnaissanceAndMapping is Airborne Reconnaissance and Mapping.
+	Modifier1SIGINTSubsurface_AirborneReconnaissanceAndMapping Modifier1 = 5
+
+	// Modifier1SIGINTSubsurface_AirTrafficControl is Air Traffic Control.
+	Modifier1SIGINTSubsurface_AirTrafficControl Modifier1 = 6
+
+	// Modifier1SIGINTSubsurface_BeaconTransponderNotIFF is Beacon Transponder (not IFF).
+	Modifier1SIGINTSubsurface_BeaconTransponderNotIFF Modifier1 = 7
+
+	// Modifier1SIGINTSubsurface_BattlefieldSurveillance is Battlefield Surveillance.
+	Modifier1SIGINTSubsurface_BattlefieldSurveillance Modifier1 = 8
+
+	// Modifier1SIGINTSubsurface_ControlledApproach is Controlled Approach.
+	Modifier1SIGINTSubsurface_ControlledApproach Modifier1 = 9
+
+	// Modifier1SIGINTSubsurface_ControlledIntercept is Controlled Intercept.
+	Modifier1SIGINTSubsurface_ControlledIntercept Modifier1 = 10
+
+	// Modifier1SIGINTSubsurface_CellularMobile is Cellular/Mobile.
+	Modifier1SIGINTSubsurface_CellularMobile Modifier1 = 11
+
+	// Modifier1SIGINTSubsurface_CoastalSurveillance is Coastal Surveillance.
+	Modifier1SIGINTSubsurface_CoastalSurveillance Modifier1 = 12
+
+	// Modifier1SIGINTSubsurface_DecoyMimic is Decoy/Mimic.
+	Modifier1SIGINTSubsurface_DecoyMimic Modifier1 = 13
+
+	// Modifier1SIGINTSubsurface_DataTransmission is Data Transmission.
+	Modifier1SIGINTSubsurface_DataTransmission Modifier1 = 14
+
+	// Modifier1SIGINTSubsurface_EarthSurveillance is Earth Surveillance.
+	Modifier1SIGINTSubsurface_EarthSurveillance Modifier1 = 15
+
+	// Modifier1SIGINTSubsurface_EarlyWarning is Early Warning.
+	Modifier1SIGINTSubsurface_EarlyWarning Modifier1 = 16
+
+	// Modifier1SIGINTSubsurface_FireControl is Fire Control.
+	Modifier1SIGINTSubsurface_FireControl Modifier1 = 17
+
+	// Modifier1SIGINTSubsurface_GroundMapping is Ground Mapping.
+	Modifier1SIGINTSubsurface_GroundMapping Modifier1 = 18
+
+	// Modifier1SIGINTSubsurface_HeightFinding is Height Finding.
+	Modifier1SIGINTSubsurface_HeightFinding Modifier1 = 19
+
+	// Modifier1SIGINTSubsurface_HarborSurveillance is Harbor Surveillance.
+	Modifier1SIGINTSubsurface_HarborSurveillance Modifier1 = 20
+
+	// Modifier1SIGINTSubsurface_IdentificationFriendOrFoeInterrogator is Identification, Friend or Foe (Interrogator).
+	Modifier1SIGINTSubsurface_IdentificationFriendOrFoeInterrogator Modifier1 = 21
+
+	// Modifier1SIGINTSubsurface_InstrumentLandingSystem is Instrument Landing System.
+	Modifier1SIGINTSubsurface_InstrumentLandingSystem Modifier1 = 22
+
+	// Modifier1SIGINTSubsurface_IonosphericSounding is Ionospheric Sounding.
+	Modifier1SIGINTSubsurface_IonosphericSounding Modifier1 = 23
+
+	// Modifier1SIGINTSubsurface_IdentificationFriendOrFoeTransponder is Identification, Friend or Foe (Transponder).
+	Modifier1SIGINTSubsurface_IdentificationFriendOrFoeTransponder Modifier1 = 24
+
+	// Modifier1SIGINTSubsurface_BarrageJammer is Barrage Jammer.
+	Modifier1SIGINTSubsurface_BarrageJammer Modifier1 = 25
+
+	// Modifier1SIGINTSubsurface_ClickJammer is Click Jammer.
+	Modifier1SIGINTSubsurface_ClickJammer Modifier1 = 26
+
+	// Modifier1SIGINTSubsurface_DeceptiveJammer is Deceptive Jammer.
+	Modifier1SIGINTSubsurface_DeceptiveJammer Modifier1 = 27
+
+	// Modifier1SIGINTSubsurface_FrequencySweptJammer is Frequency Swept Jammer.
+	Modifier1SIGINTSubsurface_FrequencySweptJammer Modifier1 = 28
+
+	// Modifier1SIGINTSubsurface_JammerGeneral is Jammer (general).
+	Modifier1SIGINTSubsurface_JammerGeneral Modifier1 = 29
+
+	// Modifier1SIGINTSubsurface_NoiseJammer is Noise Jammer.
+	Modifier1SIGINTSubsurface_NoiseJammer Modifier1 = 30
+
+	// Modifier1SIGINTSubsurface_PulsedJammer is Pulsed Jammer.
+	Modifier1SIGINTSubsurface_PulsedJammer Modifier1 = 31
+
+	// Modifier1SIGINTSubsurface_RepeaterJammer is Repeater Jammer.
+	Modifier1SIGINTSubsurface_RepeaterJammer Modifier1 = 32
+
+	// Modifier1SIGINTSubsurface_SpotNoiseJammer is Spot Noise Jammer.
+	Modifier1SIGINTSubsurface_SpotNoiseJammer Modifier1 = 33
+
+	// Modifier1SIGINTSubsurface_TransponderJammer is Transponder Jammer.
+	Modifier1SIGINTSubsurface_TransponderJammer Modifier1 = 34
+
+	// Modifier1SIGINTSubsurface_MissileAcquisition is Missile Acquisition.
+	Modifier1SIGINTSubsurface_MissileAcquisition Modifier1 = 35
+
+	// Modifier1SIGINTSubsurface_MissileControl is Missile Control.
+	Modifier1SIGINTSubsurface_MissileControl Modifier1 = 36
+
+	// Modifier1SIGINTSubsurface_MissileDownlink is Missile Downlink.
+	Modifier1SIGINTSubsurface_MissileDownlink Modifier1 = 37
+
+	// Modifier1SIGINTSubsurface_Meteorological is Meteorological.
+	Modifier1SIGINTSubsurface_Meteorological Modifier1 = 38
+
+	// Modifier1SIGINTSubsurface_MultiFunction is Multi-Function.
+	Modifier1SIGINTSubsurface_MultiFunction Modifier1 = 39
+
+	// Modifier1SIGINTSubsurface_MissileGuidance is Missile Guidance.
+	Modifier1SIGINTSubsurface_MissileGuidance Modifier1 = 40
+
+	// Modifier1SIGINTSubsurface_MissileHoming is Missile Homing.
+	Modifier1SIGINTSubsurface_MissileHoming Modifier1 = 41
+
+	// Modifier1SIGINTSubsurface_MissileTracking is Missile Tracking.
+	Modifier1SIGINTSubsurface_MissileTracking Modifier1 = 42
+
+	// Modifier1SIGINTSubsurface_NavigationalGeneral is Navigational/General.
+	Modifier1SIGINTSubsurface_NavigationalGeneral Modifier1 = 43
+
+	// Modifier1SIGINTSubsurface_NavigationalDistanceMeasuringEquipment is Navigational/Distance Measuring Equipment.
+	Modifier1SIGINTSubsurface_NavigationalDistanceMeasuringEquipment Modifier1 = 44
+
+	// Modifier1SIGINTSubsurface_NavigationTerrainFollowing is Navigation/Terrain Following.
+	Modifier1SIGINTSubsurface_NavigationTerrainFollowing Modifier1 = 45
+
+	// Modifier1SIGINTSubsurface_NavigationalWeatherAvoidance is Navigational/Weather Avoidance.
+	Modifier1SIGINTSubsurface_NavigationalWeatherAvoidance Modifier1 = 46
+
+	// Modifier1SIGINTSubsurface_OmniLineOfSightLOS is Omni-Line of Sight (LOS).
+	Modifier1SIGINTSubsurface_OmniLineOfSightLOS Modifier1 = 47
+
+	// Modifier1SIGINTSubsurface_ProximityUse is Proximity Use.
+	Modifier1SIGINTSubsurface_ProximityUse Modifier1 = 48
+
+	// Modifier1SIGINTSubsurface_PointToPointLineOfSightLOS is Point-to-Point Line of Sight (LOS).
+	Modifier1SIGINTSubsurface_PointToPointLineOfSightLOS Modifier1 = 49
+
+	// Modifier1SIGINTSubsurface_Instrumentation is Instrumentation.
+	Modifier1SIGINTSubsurface_Instrumentation Modifier1 = 50
+
+	// Modifier1SIGINTSubsurface_RangeOnly is Range Only.
+	Modifier1SIGINTSubsurface_RangeOnly Modifier1 = 51
+
+	// Modifier1SIGINTSubsurface_Sonobuoy is Sonobuoy.
+	Modifier1SIGINTSubsurface_Sonobuoy Modifier1 = 52
+
+	// Modifier1SIGINTSubsurface_SatelliteDownlink is Satellite Downlink.
+	Modifier1SIGINTSubsurface_SatelliteDownlink Modifier1 = 53
+
+	// Modifier1SIGINTSubsurface_Space is Space.
+	Modifier1SIGINTSubsurface_Space Modifier1 = 54
+
+	// Modifier1SIGINTSubsurface_SurfaceSearch is Surface Search.
+	Modifier1SIGINTSubsurface_SurfaceSearch Modifier1 = 55
+
+	// Modifier1SIGINTSubsurface_ShellTracking is Shell Tracking.
+	Modifier1SIGINTSubsurface_ShellTracking Modifier1 = 56
+
+	// Modifier1SIGINTSubsurface_SatelliteUplink is Satellite Uplink.
+	Modifier1SIGINTSubsurface_SatelliteUplink Modifier1 = 57
+
+	// Modifier1SIGINTSubsurface_TargetAcquisition is Target Acquisition.
+	Modifier1SIGINTSubsurface_TargetAcquisition Modifier1 = 58
+
+	// Modifier1SIGINTSubsurface_TargetIllumination is Target Illumination.
+	Modifier1SIGINTSubsurface_TargetIllumination Modifier1 = 59
+
+	// Modifier1SIGINTSubsurface_TroposphericScatter is Tropospheric Scatter.
+	Modifier1SIGINTSubsurface_TroposphericScatter Modifier1 = 60
+
+	// Modifier1SIGINTSubsurface_TargetTracking is Target Tracking.
+	Modifier1SIGINTSubsurface_TargetTracking Modifier1 = 61
+
+	// Modifier1SIGINTSubsurface_Unknown is Unknown.
+	Modifier1SIGINTSubsurface_Unknown Modifier1 = 62
+
+	// Modifier1SIGINTSubsurface_VideoRemoting is Video Remoting.
+	Modifier1SIGINTSubsurface_VideoRemoting Modifier1 = 63
+
+	// Modifier1SIGINTSubsurface_Experimental is Experimental.
+	Modifier1SIGINTSubsurface_Experimental Modifier1 = 64
+
+	// Modifier1SIGINTSubsurface_Disused is {Disused}.
+	Modifier1SIGINTSubsurface_Disused Modifier1 = 65
 )

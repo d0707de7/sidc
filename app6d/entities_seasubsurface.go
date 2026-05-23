@@ -5,26 +5,69 @@ package app6d
 
 // Entity constants for symbol set 35 (Sea subsurface).
 const (
-	EntitySeaSubsurface_Military                                                           Entity = 110000 // Military
-	EntitySeaSubsurface_MilitarySubmarine                                                  Entity = 110100 // Military / Submarine
-	EntitySeaSubsurface_MilitarySubmarineSubmarineSurfaced                                 Entity = 110101 // Military / Submarine / Submarine, Surfaced
-	EntitySeaSubsurface_MilitarySubmarineSubmarineSnorkeling                               Entity = 110102 // Military / Submarine / Submarine, Snorkeling
-	EntitySeaSubsurface_MilitarySubmarineSubmarineBottomed                                 Entity = 110103 // Military / Submarine / Submarine, Bottomed
-	EntitySeaSubsurface_MilitaryOtherSubmersible                                           Entity = 110200 // Military / Other Submersible
-	EntitySeaSubsurface_MilitaryNonsubmarine                                               Entity = 110300 // Military / Nonsubmarine
-	EntitySeaSubsurface_MilitaryAutonomousUnderwaterVehicleAUVUnmannedUnderwaterVehicleUUV Entity = 110400 // Military / Autonomous Underwater Vehicle (AUV)/Unmanned Underwater Vehicle (UUV)
-	EntitySeaSubsurface_MilitaryDiver                                                      Entity = 110500 // Military / Diver
-	EntitySeaSubsurface_Civilian                                                           Entity = 120000 // Civilian
-	EntitySeaSubsurface_CivilianSubmersible                                                Entity = 120100 // Civilian / Submersible
-	EntitySeaSubsurface_CivilianAutonomousUnderwaterVehicleAUVUnmannedUnderwaterVehicleUUV Entity = 120200 // Civilian / Autonomous Underwater Vehicle (AUV)/ Unmanned Underwater Vehicle (UUV)
-	EntitySeaSubsurface_CivilianDiver                                                      Entity = 120300 // Civilian / Diver
-	EntitySeaSubsurface_Weapon                                                             Entity = 130000 // Weapon
-	EntitySeaSubsurface_WeaponTorpedo                                                      Entity = 130100 // Weapon / Torpedo
-	EntitySeaSubsurface_WeaponImprovisedExplosiveDeviceIED                                 Entity = 130200 // Weapon / Improvised Explosive Device (IED)
-	EntitySeaSubsurface_WeaponDecoy                                                        Entity = 130300 // Weapon / Decoy
-	EntitySeaSubsurface_EchoTrackerClassifierETCPossibleContactPOSCON                      Entity = 140000 // Echo Tracker Classifier (ETC) / Possible Contact (POSCON)
-	EntitySeaSubsurface_FusedTrack                                                         Entity = 150000 // Fused Track
-	EntitySeaSubsurface_ManualTrack                                                        Entity = 160000 // Manual Track
-	EntitySeaSubsurface_SeabedInstallationManMadeMilitary                                  Entity = 200000 // Seabed Installation Man-Made, Military
-	EntitySeaSubsurface_SeabedInstallationManMadeNonMilitary                               Entity = 210000 // Seabed Installation Man-Made, Non-Military
+	// EntitySeaSubsurface_Military is Military.
+	EntitySeaSubsurface_Military Entity = 110000
+
+	// EntitySeaSubsurface_MilitarySubmarine is Military / Submarine.
+	EntitySeaSubsurface_MilitarySubmarine Entity = 110100
+
+	// EntitySeaSubsurface_MilitarySubmarineSubmarineSurfaced is Military / Submarine / Submarine, Surfaced.
+	EntitySeaSubsurface_MilitarySubmarineSubmarineSurfaced Entity = 110101
+
+	// EntitySeaSubsurface_MilitarySubmarineSubmarineSnorkeling is Military / Submarine / Submarine, Snorkeling.
+	EntitySeaSubsurface_MilitarySubmarineSubmarineSnorkeling Entity = 110102
+
+	// EntitySeaSubsurface_MilitarySubmarineSubmarineBottomed is Military / Submarine / Submarine, Bottomed.
+	EntitySeaSubsurface_MilitarySubmarineSubmarineBottomed Entity = 110103
+
+	// EntitySeaSubsurface_MilitaryOtherSubmersible is Military / Other Submersible.
+	EntitySeaSubsurface_MilitaryOtherSubmersible Entity = 110200
+
+	// EntitySeaSubsurface_MilitaryNonsubmarine is Military / Nonsubmarine.
+	EntitySeaSubsurface_MilitaryNonsubmarine Entity = 110300
+
+	// EntitySeaSubsurface_MilitaryAutonomousUnderwaterVehicleAUVUnmannedUnderwaterVehicleUUV is Military / Autonomous Underwater Vehicle (AUV)/Unmanned Underwater Vehicle (UUV).
+	EntitySeaSubsurface_MilitaryAutonomousUnderwaterVehicleAUVUnmannedUnderwaterVehicleUUV Entity = 110400
+
+	// EntitySeaSubsurface_MilitaryDiver is Military / Diver.
+	EntitySeaSubsurface_MilitaryDiver Entity = 110500
+
+	// EntitySeaSubsurface_Civilian is Civilian.
+	EntitySeaSubsurface_Civilian Entity = 120000
+
+	// EntitySeaSubsurface_CivilianSubmersible is Civilian / Submersible.
+	EntitySeaSubsurface_CivilianSubmersible Entity = 120100
+
+	// EntitySeaSubsurface_CivilianAutonomousUnderwaterVehicleAUVUnmannedUnderwaterVehicleUUV is Civilian / Autonomous Underwater Vehicle (AUV)/ Unmanned Underwater Vehicle (UUV).
+	EntitySeaSubsurface_CivilianAutonomousUnderwaterVehicleAUVUnmannedUnderwaterVehicleUUV Entity = 120200
+
+	// EntitySeaSubsurface_CivilianDiver is Civilian / Diver.
+	EntitySeaSubsurface_CivilianDiver Entity = 120300
+
+	// EntitySeaSubsurface_Weapon is Weapon.
+	EntitySeaSubsurface_Weapon Entity = 130000
+
+	// EntitySeaSubsurface_WeaponTorpedo is Weapon / Torpedo.
+	EntitySeaSubsurface_WeaponTorpedo Entity = 130100
+
+	// EntitySeaSubsurface_WeaponImprovisedExplosiveDeviceIED is Weapon / Improvised Explosive Device (IED).
+	EntitySeaSubsurface_WeaponImprovisedExplosiveDeviceIED Entity = 130200
+
+	// EntitySeaSubsurface_WeaponDecoy is Weapon / Decoy.
+	EntitySeaSubsurface_WeaponDecoy Entity = 130300
+
+	// EntitySeaSubsurface_EchoTrackerClassifierETCPossibleContactPOSCON is Echo Tracker Classifier (ETC) / Possible Contact (POSCON).
+	EntitySeaSubsurface_EchoTrackerClassifierETCPossibleContactPOSCON Entity = 140000
+
+	// EntitySeaSubsurface_FusedTrack is Fused Track.
+	EntitySeaSubsurface_FusedTrack Entity = 150000
+
+	// EntitySeaSubsurface_ManualTrack is Manual Track.
+	EntitySeaSubsurface_ManualTrack Entity = 160000
+
+	// EntitySeaSubsurface_SeabedInstallationManMadeMilitary is Seabed Installation Man-Made, Military.
+	EntitySeaSubsurface_SeabedInstallationManMadeMilitary Entity = 200000
+
+	// EntitySeaSubsurface_SeabedInstallationManMadeNonMilitary is Seabed Installation Man-Made, Non-Military.
+	EntitySeaSubsurface_SeabedInstallationManMadeNonMilitary Entity = 210000
 )

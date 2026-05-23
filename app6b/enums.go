@@ -10,8 +10,9 @@ const (
 	CodingSchemeTacticalGraphics CodingScheme = 'G'
 	CodingSchemeWeather          CodingScheme = 'W'
 	CodingSchemeIntelligence     CodingScheme = 'I'
-	CodingSchemeMOOTW            CodingScheme = 'O' // military operations other than war / stability
-	CodingSchemeEmergencyMgmt    CodingScheme = 'E'
+	// CodingSchemeMOOTW is military operations other than war (stability operations).
+	CodingSchemeMOOTW         CodingScheme = 'O'
+	CodingSchemeEmergencyMgmt CodingScheme = 'E'
 )
 
 func (c CodingScheme) String() string {

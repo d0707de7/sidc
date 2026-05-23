@@ -5,97 +5,282 @@ package app6d
 
 // Entity constants for symbol set 30 (Sea surface).
 const (
-	EntitySeaSurface_Military                                                                Entity = 110000 // Military
-	EntitySeaSurface_MilitaryCombatant                                                       Entity = 120000 // Military Combatant
-	EntitySeaSurface_MilitaryCombatantCarrier                                                Entity = 120100 // Military Combatant / Carrier
-	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLine                                   Entity = 120200 // Military Combatant / Surface Combatant, Line
-	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineBattleship                         Entity = 120201 // Military Combatant / Surface Combatant, Line / Battleship
-	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineCruiser                            Entity = 120202 // Military Combatant / Surface Combatant, Line / Cruiser
-	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineDestroyer                          Entity = 120203 // Military Combatant / Surface Combatant, Line / Destroyer
-	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineFrigate                            Entity = 120204 // Military Combatant / Surface Combatant, Line / Frigate
-	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineCorvette                           Entity = 120205 // Military Combatant / Surface Combatant, Line / Corvette
-	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineLittoralCombatantShip              Entity = 120206 // Military Combatant / Surface Combatant, Line / Littoral Combatant Ship
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShip                                  Entity = 120300 // Military Combatant / Amphibious Warfare Ship
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousCommandShip             Entity = 120301 // Military Combatant / Amphibious Warfare Ship / Amphibious Command Ship
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultNonSpecified     Entity = 120302 // Military Combatant / Amphibious Warfare Ship / Amphibious Assault, Non-specified
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipGeneral      Entity = 120303 // Military Combatant / Amphibious Warfare Ship / Amphibious Assault Ship, General
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipMultipurpose Entity = 120304 // Military Combatant / Amphibious Warfare Ship / Amphibious Assault Ship, Multipurpose
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipHelicopter   Entity = 120305 // Military Combatant / Amphibious Warfare Ship / Amphibious Assault Ship, Helicopter
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousTransportDock           Entity = 120306 // Military Combatant / Amphibious Warfare Ship / Amphibious Transport Dock
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipLandingShip                       Entity = 120307 // Military Combatant / Amphibious Warfare Ship / Landing Ship
-	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipLandingCraft                      Entity = 120308 // Military Combatant / Amphibious Warfare Ship / Landing Craft
-	EntitySeaSurface_MilitaryCombatantMineWarfareShip                                        Entity = 120400 // Military Combatant / Mine Warfare Ship
-	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineLayer                               Entity = 120401 // Military Combatant / Mine Warfare Ship / Mine Layer
-	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineSweeper                             Entity = 120402 // Military Combatant / Mine Warfare Ship / Mine Sweeper
-	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineSweeperDrone                        Entity = 120403 // Military Combatant / Mine Warfare Ship / Mine Sweeper, Drone
-	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineHunter                              Entity = 120404 // Military Combatant / Mine Warfare Ship / Mine Hunter
-	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineCountermeasures                     Entity = 120405 // Military Combatant / Mine Warfare Ship / Mine Countermeasures
-	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineCountermeasuresSupportShip          Entity = 120406 // Military Combatant / Mine Warfare Ship / Mine Countermeasures, Support Ship
-	EntitySeaSurface_MilitaryCombatantPatrolBoat                                             Entity = 120500 // Military Combatant / Patrol Boat
-	EntitySeaSurface_MilitaryCombatantPatrolBoatPatrolCraftSubmarineChaserEscortGeneral      Entity = 120501 // Military Combatant / Patrol Boat / Patrol Craft, Submarine Chaser/Escort, General
-	EntitySeaSurface_MilitaryCombatantPatrolBoatPatrolShipGeneral                            Entity = 120502 // Military Combatant / Patrol Boat / Patrol Ship, General
-	EntitySeaSurface_MilitaryCombatantDecoy                                                  Entity = 120600 // Military Combatant / Decoy
-	EntitySeaSurface_MilitaryCombatantUnmannedSurfaceWaterVehicleUSV                         Entity = 120700 // Military Combatant / Unmanned Surface Water Vehicle (USV)
-	EntitySeaSurface_MilitaryCombatantSpeedboat                                              Entity = 120800 // Military Combatant / Speedboat
-	EntitySeaSurface_MilitaryCombatantSpeedboatRigidHullInflatableBoatRHIB                   Entity = 120801 // Military Combatant / Speedboat / Rigid–Hull Inflatable Boat (RHIB)
-	EntitySeaSurface_MilitaryCombatantJetSki                                                 Entity = 120900 // Military Combatant / Jet Ski
-	EntitySeaSurface_MilitaryCombatantNavyTaskOrganization                                   Entity = 121000 // Military Combatant / Navy Task Organization
-	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskElement                    Entity = 121001 // Military Combatant / Navy Task Organization / Navy Task Element
-	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskForce                      Entity = 121002 // Military Combatant / Navy Task Organization / Navy Task Force
-	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskGroup                      Entity = 121003 // Military Combatant / Navy Task Organization / Navy Task Group
-	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskUnit                       Entity = 121004 // Military Combatant / Navy Task Organization / Navy Task Unit
-	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationConvoy                             Entity = 121005 // Military Combatant / Navy Task Organization / Convoy
-	EntitySeaSurface_MilitaryCombatantSeaBasedXBandRadar                                     Entity = 121100 // Military Combatant / Sea-Based X-Band Radar
-	EntitySeaSurface_MilitaryNonCombatant                                                    Entity = 130000 // Military Non Combatant
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShip                                       Entity = 130100 // Military Non Combatant / Auxiliary Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipAmmunitionShip                         Entity = 130101 // Military Non Combatant / Auxiliary Ship / Ammunition Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipNavalStoresShip                        Entity = 130102 // Military Non Combatant / Auxiliary Ship / Naval Stores Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipAuxiliaryFlagShip                      Entity = 130103 // Military Non Combatant / Auxiliary Ship / Auxiliary Flag Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipIntelligenceCollector                  Entity = 130104 // Military Non Combatant / Auxiliary Ship / Intelligence Collector
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipOceanographicResearchShip              Entity = 130105 // Military Non Combatant / Auxiliary Ship / Oceanographic Research Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipSurveyShip                             Entity = 130106 // Military Non Combatant / Auxiliary Ship / Survey Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipHospitalShip                           Entity = 130107 // Military Non Combatant / Auxiliary Ship / Hospital Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipNavalCargoShip                         Entity = 130108 // Military Non Combatant / Auxiliary Ship / Naval Cargo Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipCombatSupportShipFast                  Entity = 130109 // Military Non Combatant / Auxiliary Ship / Combat Support Ship, Fast
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipOilerReplenishment                     Entity = 130110 // Military Non Combatant / Auxiliary Ship / Oiler, Replenishment
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipRepairShip                             Entity = 130111 // Military Non Combatant / Auxiliary Ship / Repair Ship
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipSubmarineTender                        Entity = 130112 // Military Non Combatant / Auxiliary Ship / Submarine Tender
-	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipTugOceanGoing                          Entity = 130113 // Military Non Combatant / Auxiliary Ship / Tug, Ocean Going
-	EntitySeaSurface_MilitaryNonCombatantServiceCraftYard                                    Entity = 130200 // Military Non Combatant / Service Craft/Yard
-	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardBargeNotSelfPropelled               Entity = 130201 // Military Non Combatant / Service Craft/Yard / Barge, not Self–Propelled
-	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardBargeSelfPropelled                  Entity = 130202 // Military Non Combatant / Service Craft/Yard / Barge, Self–Propelled
-	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardTugHarbor                           Entity = 130203 // Military Non Combatant / Service Craft/Yard / Tug, Harbor
-	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardLaunch                              Entity = 130204 // Military Non Combatant / Service Craft/Yard / Launch
-	EntitySeaSurface_Civilian                                                                Entity = 140000 // Civilian
-	EntitySeaSurface_CivilianMerchantShip                                                    Entity = 140100 // Civilian / Merchant Ship
-	EntitySeaSurface_CivilianMerchantShipCargoGeneral                                        Entity = 140101 // Civilian / Merchant Ship / Cargo, General
-	EntitySeaSurface_CivilianMerchantShipContainerShip                                       Entity = 140102 // Civilian / Merchant Ship / Container Ship
-	EntitySeaSurface_CivilianMerchantShipDredge                                              Entity = 140103 // Civilian / Merchant Ship / Dredge
-	EntitySeaSurface_CivilianMerchantShipRollOnRollOff                                       Entity = 140104 // Civilian / Merchant Ship / Roll On/Roll Off
-	EntitySeaSurface_CivilianMerchantShipFerry                                               Entity = 140105 // Civilian / Merchant Ship / Ferry
-	EntitySeaSurface_CivilianMerchantShipHeavyLift                                           Entity = 140106 // Civilian / Merchant Ship / Heavy Lift
-	EntitySeaSurface_CivilianMerchantShipHovercraft                                          Entity = 140107 // Civilian / Merchant Ship / Hovercraft
-	EntitySeaSurface_CivilianMerchantShipLashCarrierWithBarges                               Entity = 140108 // Civilian / Merchant Ship / Lash Carrier (with Barges)
-	EntitySeaSurface_CivilianMerchantShipOilerTanker                                         Entity = 140109 // Civilian / Merchant Ship / Oiler/Tanker
-	EntitySeaSurface_CivilianMerchantShipPassenger                                           Entity = 140110 // Civilian / Merchant Ship / Passenger
-	EntitySeaSurface_CivilianMerchantShipTugOceanGoing                                       Entity = 140111 // Civilian / Merchant Ship / Tug, Ocean Going
-	EntitySeaSurface_CivilianMerchantShipTow                                                 Entity = 140112 // Civilian / Merchant Ship / Tow
-	EntitySeaSurface_CivilianMerchantShipTransportShipHazardousMaterial                      Entity = 140113 // Civilian / Merchant Ship / Transport Ship, Hazardous Material
-	EntitySeaSurface_CivilianMerchantShipJunkDhow                                            Entity = 140114 // Civilian / Merchant Ship / Junk/Dhow
-	EntitySeaSurface_CivilianMerchantShipBargeNotSelfPropelled                               Entity = 140115 // Civilian / Merchant Ship / Barge, not Self–Propelled
-	EntitySeaSurface_CivilianMerchantShipHospitalShip                                        Entity = 140116 // Civilian / Merchant Ship / Hospital Ship
-	EntitySeaSurface_CivilianFishingVessel                                                   Entity = 140200 // Civilian / Fishing Vessel
-	EntitySeaSurface_CivilianFishingVesselDrifter                                            Entity = 140201 // Civilian / Fishing Vessel / Drifter
-	EntitySeaSurface_CivilianFishingVesselTrawler                                            Entity = 140202 // Civilian / Fishing Vessel / Trawler
-	EntitySeaSurface_CivilianFishingVesselDredger                                            Entity = 140203 // Civilian / Fishing Vessel / Dredger
-	EntitySeaSurface_CivilianLawEnforcementVessel                                            Entity = 140300 // Civilian / Law Enforcement Vessel
-	EntitySeaSurface_CivilianLeisureCraftSailing                                             Entity = 140400 // Civilian / Leisure Craft, Sailing
-	EntitySeaSurface_CivilianLeisureCraftMotorized                                           Entity = 140500 // Civilian / Leisure Craft, Motorized
-	EntitySeaSurface_CivilianLeisureCraftMotorizedRigidHullInflatableBoatRHIB                Entity = 140501 // Civilian / Leisure Craft, Motorized / Rigid–Hull Inflatable Boat (RHIB)
-	EntitySeaSurface_CivilianLeisureCraftMotorizedSpeedboat                                  Entity = 140502 // Civilian / Leisure Craft, Motorized / Speedboat
-	EntitySeaSurface_CivilianJetSki                                                          Entity = 140600 // Civilian / Jet Ski
-	EntitySeaSurface_CivilianUnmannedSurfaceWaterVehicleUSV                                  Entity = 140700 // Civilian / Unmanned Surface Water Vehicle (USV)
-	EntitySeaSurface_OwnShip                                                                 Entity = 150000 // Own Ship
-	EntitySeaSurface_FusedTrack                                                              Entity = 160000 // Fused Track
-	EntitySeaSurface_ManualTrack                                                             Entity = 170000 // Manual Track
+	// EntitySeaSurface_Military is Military.
+	EntitySeaSurface_Military Entity = 110000
+
+	// EntitySeaSurface_MilitaryCombatant is Military Combatant.
+	EntitySeaSurface_MilitaryCombatant Entity = 120000
+
+	// EntitySeaSurface_MilitaryCombatantCarrier is Military Combatant / Carrier.
+	EntitySeaSurface_MilitaryCombatantCarrier Entity = 120100
+
+	// EntitySeaSurface_MilitaryCombatantSurfaceCombatantLine is Military Combatant / Surface Combatant, Line.
+	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLine Entity = 120200
+
+	// EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineBattleship is Military Combatant / Surface Combatant, Line / Battleship.
+	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineBattleship Entity = 120201
+
+	// EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineCruiser is Military Combatant / Surface Combatant, Line / Cruiser.
+	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineCruiser Entity = 120202
+
+	// EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineDestroyer is Military Combatant / Surface Combatant, Line / Destroyer.
+	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineDestroyer Entity = 120203
+
+	// EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineFrigate is Military Combatant / Surface Combatant, Line / Frigate.
+	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineFrigate Entity = 120204
+
+	// EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineCorvette is Military Combatant / Surface Combatant, Line / Corvette.
+	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineCorvette Entity = 120205
+
+	// EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineLittoralCombatantShip is Military Combatant / Surface Combatant, Line / Littoral Combatant Ship.
+	EntitySeaSurface_MilitaryCombatantSurfaceCombatantLineLittoralCombatantShip Entity = 120206
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShip is Military Combatant / Amphibious Warfare Ship.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShip Entity = 120300
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousCommandShip is Military Combatant / Amphibious Warfare Ship / Amphibious Command Ship.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousCommandShip Entity = 120301
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultNonSpecified is Military Combatant / Amphibious Warfare Ship / Amphibious Assault, Non-specified.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultNonSpecified Entity = 120302
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipGeneral is Military Combatant / Amphibious Warfare Ship / Amphibious Assault Ship, General.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipGeneral Entity = 120303
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipMultipurpose is Military Combatant / Amphibious Warfare Ship / Amphibious Assault Ship, Multipurpose.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipMultipurpose Entity = 120304
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipHelicopter is Military Combatant / Amphibious Warfare Ship / Amphibious Assault Ship, Helicopter.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousAssaultShipHelicopter Entity = 120305
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousTransportDock is Military Combatant / Amphibious Warfare Ship / Amphibious Transport Dock.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipAmphibiousTransportDock Entity = 120306
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipLandingShip is Military Combatant / Amphibious Warfare Ship / Landing Ship.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipLandingShip Entity = 120307
+
+	// EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipLandingCraft is Military Combatant / Amphibious Warfare Ship / Landing Craft.
+	EntitySeaSurface_MilitaryCombatantAmphibiousWarfareShipLandingCraft Entity = 120308
+
+	// EntitySeaSurface_MilitaryCombatantMineWarfareShip is Military Combatant / Mine Warfare Ship.
+	EntitySeaSurface_MilitaryCombatantMineWarfareShip Entity = 120400
+
+	// EntitySeaSurface_MilitaryCombatantMineWarfareShipMineLayer is Military Combatant / Mine Warfare Ship / Mine Layer.
+	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineLayer Entity = 120401
+
+	// EntitySeaSurface_MilitaryCombatantMineWarfareShipMineSweeper is Military Combatant / Mine Warfare Ship / Mine Sweeper.
+	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineSweeper Entity = 120402
+
+	// EntitySeaSurface_MilitaryCombatantMineWarfareShipMineSweeperDrone is Military Combatant / Mine Warfare Ship / Mine Sweeper, Drone.
+	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineSweeperDrone Entity = 120403
+
+	// EntitySeaSurface_MilitaryCombatantMineWarfareShipMineHunter is Military Combatant / Mine Warfare Ship / Mine Hunter.
+	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineHunter Entity = 120404
+
+	// EntitySeaSurface_MilitaryCombatantMineWarfareShipMineCountermeasures is Military Combatant / Mine Warfare Ship / Mine Countermeasures.
+	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineCountermeasures Entity = 120405
+
+	// EntitySeaSurface_MilitaryCombatantMineWarfareShipMineCountermeasuresSupportShip is Military Combatant / Mine Warfare Ship / Mine Countermeasures, Support Ship.
+	EntitySeaSurface_MilitaryCombatantMineWarfareShipMineCountermeasuresSupportShip Entity = 120406
+
+	// EntitySeaSurface_MilitaryCombatantPatrolBoat is Military Combatant / Patrol Boat.
+	EntitySeaSurface_MilitaryCombatantPatrolBoat Entity = 120500
+
+	// EntitySeaSurface_MilitaryCombatantPatrolBoatPatrolCraftSubmarineChaserEscortGeneral is Military Combatant / Patrol Boat / Patrol Craft, Submarine Chaser/Escort, General.
+	EntitySeaSurface_MilitaryCombatantPatrolBoatPatrolCraftSubmarineChaserEscortGeneral Entity = 120501
+
+	// EntitySeaSurface_MilitaryCombatantPatrolBoatPatrolShipGeneral is Military Combatant / Patrol Boat / Patrol Ship, General.
+	EntitySeaSurface_MilitaryCombatantPatrolBoatPatrolShipGeneral Entity = 120502
+
+	// EntitySeaSurface_MilitaryCombatantDecoy is Military Combatant / Decoy.
+	EntitySeaSurface_MilitaryCombatantDecoy Entity = 120600
+
+	// EntitySeaSurface_MilitaryCombatantUnmannedSurfaceWaterVehicleUSV is Military Combatant / Unmanned Surface Water Vehicle (USV).
+	EntitySeaSurface_MilitaryCombatantUnmannedSurfaceWaterVehicleUSV Entity = 120700
+
+	// EntitySeaSurface_MilitaryCombatantSpeedboat is Military Combatant / Speedboat.
+	EntitySeaSurface_MilitaryCombatantSpeedboat Entity = 120800
+
+	// EntitySeaSurface_MilitaryCombatantSpeedboatRigidHullInflatableBoatRHIB is Military Combatant / Speedboat / Rigid–Hull Inflatable Boat (RHIB).
+	EntitySeaSurface_MilitaryCombatantSpeedboatRigidHullInflatableBoatRHIB Entity = 120801
+
+	// EntitySeaSurface_MilitaryCombatantJetSki is Military Combatant / Jet Ski.
+	EntitySeaSurface_MilitaryCombatantJetSki Entity = 120900
+
+	// EntitySeaSurface_MilitaryCombatantNavyTaskOrganization is Military Combatant / Navy Task Organization.
+	EntitySeaSurface_MilitaryCombatantNavyTaskOrganization Entity = 121000
+
+	// EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskElement is Military Combatant / Navy Task Organization / Navy Task Element.
+	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskElement Entity = 121001
+
+	// EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskForce is Military Combatant / Navy Task Organization / Navy Task Force.
+	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskForce Entity = 121002
+
+	// EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskGroup is Military Combatant / Navy Task Organization / Navy Task Group.
+	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskGroup Entity = 121003
+
+	// EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskUnit is Military Combatant / Navy Task Organization / Navy Task Unit.
+	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationNavyTaskUnit Entity = 121004
+
+	// EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationConvoy is Military Combatant / Navy Task Organization / Convoy.
+	EntitySeaSurface_MilitaryCombatantNavyTaskOrganizationConvoy Entity = 121005
+
+	// EntitySeaSurface_MilitaryCombatantSeaBasedXBandRadar is Military Combatant / Sea-Based X-Band Radar.
+	EntitySeaSurface_MilitaryCombatantSeaBasedXBandRadar Entity = 121100
+
+	// EntitySeaSurface_MilitaryNonCombatant is Military Non Combatant.
+	EntitySeaSurface_MilitaryNonCombatant Entity = 130000
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShip is Military Non Combatant / Auxiliary Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShip Entity = 130100
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipAmmunitionShip is Military Non Combatant / Auxiliary Ship / Ammunition Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipAmmunitionShip Entity = 130101
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipNavalStoresShip is Military Non Combatant / Auxiliary Ship / Naval Stores Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipNavalStoresShip Entity = 130102
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipAuxiliaryFlagShip is Military Non Combatant / Auxiliary Ship / Auxiliary Flag Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipAuxiliaryFlagShip Entity = 130103
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipIntelligenceCollector is Military Non Combatant / Auxiliary Ship / Intelligence Collector.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipIntelligenceCollector Entity = 130104
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipOceanographicResearchShip is Military Non Combatant / Auxiliary Ship / Oceanographic Research Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipOceanographicResearchShip Entity = 130105
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipSurveyShip is Military Non Combatant / Auxiliary Ship / Survey Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipSurveyShip Entity = 130106
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipHospitalShip is Military Non Combatant / Auxiliary Ship / Hospital Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipHospitalShip Entity = 130107
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipNavalCargoShip is Military Non Combatant / Auxiliary Ship / Naval Cargo Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipNavalCargoShip Entity = 130108
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipCombatSupportShipFast is Military Non Combatant / Auxiliary Ship / Combat Support Ship, Fast.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipCombatSupportShipFast Entity = 130109
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipOilerReplenishment is Military Non Combatant / Auxiliary Ship / Oiler, Replenishment.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipOilerReplenishment Entity = 130110
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipRepairShip is Military Non Combatant / Auxiliary Ship / Repair Ship.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipRepairShip Entity = 130111
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipSubmarineTender is Military Non Combatant / Auxiliary Ship / Submarine Tender.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipSubmarineTender Entity = 130112
+
+	// EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipTugOceanGoing is Military Non Combatant / Auxiliary Ship / Tug, Ocean Going.
+	EntitySeaSurface_MilitaryNonCombatantAuxiliaryShipTugOceanGoing Entity = 130113
+
+	// EntitySeaSurface_MilitaryNonCombatantServiceCraftYard is Military Non Combatant / Service Craft/Yard.
+	EntitySeaSurface_MilitaryNonCombatantServiceCraftYard Entity = 130200
+
+	// EntitySeaSurface_MilitaryNonCombatantServiceCraftYardBargeNotSelfPropelled is Military Non Combatant / Service Craft/Yard / Barge, not Self–Propelled.
+	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardBargeNotSelfPropelled Entity = 130201
+
+	// EntitySeaSurface_MilitaryNonCombatantServiceCraftYardBargeSelfPropelled is Military Non Combatant / Service Craft/Yard / Barge, Self–Propelled.
+	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardBargeSelfPropelled Entity = 130202
+
+	// EntitySeaSurface_MilitaryNonCombatantServiceCraftYardTugHarbor is Military Non Combatant / Service Craft/Yard / Tug, Harbor.
+	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardTugHarbor Entity = 130203
+
+	// EntitySeaSurface_MilitaryNonCombatantServiceCraftYardLaunch is Military Non Combatant / Service Craft/Yard / Launch.
+	EntitySeaSurface_MilitaryNonCombatantServiceCraftYardLaunch Entity = 130204
+
+	// EntitySeaSurface_Civilian is Civilian.
+	EntitySeaSurface_Civilian Entity = 140000
+
+	// EntitySeaSurface_CivilianMerchantShip is Civilian / Merchant Ship.
+	EntitySeaSurface_CivilianMerchantShip Entity = 140100
+
+	// EntitySeaSurface_CivilianMerchantShipCargoGeneral is Civilian / Merchant Ship / Cargo, General.
+	EntitySeaSurface_CivilianMerchantShipCargoGeneral Entity = 140101
+
+	// EntitySeaSurface_CivilianMerchantShipContainerShip is Civilian / Merchant Ship / Container Ship.
+	EntitySeaSurface_CivilianMerchantShipContainerShip Entity = 140102
+
+	// EntitySeaSurface_CivilianMerchantShipDredge is Civilian / Merchant Ship / Dredge.
+	EntitySeaSurface_CivilianMerchantShipDredge Entity = 140103
+
+	// EntitySeaSurface_CivilianMerchantShipRollOnRollOff is Civilian / Merchant Ship / Roll On/Roll Off.
+	EntitySeaSurface_CivilianMerchantShipRollOnRollOff Entity = 140104
+
+	// EntitySeaSurface_CivilianMerchantShipFerry is Civilian / Merchant Ship / Ferry.
+	EntitySeaSurface_CivilianMerchantShipFerry Entity = 140105
+
+	// EntitySeaSurface_CivilianMerchantShipHeavyLift is Civilian / Merchant Ship / Heavy Lift.
+	EntitySeaSurface_CivilianMerchantShipHeavyLift Entity = 140106
+
+	// EntitySeaSurface_CivilianMerchantShipHovercraft is Civilian / Merchant Ship / Hovercraft.
+	EntitySeaSurface_CivilianMerchantShipHovercraft Entity = 140107
+
+	// EntitySeaSurface_CivilianMerchantShipLashCarrierWithBarges is Civilian / Merchant Ship / Lash Carrier (with Barges).
+	EntitySeaSurface_CivilianMerchantShipLashCarrierWithBarges Entity = 140108
+
+	// EntitySeaSurface_CivilianMerchantShipOilerTanker is Civilian / Merchant Ship / Oiler/Tanker.
+	EntitySeaSurface_CivilianMerchantShipOilerTanker Entity = 140109
+
+	// EntitySeaSurface_CivilianMerchantShipPassenger is Civilian / Merchant Ship / Passenger.
+	EntitySeaSurface_CivilianMerchantShipPassenger Entity = 140110
+
+	// EntitySeaSurface_CivilianMerchantShipTugOceanGoing is Civilian / Merchant Ship / Tug, Ocean Going.
+	EntitySeaSurface_CivilianMerchantShipTugOceanGoing Entity = 140111
+
+	// EntitySeaSurface_CivilianMerchantShipTow is Civilian / Merchant Ship / Tow.
+	EntitySeaSurface_CivilianMerchantShipTow Entity = 140112
+
+	// EntitySeaSurface_CivilianMerchantShipTransportShipHazardousMaterial is Civilian / Merchant Ship / Transport Ship, Hazardous Material.
+	EntitySeaSurface_CivilianMerchantShipTransportShipHazardousMaterial Entity = 140113
+
+	// EntitySeaSurface_CivilianMerchantShipJunkDhow is Civilian / Merchant Ship / Junk/Dhow.
+	EntitySeaSurface_CivilianMerchantShipJunkDhow Entity = 140114
+
+	// EntitySeaSurface_CivilianMerchantShipBargeNotSelfPropelled is Civilian / Merchant Ship / Barge, not Self–Propelled.
+	EntitySeaSurface_CivilianMerchantShipBargeNotSelfPropelled Entity = 140115
+
+	// EntitySeaSurface_CivilianMerchantShipHospitalShip is Civilian / Merchant Ship / Hospital Ship.
+	EntitySeaSurface_CivilianMerchantShipHospitalShip Entity = 140116
+
+	// EntitySeaSurface_CivilianFishingVessel is Civilian / Fishing Vessel.
+	EntitySeaSurface_CivilianFishingVessel Entity = 140200
+
+	// EntitySeaSurface_CivilianFishingVesselDrifter is Civilian / Fishing Vessel / Drifter.
+	EntitySeaSurface_CivilianFishingVesselDrifter Entity = 140201
+
+	// EntitySeaSurface_CivilianFishingVesselTrawler is Civilian / Fishing Vessel / Trawler.
+	EntitySeaSurface_CivilianFishingVesselTrawler Entity = 140202
+
+	// EntitySeaSurface_CivilianFishingVesselDredger is Civilian / Fishing Vessel / Dredger.
+	EntitySeaSurface_CivilianFishingVesselDredger Entity = 140203
+
+	// EntitySeaSurface_CivilianLawEnforcementVessel is Civilian / Law Enforcement Vessel.
+	EntitySeaSurface_CivilianLawEnforcementVessel Entity = 140300
+
+	// EntitySeaSurface_CivilianLeisureCraftSailing is Civilian / Leisure Craft, Sailing.
+	EntitySeaSurface_CivilianLeisureCraftSailing Entity = 140400
+
+	// EntitySeaSurface_CivilianLeisureCraftMotorized is Civilian / Leisure Craft, Motorized.
+	EntitySeaSurface_CivilianLeisureCraftMotorized Entity = 140500
+
+	// EntitySeaSurface_CivilianLeisureCraftMotorizedRigidHullInflatableBoatRHIB is Civilian / Leisure Craft, Motorized / Rigid–Hull Inflatable Boat (RHIB).
+	EntitySeaSurface_CivilianLeisureCraftMotorizedRigidHullInflatableBoatRHIB Entity = 140501
+
+	// EntitySeaSurface_CivilianLeisureCraftMotorizedSpeedboat is Civilian / Leisure Craft, Motorized / Speedboat.
+	EntitySeaSurface_CivilianLeisureCraftMotorizedSpeedboat Entity = 140502
+
+	// EntitySeaSurface_CivilianJetSki is Civilian / Jet Ski.
+	EntitySeaSurface_CivilianJetSki Entity = 140600
+
+	// EntitySeaSurface_CivilianUnmannedSurfaceWaterVehicleUSV is Civilian / Unmanned Surface Water Vehicle (USV).
+	EntitySeaSurface_CivilianUnmannedSurfaceWaterVehicleUSV Entity = 140700
+
+	// EntitySeaSurface_OwnShip is Own Ship.
+	EntitySeaSurface_OwnShip Entity = 150000
+
+	// EntitySeaSurface_FusedTrack is Fused Track.
+	EntitySeaSurface_FusedTrack Entity = 160000
+
+	// EntitySeaSurface_ManualTrack is Manual Track.
+	EntitySeaSurface_ManualTrack Entity = 170000
 )

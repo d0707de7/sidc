@@ -5,8 +5,15 @@ package app6d
 
 // Entity constants for symbol set 53 (Signals intelligence).
 const (
-	EntitySIGINTSeaSurface_SignalInterceptSignalIntercept Entity = 110000 // Signal Intercept / Signal Intercept
-	EntitySIGINTSeaSurface_SignalInterceptCommunications  Entity = 110100 // Signal Intercept / Communications
-	EntitySIGINTSeaSurface_SignalInterceptJammer          Entity = 110200 // Signal Intercept / Jammer
-	EntitySIGINTSeaSurface_SignalInterceptRadar           Entity = 110300 // Signal Intercept / Radar
+	// EntitySIGINTSeaSurface_SignalInterceptSignalIntercept is Signal Intercept / Signal Intercept.
+	EntitySIGINTSeaSurface_SignalInterceptSignalIntercept Entity = 110000
+
+	// EntitySIGINTSeaSurface_SignalInterceptCommunications is Signal Intercept / Communications.
+	EntitySIGINTSeaSurface_SignalInterceptCommunications Entity = 110100
+
+	// EntitySIGINTSeaSurface_SignalInterceptJammer is Signal Intercept / Jammer.
+	EntitySIGINTSeaSurface_SignalInterceptJammer Entity = 110200
+
+	// EntitySIGINTSeaSurface_SignalInterceptRadar is Signal Intercept / Radar.
+	EntitySIGINTSeaSurface_SignalInterceptRadar Entity = 110300
 )

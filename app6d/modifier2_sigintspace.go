@@ -5,5 +5,6 @@ package app6d
 
 // Modifier 2 constants for symbol set 50 (Signals intelligence).
 const (
-	Modifier2SIGINTSpace_Disused Modifier2 = 1 // {Disused}
+	// Modifier2SIGINTSpace_Disused is {Disused}.
+	Modifier2SIGINTSpace_Disused Modifier2 = 1
 )

@@ -5,14 +5,33 @@ package app6d
 
 // Modifier 2 constants for symbol set 15 (Land equipment).
 const (
-	Modifier2LandEquipment_Disused        Modifier2 = 1  // {Disused}
-	Modifier2LandEquipment_Disused_02     Modifier2 = 2  // {Disused}
-	Modifier2LandEquipment_Disused_03     Modifier2 = 3  // {Disused}
-	Modifier2LandEquipment_Disused_04     Modifier2 = 4  // {Disused}
-	Modifier2LandEquipment_Disused_05     Modifier2 = 5  // {Disused}
-	Modifier2LandEquipment_TractorTrailer Modifier2 = 6  // Tractor Trailer
-	Modifier2LandEquipment_Disused_07     Modifier2 = 7  // {Disused}
-	Modifier2LandEquipment_Disused_08     Modifier2 = 8  // {Disused}
-	Modifier2LandEquipment_Disused_09     Modifier2 = 9  // {Disused}
-	Modifier2LandEquipment_Disused_10     Modifier2 = 10 // {Disused}
+	// Modifier2LandEquipment_Disused is {Disused}.
+	Modifier2LandEquipment_Disused Modifier2 = 1
+
+	// Modifier2LandEquipment_Disused_02 is {Disused}.
+	Modifier2LandEquipment_Disused_02 Modifier2 = 2
+
+	// Modifier2LandEquipment_Disused_03 is {Disused}.
+	Modifier2LandEquipment_Disused_03 Modifier2 = 3
+
+	// Modifier2LandEquipment_Disused_04 is {Disused}.
+	Modifier2LandEquipment_Disused_04 Modifier2 = 4
+
+	// Modifier2LandEquipment_Disused_05 is {Disused}.
+	Modifier2LandEquipment_Disused_05 Modifier2 = 5
+
+	// Modifier2LandEquipment_TractorTrailer is Tractor Trailer.
+	Modifier2LandEquipment_TractorTrailer Modifier2 = 6
+
+	// Modifier2LandEquipment_Disused_07 is {Disused}.
+	Modifier2LandEquipment_Disused_07 Modifier2 = 7
+
+	// Modifier2LandEquipment_Disused_08 is {Disused}.
+	Modifier2LandEquipment_Disused_08 Modifier2 = 8
+
+	// Modifier2LandEquipment_Disused_09 is {Disused}.
+	Modifier2LandEquipment_Disused_09 Modifier2 = 9
+
+	// Modifier2LandEquipment_Disused_10 is {Disused}.
+	Modifier2LandEquipment_Disused_10 Modifier2 = 10
 )

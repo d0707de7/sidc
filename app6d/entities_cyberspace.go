@@ -5,47 +5,132 @@ package app6d
 
 // Entity constants for symbol set 60 (Cyberspace).
 const (
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecified                                Entity = 110000 // Cyberspace Unit/Cyberspace Unit (non specified)
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedCombatMissionTeam               Entity = 110100 // Cyberspace Unit/Cyberspace Unit (non specified) / Combat Mission Team
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedNationalMissionTeam             Entity = 110200 // Cyberspace Unit/Cyberspace Unit (non specified) / National Mission Team
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedCyberProtectionTeam             Entity = 110300 // Cyberspace Unit/Cyberspace Unit (non specified) / Cyber Protection Team
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDisused                         Entity = 110400 // Cyberspace Unit/Cyberspace Unit (non specified) / {Disused}
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDisused_110500                  Entity = 110500 // Cyberspace Unit/Cyberspace Unit (non specified) / {Disused}
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDefensiveCyberspace             Entity = 110600 // Cyberspace Unit/Cyberspace Unit (non specified) / Defensive Cyberspace
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedOffensiveCyberspace             Entity = 110700 // Cyberspace Unit/Cyberspace Unit (non specified) / Offensive Cyberspace
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedInternetServiceProvider         Entity = 110800 // Cyberspace Unit/Cyberspace Unit (non specified) / Internet Service Provider
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedSecuritySecurityOperations      Entity = 110900 // Cyberspace Unit/Cyberspace Unit (non specified) / Security/Security Operations
-	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedOperationsActiveCyberOperations Entity = 111000 // Cyberspace Unit/Cyberspace Unit (non specified) / Operations/Active Cyber Operations
-	EntityCyberspace_ThreatActors                                                            Entity = 120000 // Threat Actors
-	EntityCyberspace_ThreatActorsInsider                                                     Entity = 120200 // Threat Actors / Insider
-	EntityCyberspace_Agent                                                                   Entity = 130000 // Agent
-	EntityCyberspace_AgentFirewall                                                           Entity = 130100 // Agent / Firewall
-	EntityCyberspace_AgentFirmware                                                           Entity = 130200 // Agent / Firmware
-	EntityCyberspace_Application                                                             Entity = 140000 // Application
-	EntityCyberspace_ApplicationSearchEngine                                                 Entity = 140300 // Application / Search Engine
-	EntityCyberspace_ApplicationSocialMedia                                                  Entity = 140400 // Application / Social Media
-	EntityCyberspace_Threat                                                                  Entity = 150000 // Threat
-	EntityCyberspace_ThreatMalware                                                           Entity = 150100 // Threat / Malware
-	EntityCyberspace_ThreatPhishing                                                          Entity = 150200 // Threat / Phishing
-	EntityCyberspace_ThreatSpearPhishing                                                     Entity = 150300 // Threat / Spear Phishing
-	EntityCyberspace_ThreatWhalePhishing                                                     Entity = 150400 // Threat / Whale Phishing
-	EntityCyberspace_Data                                                                    Entity = 160000 // Data
-	EntityCyberspace_DataDigitalCurrency                                                     Entity = 160100 // Data / Digital Currency
-	EntityCyberspace_DataPersona                                                             Entity = 160200 // Data / Persona
-	EntityCyberspace_Endpoint                                                                Entity = 170000 // Endpoint
-	EntityCyberspace_EndpointServer                                                          Entity = 170100 // Endpoint / Server
-	EntityCyberspace_EndpointWorkstation                                                     Entity = 170200 // Endpoint / Workstation
-	EntityCyberspace_EndpointPortableElectronicDevicePED                                     Entity = 170300 // Endpoint / Portable Electronic Device (PED)
-	EntityCyberspace_EndpointPortableElectronicDevicePEDSmartphoneMobile                     Entity = 170301 // Endpoint / Portable Electronic Device (PED) / Smartphone/Mobile
-	EntityCyberspace_EndpointPortableElectronicDevicePEDTabletMobilePersonalDevice           Entity = 170302 // Endpoint / Portable Electronic Device (PED) / Tablet/Mobile Personal Device
-	EntityCyberspace_EndpointPortableElectronicDevicePEDLaptop                               Entity = 170303 // Endpoint / Portable Electronic Device (PED) / Laptop
-	EntityCyberspace_EndpointPortableElectronicDevicePEDHealthMonitor                        Entity = 170304 // Endpoint / Portable Electronic Device (PED) / Health Monitor
-	EntityCyberspace_EndpointPortableElectronicDevicePEDSmartvest                            Entity = 170305 // Endpoint / Portable Electronic Device (PED) / Smartvest
-	EntityCyberspace_EndpointPortableElectronicDevicePEDSmartwatch                           Entity = 170306 // Endpoint / Portable Electronic Device (PED) / Smartwatch
-	EntityCyberspace_EndpointPortableElectronicDevicePEDWearable                             Entity = 170307 // Endpoint / Portable Electronic Device (PED) / Wearable
-	EntityCyberspace_EndpointInternetOfThingsDevice                                          Entity = 170400 // Endpoint / Internet of Things Device
-	EntityCyberspace_EndpointPrinter                                                         Entity = 170500 // Endpoint / Printer
-	EntityCyberspace_EndpointRouter                                                          Entity = 170600 // Endpoint / Router
-	EntityCyberspace_EndpointSwitch                                                          Entity = 170700 // Endpoint / Switch
-	EntityCyberspace_Network                                                                 Entity = 180000 // Network
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecified is Cyberspace Unit/Cyberspace Unit (non specified).
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecified Entity = 110000
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedCombatMissionTeam is Cyberspace Unit/Cyberspace Unit (non specified) / Combat Mission Team.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedCombatMissionTeam Entity = 110100
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedNationalMissionTeam is Cyberspace Unit/Cyberspace Unit (non specified) / National Mission Team.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedNationalMissionTeam Entity = 110200
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedCyberProtectionTeam is Cyberspace Unit/Cyberspace Unit (non specified) / Cyber Protection Team.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedCyberProtectionTeam Entity = 110300
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDisused is Cyberspace Unit/Cyberspace Unit (non specified) / {Disused}.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDisused Entity = 110400
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDisused_110500 is Cyberspace Unit/Cyberspace Unit (non specified) / {Disused}.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDisused_110500 Entity = 110500
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDefensiveCyberspace is Cyberspace Unit/Cyberspace Unit (non specified) / Defensive Cyberspace.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedDefensiveCyberspace Entity = 110600
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedOffensiveCyberspace is Cyberspace Unit/Cyberspace Unit (non specified) / Offensive Cyberspace.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedOffensiveCyberspace Entity = 110700
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedInternetServiceProvider is Cyberspace Unit/Cyberspace Unit (non specified) / Internet Service Provider.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedInternetServiceProvider Entity = 110800
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedSecuritySecurityOperations is Cyberspace Unit/Cyberspace Unit (non specified) / Security/Security Operations.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedSecuritySecurityOperations Entity = 110900
+
+	// EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedOperationsActiveCyberOperations is Cyberspace Unit/Cyberspace Unit (non specified) / Operations/Active Cyber Operations.
+	EntityCyberspace_CyberspaceUnitCyberspaceUnitNonSpecifiedOperationsActiveCyberOperations Entity = 111000
+
+	// EntityCyberspace_ThreatActors is Threat Actors.
+	EntityCyberspace_ThreatActors Entity = 120000
+
+	// EntityCyberspace_ThreatActorsInsider is Threat Actors / Insider.
+	EntityCyberspace_ThreatActorsInsider Entity = 120200
+
+	// EntityCyberspace_Agent is Agent.
+	EntityCyberspace_Agent Entity = 130000
+
+	// EntityCyberspace_AgentFirewall is Agent / Firewall.
+	EntityCyberspace_AgentFirewall Entity = 130100
+
+	// EntityCyberspace_AgentFirmware is Agent / Firmware.
+	EntityCyberspace_AgentFirmware Entity = 130200
+
+	// EntityCyberspace_Application is Application.
+	EntityCyberspace_Application Entity = 140000
+
+	// EntityCyberspace_ApplicationSearchEngine is Application / Search Engine.
+	EntityCyberspace_ApplicationSearchEngine Entity = 140300
+
+	// EntityCyberspace_ApplicationSocialMedia is Application / Social Media.
+	EntityCyberspace_ApplicationSocialMedia Entity = 140400
+
+	// EntityCyberspace_Threat is Threat.
+	EntityCyberspace_Threat Entity = 150000
+
+	// EntityCyberspace_ThreatMalware is Threat / Malware.
+	EntityCyberspace_ThreatMalware Entity = 150100
+
+	// EntityCyberspace_ThreatPhishing is Threat / Phishing.
+	EntityCyberspace_ThreatPhishing Entity = 150200
+
+	// EntityCyberspace_ThreatSpearPhishing is Threat / Spear Phishing.
+	EntityCyberspace_ThreatSpearPhishing Entity = 150300
+
+	// EntityCyberspace_ThreatWhalePhishing is Threat / Whale Phishing.
+	EntityCyberspace_ThreatWhalePhishing Entity = 150400
+
+	// EntityCyberspace_Data is Data.
+	EntityCyberspace_Data Entity = 160000
+
+	// EntityCyberspace_DataDigitalCurrency is Data / Digital Currency.
+	EntityCyberspace_DataDigitalCurrency Entity = 160100
+
+	// EntityCyberspace_DataPersona is Data / Persona.
+	EntityCyberspace_DataPersona Entity = 160200
+
+	// EntityCyberspace_Endpoint is Endpoint.
+	EntityCyberspace_Endpoint Entity = 170000
+
+	// EntityCyberspace_EndpointServer is Endpoint / Server.
+	EntityCyberspace_EndpointServer Entity = 170100
+
+	// EntityCyberspace_EndpointWorkstation is Endpoint / Workstation.
+	EntityCyberspace_EndpointWorkstation Entity = 170200
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePED is Endpoint / Portable Electronic Device (PED).
+	EntityCyberspace_EndpointPortableElectronicDevicePED Entity = 170300
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePEDSmartphoneMobile is Endpoint / Portable Electronic Device (PED) / Smartphone/Mobile.
+	EntityCyberspace_EndpointPortableElectronicDevicePEDSmartphoneMobile Entity = 170301
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePEDTabletMobilePersonalDevice is Endpoint / Portable Electronic Device (PED) / Tablet/Mobile Personal Device.
+	EntityCyberspace_EndpointPortableElectronicDevicePEDTabletMobilePersonalDevice Entity = 170302
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePEDLaptop is Endpoint / Portable Electronic Device (PED) / Laptop.
+	EntityCyberspace_EndpointPortableElectronicDevicePEDLaptop Entity = 170303
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePEDHealthMonitor is Endpoint / Portable Electronic Device (PED) / Health Monitor.
+	EntityCyberspace_EndpointPortableElectronicDevicePEDHealthMonitor Entity = 170304
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePEDSmartvest is Endpoint / Portable Electronic Device (PED) / Smartvest.
+	EntityCyberspace_EndpointPortableElectronicDevicePEDSmartvest Entity = 170305
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePEDSmartwatch is Endpoint / Portable Electronic Device (PED) / Smartwatch.
+	EntityCyberspace_EndpointPortableElectronicDevicePEDSmartwatch Entity = 170306
+
+	// EntityCyberspace_EndpointPortableElectronicDevicePEDWearable is Endpoint / Portable Electronic Device (PED) / Wearable.
+	EntityCyberspace_EndpointPortableElectronicDevicePEDWearable Entity = 170307
+
+	// EntityCyberspace_EndpointInternetOfThingsDevice is Endpoint / Internet of Things Device.
+	EntityCyberspace_EndpointInternetOfThingsDevice Entity = 170400
+
+	// EntityCyberspace_EndpointPrinter is Endpoint / Printer.
+	EntityCyberspace_EndpointPrinter Entity = 170500
+
+	// EntityCyberspace_EndpointRouter is Endpoint / Router.
+	EntityCyberspace_EndpointRouter Entity = 170600
+
+	// EntityCyberspace_EndpointSwitch is Endpoint / Switch.
+	EntityCyberspace_EndpointSwitch Entity = 170700
+
+	// EntityCyberspace_Network is Network.
+	EntityCyberspace_Network Entity = 180000
 )

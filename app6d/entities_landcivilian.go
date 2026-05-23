@@ -5,15 +5,36 @@ package app6d
 
 // Entity constants for symbol set 11 (Land civilian).
 const (
-	EntityLandCivilian_Civilian                          Entity = 110000 // Civilian
-	EntityLandCivilian_CivilianEnvironmentalProtection   Entity = 110100 // Civilian / Environmental Protection
-	EntityLandCivilian_CivilianGovernmentOrganization    Entity = 110200 // Civilian / Government Organization
-	EntityLandCivilian_CivilianIndividual                Entity = 110300 // Civilian / Individual
-	EntityLandCivilian_CivilianOrganizationOrGroup       Entity = 110400 // Civilian / Organization or Group
-	EntityLandCivilian_CivilianKillingVictim             Entity = 110500 // Civilian / Killing Victim
-	EntityLandCivilian_CivilianKillingVictims            Entity = 110600 // Civilian / Killing Victims
-	EntityLandCivilian_CivilianVictimOfAnAttemptedCrime  Entity = 110700 // Civilian / Victim of an Attempted Crime
-	EntityLandCivilian_CivilianSpy                       Entity = 110800 // Civilian / Spy
-	EntityLandCivilian_CivilianCompositeLoss             Entity = 110900 // Civilian / Composite Loss
-	EntityLandCivilian_CivilianEmergencyMedicalOperation Entity = 111000 // Civilian / Emergency Medical Operation
+	// EntityLandCivilian_Civilian is Civilian.
+	EntityLandCivilian_Civilian Entity = 110000
+
+	// EntityLandCivilian_CivilianEnvironmentalProtection is Civilian / Environmental Protection.
+	EntityLandCivilian_CivilianEnvironmentalProtection Entity = 110100
+
+	// EntityLandCivilian_CivilianGovernmentOrganization is Civilian / Government Organization.
+	EntityLandCivilian_CivilianGovernmentOrganization Entity = 110200
+
+	// EntityLandCivilian_CivilianIndividual is Civilian / Individual.
+	EntityLandCivilian_CivilianIndividual Entity = 110300
+
+	// EntityLandCivilian_CivilianOrganizationOrGroup is Civilian / Organization or Group.
+	EntityLandCivilian_CivilianOrganizationOrGroup Entity = 110400
+
+	// EntityLandCivilian_CivilianKillingVictim is Civilian / Killing Victim.
+	EntityLandCivilian_CivilianKillingVictim Entity = 110500
+
+	// EntityLandCivilian_CivilianKillingVictims is Civilian / Killing Victims.
+	EntityLandCivilian_CivilianKillingVictims Entity = 110600
+
+	// EntityLandCivilian_CivilianVictimOfAnAttemptedCrime is Civilian / Victim of an Attempted Crime.
+	EntityLandCivilian_CivilianVictimOfAnAttemptedCrime Entity = 110700
+
+	// EntityLandCivilian_CivilianSpy is Civilian / Spy.
+	EntityLandCivilian_CivilianSpy Entity = 110800
+
+	// EntityLandCivilian_CivilianCompositeLoss is Civilian / Composite Loss.
+	EntityLandCivilian_CivilianCompositeLoss Entity = 110900
+
+	// EntityLandCivilian_CivilianEmergencyMedicalOperation is Civilian / Emergency Medical Operation.
+	EntityLandCivilian_CivilianEmergencyMedicalOperation Entity = 111000
 )

@@ -5,5 +5,6 @@ package app6d
 
 // Modifier 2 constants for symbol set 54 (Signals intelligence).
 const (
-	Modifier2SIGINTSubsurface_Disused Modifier2 = 1 // {Disused}
+	// Modifier2SIGINTSubsurface_Disused is {Disused}.
+	Modifier2SIGINTSubsurface_Disused Modifier2 = 1
 )

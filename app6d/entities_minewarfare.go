@@ -5,69 +5,198 @@ package app6d
 
 // Entity constants for symbol set 36 (Mine warfare).
 const (
-	EntityMineWarfare_SeaMineGeneral                                                   Entity = 110000 // Sea Mine, General
-	EntityMineWarfare_SeaMineGeneralSeaMineBottom                                      Entity = 110100 // Sea Mine, General / Sea Mine, Bottom
-	EntityMineWarfare_SeaMineGeneralSeaMineMoored                                      Entity = 110200 // Sea Mine, General / Sea Mine, Moored
-	EntityMineWarfare_SeaMineGeneralSeaMineFloating                                    Entity = 110300 // Sea Mine, General / Sea Mine, Floating
-	EntityMineWarfare_SeaMineGeneralSeaMineRising                                      Entity = 110400 // Sea Mine, General / Sea Mine, Rising
-	EntityMineWarfare_SeaMineGeneralSeaMineOtherPosition                               Entity = 110500 // Sea Mine, General / Sea Mine, Other Position
-	EntityMineWarfare_SeaMineGeneralKingfisher                                         Entity = 110600 // Sea Mine, General / Kingfisher
-	EntityMineWarfare_SeaMineGeneralSmallObjectMineLike                                Entity = 110700 // Sea Mine, General / Small Object, Mine–Like
-	EntityMineWarfare_SeaMineGeneralExerciseMineGeneral                                Entity = 110800 // Sea Mine, General / Exercise Mine, General
-	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineBottom              Entity = 110801 // Sea Mine, General / Exercise Mine, General / Exercise Mine, Bottom
-	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineMoored              Entity = 110802 // Sea Mine, General / Exercise Mine, General / Exercise Mine, Moored
-	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineFloating            Entity = 110803 // Sea Mine, General / Exercise Mine, General / Exercise Mine, Floating
-	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineRising              Entity = 110804 // Sea Mine, General / Exercise Mine, General / Exercise Mine, Rising
-	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneral                             Entity = 110900 // Sea Mine, General / Neutralized Mine, General
-	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineBottom        Entity = 110901 // Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Bottom
-	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineMoored        Entity = 110902 // Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Moored
-	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineFloating      Entity = 110903 // Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Floating
-	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineRising        Entity = 110904 // Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Rising
-	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineOtherPosition Entity = 110905 // Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Other Position
-	EntityMineWarfare_UnexplodedOrdnance                                               Entity = 120000 // Unexploded Ordnance
-	EntityMineWarfare_SeaMineDecoy                                                     Entity = 130000 // Sea Mine Decoy
-	EntityMineWarfare_SeaMineDecoySeaMineDecoyBottom                                   Entity = 130100 // Sea Mine Decoy / Sea Mine Decoy, Bottom
-	EntityMineWarfare_SeaMineDecoySeaMineDecoyMoored                                   Entity = 130200 // Sea Mine Decoy / Sea Mine Decoy, Moored
-	EntityMineWarfare_MineLikeContactMILCO                                             Entity = 140000 // Mine–Like Contact (MILCO)
-	EntityMineWarfare_MineLikeContactMILCOMILCOGeneral                                 Entity = 140100 // Mine–Like Contact (MILCO) / MILCO - General
-	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel1     Entity = 140101 // Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 1
-	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel2     Entity = 140102 // Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 2
-	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel3     Entity = 140103 // Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 3
-	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel4     Entity = 140104 // Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 4
-	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel5     Entity = 140105 // Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 5
-	EntityMineWarfare_MineLikeContactMILCOMILCOBottom                                  Entity = 140200 // Mine–Like Contact (MILCO) / MILCO - Bottom
-	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel1       Entity = 140201 // Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 1
-	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel2       Entity = 140202 // Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 2
-	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel3       Entity = 140203 // Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 3
-	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel4       Entity = 140204 // Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 4
-	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel5       Entity = 140205 // Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 5
-	EntityMineWarfare_MineLikeContactMILCOMILCOMoored                                  Entity = 140300 // Mine–Like Contact (MILCO) / MILCO - Moored
-	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel1       Entity = 140301 // Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 1
-	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel2       Entity = 140302 // Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 2
-	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel3       Entity = 140303 // Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 3
-	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel4       Entity = 140304 // Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 4
-	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel5       Entity = 140305 // Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 5
-	EntityMineWarfare_MineLikeContactMILCOMILCOFloating                                Entity = 140400 // Mine–Like Contact (MILCO) / MILCO - Floating
-	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel1   Entity = 140401 // Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 1
-	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel2   Entity = 140402 // Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 2
-	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel3   Entity = 140403 // Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 3
-	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel4   Entity = 140404 // Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 4
-	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel5   Entity = 140405 // Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 5
-	EntityMineWarfare_MineLikeEchoMILECGeneral                                         Entity = 150000 // Mine–Like Echo (MILEC), General
-	EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoBottom                       Entity = 150100 // Mine–Like Echo (MILEC), General / Mine–Like Echo, Bottom
-	EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoMoored                       Entity = 150200 // Mine–Like Echo (MILEC), General / Mine–Like Echo, Moored
-	EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoFloating                     Entity = 150300 // Mine–Like Echo (MILEC), General / Mine–Like Echo, Floating
-	EntityMineWarfare_NegativeReacquisitionGeneral                                     Entity = 160000 // Negative Reacquisition, General
-	EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionBottom          Entity = 160100 // Negative Reacquisition, General / Negative Reacquisition, Bottom
-	EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionMoored          Entity = 160200 // Negative Reacquisition, General / Negative Reacquisition, Moored
-	EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionFloating        Entity = 160300 // Negative Reacquisition, General / Negative Reacquisition, Floating
-	EntityMineWarfare_Obstructor                                                       Entity = 170000 // Obstructor
-	EntityMineWarfare_ObstructorNeutralizedObstructor                                  Entity = 170100 // Obstructor / Neutralized Obstructor
-	EntityMineWarfare_GeneralMineAnchor                                                Entity = 180000 // General Mine Anchor
-	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneral                                 Entity = 190000 // Non-Mine Mine–Like Object (NMLO), General
-	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectBottom      Entity = 190100 // Non-Mine Mine–Like Object (NMLO), General / Non-Mine Mine–Like Object, Bottom
-	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectMoored      Entity = 190200 // Non-Mine Mine–Like Object (NMLO), General / Non-Mine Mine–Like Object, Moored
-	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectFloating    Entity = 190300 // Non-Mine Mine–Like Object (NMLO), General / Non-Mine Mine–Like Object, Floating
-	EntityMineWarfare_EnvironmentalReportLocation                                      Entity = 200000 // Environmental Report Location
-	EntityMineWarfare_DiveReportLocation                                               Entity = 210000 // Dive Report Location
+	// EntityMineWarfare_SeaMineGeneral is Sea Mine, General.
+	EntityMineWarfare_SeaMineGeneral Entity = 110000
+
+	// EntityMineWarfare_SeaMineGeneralSeaMineBottom is Sea Mine, General / Sea Mine, Bottom.
+	EntityMineWarfare_SeaMineGeneralSeaMineBottom Entity = 110100
+
+	// EntityMineWarfare_SeaMineGeneralSeaMineMoored is Sea Mine, General / Sea Mine, Moored.
+	EntityMineWarfare_SeaMineGeneralSeaMineMoored Entity = 110200
+
+	// EntityMineWarfare_SeaMineGeneralSeaMineFloating is Sea Mine, General / Sea Mine, Floating.
+	EntityMineWarfare_SeaMineGeneralSeaMineFloating Entity = 110300
+
+	// EntityMineWarfare_SeaMineGeneralSeaMineRising is Sea Mine, General / Sea Mine, Rising.
+	EntityMineWarfare_SeaMineGeneralSeaMineRising Entity = 110400
+
+	// EntityMineWarfare_SeaMineGeneralSeaMineOtherPosition is Sea Mine, General / Sea Mine, Other Position.
+	EntityMineWarfare_SeaMineGeneralSeaMineOtherPosition Entity = 110500
+
+	// EntityMineWarfare_SeaMineGeneralKingfisher is Sea Mine, General / Kingfisher.
+	EntityMineWarfare_SeaMineGeneralKingfisher Entity = 110600
+
+	// EntityMineWarfare_SeaMineGeneralSmallObjectMineLike is Sea Mine, General / Small Object, Mine–Like.
+	EntityMineWarfare_SeaMineGeneralSmallObjectMineLike Entity = 110700
+
+	// EntityMineWarfare_SeaMineGeneralExerciseMineGeneral is Sea Mine, General / Exercise Mine, General.
+	EntityMineWarfare_SeaMineGeneralExerciseMineGeneral Entity = 110800
+
+	// EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineBottom is Sea Mine, General / Exercise Mine, General / Exercise Mine, Bottom.
+	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineBottom Entity = 110801
+
+	// EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineMoored is Sea Mine, General / Exercise Mine, General / Exercise Mine, Moored.
+	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineMoored Entity = 110802
+
+	// EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineFloating is Sea Mine, General / Exercise Mine, General / Exercise Mine, Floating.
+	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineFloating Entity = 110803
+
+	// EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineRising is Sea Mine, General / Exercise Mine, General / Exercise Mine, Rising.
+	EntityMineWarfare_SeaMineGeneralExerciseMineGeneralExerciseMineRising Entity = 110804
+
+	// EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneral is Sea Mine, General / Neutralized Mine, General.
+	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneral Entity = 110900
+
+	// EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineBottom is Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Bottom.
+	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineBottom Entity = 110901
+
+	// EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineMoored is Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Moored.
+	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineMoored Entity = 110902
+
+	// EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineFloating is Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Floating.
+	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineFloating Entity = 110903
+
+	// EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineRising is Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Rising.
+	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineRising Entity = 110904
+
+	// EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineOtherPosition is Sea Mine, General / Neutralized Mine, General / Neutralized Mine, Other Position.
+	EntityMineWarfare_SeaMineGeneralNeutralizedMineGeneralNeutralizedMineOtherPosition Entity = 110905
+
+	// EntityMineWarfare_UnexplodedOrdnance is Unexploded Ordnance.
+	EntityMineWarfare_UnexplodedOrdnance Entity = 120000
+
+	// EntityMineWarfare_SeaMineDecoy is Sea Mine Decoy.
+	EntityMineWarfare_SeaMineDecoy Entity = 130000
+
+	// EntityMineWarfare_SeaMineDecoySeaMineDecoyBottom is Sea Mine Decoy / Sea Mine Decoy, Bottom.
+	EntityMineWarfare_SeaMineDecoySeaMineDecoyBottom Entity = 130100
+
+	// EntityMineWarfare_SeaMineDecoySeaMineDecoyMoored is Sea Mine Decoy / Sea Mine Decoy, Moored.
+	EntityMineWarfare_SeaMineDecoySeaMineDecoyMoored Entity = 130200
+
+	// EntityMineWarfare_MineLikeContactMILCO is Mine–Like Contact (MILCO).
+	EntityMineWarfare_MineLikeContactMILCO Entity = 140000
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOGeneral is Mine–Like Contact (MILCO) / MILCO - General.
+	EntityMineWarfare_MineLikeContactMILCOMILCOGeneral Entity = 140100
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel1 is Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 1.
+	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel1 Entity = 140101
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel2 is Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 2.
+	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel2 Entity = 140102
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel3 is Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 3.
+	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel3 Entity = 140103
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel4 is Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 4.
+	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel4 Entity = 140104
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel5 is Mine–Like Contact (MILCO) / MILCO - General / MILCO - General, Confidence Level 5.
+	EntityMineWarfare_MineLikeContactMILCOMILCOGeneralMILCOGeneralConfidenceLevel5 Entity = 140105
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOBottom is Mine–Like Contact (MILCO) / MILCO - Bottom.
+	EntityMineWarfare_MineLikeContactMILCOMILCOBottom Entity = 140200
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel1 is Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 1.
+	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel1 Entity = 140201
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel2 is Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 2.
+	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel2 Entity = 140202
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel3 is Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 3.
+	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel3 Entity = 140203
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel4 is Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 4.
+	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel4 Entity = 140204
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel5 is Mine–Like Contact (MILCO) / MILCO - Bottom / MILCO - Bottom, Confidence Level 5.
+	EntityMineWarfare_MineLikeContactMILCOMILCOBottomMILCOBottomConfidenceLevel5 Entity = 140205
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOMoored is Mine–Like Contact (MILCO) / MILCO - Moored.
+	EntityMineWarfare_MineLikeContactMILCOMILCOMoored Entity = 140300
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel1 is Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 1.
+	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel1 Entity = 140301
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel2 is Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 2.
+	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel2 Entity = 140302
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel3 is Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 3.
+	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel3 Entity = 140303
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel4 is Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 4.
+	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel4 Entity = 140304
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel5 is Mine–Like Contact (MILCO) / MILCO - Moored / MILCO - Moored, Confidence Level 5.
+	EntityMineWarfare_MineLikeContactMILCOMILCOMooredMILCOMooredConfidenceLevel5 Entity = 140305
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOFloating is Mine–Like Contact (MILCO) / MILCO - Floating.
+	EntityMineWarfare_MineLikeContactMILCOMILCOFloating Entity = 140400
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel1 is Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 1.
+	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel1 Entity = 140401
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel2 is Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 2.
+	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel2 Entity = 140402
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel3 is Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 3.
+	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel3 Entity = 140403
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel4 is Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 4.
+	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel4 Entity = 140404
+
+	// EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel5 is Mine–Like Contact (MILCO) / MILCO - Floating / MILCO - Floating, Confidence Level 5.
+	EntityMineWarfare_MineLikeContactMILCOMILCOFloatingMILCOFloatingConfidenceLevel5 Entity = 140405
+
+	// EntityMineWarfare_MineLikeEchoMILECGeneral is Mine–Like Echo (MILEC), General.
+	EntityMineWarfare_MineLikeEchoMILECGeneral Entity = 150000
+
+	// EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoBottom is Mine–Like Echo (MILEC), General / Mine–Like Echo, Bottom.
+	EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoBottom Entity = 150100
+
+	// EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoMoored is Mine–Like Echo (MILEC), General / Mine–Like Echo, Moored.
+	EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoMoored Entity = 150200
+
+	// EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoFloating is Mine–Like Echo (MILEC), General / Mine–Like Echo, Floating.
+	EntityMineWarfare_MineLikeEchoMILECGeneralMineLikeEchoFloating Entity = 150300
+
+	// EntityMineWarfare_NegativeReacquisitionGeneral is Negative Reacquisition, General.
+	EntityMineWarfare_NegativeReacquisitionGeneral Entity = 160000
+
+	// EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionBottom is Negative Reacquisition, General / Negative Reacquisition, Bottom.
+	EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionBottom Entity = 160100
+
+	// EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionMoored is Negative Reacquisition, General / Negative Reacquisition, Moored.
+	EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionMoored Entity = 160200
+
+	// EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionFloating is Negative Reacquisition, General / Negative Reacquisition, Floating.
+	EntityMineWarfare_NegativeReacquisitionGeneralNegativeReacquisitionFloating Entity = 160300
+
+	// EntityMineWarfare_Obstructor is Obstructor.
+	EntityMineWarfare_Obstructor Entity = 170000
+
+	// EntityMineWarfare_ObstructorNeutralizedObstructor is Obstructor / Neutralized Obstructor.
+	EntityMineWarfare_ObstructorNeutralizedObstructor Entity = 170100
+
+	// EntityMineWarfare_GeneralMineAnchor is General Mine Anchor.
+	EntityMineWarfare_GeneralMineAnchor Entity = 180000
+
+	// EntityMineWarfare_NonMineMineLikeObjectNMLOGeneral is Non-Mine Mine–Like Object (NMLO), General.
+	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneral Entity = 190000
+
+	// EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectBottom is Non-Mine Mine–Like Object (NMLO), General / Non-Mine Mine–Like Object, Bottom.
+	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectBottom Entity = 190100
+
+	// EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectMoored is Non-Mine Mine–Like Object (NMLO), General / Non-Mine Mine–Like Object, Moored.
+	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectMoored Entity = 190200
+
+	// EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectFloating is Non-Mine Mine–Like Object (NMLO), General / Non-Mine Mine–Like Object, Floating.
+	EntityMineWarfare_NonMineMineLikeObjectNMLOGeneralNonMineMineLikeObjectFloating Entity = 190300
+
+	// EntityMineWarfare_EnvironmentalReportLocation is Environmental Report Location.
+	EntityMineWarfare_EnvironmentalReportLocation Entity = 200000
+
+	// EntityMineWarfare_DiveReportLocation is Dive Report Location.
+	EntityMineWarfare_DiveReportLocation Entity = 210000
 )

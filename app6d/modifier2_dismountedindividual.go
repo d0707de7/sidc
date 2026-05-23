@@ -5,43 +5,120 @@ package app6d
 
 // Modifier 2 constants for symbol set 27 (Dismounted individual).
 const (
-	Modifier2DismountedIndividual_Disused                  Modifier2 = 1  // {Disused}
-	Modifier2DismountedIndividual_Disused_02               Modifier2 = 2  // {Disused}
-	Modifier2DismountedIndividual_VideoImageryCombatCamera Modifier2 = 3  // Video Imagery (Combat Camera)
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ1    Modifier2 = 4  // Functional Staff Area J1
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ2    Modifier2 = 5  // Functional Staff Area J2
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ3    Modifier2 = 6  // Functional Staff Area J3
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ4    Modifier2 = 7  // Functional Staff Area J4
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ5    Modifier2 = 8  // Functional Staff Area J5
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ6    Modifier2 = 9  // Functional Staff Area J6
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ7    Modifier2 = 10 // Functional Staff Area J7
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ8    Modifier2 = 11 // Functional Staff Area J8
-	Modifier2DismountedIndividual_FunctionalStaffAreaJ9    Modifier2 = 12 // Functional Staff Area J9
-	Modifier2DismountedIndividual_Disused_13               Modifier2 = 13 // {Disused}
-	Modifier2DismountedIndividual_RankO1O2RankCodeOF1      Modifier2 = 14 // Rank O-1/O-2 {Rank Code OF-1}
-	Modifier2DismountedIndividual_RankO3RankCodeOF2        Modifier2 = 15 // Rank O-3 {Rank Code OF-2}
-	Modifier2DismountedIndividual_RankO4RankCodeOF3        Modifier2 = 16 // Rank O-4 {Rank Code OF-3}
-	Modifier2DismountedIndividual_RankO5RankCodeOF4        Modifier2 = 17 // Rank O-5 Rank Code OF-4}
-	Modifier2DismountedIndividual_RankO6RankCodeOF5        Modifier2 = 18 // Rank O-6 {Rank Code OF-5}
-	Modifier2DismountedIndividual_RankO7RankCodeOF6        Modifier2 = 19 // Rank O-7 {Rank Code OF-6}
-	Modifier2DismountedIndividual_RankO8RankCodeOF7        Modifier2 = 20 // Rank O-8 {Rank Code OF-7}
-	Modifier2DismountedIndividual_RankO9RankCodeOF8        Modifier2 = 21 // Rank O-9 {Rank Code OF-8}
-	Modifier2DismountedIndividual_RankO10RankCodeOF9       Modifier2 = 22 // Rank O-10 {Rank Code OF-9}
-	Modifier2DismountedIndividual_RankO11RankCodeOF10      Modifier2 = 23 // Rank O-11 {Rank Code OF-10}
-	Modifier2DismountedIndividual_RankCodeOFD              Modifier2 = 24 // Rank Code OF-D
-	Modifier2DismountedIndividual_RankE1RankCodeOR1        Modifier2 = 25 // Rank E-1 {Rank Code OR-1}
-	Modifier2DismountedIndividual_RankE2RankCodeOR2        Modifier2 = 26 // Rank E-2 {Rank Code OR-2}
-	Modifier2DismountedIndividual_RankE3RankCodeOR3        Modifier2 = 27 // Rank E-3 {Rank Code OR-3}
-	Modifier2DismountedIndividual_RankE4RankCodeOR4        Modifier2 = 28 // Rank E-4 {Rank Code OR-4}
-	Modifier2DismountedIndividual_RankE5RankCodeOR5        Modifier2 = 29 // Rank E-5 {Rank Code OR-5}
-	Modifier2DismountedIndividual_RankE6RankCodeOR6        Modifier2 = 30 // Rank E-6 {Rank Code OR-6}
-	Modifier2DismountedIndividual_RankE7RankCodeOR7        Modifier2 = 31 // Rank E-7 {Rank Code OR-7}
-	Modifier2DismountedIndividual_RankE8RankCodeOR8        Modifier2 = 32 // Rank E-8 {Rank Code OR-8}
-	Modifier2DismountedIndividual_RankE9RankCodeOR9        Modifier2 = 33 // Rank E-9 {Rank Code OR-9}
-	Modifier2DismountedIndividual_RankCodeWO1              Modifier2 = 34 // Rank Code WO-1
-	Modifier2DismountedIndividual_RankCodeWO2              Modifier2 = 35 // Rank Code WO-2
-	Modifier2DismountedIndividual_RankCodeWO3              Modifier2 = 36 // Rank Code WO-3
-	Modifier2DismountedIndividual_RankCodeWO4              Modifier2 = 37 // Rank Code WO-4
-	Modifier2DismountedIndividual_RankCodeWO5              Modifier2 = 38 // Rank Code WO-5
-	Modifier2DismountedIndividual_Disused_39               Modifier2 = 39 // {Disused}
+	// Modifier2DismountedIndividual_Disused is {Disused}.
+	Modifier2DismountedIndividual_Disused Modifier2 = 1
+
+	// Modifier2DismountedIndividual_Disused_02 is {Disused}.
+	Modifier2DismountedIndividual_Disused_02 Modifier2 = 2
+
+	// Modifier2DismountedIndividual_VideoImageryCombatCamera is Video Imagery (Combat Camera).
+	Modifier2DismountedIndividual_VideoImageryCombatCamera Modifier2 = 3
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ1 is Functional Staff Area J1.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ1 Modifier2 = 4
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ2 is Functional Staff Area J2.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ2 Modifier2 = 5
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ3 is Functional Staff Area J3.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ3 Modifier2 = 6
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ4 is Functional Staff Area J4.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ4 Modifier2 = 7
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ5 is Functional Staff Area J5.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ5 Modifier2 = 8
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ6 is Functional Staff Area J6.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ6 Modifier2 = 9
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ7 is Functional Staff Area J7.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ7 Modifier2 = 10
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ8 is Functional Staff Area J8.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ8 Modifier2 = 11
+
+	// Modifier2DismountedIndividual_FunctionalStaffAreaJ9 is Functional Staff Area J9.
+	Modifier2DismountedIndividual_FunctionalStaffAreaJ9 Modifier2 = 12
+
+	// Modifier2DismountedIndividual_Disused_13 is {Disused}.
+	Modifier2DismountedIndividual_Disused_13 Modifier2 = 13
+
+	// Modifier2DismountedIndividual_RankO1O2RankCodeOF1 is Rank O-1/O-2 {Rank Code OF-1}.
+	Modifier2DismountedIndividual_RankO1O2RankCodeOF1 Modifier2 = 14
+
+	// Modifier2DismountedIndividual_RankO3RankCodeOF2 is Rank O-3 {Rank Code OF-2}.
+	Modifier2DismountedIndividual_RankO3RankCodeOF2 Modifier2 = 15
+
+	// Modifier2DismountedIndividual_RankO4RankCodeOF3 is Rank O-4 {Rank Code OF-3}.
+	Modifier2DismountedIndividual_RankO4RankCodeOF3 Modifier2 = 16
+
+	// Modifier2DismountedIndividual_RankO5RankCodeOF4 is Rank O-5 Rank Code OF-4}.
+	Modifier2DismountedIndividual_RankO5RankCodeOF4 Modifier2 = 17
+
+	// Modifier2DismountedIndividual_RankO6RankCodeOF5 is Rank O-6 {Rank Code OF-5}.
+	Modifier2DismountedIndividual_RankO6RankCodeOF5 Modifier2 = 18
+
+	// Modifier2DismountedIndividual_RankO7RankCodeOF6 is Rank O-7 {Rank Code OF-6}.
+	Modifier2DismountedIndividual_RankO7RankCodeOF6 Modifier2 = 19
+
+	// Modifier2DismountedIndividual_RankO8RankCodeOF7 is Rank O-8 {Rank Code OF-7}.
+	Modifier2DismountedIndividual_RankO8RankCodeOF7 Modifier2 = 20
+
+	// Modifier2DismountedIndividual_RankO9RankCodeOF8 is Rank O-9 {Rank Code OF-8}.
+	Modifier2DismountedIndividual_RankO9RankCodeOF8 Modifier2 = 21
+
+	// Modifier2DismountedIndividual_RankO10RankCodeOF9 is Rank O-10 {Rank Code OF-9}.
+	Modifier2DismountedIndividual_RankO10RankCodeOF9 Modifier2 = 22
+
+	// Modifier2DismountedIndividual_RankO11RankCodeOF10 is Rank O-11 {Rank Code OF-10}.
+	Modifier2DismountedIndividual_RankO11RankCodeOF10 Modifier2 = 23
+
+	// Modifier2DismountedIndividual_RankCodeOFD is Rank Code OF-D.
+	Modifier2DismountedIndividual_RankCodeOFD Modifier2 = 24
+
+	// Modifier2DismountedIndividual_RankE1RankCodeOR1 is Rank E-1 {Rank Code OR-1}.
+	Modifier2DismountedIndividual_RankE1RankCodeOR1 Modifier2 = 25
+
+	// Modifier2DismountedIndividual_RankE2RankCodeOR2 is Rank E-2 {Rank Code OR-2}.
+	Modifier2DismountedIndividual_RankE2RankCodeOR2 Modifier2 = 26
+
+	// Modifier2DismountedIndividual_RankE3RankCodeOR3 is Rank E-3 {Rank Code OR-3}.
+	Modifier2DismountedIndividual_RankE3RankCodeOR3 Modifier2 = 27
+
+	// Modifier2DismountedIndividual_RankE4RankCodeOR4 is Rank E-4 {Rank Code OR-4}.
+	Modifier2DismountedIndividual_RankE4RankCodeOR4 Modifier2 = 28
+
+	// Modifier2DismountedIndividual_RankE5RankCodeOR5 is Rank E-5 {Rank Code OR-5}.
+	Modifier2DismountedIndividual_RankE5RankCodeOR5 Modifier2 = 29
+
+	// Modifier2DismountedIndividual_RankE6RankCodeOR6 is Rank E-6 {Rank Code OR-6}.
+	Modifier2DismountedIndividual_RankE6RankCodeOR6 Modifier2 = 30
+
+	// Modifier2DismountedIndividual_RankE7RankCodeOR7 is Rank E-7 {Rank Code OR-7}.
+	Modifier2DismountedIndividual_RankE7RankCodeOR7 Modifier2 = 31
+
+	// Modifier2DismountedIndividual_RankE8RankCodeOR8 is Rank E-8 {Rank Code OR-8}.
+	Modifier2DismountedIndividual_RankE8RankCodeOR8 Modifier2 = 32
+
+	// Modifier2DismountedIndividual_RankE9RankCodeOR9 is Rank E-9 {Rank Code OR-9}.
+	Modifier2DismountedIndividual_RankE9RankCodeOR9 Modifier2 = 33
+
+	// Modifier2DismountedIndividual_RankCodeWO1 is Rank Code WO-1.
+	Modifier2DismountedIndividual_RankCodeWO1 Modifier2 = 34
+
+	// Modifier2DismountedIndividual_RankCodeWO2 is Rank Code WO-2.
+	Modifier2DismountedIndividual_RankCodeWO2 Modifier2 = 35
+
+	// Modifier2DismountedIndividual_RankCodeWO3 is Rank Code WO-3.
+	Modifier2DismountedIndividual_RankCodeWO3 Modifier2 = 36
+
+	// Modifier2DismountedIndividual_RankCodeWO4 is Rank Code WO-4.
+	Modifier2DismountedIndividual_RankCodeWO4 Modifier2 = 37
+
+	// Modifier2DismountedIndividual_RankCodeWO5 is Rank Code WO-5.
+	Modifier2DismountedIndividual_RankCodeWO5 Modifier2 = 38
+
+	// Modifier2DismountedIndividual_Disused_39 is {Disused}.
+	Modifier2DismountedIndividual_Disused_39 Modifier2 = 39
 )

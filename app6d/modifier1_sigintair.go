@@ -5,69 +5,198 @@ package app6d
 
 // Modifier 1 constants for symbol set 51 (Signals intelligence).
 const (
-	Modifier1SIGINTAir_AntiAircraftFireControl                Modifier1 = 1  // Anti-Aircraft Fire Control
-	Modifier1SIGINTAir_AirborneSearchAndBombing               Modifier1 = 2  // Airborne Search and Bombing
-	Modifier1SIGINTAir_AirborneIntercept                      Modifier1 = 3  // Airborne Intercept
-	Modifier1SIGINTAir_Altimeter                              Modifier1 = 4  // Altimeter
-	Modifier1SIGINTAir_AirborneReconnaissanceAndMapping       Modifier1 = 5  // Airborne Reconnaissance and Mapping
-	Modifier1SIGINTAir_AirTrafficControl                      Modifier1 = 6  // Air Traffic Control
-	Modifier1SIGINTAir_BeaconTransponderNotIFF                Modifier1 = 7  // Beacon Transponder (not IFF)
-	Modifier1SIGINTAir_BattlefieldSurveillance                Modifier1 = 8  // Battlefield Surveillance
-	Modifier1SIGINTAir_ControlledApproach                     Modifier1 = 9  // Controlled Approach
-	Modifier1SIGINTAir_ControlledIntercept                    Modifier1 = 10 // Controlled Intercept
-	Modifier1SIGINTAir_CellularMobile                         Modifier1 = 11 // Cellular/Mobile
-	Modifier1SIGINTAir_CoastalSurveillance                    Modifier1 = 12 // Coastal Surveillance
-	Modifier1SIGINTAir_DecoyMimic                             Modifier1 = 13 // Decoy/Mimic
-	Modifier1SIGINTAir_DataTransmission                       Modifier1 = 14 // Data Transmission
-	Modifier1SIGINTAir_EarthSurveillance                      Modifier1 = 15 // Earth Surveillance
-	Modifier1SIGINTAir_EarlyWarning                           Modifier1 = 16 // Early Warning
-	Modifier1SIGINTAir_FireControl                            Modifier1 = 17 // Fire Control
-	Modifier1SIGINTAir_GroundMapping                          Modifier1 = 18 // Ground Mapping
-	Modifier1SIGINTAir_HeightFinding                          Modifier1 = 19 // Height Finding
-	Modifier1SIGINTAir_HarborSurveillance                     Modifier1 = 20 // Harbor Surveillance
-	Modifier1SIGINTAir_IdentificationFriendOrFoeInterrogator  Modifier1 = 21 // Identification, Friend or Foe (Interrogator)
-	Modifier1SIGINTAir_InstrumentLandingSystem                Modifier1 = 22 // Instrument Landing System
-	Modifier1SIGINTAir_IonosphericSounding                    Modifier1 = 23 // Ionospheric Sounding
-	Modifier1SIGINTAir_IdentificationFriendOrFoeTransponder   Modifier1 = 24 // Identification, Friend or Foe (Transponder)
-	Modifier1SIGINTAir_BarrageJammer                          Modifier1 = 25 // Barrage Jammer
-	Modifier1SIGINTAir_ClickJammer                            Modifier1 = 26 // Click Jammer
-	Modifier1SIGINTAir_DeceptiveJammer                        Modifier1 = 27 // Deceptive Jammer
-	Modifier1SIGINTAir_FrequencySweptJammer                   Modifier1 = 28 // Frequency Swept Jammer
-	Modifier1SIGINTAir_JammerGeneral                          Modifier1 = 29 // Jammer (general)
-	Modifier1SIGINTAir_NoiseJammer                            Modifier1 = 30 // Noise Jammer
-	Modifier1SIGINTAir_PulsedJammer                           Modifier1 = 31 // Pulsed Jammer
-	Modifier1SIGINTAir_RepeaterJammer                         Modifier1 = 32 // Repeater Jammer
-	Modifier1SIGINTAir_SpotNoiseJammer                        Modifier1 = 33 // Spot Noise Jammer
-	Modifier1SIGINTAir_TransponderJammer                      Modifier1 = 34 // Transponder Jammer
-	Modifier1SIGINTAir_MissileAcquisition                     Modifier1 = 35 // Missile Acquisition
-	Modifier1SIGINTAir_MissileControl                         Modifier1 = 36 // Missile Control
-	Modifier1SIGINTAir_MissileDownlink                        Modifier1 = 37 // Missile Downlink
-	Modifier1SIGINTAir_Meteorological                         Modifier1 = 38 // Meteorological
-	Modifier1SIGINTAir_MultiFunction                          Modifier1 = 39 // Multi-Function
-	Modifier1SIGINTAir_MissileGuidance                        Modifier1 = 40 // Missile Guidance
-	Modifier1SIGINTAir_MissileHoming                          Modifier1 = 41 // Missile Homing
-	Modifier1SIGINTAir_MissileTracking                        Modifier1 = 42 // Missile Tracking
-	Modifier1SIGINTAir_NavigationalGeneral                    Modifier1 = 43 // Navigational/General
-	Modifier1SIGINTAir_NavigationalDistanceMeasuringEquipment Modifier1 = 44 // Navigational/Distance Measuring Equipment
-	Modifier1SIGINTAir_NavigationTerrainFollowing             Modifier1 = 45 // Navigation/Terrain Following
-	Modifier1SIGINTAir_NavigationalWeatherAvoidance           Modifier1 = 46 // Navigational/Weather Avoidance
-	Modifier1SIGINTAir_OmniLineOfSightLOS                     Modifier1 = 47 // Omni-Line of Sight (LOS)
-	Modifier1SIGINTAir_ProximityUse                           Modifier1 = 48 // Proximity Use
-	Modifier1SIGINTAir_PointToPointLineOfSightLOS             Modifier1 = 49 // Point-to-Point Line of Sight (LOS)
-	Modifier1SIGINTAir_Instrumentation                        Modifier1 = 50 // Instrumentation
-	Modifier1SIGINTAir_RangeOnly                              Modifier1 = 51 // Range Only
-	Modifier1SIGINTAir_Sonobuoy                               Modifier1 = 52 // Sonobuoy
-	Modifier1SIGINTAir_SatelliteDownlink                      Modifier1 = 53 // Satellite Downlink
-	Modifier1SIGINTAir_Space                                  Modifier1 = 54 // Space
-	Modifier1SIGINTAir_SurfaceSearch                          Modifier1 = 55 // Surface Search
-	Modifier1SIGINTAir_ShellTracking                          Modifier1 = 56 // Shell Tracking
-	Modifier1SIGINTAir_SatelliteUplink                        Modifier1 = 57 // Satellite Uplink
-	Modifier1SIGINTAir_TargetAcquisition                      Modifier1 = 58 // Target Acquisition
-	Modifier1SIGINTAir_TargetIllumination                     Modifier1 = 59 // Target Illumination
-	Modifier1SIGINTAir_TroposphericScatter                    Modifier1 = 60 // Tropospheric Scatter
-	Modifier1SIGINTAir_TargetTracking                         Modifier1 = 61 // Target Tracking
-	Modifier1SIGINTAir_Unknown                                Modifier1 = 62 // Unknown
-	Modifier1SIGINTAir_VideoRemoting                          Modifier1 = 63 // Video Remoting
-	Modifier1SIGINTAir_Experimental                           Modifier1 = 64 // Experimental
-	Modifier1SIGINTAir_Disused                                Modifier1 = 65 // {Disused}
+	// Modifier1SIGINTAir_AntiAircraftFireControl is Anti-Aircraft Fire Control.
+	Modifier1SIGINTAir_AntiAircraftFireControl Modifier1 = 1
+
+	// Modifier1SIGINTAir_AirborneSearchAndBombing is Airborne Search and Bombing.
+	Modifier1SIGINTAir_AirborneSearchAndBombing Modifier1 = 2
+
+	// Modifier1SIGINTAir_AirborneIntercept is Airborne Intercept.
+	Modifier1SIGINTAir_AirborneIntercept Modifier1 = 3
+
+	// Modifier1SIGINTAir_Altimeter is Altimeter.
+	Modifier1SIGINTAir_Altimeter Modifier1 = 4
+
+	// Modifier1SIGINTAir_AirborneReconnaissanceAndMapping is Airborne Reconnaissance and Mapping.
+	Modifier1SIGINTAir_AirborneReconnaissanceAndMapping Modifier1 = 5
+
+	// Modifier1SIGINTAir_AirTrafficControl is Air Traffic Control.
+	Modifier1SIGINTAir_AirTrafficControl Modifier1 = 6
+
+	// Modifier1SIGINTAir_BeaconTransponderNotIFF is Beacon Transponder (not IFF).
+	Modifier1SIGINTAir_BeaconTransponderNotIFF Modifier1 = 7
+
+	// Modifier1SIGINTAir_BattlefieldSurveillance is Battlefield Surveillance.
+	Modifier1SIGINTAir_BattlefieldSurveillance Modifier1 = 8
+
+	// Modifier1SIGINTAir_ControlledApproach is Controlled Approach.
+	Modifier1SIGINTAir_ControlledApproach Modifier1 = 9
+
+	// Modifier1SIGINTAir_ControlledIntercept is Controlled Intercept.
+	Modifier1SIGINTAir_ControlledIntercept Modifier1 = 10
+
+	// Modifier1SIGINTAir_CellularMobile is Cellular/Mobile.
+	Modifier1SIGINTAir_CellularMobile Modifier1 = 11
+
+	// Modifier1SIGINTAir_CoastalSurveillance is Coastal Surveillance.
+	Modifier1SIGINTAir_CoastalSurveillance Modifier1 = 12
+
+	// Modifier1SIGINTAir_DecoyMimic is Decoy/Mimic.
+	Modifier1SIGINTAir_DecoyMimic Modifier1 = 13
+
+	// Modifier1SIGINTAir_DataTransmission is Data Transmission.
+	Modifier1SIGINTAir_DataTransmission Modifier1 = 14
+
+	// Modifier1SIGINTAir_EarthSurveillance is Earth Surveillance.
+	Modifier1SIGINTAir_EarthSurveillance Modifier1 = 15
+
+	// Modifier1SIGINTAir_EarlyWarning is Early Warning.
+	Modifier1SIGINTAir_EarlyWarning Modifier1 = 16
+
+	// Modifier1SIGINTAir_FireControl is Fire Control.
+	Modifier1SIGINTAir_FireControl Modifier1 = 17
+
+	// Modifier1SIGINTAir_GroundMapping is Ground Mapping.
+	Modifier1SIGINTAir_GroundMapping Modifier1 = 18
+
+	// Modifier1SIGINTAir_HeightFinding is Height Finding.
+	Modifier1SIGINTAir_HeightFinding Modifier1 = 19
+
+	// Modifier1SIGINTAir_HarborSurveillance is Harbor Surveillance.
+	Modifier1SIGINTAir_HarborSurveillance Modifier1 = 20
+
+	// Modifier1SIGINTAir_IdentificationFriendOrFoeInterrogator is Identification, Friend or Foe (Interrogator).
+	Modifier1SIGINTAir_IdentificationFriendOrFoeInterrogator Modifier1 = 21
+
+	// Modifier1SIGINTAir_InstrumentLandingSystem is Instrument Landing System.
+	Modifier1SIGINTAir_InstrumentLandingSystem Modifier1 = 22
+
+	// Modifier1SIGINTAir_IonosphericSounding is Ionospheric Sounding.
+	Modifier1SIGINTAir_IonosphericSounding Modifier1 = 23
+
+	// Modifier1SIGINTAir_IdentificationFriendOrFoeTransponder is Identification, Friend or Foe (Transponder).
+	Modifier1SIGINTAir_IdentificationFriendOrFoeTransponder Modifier1 = 24
+
+	// Modifier1SIGINTAir_BarrageJammer is Barrage Jammer.
+	Modifier1SIGINTAir_BarrageJammer Modifier1 = 25
+
+	// Modifier1SIGINTAir_ClickJammer is Click Jammer.
+	Modifier1SIGINTAir_ClickJammer Modifier1 = 26
+
+	// Modifier1SIGINTAir_DeceptiveJammer is Deceptive Jammer.
+	Modifier1SIGINTAir_DeceptiveJammer Modifier1 = 27
+
+	// Modifier1SIGINTAir_FrequencySweptJammer is Frequency Swept Jammer.
+	Modifier1SIGINTAir_FrequencySweptJammer Modifier1 = 28
+
+	// Modifier1SIGINTAir_JammerGeneral is Jammer (general).
+	Modifier1SIGINTAir_JammerGeneral Modifier1 = 29
+
+	// Modifier1SIGINTAir_NoiseJammer is Noise Jammer.
+	Modifier1SIGINTAir_NoiseJammer Modifier1 = 30
+
+	// Modifier1SIGINTAir_PulsedJammer is Pulsed Jammer.
+	Modifier1SIGINTAir_PulsedJammer Modifier1 = 31
+
+	// Modifier1SIGINTAir_RepeaterJammer is Repeater Jammer.
+	Modifier1SIGINTAir_RepeaterJammer Modifier1 = 32
+
+	// Modifier1SIGINTAir_SpotNoiseJammer is Spot Noise Jammer.
+	Modifier1SIGINTAir_SpotNoiseJammer Modifier1 = 33
+
+	// Modifier1SIGINTAir_TransponderJammer is Transponder Jammer.
+	Modifier1SIGINTAir_TransponderJammer Modifier1 = 34
+
+	// Modifier1SIGINTAir_MissileAcquisition is Missile Acquisition.
+	Modifier1SIGINTAir_MissileAcquisition Modifier1 = 35
+
+	// Modifier1SIGINTAir_MissileControl is Missile Control.
+	Modifier1SIGINTAir_MissileControl Modifier1 = 36
+
+	// Modifier1SIGINTAir_MissileDownlink is Missile Downlink.
+	Modifier1SIGINTAir_MissileDownlink Modifier1 = 37
+
+	// Modifier1SIGINTAir_Meteorological is Meteorological.
+	Modifier1SIGINTAir_Meteorological Modifier1 = 38
+
+	// Modifier1SIGINTAir_MultiFunction is Multi-Function.
+	Modifier1SIGINTAir_MultiFunction Modifier1 = 39
+
+	// Modifier1SIGINTAir_MissileGuidance is Missile Guidance.
+	Modifier1SIGINTAir_MissileGuidance Modifier1 = 40
+
+	// Modifier1SIGINTAir_MissileHoming is Missile Homing.
+	Modifier1SIGINTAir_MissileHoming Modifier1 = 41
+
+	// Modifier1SIGINTAir_MissileTracking is Missile Tracking.
+	Modifier1SIGINTAir_MissileTracking Modifier1 = 42
+
+	// Modifier1SIGINTAir_NavigationalGeneral is Navigational/General.
+	Modifier1SIGINTAir_NavigationalGeneral Modifier1 = 43
+
+	// Modifier1SIGINTAir_NavigationalDistanceMeasuringEquipment is Navigational/Distance Measuring Equipment.
+	Modifier1SIGINTAir_NavigationalDistanceMeasuringEquipment Modifier1 = 44
+
+	// Modifier1SIGINTAir_NavigationTerrainFollowing is Navigation/Terrain Following.
+	Modifier1SIGINTAir_NavigationTerrainFollowing Modifier1 = 45
+
+	// Modifier1SIGINTAir_NavigationalWeatherAvoidance is Navigational/Weather Avoidance.
+	Modifier1SIGINTAir_NavigationalWeatherAvoidance Modifier1 = 46
+
+	// Modifier1SIGINTAir_OmniLineOfSightLOS is Omni-Line of Sight (LOS).
+	Modifier1SIGINTAir_OmniLineOfSightLOS Modifier1 = 47
+
+	// Modifier1SIGINTAir_ProximityUse is Proximity Use.
+	Modifier1SIGINTAir_ProximityUse Modifier1 = 48
+
+	// Modifier1SIGINTAir_PointToPointLineOfSightLOS is Point-to-Point Line of Sight (LOS).
+	Modifier1SIGINTAir_PointToPointLineOfSightLOS Modifier1 = 49
+
+	// Modifier1SIGINTAir_Instrumentation is Instrumentation.
+	Modifier1SIGINTAir_Instrumentation Modifier1 = 50
+
+	// Modifier1SIGINTAir_RangeOnly is Range Only.
+	Modifier1SIGINTAir_RangeOnly Modifier1 = 51
+
+	// Modifier1SIGINTAir_Sonobuoy is Sonobuoy.
+	Modifier1SIGINTAir_Sonobuoy Modifier1 = 52
+
+	// Modifier1SIGINTAir_SatelliteDownlink is Satellite Downlink.
+	Modifier1SIGINTAir_SatelliteDownlink Modifier1 = 53
+
+	// Modifier1SIGINTAir_Space is Space.
+	Modifier1SIGINTAir_Space Modifier1 = 54
+
+	// Modifier1SIGINTAir_SurfaceSearch is Surface Search.
+	Modifier1SIGINTAir_SurfaceSearch Modifier1 = 55
+
+	// Modifier1SIGINTAir_ShellTracking is Shell Tracking.
+	Modifier1SIGINTAir_ShellTracking Modifier1 = 56
+
+	// Modifier1SIGINTAir_SatelliteUplink is Satellite Uplink.
+	Modifier1SIGINTAir_SatelliteUplink Modifier1 = 57
+
+	// Modifier1SIGINTAir_TargetAcquisition is Target Acquisition.
+	Modifier1SIGINTAir_TargetAcquisition Modifier1 = 58
+
+	// Modifier1SIGINTAir_TargetIllumination is Target Illumination.
+	Modifier1SIGINTAir_TargetIllumination Modifier1 = 59
+
+	// Modifier1SIGINTAir_TroposphericScatter is Tropospheric Scatter.
+	Modifier1SIGINTAir_TroposphericScatter Modifier1 = 60
+
+	// Modifier1SIGINTAir_TargetTracking is Target Tracking.
+	Modifier1SIGINTAir_TargetTracking Modifier1 = 61
+
+	// Modifier1SIGINTAir_Unknown is Unknown.
+	Modifier1SIGINTAir_Unknown Modifier1 = 62
+
+	// Modifier1SIGINTAir_VideoRemoting is Video Remoting.
+	Modifier1SIGINTAir_VideoRemoting Modifier1 = 63
+
+	// Modifier1SIGINTAir_Experimental is Experimental.
+	Modifier1SIGINTAir_Experimental Modifier1 = 64
+
+	// Modifier1SIGINTAir_Disused is {Disused}.
+	Modifier1SIGINTAir_Disused Modifier1 = 65
 )

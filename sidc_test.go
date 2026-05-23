@@ -1,47 +1,38 @@
 package sidc
 
 import (
-	"errors"
+	"strings"
 	"testing"
 )
 
 func TestDetect(t *testing.T) {
 	tests := []struct {
-		name    string
-		input   string
-		want    Version
-		wantErr bool
+		name        string
+		input       string
+		wantVersion Version
+		wantOK      bool
 	}{
-		{name: "15 characters is APP-6 B", input: "SFAPMFF--------", want: VersionAPP6B},
-		{name: "15 dashes is APP-6 B", input: "---------------", want: VersionAPP6B},
-		{name: "20 digits starting 10 is APP-6 D", input: "10031000141211000000", want: VersionAPP6D},
-		{name: "20 digits starting 11 is APP-6 D", input: "11031000141211000000", want: VersionAPP6D},
-		{name: "20 digits starting 12 is APP-6 D", input: "12031000141211000000", want: VersionAPP6D},
-		{name: "20 digits starting 13 is APP-6 E", input: "13166000001100000000", want: VersionAPP6E},
-		{name: "20 digits starting 14 is APP-6 E", input: "14025002000000007199", want: VersionAPP6E},
-		{name: "20 digits with unknown version prefix is rejected", input: "99031000141211000000", want: VersionUnknown, wantErr: true},
-		{name: "20 chars with non-digit is rejected", input: "1003100014A211000000", want: VersionUnknown, wantErr: true},
-		{name: "empty string is rejected", input: "", want: VersionUnknown, wantErr: true},
-		{name: "10 characters is rejected", input: "1234567890", want: VersionUnknown, wantErr: true},
-		{name: "30 characters is rejected", input: "100310001412110000000000000000", want: VersionUnknown, wantErr: true},
+		{name: "15 characters is APP-6 B", input: "SFAPMFF--------", wantVersion: VersionAPP6B, wantOK: true},
+		{name: "15 dashes is APP-6 B", input: strings.Repeat("-", 15), wantVersion: VersionAPP6B, wantOK: true},
+		{name: "20 digits starting 10 is APP-6 D", input: "10031000141211000000", wantVersion: VersionAPP6D, wantOK: true},
+		{name: "20 digits starting 11 is APP-6 D", input: "11031000141211000000", wantVersion: VersionAPP6D, wantOK: true},
+		{name: "20 digits starting 12 is APP-6 D", input: "12031000141211000000", wantVersion: VersionAPP6D, wantOK: true},
+		{name: "20 digits starting 13 is APP-6 E", input: "13166000001100000000", wantVersion: VersionAPP6E, wantOK: true},
+		{name: "20 digits starting 14 is APP-6 E", input: "14025002000000007199", wantVersion: VersionAPP6E, wantOK: true},
+		{name: "20 digits with unknown version prefix is unrecognised", input: "99031000141211000000", wantVersion: VersionUnknown, wantOK: false},
+		{name: "20 chars with non-digit is unrecognised", input: "1003100014A211000000", wantVersion: VersionUnknown, wantOK: false},
+		{name: "empty string is unrecognised", input: "", wantVersion: VersionUnknown, wantOK: false},
+		{name: "10 characters is unrecognised", input: strings.Repeat("0", 10), wantVersion: VersionUnknown, wantOK: false},
+		{name: "30 characters is unrecognised", input: strings.Repeat("0", 30), wantVersion: VersionUnknown, wantOK: false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := Detect(tt.input)
-			if got != tt.want {
-				t.Errorf("got version %v, expected %v", got, tt.want)
+			version, ok := Detect(tt.input)
+			if version != tt.wantVersion {
+				t.Errorf("got version %v, expected %v", version, tt.wantVersion)
 			}
-			if tt.wantErr {
-				if err == nil {
-					t.Fatalf("expected error, got nil")
-				}
-				if !errors.Is(err, ErrUnknownVersion) {
-					t.Errorf("got error %v, expected to wrap ErrUnknownVersion", err)
-				}
-				return
-			}
-			if err != nil {
-				t.Errorf("got unexpected error: %v", err)
+			if ok != tt.wantOK {
+				t.Errorf("got ok=%v, expected %v", ok, tt.wantOK)
 			}
 		})
 	}

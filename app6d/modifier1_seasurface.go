@@ -5,29 +5,78 @@ package app6d
 
 // Modifier 1 constants for symbol set 30 (Sea surface).
 const (
-	Modifier1SeaSurface_OwnShip                                                  Modifier1 = 1  // Own Ship
-	Modifier1SeaSurface_AntiairWarfare                                           Modifier1 = 2  // Antiair Warfare
-	Modifier1SeaSurface_Disused                                                  Modifier1 = 3  // {Disused}
-	Modifier1SeaSurface_Disused_04                                               Modifier1 = 4  // {Disused}
-	Modifier1SeaSurface_ElectronicWarfare                                        Modifier1 = 5  // Electronic Warfare
-	Modifier1SeaSurface_Disused_06                                               Modifier1 = 6  // {Disused}
-	Modifier1SeaSurface_Disused_07                                               Modifier1 = 7  // {Disused}
-	Modifier1SeaSurface_MissileDefense                                           Modifier1 = 8  // Missile Defense
-	Modifier1SeaSurface_Medical                                                  Modifier1 = 9  // Medical
-	Modifier1SeaSurface_Disused_10                                               Modifier1 = 10 // {Disused}
-	Modifier1SeaSurface_RemoteMultiMissionVehicleRMV                             Modifier1 = 11 // Remote Multi-mission Vehicle (RMV)
-	Modifier1SeaSurface_Disused_12                                               Modifier1 = 12 // {Disused}
-	Modifier1SeaSurface_Disused_13                                               Modifier1 = 13 // {Disused}
-	Modifier1SeaSurface_Disused_14                                               Modifier1 = 14 // {Disused}
-	Modifier1SeaSurface_Disused_15                                               Modifier1 = 15 // {Disused}
-	Modifier1SeaSurface_Disused_16                                               Modifier1 = 16 // {Disused}
-	Modifier1SeaSurface_Torpedo                                                  Modifier1 = 17 // Torpedo
-	Modifier1SeaSurface_DroneEquipped                                            Modifier1 = 18 // Drone–Equipped
-	Modifier1SeaSurface_Disused_19                                               Modifier1 = 19 // {Disused}
-	Modifier1SeaSurface_Disused_20                                               Modifier1 = 20 // {Disused}
-	Modifier1SeaSurface_BallisticMissileDefenseLongRangeSurveillanceAndTrackLRST Modifier1 = 21 // Ballistic Missile Defense, Long-Range Surveillance and Track (LRS&T)
-	Modifier1SeaSurface_SeaBaseXBand                                             Modifier1 = 22 // Sea-Base X-Band
-	Modifier1SeaSurface_Disused_23                                               Modifier1 = 23 // {Disused}
-	Modifier1SeaSurface_Disused_24                                               Modifier1 = 24 // {Disused}
-	Modifier1SeaSurface_Disused_25                                               Modifier1 = 25 // {Disused}
+	// Modifier1SeaSurface_OwnShip is Own Ship.
+	Modifier1SeaSurface_OwnShip Modifier1 = 1
+
+	// Modifier1SeaSurface_AntiairWarfare is Antiair Warfare.
+	Modifier1SeaSurface_AntiairWarfare Modifier1 = 2
+
+	// Modifier1SeaSurface_Disused is {Disused}.
+	Modifier1SeaSurface_Disused Modifier1 = 3
+
+	// Modifier1SeaSurface_Disused_04 is {Disused}.
+	Modifier1SeaSurface_Disused_04 Modifier1 = 4
+
+	// Modifier1SeaSurface_ElectronicWarfare is Electronic Warfare.
+	Modifier1SeaSurface_ElectronicWarfare Modifier1 = 5
+
+	// Modifier1SeaSurface_Disused_06 is {Disused}.
+	Modifier1SeaSurface_Disused_06 Modifier1 = 6
+
+	// Modifier1SeaSurface_Disused_07 is {Disused}.
+	Modifier1SeaSurface_Disused_07 Modifier1 = 7
+
+	// Modifier1SeaSurface_MissileDefense is Missile Defense.
+	Modifier1SeaSurface_MissileDefense Modifier1 = 8
+
+	// Modifier1SeaSurface_Medical is Medical.
+	Modifier1SeaSurface_Medical Modifier1 = 9
+
+	// Modifier1SeaSurface_Disused_10 is {Disused}.
+	Modifier1SeaSurface_Disused_10 Modifier1 = 10
+
+	// Modifier1SeaSurface_RemoteMultiMissionVehicleRMV is Remote Multi-mission Vehicle (RMV).
+	Modifier1SeaSurface_RemoteMultiMissionVehicleRMV Modifier1 = 11
+
+	// Modifier1SeaSurface_Disused_12 is {Disused}.
+	Modifier1SeaSurface_Disused_12 Modifier1 = 12
+
+	// Modifier1SeaSurface_Disused_13 is {Disused}.
+	Modifier1SeaSurface_Disused_13 Modifier1 = 13
+
+	// Modifier1SeaSurface_Disused_14 is {Disused}.
+	Modifier1SeaSurface_Disused_14 Modifier1 = 14
+
+	// Modifier1SeaSurface_Disused_15 is {Disused}.
+	Modifier1SeaSurface_Disused_15 Modifier1 = 15
+
+	// Modifier1SeaSurface_Disused_16 is {Disused}.
+	Modifier1SeaSurface_Disused_16 Modifier1 = 16
+
+	// Modifier1SeaSurface_Torpedo is Torpedo.
+	Modifier1SeaSurface_Torpedo Modifier1 = 17
+
+	// Modifier1SeaSurface_DroneEquipped is Drone–Equipped.
+	Modifier1SeaSurface_DroneEquipped Modifier1 = 18
+
+	// Modifier1SeaSurface_Disused_19 is {Disused}.
+	Modifier1SeaSurface_Disused_19 Modifier1 = 19
+
+	// Modifier1SeaSurface_Disused_20 is {Disused}.
+	Modifier1SeaSurface_Disused_20 Modifier1 = 20
+
+	// Modifier1SeaSurface_BallisticMissileDefenseLongRangeSurveillanceAndTrackLRST is Ballistic Missile Defense, Long-Range Surveillance and Track (LRS&T).
+	Modifier1SeaSurface_BallisticMissileDefenseLongRangeSurveillanceAndTrackLRST Modifier1 = 21
+
+	// Modifier1SeaSurface_SeaBaseXBand is Sea-Base X-Band.
+	Modifier1SeaSurface_SeaBaseXBand Modifier1 = 22
+
+	// Modifier1SeaSurface_Disused_23 is {Disused}.
+	Modifier1SeaSurface_Disused_23 Modifier1 = 23
+
+	// Modifier1SeaSurface_Disused_24 is {Disused}.
+	Modifier1SeaSurface_Disused_24 Modifier1 = 24
+
+	// Modifier1SeaSurface_Disused_25 is {Disused}.
+	Modifier1SeaSurface_Disused_25 Modifier1 = 25
 )

@@ -11,10 +11,7 @@
 // to the appropriate package's Parse function.
 package sidc
 
-import (
-	"errors"
-	"fmt"
-)
+import "fmt"
 
 //go:generate go run ./internal/tsvgen -tables tables -out app6d
 
@@ -49,37 +46,34 @@ func (v Version) String() string {
 	return fmt.Sprintf("Version(%d)", uint8(v))
 }
 
-// ErrUnknownVersion indicates Detect could not classify the input.
-var ErrUnknownVersion = errors.New("sidc: input does not match any known SIDC layout")
-
 // Detect returns the SIDC version that the input string belongs to, based on
-// its length and leading characters. It is a cheap structural check — it does
+// its length and leading characters. It is a cheap structural check that does
 // not parse or validate the body of the SIDC.
+//
+// The bool return is true when the input matched a known layout. When it is
+// false, the returned Version is VersionUnknown.
 //
 // Rules:
 //   - 15 characters of any composition → APP-6 B (letter-based).
 //   - 20 characters, all ASCII digits, leading "10", "11", or "12" → APP-6 D.
 //   - 20 characters, all ASCII digits, leading "13" or "14" → APP-6 E.
-//   - Anything else → VersionUnknown with ErrUnknownVersion.
-func Detect(s string) (Version, error) {
+//   - Anything else → VersionUnknown, false.
+func Detect(s string) (version Version, ok bool) {
 	switch len(s) {
 	case 15:
-		return VersionAPP6B, nil
+		return VersionAPP6B, true
 	case 20:
 		for i := range len(s) {
 			if s[i] < '0' || s[i] > '9' {
-				return VersionUnknown, fmt.Errorf("%w: 20-char input contains non-digit at position %d", ErrUnknownVersion, i)
+				return VersionUnknown, false
 			}
 		}
 		switch s[0:2] {
 		case "10", "11", "12":
-			return VersionAPP6D, nil
+			return VersionAPP6D, true
 		case "13", "14":
-			return VersionAPP6E, nil
-		default:
-			return VersionUnknown, fmt.Errorf("%w: 20-digit input has unrecognised version prefix %q", ErrUnknownVersion, s[0:2])
+			return VersionAPP6E, true
 		}
-	default:
-		return VersionUnknown, fmt.Errorf("%w: length %d is neither 15 nor 20", ErrUnknownVersion, len(s))
 	}
+	return VersionUnknown, false
 }

@@ -8,27 +8,49 @@ import "fmt"
 type SymbolSet uint8
 
 const (
-	SymbolSetUnknown              SymbolSet = 0
-	SymbolSetAir                  SymbolSet = 1  // 01
-	SymbolSetAirMissile           SymbolSet = 2  // 02 (E only)
-	SymbolSetSpace                SymbolSet = 5  // 05
-	SymbolSetSpaceMissile         SymbolSet = 6  // 06 (E only)
-	SymbolSetLandUnit             SymbolSet = 10 // 10
-	SymbolSetLandCivilian         SymbolSet = 11 // 11
-	SymbolSetLandEquipment        SymbolSet = 15 // 15
-	SymbolSetLandInstallation     SymbolSet = 20 // 20
-	SymbolSetControlMeasure       SymbolSet = 25 // 25
-	SymbolSetDismountedIndividual SymbolSet = 27 // 27 (E only)
-	SymbolSetSeaSurface           SymbolSet = 30 // 30
-	SymbolSetSeaSubsurface        SymbolSet = 35 // 35
-	SymbolSetMineWarfare          SymbolSet = 36 // 36
-	SymbolSetActivities           SymbolSet = 40 // 40
-	SymbolSetSIGINTSpace          SymbolSet = 50 // 50 (E only)
-	SymbolSetSIGINTAir            SymbolSet = 51 // 51 (E only)
-	SymbolSetSIGINTLand           SymbolSet = 52 // 52 (E only)
-	SymbolSetSIGINTSeaSurface     SymbolSet = 53 // 53 (E only)
-	SymbolSetSIGINTSubsurface     SymbolSet = 54 // 54 (E only)
-	SymbolSetCyberspace           SymbolSet = 60 // 60 (E only)
+	SymbolSetUnknown SymbolSet = 0
+
+	SymbolSetAir SymbolSet = 1
+
+	// SymbolSetAirMissile is only valid in APP-6 E.
+	SymbolSetAirMissile SymbolSet = 2
+
+	SymbolSetSpace SymbolSet = 5
+
+	// SymbolSetSpaceMissile is only valid in APP-6 E.
+	SymbolSetSpaceMissile SymbolSet = 6
+
+	SymbolSetLandUnit         SymbolSet = 10
+	SymbolSetLandCivilian     SymbolSet = 11
+	SymbolSetLandEquipment    SymbolSet = 15
+	SymbolSetLandInstallation SymbolSet = 20
+	SymbolSetControlMeasure   SymbolSet = 25
+
+	// SymbolSetDismountedIndividual is only valid in APP-6 E.
+	SymbolSetDismountedIndividual SymbolSet = 27
+
+	SymbolSetSeaSurface    SymbolSet = 30
+	SymbolSetSeaSubsurface SymbolSet = 35
+	SymbolSetMineWarfare   SymbolSet = 36
+	SymbolSetActivities    SymbolSet = 40
+
+	// SymbolSetSIGINTSpace is only valid in APP-6 E.
+	SymbolSetSIGINTSpace SymbolSet = 50
+
+	// SymbolSetSIGINTAir is only valid in APP-6 E.
+	SymbolSetSIGINTAir SymbolSet = 51
+
+	// SymbolSetSIGINTLand is only valid in APP-6 E.
+	SymbolSetSIGINTLand SymbolSet = 52
+
+	// SymbolSetSIGINTSeaSurface is only valid in APP-6 E.
+	SymbolSetSIGINTSeaSurface SymbolSet = 53
+
+	// SymbolSetSIGINTSubsurface is only valid in APP-6 E.
+	SymbolSetSIGINTSubsurface SymbolSet = 54
+
+	// SymbolSetCyberspace is only valid in APP-6 E.
+	SymbolSetCyberspace SymbolSet = 60
 )
 
 // eOnly lists symbol sets that are only valid in APP-6 E.

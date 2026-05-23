@@ -1,9 +1,6 @@
 package app6d
 
-import (
-	"errors"
-	"fmt"
-)
+import "fmt"
 
 // ValidationError reports the first invalid field encountered when validating
 // a SIDC. It identifies the field by name and includes a human-readable reason.
@@ -16,25 +13,21 @@ func (e *ValidationError) Error() string {
 	return fmt.Sprintf("sidc: invalid %s: %s", e.Field, e.Reason)
 }
 
-// ErrUnknownEntity indicates the entity code is not defined for the symbol set.
-var ErrUnknownEntity = errors.New("sidc: unknown entity for symbol set")
-
-// ErrUnknownModifier indicates a modifier code is not defined for the symbol set.
-var ErrUnknownModifier = errors.New("sidc: unknown modifier for symbol set")
-
-// Validate performs cross-field structural and table-lookup checks. It does
-// not require the SIDC to identify a known entity (zero is treated as "not
-// specified"); pass StrictEntity to require entity membership in the symbol
-// set's table.
+// Validate checks that every field carries a meaningful value:
 //
-// Checks performed:
-//   - Version must be a recognised D or E value (or Unspecified).
-//   - Context, Affiliation, Status must be in their enum ranges.
-//   - HQTFD must be 0-7.
-//   - Amplifier, if non-zero, must fall in one of the echelon, mobility,
-//     or leadership ranges (Category() != AmplifierCategoryNone).
-//   - SymbolSet must be a recognised value.
-//   - If SymbolSet is E-only, Version must be in the E family.
+//   - Version is a recognised D or E value (or Unspecified).
+//   - Context, Affiliation, Status are within their enum ranges.
+//   - HQTFD is 0-7.
+//   - Amplifier, if non-zero, names a defined echelon, mobility, or leadership code.
+//   - SymbolSet is a recognised value.
+//   - If SymbolSet is E-only, Version is in the E family.
+//   - The Entity, if non-zero, is defined for the SymbolSet.
+//   - Modifier1 and Modifier2, if non-zero, are defined for the SymbolSet.
+//
+// Validate stops at the first failure and returns a *ValidationError naming
+// the field. Parse does not call Validate — it only checks the structure of
+// the input — so callers must invoke Validate explicitly when they want to
+// know that the contents are meaningful.
 func (s SIDC) Validate() error {
 	if s.Version != VersionUnspecified && !s.Version.IsD() && !s.Version.IsE() {
 		return &ValidationError{Field: "Version", Reason: fmt.Sprintf("unrecognised value %d", uint8(s.Version))}
@@ -60,28 +53,19 @@ func (s SIDC) Validate() error {
 	if s.SymbolSet.IsEOnly() && s.Version != VersionUnspecified && !s.Version.IsE() {
 		return &ValidationError{Field: "SymbolSet", Reason: fmt.Sprintf("%s is only valid in APP-6 E, got version %d", s.SymbolSet, uint8(s.Version))}
 	}
-	return nil
-}
-
-// ValidateStrict performs all the checks of Validate plus table lookups: the
-// Entity must exist in the symbol set, and any non-zero modifiers must too.
-func (s SIDC) ValidateStrict() error {
-	if err := s.Validate(); err != nil {
-		return err
-	}
 	if s.Entity != 0 {
 		if _, ok := entityNames[entityKey{Set: s.SymbolSet, E: s.Entity}]; !ok {
-			return fmt.Errorf("%w: entity %s in symbol set %s", ErrUnknownEntity, s.Entity, s.SymbolSet)
+			return &ValidationError{Field: "Entity", Reason: fmt.Sprintf("%s is not defined in symbol set %s", s.Entity, s.SymbolSet)}
 		}
 	}
 	if s.Modifier1 != 0 {
 		if _, ok := modifier1Names[modifier1Key{Set: s.SymbolSet, M: s.Modifier1}]; !ok {
-			return fmt.Errorf("%w: modifier1 %s in symbol set %s", ErrUnknownModifier, s.Modifier1, s.SymbolSet)
+			return &ValidationError{Field: "Modifier1", Reason: fmt.Sprintf("%s is not defined in symbol set %s", s.Modifier1, s.SymbolSet)}
 		}
 	}
 	if s.Modifier2 != 0 {
 		if _, ok := modifier2Names[modifier2Key{Set: s.SymbolSet, M: s.Modifier2}]; !ok {
-			return fmt.Errorf("%w: modifier2 %s in symbol set %s", ErrUnknownModifier, s.Modifier2, s.SymbolSet)
+			return &ValidationError{Field: "Modifier2", Reason: fmt.Sprintf("%s is not defined in symbol set %s", s.Modifier2, s.SymbolSet)}
 		}
 	}
 	return nil

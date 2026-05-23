@@ -5,69 +5,198 @@ package app6d
 
 // Modifier 1 constants for symbol set 53 (Signals intelligence).
 const (
-	Modifier1SIGINTSeaSurface_AntiAircraftFireControl                Modifier1 = 1  // Anti-Aircraft Fire Control
-	Modifier1SIGINTSeaSurface_AirborneSearchAndBombing               Modifier1 = 2  // Airborne Search and Bombing
-	Modifier1SIGINTSeaSurface_AirborneIntercept                      Modifier1 = 3  // Airborne Intercept
-	Modifier1SIGINTSeaSurface_Altimeter                              Modifier1 = 4  // Altimeter
-	Modifier1SIGINTSeaSurface_AirborneReconnaissanceAndMapping       Modifier1 = 5  // Airborne Reconnaissance and Mapping
-	Modifier1SIGINTSeaSurface_AirTrafficControl                      Modifier1 = 6  // Air Traffic Control
-	Modifier1SIGINTSeaSurface_BeaconTransponderNotIFF                Modifier1 = 7  // Beacon Transponder (not IFF)
-	Modifier1SIGINTSeaSurface_BattlefieldSurveillance                Modifier1 = 8  // Battlefield Surveillance
-	Modifier1SIGINTSeaSurface_ControlledApproach                     Modifier1 = 9  // Controlled Approach
-	Modifier1SIGINTSeaSurface_ControlledIntercept                    Modifier1 = 10 // Controlled Intercept
-	Modifier1SIGINTSeaSurface_CellularMobile                         Modifier1 = 11 // Cellular/Mobile
-	Modifier1SIGINTSeaSurface_CoastalSurveillance                    Modifier1 = 12 // Coastal Surveillance
-	Modifier1SIGINTSeaSurface_DecoyMimic                             Modifier1 = 13 // Decoy/Mimic
-	Modifier1SIGINTSeaSurface_DataTransmission                       Modifier1 = 14 // Data Transmission
-	Modifier1SIGINTSeaSurface_EarthSurveillance                      Modifier1 = 15 // Earth Surveillance
-	Modifier1SIGINTSeaSurface_EarlyWarning                           Modifier1 = 16 // Early Warning
-	Modifier1SIGINTSeaSurface_FireControl                            Modifier1 = 17 // Fire Control
-	Modifier1SIGINTSeaSurface_GroundMapping                          Modifier1 = 18 // Ground Mapping
-	Modifier1SIGINTSeaSurface_HeightFinding                          Modifier1 = 19 // Height Finding
-	Modifier1SIGINTSeaSurface_HarborSurveillance                     Modifier1 = 20 // Harbor Surveillance
-	Modifier1SIGINTSeaSurface_IdentificationFriendOrFoeInterrogator  Modifier1 = 21 // Identification, Friend or Foe (Interrogator)
-	Modifier1SIGINTSeaSurface_InstrumentLandingSystem                Modifier1 = 22 // Instrument Landing System
-	Modifier1SIGINTSeaSurface_IonosphericSounding                    Modifier1 = 23 // Ionospheric Sounding
-	Modifier1SIGINTSeaSurface_IdentificationFriendOrFoeTransponder   Modifier1 = 24 // Identification, Friend or Foe (Transponder)
-	Modifier1SIGINTSeaSurface_BarrageJammer                          Modifier1 = 25 // Barrage Jammer
-	Modifier1SIGINTSeaSurface_ClickJammer                            Modifier1 = 26 // Click Jammer
-	Modifier1SIGINTSeaSurface_DeceptiveJammer                        Modifier1 = 27 // Deceptive Jammer
-	Modifier1SIGINTSeaSurface_FrequencySweptJammer                   Modifier1 = 28 // Frequency Swept Jammer
-	Modifier1SIGINTSeaSurface_JammerGeneral                          Modifier1 = 29 // Jammer (general)
-	Modifier1SIGINTSeaSurface_NoiseJammer                            Modifier1 = 30 // Noise Jammer
-	Modifier1SIGINTSeaSurface_PulsedJammer                           Modifier1 = 31 // Pulsed Jammer
-	Modifier1SIGINTSeaSurface_RepeaterJammer                         Modifier1 = 32 // Repeater Jammer
-	Modifier1SIGINTSeaSurface_SpotNoiseJammer                        Modifier1 = 33 // Spot Noise Jammer
-	Modifier1SIGINTSeaSurface_TransponderJammer                      Modifier1 = 34 // Transponder Jammer
-	Modifier1SIGINTSeaSurface_MissileAcquisition                     Modifier1 = 35 // Missile Acquisition
-	Modifier1SIGINTSeaSurface_MissileControl                         Modifier1 = 36 // Missile Control
-	Modifier1SIGINTSeaSurface_MissileDownlink                        Modifier1 = 37 // Missile Downlink
-	Modifier1SIGINTSeaSurface_Meteorological                         Modifier1 = 38 // Meteorological
-	Modifier1SIGINTSeaSurface_MultiFunction                          Modifier1 = 39 // Multi-Function
-	Modifier1SIGINTSeaSurface_MissileGuidance                        Modifier1 = 40 // Missile Guidance
-	Modifier1SIGINTSeaSurface_MissileHoming                          Modifier1 = 41 // Missile Homing
-	Modifier1SIGINTSeaSurface_MissileTracking                        Modifier1 = 42 // Missile Tracking
-	Modifier1SIGINTSeaSurface_NavigationalGeneral                    Modifier1 = 43 // Navigational/General
-	Modifier1SIGINTSeaSurface_NavigationalDistanceMeasuringEquipment Modifier1 = 44 // Navigational/Distance Measuring Equipment
-	Modifier1SIGINTSeaSurface_NavigationTerrainFollowing             Modifier1 = 45 // Navigation/Terrain Following
-	Modifier1SIGINTSeaSurface_NavigationalWeatherAvoidance           Modifier1 = 46 // Navigational/Weather Avoidance
-	Modifier1SIGINTSeaSurface_OmniLineOfSightLOS                     Modifier1 = 47 // Omni-Line of Sight (LOS)
-	Modifier1SIGINTSeaSurface_ProximityUse                           Modifier1 = 48 // Proximity Use
-	Modifier1SIGINTSeaSurface_PointToPointLineOfSightLOS             Modifier1 = 49 // Point-to-Point Line of Sight (LOS)
-	Modifier1SIGINTSeaSurface_Instrumentation                        Modifier1 = 50 // Instrumentation
-	Modifier1SIGINTSeaSurface_RangeOnly                              Modifier1 = 51 // Range Only
-	Modifier1SIGINTSeaSurface_Sonobuoy                               Modifier1 = 52 // Sonobuoy
-	Modifier1SIGINTSeaSurface_SatelliteDownlink                      Modifier1 = 53 // Satellite Downlink
-	Modifier1SIGINTSeaSurface_Space                                  Modifier1 = 54 // Space
-	Modifier1SIGINTSeaSurface_SurfaceSearch                          Modifier1 = 55 // Surface Search
-	Modifier1SIGINTSeaSurface_ShellTracking                          Modifier1 = 56 // Shell Tracking
-	Modifier1SIGINTSeaSurface_SatelliteUplink                        Modifier1 = 57 // Satellite Uplink
-	Modifier1SIGINTSeaSurface_TargetAcquisition                      Modifier1 = 58 // Target Acquisition
-	Modifier1SIGINTSeaSurface_TargetIllumination                     Modifier1 = 59 // Target Illumination
-	Modifier1SIGINTSeaSurface_TroposphericScatter                    Modifier1 = 60 // Tropospheric Scatter
-	Modifier1SIGINTSeaSurface_TargetTracking                         Modifier1 = 61 // Target Tracking
-	Modifier1SIGINTSeaSurface_Unknown                                Modifier1 = 62 // Unknown
-	Modifier1SIGINTSeaSurface_VideoRemoting                          Modifier1 = 63 // Video Remoting
-	Modifier1SIGINTSeaSurface_Experimental                           Modifier1 = 64 // Experimental
-	Modifier1SIGINTSeaSurface_Disused                                Modifier1 = 65 // {Disused}
+	// Modifier1SIGINTSeaSurface_AntiAircraftFireControl is Anti-Aircraft Fire Control.
+	Modifier1SIGINTSeaSurface_AntiAircraftFireControl Modifier1 = 1
+
+	// Modifier1SIGINTSeaSurface_AirborneSearchAndBombing is Airborne Search and Bombing.
+	Modifier1SIGINTSeaSurface_AirborneSearchAndBombing Modifier1 = 2
+
+	// Modifier1SIGINTSeaSurface_AirborneIntercept is Airborne Intercept.
+	Modifier1SIGINTSeaSurface_AirborneIntercept Modifier1 = 3
+
+	// Modifier1SIGINTSeaSurface_Altimeter is Altimeter.
+	Modifier1SIGINTSeaSurface_Altimeter Modifier1 = 4
+
+	// Modifier1SIGINTSeaSurface_AirborneReconnaissanceAndMapping is Airborne Reconnaissance and Mapping.
+	Modifier1SIGINTSeaSurface_AirborneReconnaissanceAndMapping Modifier1 = 5
+
+	// Modifier1SIGINTSeaSurface_AirTrafficControl is Air Traffic Control.
+	Modifier1SIGINTSeaSurface_AirTrafficControl Modifier1 = 6
+
+	// Modifier1SIGINTSeaSurface_BeaconTransponderNotIFF is Beacon Transponder (not IFF).
+	Modifier1SIGINTSeaSurface_BeaconTransponderNotIFF Modifier1 = 7
+
+	// Modifier1SIGINTSeaSurface_BattlefieldSurveillance is Battlefield Surveillance.
+	Modifier1SIGINTSeaSurface_BattlefieldSurveillance Modifier1 = 8
+
+	// Modifier1SIGINTSeaSurface_ControlledApproach is Controlled Approach.
+	Modifier1SIGINTSeaSurface_ControlledApproach Modifier1 = 9
+
+	// Modifier1SIGINTSeaSurface_ControlledIntercept is Controlled Intercept.
+	Modifier1SIGINTSeaSurface_ControlledIntercept Modifier1 = 10
+
+	// Modifier1SIGINTSeaSurface_CellularMobile is Cellular/Mobile.
+	Modifier1SIGINTSeaSurface_CellularMobile Modifier1 = 11
+
+	// Modifier1SIGINTSeaSurface_CoastalSurveillance is Coastal Surveillance.
+	Modifier1SIGINTSeaSurface_CoastalSurveillance Modifier1 = 12
+
+	// Modifier1SIGINTSeaSurface_DecoyMimic is Decoy/Mimic.
+	Modifier1SIGINTSeaSurface_DecoyMimic Modifier1 = 13
+
+	// Modifier1SIGINTSeaSurface_DataTransmission is Data Transmission.
+	Modifier1SIGINTSeaSurface_DataTransmission Modifier1 = 14
+
+	// Modifier1SIGINTSeaSurface_EarthSurveillance is Earth Surveillance.
+	Modifier1SIGINTSeaSurface_EarthSurveillance Modifier1 = 15
+
+	// Modifier1SIGINTSeaSurface_EarlyWarning is Early Warning.
+	Modifier1SIGINTSeaSurface_EarlyWarning Modifier1 = 16
+
+	// Modifier1SIGINTSeaSurface_FireControl is Fire Control.
+	Modifier1SIGINTSeaSurface_FireControl Modifier1 = 17
+
+	// Modifier1SIGINTSeaSurface_GroundMapping is Ground Mapping.
+	Modifier1SIGINTSeaSurface_GroundMapping Modifier1 = 18
+
+	// Modifier1SIGINTSeaSurface_HeightFinding is Height Finding.
+	Modifier1SIGINTSeaSurface_HeightFinding Modifier1 = 19
+
+	// Modifier1SIGINTSeaSurface_HarborSurveillance is Harbor Surveillance.
+	Modifier1SIGINTSeaSurface_HarborSurveillance Modifier1 = 20
+
+	// Modifier1SIGINTSeaSurface_IdentificationFriendOrFoeInterrogator is Identification, Friend or Foe (Interrogator).
+	Modifier1SIGINTSeaSurface_IdentificationFriendOrFoeInterrogator Modifier1 = 21
+
+	// Modifier1SIGINTSeaSurface_InstrumentLandingSystem is Instrument Landing System.
+	Modifier1SIGINTSeaSurface_InstrumentLandingSystem Modifier1 = 22
+
+	// Modifier1SIGINTSeaSurface_IonosphericSounding is Ionospheric Sounding.
+	Modifier1SIGINTSeaSurface_IonosphericSounding Modifier1 = 23
+
+	// Modifier1SIGINTSeaSurface_IdentificationFriendOrFoeTransponder is Identification, Friend or Foe (Transponder).
+	Modifier1SIGINTSeaSurface_IdentificationFriendOrFoeTransponder Modifier1 = 24
+
+	// Modifier1SIGINTSeaSurface_BarrageJammer is Barrage Jammer.
+	Modifier1SIGINTSeaSurface_BarrageJammer Modifier1 = 25
+
+	// Modifier1SIGINTSeaSurface_ClickJammer is Click Jammer.
+	Modifier1SIGINTSeaSurface_ClickJammer Modifier1 = 26
+
+	// Modifier1SIGINTSeaSurface_DeceptiveJammer is Deceptive Jammer.
+	Modifier1SIGINTSeaSurface_DeceptiveJammer Modifier1 = 27
+
+	// Modifier1SIGINTSeaSurface_FrequencySweptJammer is Frequency Swept Jammer.
+	Modifier1SIGINTSeaSurface_FrequencySweptJammer Modifier1 = 28
+
+	// Modifier1SIGINTSeaSurface_JammerGeneral is Jammer (general).
+	Modifier1SIGINTSeaSurface_JammerGeneral Modifier1 = 29
+
+	// Modifier1SIGINTSeaSurface_NoiseJammer is Noise Jammer.
+	Modifier1SIGINTSeaSurface_NoiseJammer Modifier1 = 30
+
+	// Modifier1SIGINTSeaSurface_PulsedJammer is Pulsed Jammer.
+	Modifier1SIGINTSeaSurface_PulsedJammer Modifier1 = 31
+
+	// Modifier1SIGINTSeaSurface_RepeaterJammer is Repeater Jammer.
+	Modifier1SIGINTSeaSurface_RepeaterJammer Modifier1 = 32
+
+	// Modifier1SIGINTSeaSurface_SpotNoiseJammer is Spot Noise Jammer.
+	Modifier1SIGINTSeaSurface_SpotNoiseJammer Modifier1 = 33
+
+	// Modifier1SIGINTSeaSurface_TransponderJammer is Transponder Jammer.
+	Modifier1SIGINTSeaSurface_TransponderJammer Modifier1 = 34
+
+	// Modifier1SIGINTSeaSurface_MissileAcquisition is Missile Acquisition.
+	Modifier1SIGINTSeaSurface_MissileAcquisition Modifier1 = 35
+
+	// Modifier1SIGINTSeaSurface_MissileControl is Missile Control.
+	Modifier1SIGINTSeaSurface_MissileControl Modifier1 = 36
+
+	// Modifier1SIGINTSeaSurface_MissileDownlink is Missile Downlink.
+	Modifier1SIGINTSeaSurface_MissileDownlink Modifier1 = 37
+
+	// Modifier1SIGINTSeaSurface_Meteorological is Meteorological.
+	Modifier1SIGINTSeaSurface_Meteorological Modifier1 = 38
+
+	// Modifier1SIGINTSeaSurface_MultiFunction is Multi-Function.
+	Modifier1SIGINTSeaSurface_MultiFunction Modifier1 = 39
+
+	// Modifier1SIGINTSeaSurface_MissileGuidance is Missile Guidance.
+	Modifier1SIGINTSeaSurface_MissileGuidance Modifier1 = 40
+
+	// Modifier1SIGINTSeaSurface_MissileHoming is Missile Homing.
+	Modifier1SIGINTSeaSurface_MissileHoming Modifier1 = 41
+
+	// Modifier1SIGINTSeaSurface_MissileTracking is Missile Tracking.
+	Modifier1SIGINTSeaSurface_MissileTracking Modifier1 = 42
+
+	// Modifier1SIGINTSeaSurface_NavigationalGeneral is Navigational/General.
+	Modifier1SIGINTSeaSurface_NavigationalGeneral Modifier1 = 43
+
+	// Modifier1SIGINTSeaSurface_NavigationalDistanceMeasuringEquipment is Navigational/Distance Measuring Equipment.
+	Modifier1SIGINTSeaSurface_NavigationalDistanceMeasuringEquipment Modifier1 = 44
+
+	// Modifier1SIGINTSeaSurface_NavigationTerrainFollowing is Navigation/Terrain Following.
+	Modifier1SIGINTSeaSurface_NavigationTerrainFollowing Modifier1 = 45
+
+	// Modifier1SIGINTSeaSurface_NavigationalWeatherAvoidance is Navigational/Weather Avoidance.
+	Modifier1SIGINTSeaSurface_NavigationalWeatherAvoidance Modifier1 = 46
+
+	// Modifier1SIGINTSeaSurface_OmniLineOfSightLOS is Omni-Line of Sight (LOS).
+	Modifier1SIGINTSeaSurface_OmniLineOfSightLOS Modifier1 = 47
+
+	// Modifier1SIGINTSeaSurface_ProximityUse is Proximity Use.
+	Modifier1SIGINTSeaSurface_ProximityUse Modifier1 = 48
+
+	// Modifier1SIGINTSeaSurface_PointToPointLineOfSightLOS is Point-to-Point Line of Sight (LOS).
+	Modifier1SIGINTSeaSurface_PointToPointLineOfSightLOS Modifier1 = 49
+
+	// Modifier1SIGINTSeaSurface_Instrumentation is Instrumentation.
+	Modifier1SIGINTSeaSurface_Instrumentation Modifier1 = 50
+
+	// Modifier1SIGINTSeaSurface_RangeOnly is Range Only.
+	Modifier1SIGINTSeaSurface_RangeOnly Modifier1 = 51
+
+	// Modifier1SIGINTSeaSurface_Sonobuoy is Sonobuoy.
+	Modifier1SIGINTSeaSurface_Sonobuoy Modifier1 = 52
+
+	// Modifier1SIGINTSeaSurface_SatelliteDownlink is Satellite Downlink.
+	Modifier1SIGINTSeaSurface_SatelliteDownlink Modifier1 = 53
+
+	// Modifier1SIGINTSeaSurface_Space is Space.
+	Modifier1SIGINTSeaSurface_Space Modifier1 = 54
+
+	// Modifier1SIGINTSeaSurface_SurfaceSearch is Surface Search.
+	Modifier1SIGINTSeaSurface_SurfaceSearch Modifier1 = 55
+
+	// Modifier1SIGINTSeaSurface_ShellTracking is Shell Tracking.
+	Modifier1SIGINTSeaSurface_ShellTracking Modifier1 = 56
+
+	// Modifier1SIGINTSeaSurface_SatelliteUplink is Satellite Uplink.
+	Modifier1SIGINTSeaSurface_SatelliteUplink Modifier1 = 57
+
+	// Modifier1SIGINTSeaSurface_TargetAcquisition is Target Acquisition.
+	Modifier1SIGINTSeaSurface_TargetAcquisition Modifier1 = 58
+
+	// Modifier1SIGINTSeaSurface_TargetIllumination is Target Illumination.
+	Modifier1SIGINTSeaSurface_TargetIllumination Modifier1 = 59
+
+	// Modifier1SIGINTSeaSurface_TroposphericScatter is Tropospheric Scatter.
+	Modifier1SIGINTSeaSurface_TroposphericScatter Modifier1 = 60
+
+	// Modifier1SIGINTSeaSurface_TargetTracking is Target Tracking.
+	Modifier1SIGINTSeaSurface_TargetTracking Modifier1 = 61
+
+	// Modifier1SIGINTSeaSurface_Unknown is Unknown.
+	Modifier1SIGINTSeaSurface_Unknown Modifier1 = 62
+
+	// Modifier1SIGINTSeaSurface_VideoRemoting is Video Remoting.
+	Modifier1SIGINTSeaSurface_VideoRemoting Modifier1 = 63
+
+	// Modifier1SIGINTSeaSurface_Experimental is Experimental.
+	Modifier1SIGINTSeaSurface_Experimental Modifier1 = 64
+
+	// Modifier1SIGINTSeaSurface_Disused is {Disused}.
+	Modifier1SIGINTSeaSurface_Disused Modifier1 = 65
 )

@@ -5,16 +5,39 @@ package app6d
 
 // Modifier 2 constants for symbol set 01 (Air).
 const (
-	Modifier2Air_Disused       Modifier2 = 1  // {Disused}
-	Modifier2Air_Disused_02    Modifier2 = 2  // {Disused}
-	Modifier2Air_Disused_03    Modifier2 = 3  // {Disused}
-	Modifier2Air_BoomOnly      Modifier2 = 4  // Boom–Only
-	Modifier2Air_DrogueOnly    Modifier2 = 5  // Drogue–Only
-	Modifier2Air_BoomAndDrogue Modifier2 = 6  // Boom and Drogue
-	Modifier2Air_Disused_07    Modifier2 = 7  // {Disused}
-	Modifier2Air_Disused_08    Modifier2 = 8  // {Disused}
-	Modifier2Air_Disused_09    Modifier2 = 9  // {Disused}
-	Modifier2Air_Disused_10    Modifier2 = 10 // {Disused}
-	Modifier2Air_Downlinked    Modifier2 = 11 // Downlinked
-	Modifier2Air_Disused_12    Modifier2 = 12 // {Disused}
+	// Modifier2Air_Disused is {Disused}.
+	Modifier2Air_Disused Modifier2 = 1
+
+	// Modifier2Air_Disused_02 is {Disused}.
+	Modifier2Air_Disused_02 Modifier2 = 2
+
+	// Modifier2Air_Disused_03 is {Disused}.
+	Modifier2Air_Disused_03 Modifier2 = 3
+
+	// Modifier2Air_BoomOnly is Boom–Only.
+	Modifier2Air_BoomOnly Modifier2 = 4
+
+	// Modifier2Air_DrogueOnly is Drogue–Only.
+	Modifier2Air_DrogueOnly Modifier2 = 5
+
+	// Modifier2Air_BoomAndDrogue is Boom and Drogue.
+	Modifier2Air_BoomAndDrogue Modifier2 = 6
+
+	// Modifier2Air_Disused_07 is {Disused}.
+	Modifier2Air_Disused_07 Modifier2 = 7
+
+	// Modifier2Air_Disused_08 is {Disused}.
+	Modifier2Air_Disused_08 Modifier2 = 8
+
+	// Modifier2Air_Disused_09 is {Disused}.
+	Modifier2Air_Disused_09 Modifier2 = 9
+
+	// Modifier2Air_Disused_10 is {Disused}.
+	Modifier2Air_Disused_10 Modifier2 = 10
+
+	// Modifier2Air_Downlinked is Downlinked.
+	Modifier2Air_Downlinked Modifier2 = 11
+
+	// Modifier2Air_Disused_12 is {Disused}.
+	Modifier2Air_Disused_12 Modifier2 = 12
 )

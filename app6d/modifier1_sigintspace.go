@@ -5,69 +5,198 @@ package app6d
 
 // Modifier 1 constants for symbol set 50 (Signals intelligence).
 const (
-	Modifier1SIGINTSpace_AntiAircraftFireControl                Modifier1 = 1  // Anti-Aircraft Fire Control
-	Modifier1SIGINTSpace_AirborneSearchAndBombing               Modifier1 = 2  // Airborne Search and Bombing
-	Modifier1SIGINTSpace_AirborneIntercept                      Modifier1 = 3  // Airborne Intercept
-	Modifier1SIGINTSpace_Altimeter                              Modifier1 = 4  // Altimeter
-	Modifier1SIGINTSpace_AirborneReconnaissanceAndMapping       Modifier1 = 5  // Airborne Reconnaissance and Mapping
-	Modifier1SIGINTSpace_AirTrafficControl                      Modifier1 = 6  // Air Traffic Control
-	Modifier1SIGINTSpace_BeaconTransponderNotIFF                Modifier1 = 7  // Beacon Transponder (not IFF)
-	Modifier1SIGINTSpace_BattlefieldSurveillance                Modifier1 = 8  // Battlefield Surveillance
-	Modifier1SIGINTSpace_ControlledApproach                     Modifier1 = 9  // Controlled Approach
-	Modifier1SIGINTSpace_ControlledIntercept                    Modifier1 = 10 // Controlled Intercept
-	Modifier1SIGINTSpace_CellularMobile                         Modifier1 = 11 // Cellular/Mobile
-	Modifier1SIGINTSpace_CoastalSurveillance                    Modifier1 = 12 // Coastal Surveillance
-	Modifier1SIGINTSpace_DecoyMimic                             Modifier1 = 13 // Decoy/Mimic
-	Modifier1SIGINTSpace_DataTransmission                       Modifier1 = 14 // Data Transmission
-	Modifier1SIGINTSpace_EarthSurveillance                      Modifier1 = 15 // Earth Surveillance
-	Modifier1SIGINTSpace_EarlyWarning                           Modifier1 = 16 // Early Warning
-	Modifier1SIGINTSpace_FireControl                            Modifier1 = 17 // Fire Control
-	Modifier1SIGINTSpace_GroundMapping                          Modifier1 = 18 // Ground Mapping
-	Modifier1SIGINTSpace_HeightFinding                          Modifier1 = 19 // Height Finding
-	Modifier1SIGINTSpace_HarborSurveillance                     Modifier1 = 20 // Harbor Surveillance
-	Modifier1SIGINTSpace_IdentificationFriendOrFoeInterrogator  Modifier1 = 21 // Identification, Friend or Foe (Interrogator)
-	Modifier1SIGINTSpace_InstrumentLandingSystem                Modifier1 = 22 // Instrument Landing System
-	Modifier1SIGINTSpace_IonosphericSounding                    Modifier1 = 23 // Ionospheric Sounding
-	Modifier1SIGINTSpace_IdentificationFriendOrFoeTransponder   Modifier1 = 24 // Identification, Friend or Foe (Transponder)
-	Modifier1SIGINTSpace_BarrageJammer                          Modifier1 = 25 // Barrage Jammer
-	Modifier1SIGINTSpace_ClickJammer                            Modifier1 = 26 // Click Jammer
-	Modifier1SIGINTSpace_DeceptiveJammer                        Modifier1 = 27 // Deceptive Jammer
-	Modifier1SIGINTSpace_FrequencySweptJammer                   Modifier1 = 28 // Frequency Swept Jammer
-	Modifier1SIGINTSpace_JammerGeneral                          Modifier1 = 29 // Jammer (general)
-	Modifier1SIGINTSpace_NoiseJammer                            Modifier1 = 30 // Noise Jammer
-	Modifier1SIGINTSpace_PulsedJammer                           Modifier1 = 31 // Pulsed Jammer
-	Modifier1SIGINTSpace_RepeaterJammer                         Modifier1 = 32 // Repeater Jammer
-	Modifier1SIGINTSpace_SpotNoiseJammer                        Modifier1 = 33 // Spot Noise Jammer
-	Modifier1SIGINTSpace_TransponderJammer                      Modifier1 = 34 // Transponder Jammer
-	Modifier1SIGINTSpace_MissileAcquisition                     Modifier1 = 35 // Missile Acquisition
-	Modifier1SIGINTSpace_MissileControl                         Modifier1 = 36 // Missile Control
-	Modifier1SIGINTSpace_MissileDownlink                        Modifier1 = 37 // Missile Downlink
-	Modifier1SIGINTSpace_Meteorological                         Modifier1 = 38 // Meteorological
-	Modifier1SIGINTSpace_MultiFunction                          Modifier1 = 39 // Multi-Function
-	Modifier1SIGINTSpace_MissileGuidance                        Modifier1 = 40 // Missile Guidance
-	Modifier1SIGINTSpace_MissileHoming                          Modifier1 = 41 // Missile Homing
-	Modifier1SIGINTSpace_MissileTracking                        Modifier1 = 42 // Missile Tracking
-	Modifier1SIGINTSpace_NavigationalGeneral                    Modifier1 = 43 // Navigational/General
-	Modifier1SIGINTSpace_NavigationalDistanceMeasuringEquipment Modifier1 = 44 // Navigational/Distance Measuring Equipment
-	Modifier1SIGINTSpace_NavigationTerrainFollowing             Modifier1 = 45 // Navigation/Terrain Following
-	Modifier1SIGINTSpace_NavigationalWeatherAvoidance           Modifier1 = 46 // Navigational/Weather Avoidance
-	Modifier1SIGINTSpace_OmniLineOfSightLOS                     Modifier1 = 47 // Omni-Line of Sight (LOS)
-	Modifier1SIGINTSpace_ProximityUse                           Modifier1 = 48 // Proximity Use
-	Modifier1SIGINTSpace_PointToPointLineOfSightLOS             Modifier1 = 49 // Point-to-Point Line of Sight (LOS)
-	Modifier1SIGINTSpace_Instrumentation                        Modifier1 = 50 // Instrumentation
-	Modifier1SIGINTSpace_RangeOnly                              Modifier1 = 51 // Range Only
-	Modifier1SIGINTSpace_Sonobuoy                               Modifier1 = 52 // Sonobuoy
-	Modifier1SIGINTSpace_SatelliteDownlink                      Modifier1 = 53 // Satellite Downlink
-	Modifier1SIGINTSpace_Space                                  Modifier1 = 54 // Space
-	Modifier1SIGINTSpace_SurfaceSearch                          Modifier1 = 55 // Surface Search
-	Modifier1SIGINTSpace_ShellTracking                          Modifier1 = 56 // Shell Tracking
-	Modifier1SIGINTSpace_SatelliteUplink                        Modifier1 = 57 // Satellite Uplink
-	Modifier1SIGINTSpace_TargetAcquisition                      Modifier1 = 58 // Target Acquisition
-	Modifier1SIGINTSpace_TargetIllumination                     Modifier1 = 59 // Target Illumination
-	Modifier1SIGINTSpace_TroposphericScatter                    Modifier1 = 60 // Tropospheric Scatter
-	Modifier1SIGINTSpace_TargetTracking                         Modifier1 = 61 // Target Tracking
-	Modifier1SIGINTSpace_Unknown                                Modifier1 = 62 // Unknown
-	Modifier1SIGINTSpace_VideoRemoting                          Modifier1 = 63 // Video Remoting
-	Modifier1SIGINTSpace_Experimental                           Modifier1 = 64 // Experimental
-	Modifier1SIGINTSpace_Disused                                Modifier1 = 65 // {Disused}
+	// Modifier1SIGINTSpace_AntiAircraftFireControl is Anti-Aircraft Fire Control.
+	Modifier1SIGINTSpace_AntiAircraftFireControl Modifier1 = 1
+
+	// Modifier1SIGINTSpace_AirborneSearchAndBombing is Airborne Search and Bombing.
+	Modifier1SIGINTSpace_AirborneSearchAndBombing Modifier1 = 2
+
+	// Modifier1SIGINTSpace_AirborneIntercept is Airborne Intercept.
+	Modifier1SIGINTSpace_AirborneIntercept Modifier1 = 3
+
+	// Modifier1SIGINTSpace_Altimeter is Altimeter.
+	Modifier1SIGINTSpace_Altimeter Modifier1 = 4
+
+	// Modifier1SIGINTSpace_AirborneReconnaissanceAndMapping is Airborne Reconnaissance and Mapping.
+	Modifier1SIGINTSpace_AirborneReconnaissanceAndMapping Modifier1 = 5
+
+	// Modifier1SIGINTSpace_AirTrafficControl is Air Traffic Control.
+	Modifier1SIGINTSpace_AirTrafficControl Modifier1 = 6
+
+	// Modifier1SIGINTSpace_BeaconTransponderNotIFF is Beacon Transponder (not IFF).
+	Modifier1SIGINTSpace_BeaconTransponderNotIFF Modifier1 = 7
+
+	// Modifier1SIGINTSpace_BattlefieldSurveillance is Battlefield Surveillance.
+	Modifier1SIGINTSpace_BattlefieldSurveillance Modifier1 = 8
+
+	// Modifier1SIGINTSpace_ControlledApproach is Controlled Approach.
+	Modifier1SIGINTSpace_ControlledApproach Modifier1 = 9
+
+	// Modifier1SIGINTSpace_ControlledIntercept is Controlled Intercept.
+	Modifier1SIGINTSpace_ControlledIntercept Modifier1 = 10
+
+	// Modifier1SIGINTSpace_CellularMobile is Cellular/Mobile.
+	Modifier1SIGINTSpace_CellularMobile Modifier1 = 11
+
+	// Modifier1SIGINTSpace_CoastalSurveillance is Coastal Surveillance.
+	Modifier1SIGINTSpace_CoastalSurveillance Modifier1 = 12
+
+	// Modifier1SIGINTSpace_DecoyMimic is Decoy/Mimic.
+	Modifier1SIGINTSpace_DecoyMimic Modifier1 = 13
+
+	// Modifier1SIGINTSpace_DataTransmission is Data Transmission.
+	Modifier1SIGINTSpace_DataTransmission Modifier1 = 14
+
+	// Modifier1SIGINTSpace_EarthSurveillance is Earth Surveillance.
+	Modifier1SIGINTSpace_EarthSurveillance Modifier1 = 15
+
+	// Modifier1SIGINTSpace_EarlyWarning is Early Warning.
+	Modifier1SIGINTSpace_EarlyWarning Modifier1 = 16
+
+	// Modifier1SIGINTSpace_FireControl is Fire Control.
+	Modifier1SIGINTSpace_FireControl Modifier1 = 17
+
+	// Modifier1SIGINTSpace_GroundMapping is Ground Mapping.
+	Modifier1SIGINTSpace_GroundMapping Modifier1 = 18
+
+	// Modifier1SIGINTSpace_HeightFinding is Height Finding.
+	Modifier1SIGINTSpace_HeightFinding Modifier1 = 19
+
+	// Modifier1SIGINTSpace_HarborSurveillance is Harbor Surveillance.
+	Modifier1SIGINTSpace_HarborSurveillance Modifier1 = 20
+
+	// Modifier1SIGINTSpace_IdentificationFriendOrFoeInterrogator is Identification, Friend or Foe (Interrogator).
+	Modifier1SIGINTSpace_IdentificationFriendOrFoeInterrogator Modifier1 = 21
+
+	// Modifier1SIGINTSpace_InstrumentLandingSystem is Instrument Landing System.
+	Modifier1SIGINTSpace_InstrumentLandingSystem Modifier1 = 22
+
+	// Modifier1SIGINTSpace_IonosphericSounding is Ionospheric Sounding.
+	Modifier1SIGINTSpace_IonosphericSounding Modifier1 = 23
+
+	// Modifier1SIGINTSpace_IdentificationFriendOrFoeTransponder is Identification, Friend or Foe (Transponder).
+	Modifier1SIGINTSpace_IdentificationFriendOrFoeTransponder Modifier1 = 24
+
+	// Modifier1SIGINTSpace_BarrageJammer is Barrage Jammer.
+	Modifier1SIGINTSpace_BarrageJammer Modifier1 = 25
+
+	// Modifier1SIGINTSpace_ClickJammer is Click Jammer.
+	Modifier1SIGINTSpace_ClickJammer Modifier1 = 26
+
+	// Modifier1SIGINTSpace_DeceptiveJammer is Deceptive Jammer.
+	Modifier1SIGINTSpace_DeceptiveJammer Modifier1 = 27
+
+	// Modifier1SIGINTSpace_FrequencySweptJammer is Frequency Swept Jammer.
+	Modifier1SIGINTSpace_FrequencySweptJammer Modifier1 = 28
+
+	// Modifier1SIGINTSpace_JammerGeneral is Jammer (general).
+	Modifier1SIGINTSpace_JammerGeneral Modifier1 = 29
+
+	// Modifier1SIGINTSpace_NoiseJammer is Noise Jammer.
+	Modifier1SIGINTSpace_NoiseJammer Modifier1 = 30
+
+	// Modifier1SIGINTSpace_PulsedJammer is Pulsed Jammer.
+	Modifier1SIGINTSpace_PulsedJammer Modifier1 = 31
+
+	// Modifier1SIGINTSpace_RepeaterJammer is Repeater Jammer.
+	Modifier1SIGINTSpace_RepeaterJammer Modifier1 = 32
+
+	// Modifier1SIGINTSpace_SpotNoiseJammer is Spot Noise Jammer.
+	Modifier1SIGINTSpace_SpotNoiseJammer Modifier1 = 33
+
+	// Modifier1SIGINTSpace_TransponderJammer is Transponder Jammer.
+	Modifier1SIGINTSpace_TransponderJammer Modifier1 = 34
+
+	// Modifier1SIGINTSpace_MissileAcquisition is Missile Acquisition.
+	Modifier1SIGINTSpace_MissileAcquisition Modifier1 = 35
+
+	// Modifier1SIGINTSpace_MissileControl is Missile Control.
+	Modifier1SIGINTSpace_MissileControl Modifier1 = 36
+
+	// Modifier1SIGINTSpace_MissileDownlink is Missile Downlink.
+	Modifier1SIGINTSpace_MissileDownlink Modifier1 = 37
+
+	// Modifier1SIGINTSpace_Meteorological is Meteorological.
+	Modifier1SIGINTSpace_Meteorological Modifier1 = 38
+
+	// Modifier1SIGINTSpace_MultiFunction is Multi-Function.
+	Modifier1SIGINTSpace_MultiFunction Modifier1 = 39
+
+	// Modifier1SIGINTSpace_MissileGuidance is Missile Guidance.
+	Modifier1SIGINTSpace_MissileGuidance Modifier1 = 40
+
+	// Modifier1SIGINTSpace_MissileHoming is Missile Homing.
+	Modifier1SIGINTSpace_MissileHoming Modifier1 = 41
+
+	// Modifier1SIGINTSpace_MissileTracking is Missile Tracking.
+	Modifier1SIGINTSpace_MissileTracking Modifier1 = 42
+
+	// Modifier1SIGINTSpace_NavigationalGeneral is Navigational/General.
+	Modifier1SIGINTSpace_NavigationalGeneral Modifier1 = 43
+
+	// Modifier1SIGINTSpace_NavigationalDistanceMeasuringEquipment is Navigational/Distance Measuring Equipment.
+	Modifier1SIGINTSpace_NavigationalDistanceMeasuringEquipment Modifier1 = 44
+
+	// Modifier1SIGINTSpace_NavigationTerrainFollowing is Navigation/Terrain Following.
+	Modifier1SIGINTSpace_NavigationTerrainFollowing Modifier1 = 45
+
+	// Modifier1SIGINTSpace_NavigationalWeatherAvoidance is Navigational/Weather Avoidance.
+	Modifier1SIGINTSpace_NavigationalWeatherAvoidance Modifier1 = 46
+
+	// Modifier1SIGINTSpace_OmniLineOfSightLOS is Omni-Line of Sight (LOS).
+	Modifier1SIGINTSpace_OmniLineOfSightLOS Modifier1 = 47
+
+	// Modifier1SIGINTSpace_ProximityUse is Proximity Use.
+	Modifier1SIGINTSpace_ProximityUse Modifier1 = 48
+
+	// Modifier1SIGINTSpace_PointToPointLineOfSightLOS is Point-to-Point Line of Sight (LOS).
+	Modifier1SIGINTSpace_PointToPointLineOfSightLOS Modifier1 = 49
+
+	// Modifier1SIGINTSpace_Instrumentation is Instrumentation.
+	Modifier1SIGINTSpace_Instrumentation Modifier1 = 50
+
+	// Modifier1SIGINTSpace_RangeOnly is Range Only.
+	Modifier1SIGINTSpace_RangeOnly Modifier1 = 51
+
+	// Modifier1SIGINTSpace_Sonobuoy is Sonobuoy.
+	Modifier1SIGINTSpace_Sonobuoy Modifier1 = 52
+
+	// Modifier1SIGINTSpace_SatelliteDownlink is Satellite Downlink.
+	Modifier1SIGINTSpace_SatelliteDownlink Modifier1 = 53
+
+	// Modifier1SIGINTSpace_Space is Space.
+	Modifier1SIGINTSpace_Space Modifier1 = 54
+
+	// Modifier1SIGINTSpace_SurfaceSearch is Surface Search.
+	Modifier1SIGINTSpace_SurfaceSearch Modifier1 = 55
+
+	// Modifier1SIGINTSpace_ShellTracking is Shell Tracking.
+	Modifier1SIGINTSpace_ShellTracking Modifier1 = 56
+
+	// Modifier1SIGINTSpace_SatelliteUplink is Satellite Uplink.
+	Modifier1SIGINTSpace_SatelliteUplink Modifier1 = 57
+
+	// Modifier1SIGINTSpace_TargetAcquisition is Target Acquisition.
+	Modifier1SIGINTSpace_TargetAcquisition Modifier1 = 58
+
+	// Modifier1SIGINTSpace_TargetIllumination is Target Illumination.
+	Modifier1SIGINTSpace_TargetIllumination Modifier1 = 59
+
+	// Modifier1SIGINTSpace_TroposphericScatter is Tropospheric Scatter.
+	Modifier1SIGINTSpace_TroposphericScatter Modifier1 = 60
+
+	// Modifier1SIGINTSpace_TargetTracking is Target Tracking.
+	Modifier1SIGINTSpace_TargetTracking Modifier1 = 61
+
+	// Modifier1SIGINTSpace_Unknown is Unknown.
+	Modifier1SIGINTSpace_Unknown Modifier1 = 62
+
+	// Modifier1SIGINTSpace_VideoRemoting is Video Remoting.
+	Modifier1SIGINTSpace_VideoRemoting Modifier1 = 63
+
+	// Modifier1SIGINTSpace_Experimental is Experimental.
+	Modifier1SIGINTSpace_Experimental Modifier1 = 64
+
+	// Modifier1SIGINTSpace_Disused is {Disused}.
+	Modifier1SIGINTSpace_Disused Modifier1 = 65
 )

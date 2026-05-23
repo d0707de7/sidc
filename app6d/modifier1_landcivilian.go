@@ -5,30 +5,81 @@ package app6d
 
 // Modifier 1 constants for symbol set 11 (Land civilian).
 const (
-	Modifier1LandCivilian_Disused                                                        Modifier1 = 1  // {Disused}
-	Modifier1LandCivilian_Disused_02                                                     Modifier1 = 2  // {Disused}
-	Modifier1LandCivilian_MurderVictims                                                  Modifier1 = 3  // Murder Victims
-	Modifier1LandCivilian_Disused_04                                                     Modifier1 = 4  // {Disused}
-	Modifier1LandCivilian_Disused_05                                                     Modifier1 = 5  // {Disused}
-	Modifier1LandCivilian_Disused_06                                                     Modifier1 = 6  // {Disused}
-	Modifier1LandCivilian_Disused_07                                                     Modifier1 = 7  // {Disused}
-	Modifier1LandCivilian_Disused_08                                                     Modifier1 = 8  // {Disused}
-	Modifier1LandCivilian_DisplacedPersonSRefugeeSAndEvacueeS                            Modifier1 = 9  // Displaced Person(s), Refugee(s) and Evacuee(s)
-	Modifier1LandCivilian_ForeignFighterS                                                Modifier1 = 10 // Foreign Fighter(s)
-	Modifier1LandCivilian_GangMemberOrGang                                               Modifier1 = 11 // Gang Member or Gang
-	Modifier1LandCivilian_Disused_12                                                     Modifier1 = 12 // {Disused}
-	Modifier1LandCivilian_LeaderOrLeadership                                             Modifier1 = 13 // Leader or Leadership
-	Modifier1LandCivilian_NongovernmentalOrganizationMemberOrNongovernmentalOrganization Modifier1 = 14 // Nongovernmental Organization Member or Nongovernmental Organization
-	Modifier1LandCivilian_UnwillingCoercedRecruit                                        Modifier1 = 15 // Unwilling/Coerced Recruit
-	Modifier1LandCivilian_WillingRecruit                                                 Modifier1 = 16 // Willing Recruit
-	Modifier1LandCivilian_ReligiousOrReligiousOrganization                               Modifier1 = 17 // Religious or Religious Organization
-	Modifier1LandCivilian_TargetedIndividualOrOrganization                               Modifier1 = 18 // Targeted Individual or Organization
-	Modifier1LandCivilian_TerroristOrTerroristOrganization                               Modifier1 = 19 // Terrorist or Terrorist Organization
-	Modifier1LandCivilian_Speaker                                                        Modifier1 = 20 // Speaker
-	Modifier1LandCivilian_Disused_21                                                     Modifier1 = 21 // {Disused}
-	Modifier1LandCivilian_Disused_22                                                     Modifier1 = 22 // {Disused}
-	Modifier1LandCivilian_Other                                                          Modifier1 = 23 // Other
-	Modifier1LandCivilian_Loot                                                           Modifier1 = 24 // Loot
-	Modifier1LandCivilian_Disused_25                                                     Modifier1 = 25 // {Disused}
-	Modifier1LandCivilian_Disused_26                                                     Modifier1 = 26 // {Disused}
+	// Modifier1LandCivilian_Disused is {Disused}.
+	Modifier1LandCivilian_Disused Modifier1 = 1
+
+	// Modifier1LandCivilian_Disused_02 is {Disused}.
+	Modifier1LandCivilian_Disused_02 Modifier1 = 2
+
+	// Modifier1LandCivilian_MurderVictims is Murder Victims.
+	Modifier1LandCivilian_MurderVictims Modifier1 = 3
+
+	// Modifier1LandCivilian_Disused_04 is {Disused}.
+	Modifier1LandCivilian_Disused_04 Modifier1 = 4
+
+	// Modifier1LandCivilian_Disused_05 is {Disused}.
+	Modifier1LandCivilian_Disused_05 Modifier1 = 5
+
+	// Modifier1LandCivilian_Disused_06 is {Disused}.
+	Modifier1LandCivilian_Disused_06 Modifier1 = 6
+
+	// Modifier1LandCivilian_Disused_07 is {Disused}.
+	Modifier1LandCivilian_Disused_07 Modifier1 = 7
+
+	// Modifier1LandCivilian_Disused_08 is {Disused}.
+	Modifier1LandCivilian_Disused_08 Modifier1 = 8
+
+	// Modifier1LandCivilian_DisplacedPersonSRefugeeSAndEvacueeS is Displaced Person(s), Refugee(s) and Evacuee(s).
+	Modifier1LandCivilian_DisplacedPersonSRefugeeSAndEvacueeS Modifier1 = 9
+
+	// Modifier1LandCivilian_ForeignFighterS is Foreign Fighter(s).
+	Modifier1LandCivilian_ForeignFighterS Modifier1 = 10
+
+	// Modifier1LandCivilian_GangMemberOrGang is Gang Member or Gang.
+	Modifier1LandCivilian_GangMemberOrGang Modifier1 = 11
+
+	// Modifier1LandCivilian_Disused_12 is {Disused}.
+	Modifier1LandCivilian_Disused_12 Modifier1 = 12
+
+	// Modifier1LandCivilian_LeaderOrLeadership is Leader or Leadership.
+	Modifier1LandCivilian_LeaderOrLeadership Modifier1 = 13
+
+	// Modifier1LandCivilian_NongovernmentalOrganizationMemberOrNongovernmentalOrganization is Nongovernmental Organization Member or Nongovernmental Organization.
+	Modifier1LandCivilian_NongovernmentalOrganizationMemberOrNongovernmentalOrganization Modifier1 = 14
+
+	// Modifier1LandCivilian_UnwillingCoercedRecruit is Unwilling/Coerced Recruit.
+	Modifier1LandCivilian_UnwillingCoercedRecruit Modifier1 = 15
+
+	// Modifier1LandCivilian_WillingRecruit is Willing Recruit.
+	Modifier1LandCivilian_WillingRecruit Modifier1 = 16
+
+	// Modifier1LandCivilian_ReligiousOrReligiousOrganization is Religious or Religious Organization.
+	Modifier1LandCivilian_ReligiousOrReligiousOrganization Modifier1 = 17
+
+	// Modifier1LandCivilian_TargetedIndividualOrOrganization is Targeted Individual or Organization.
+	Modifier1LandCivilian_TargetedIndividualOrOrganization Modifier1 = 18
+
+	// Modifier1LandCivilian_TerroristOrTerroristOrganization is Terrorist or Terrorist Organization.
+	Modifier1LandCivilian_TerroristOrTerroristOrganization Modifier1 = 19
+
+	// Modifier1LandCivilian_Speaker is Speaker.
+	Modifier1LandCivilian_Speaker Modifier1 = 20
+
+	// Modifier1LandCivilian_Disused_21 is {Disused}.
+	Modifier1LandCivilian_Disused_21 Modifier1 = 21
+
+	// Modifier1LandCivilian_Disused_22 is {Disused}.
+	Modifier1LandCivilian_Disused_22 Modifier1 = 22
+
+	// Modifier1LandCivilian_Other is Other.
+	Modifier1LandCivilian_Other Modifier1 = 23
+
+	// Modifier1LandCivilian_Loot is Loot.
+	Modifier1LandCivilian_Loot Modifier1 = 24
+
+	// Modifier1LandCivilian_Disused_25 is {Disused}.
+	Modifier1LandCivilian_Disused_25 Modifier1 = 25
+
+	// Modifier1LandCivilian_Disused_26 is {Disused}.
+	Modifier1LandCivilian_Disused_26 Modifier1 = 26
 )

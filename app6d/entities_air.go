@@ -5,57 +5,162 @@ package app6d
 
 // Entity constants for symbol set 01 (Air).
 const (
-	EntityAir_Military                                                                                             Entity = 110000 // Military
-	EntityAir_MilitaryFixedWing                                                                                    Entity = 110100 // Military / Fixed Wing
-	EntityAir_MilitaryFixedWingMedicalEvacuationMEDEVAC                                                            Entity = 110101 // Military / Fixed Wing / Medical Evacuation (MEDEVAC)
-	EntityAir_MilitaryFixedWingAttackStrike                                                                        Entity = 110102 // Military / Fixed Wing / Attack/Strike
-	EntityAir_MilitaryFixedWingBomber                                                                              Entity = 110103 // Military / Fixed Wing / Bomber
-	EntityAir_MilitaryFixedWingFighter                                                                             Entity = 110104 // Military / Fixed Wing / Fighter
-	EntityAir_MilitaryFixedWingFighterBomber                                                                       Entity = 110105 // Military / Fixed Wing / Fighter/Bomber
-	EntityAir_MilitaryFixedWingDisused                                                                             Entity = 110106 // Military / Fixed Wing / {Disused}
-	EntityAir_MilitaryFixedWingCargo                                                                               Entity = 110107 // Military / Fixed Wing / Cargo
-	EntityAir_MilitaryFixedWingElectronicCombatECJammer                                                            Entity = 110108 // Military / Fixed Wing / Electronic Combat (EC)/Jammer
-	EntityAir_MilitaryFixedWingTanker                                                                              Entity = 110109 // Military / Fixed Wing / Tanker
-	EntityAir_MilitaryFixedWingPatrol                                                                              Entity = 110110 // Military / Fixed Wing / Patrol
-	EntityAir_MilitaryFixedWingReconnaissance                                                                      Entity = 110111 // Military / Fixed Wing / Reconnaissance
-	EntityAir_MilitaryFixedWingTrainer                                                                             Entity = 110112 // Military / Fixed Wing / Trainer
-	EntityAir_MilitaryFixedWingUtility                                                                             Entity = 110113 // Military / Fixed Wing / Utility
-	EntityAir_MilitaryFixedWingVerticalOrShortTakeOffAndLandingVSTOL                                               Entity = 110114 // Military / Fixed Wing / Vertical or Short Take-off and Landing (VSTOL)
-	EntityAir_MilitaryFixedWingAirborneCommandPostACP                                                              Entity = 110115 // Military / Fixed Wing / Airborne Command Post (ACP)
-	EntityAir_MilitaryFixedWingAirborneEarlyWarningAEW                                                             Entity = 110116 // Military / Fixed Wing / Airborne Early Warning (AEW)
-	EntityAir_MilitaryFixedWingAntisurfaceWarfare                                                                  Entity = 110117 // Military / Fixed Wing / Antisurface Warfare
-	EntityAir_MilitaryFixedWingAntisubmarineWarfare                                                                Entity = 110118 // Military / Fixed Wing / Antisubmarine Warfare
-	EntityAir_MilitaryFixedWingCommunications                                                                      Entity = 110119 // Military / Fixed Wing / Communications
-	EntityAir_MilitaryFixedWingCombatSearchAndRescueCSAR                                                           Entity = 110120 // Military / Fixed Wing / Combat Search and Rescue (CSAR)
-	EntityAir_MilitaryFixedWingElectronicSupportES                                                                 Entity = 110121 // Military / Fixed Wing / Electronic Support (ES)
-	EntityAir_MilitaryFixedWingGovernment                                                                          Entity = 110122 // Military / Fixed Wing / Government
-	EntityAir_MilitaryFixedWingMineCountermeasuresMCM                                                              Entity = 110123 // Military / Fixed Wing / Mine Countermeasures (MCM)
-	EntityAir_MilitaryFixedWingPersonnelRecovery                                                                   Entity = 110124 // Military / Fixed Wing / Personnel Recovery
-	EntityAir_MilitaryFixedWingSearchAndRescue                                                                     Entity = 110125 // Military / Fixed Wing / Search and Rescue
-	EntityAir_MilitaryFixedWingSpecialOperationsForces                                                             Entity = 110126 // Military / Fixed Wing / Special Operations Forces
-	EntityAir_MilitaryFixedWingUltraLight                                                                          Entity = 110127 // Military / Fixed Wing / Ultra Light
-	EntityAir_MilitaryFixedWingPhotographicReconnaissance                                                          Entity = 110128 // Military / Fixed Wing / Photographic Reconnaissance
-	EntityAir_MilitaryFixedWingVeryImportantPersonVIP                                                              Entity = 110129 // Military / Fixed Wing / Very Important Person (VIP)
-	EntityAir_MilitaryFixedWingSuppressionOfEnemyAirDefense                                                        Entity = 110130 // Military / Fixed Wing / Suppression of Enemy Air Defense
-	EntityAir_MilitaryFixedWingPassenger                                                                           Entity = 110131 // Military / Fixed Wing / Passenger
-	EntityAir_MilitaryFixedWingEscort                                                                              Entity = 110132 // Military / Fixed Wing / Escort
-	EntityAir_MilitaryFixedWingElectronicAttackEA                                                                  Entity = 110133 // Military / Fixed Wing / Electronic Attack (EA)
-	EntityAir_MilitaryRotaryWing                                                                                   Entity = 110200 // Military / Rotary Wing
-	EntityAir_MilitaryUnmannedAircraftUAUnmannedAerialVehicleUAVUnmannedAircraftSystemUASRemotelyPilotedVehicleRPV Entity = 110300 // Military / Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV)
-	EntityAir_MilitaryVerticalTakeoffUAVVTUAV                                                                      Entity = 110400 // Military / Vertical–Takeoff UAV (VT–UAV)
-	EntityAir_MilitaryLighterThanAir                                                                               Entity = 110500 // Military / Lighter Than Air
-	EntityAir_MilitaryAirship                                                                                      Entity = 110600 // Military / Airship
-	EntityAir_MilitaryTetheredLighterThanAir                                                                       Entity = 110700 // Military / Tethered Lighter than Air
-	EntityAir_Civilian                                                                                             Entity = 120000 // Civilian
-	EntityAir_CivilianFixedWing                                                                                    Entity = 120100 // Civilian / Fixed Wing
-	EntityAir_CivilianRotaryWing                                                                                   Entity = 120200 // Civilian / Rotary Wing
-	EntityAir_CivilianUnmannedAircraftUAUnmannedAerialVehicleUAVUnmannedAircraftSystemUASRemotelyPilotedVehicleRPV Entity = 120300 // Civilian / Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV)
-	EntityAir_CivilianLighterThanAir                                                                               Entity = 120400 // Civilian / Lighter Than Air
-	EntityAir_CivilianAirship                                                                                      Entity = 120500 // Civilian / Airship
-	EntityAir_CivilianTetheredLighterThanAir                                                                       Entity = 120600 // Civilian / Tethered Lighter than Air
-	EntityAir_CivilianMedicalEvacuationMEDEVAC                                                                     Entity = 120700 // Civilian / Medical Evacuation (MEDEVAC)
-	EntityAir_Weapon                                                                                               Entity = 130000 // Weapon
-	EntityAir_WeaponBomb                                                                                           Entity = 130100 // Weapon / Bomb
-	EntityAir_WeaponDecoy                                                                                          Entity = 130200 // Weapon / Decoy
-	EntityAir_ManualTrackManualTrack                                                                               Entity = 140000 // Manual Track / Manual Track
+	// EntityAir_Military is Military.
+	EntityAir_Military Entity = 110000
+
+	// EntityAir_MilitaryFixedWing is Military / Fixed Wing.
+	EntityAir_MilitaryFixedWing Entity = 110100
+
+	// EntityAir_MilitaryFixedWingMedicalEvacuationMEDEVAC is Military / Fixed Wing / Medical Evacuation (MEDEVAC).
+	EntityAir_MilitaryFixedWingMedicalEvacuationMEDEVAC Entity = 110101
+
+	// EntityAir_MilitaryFixedWingAttackStrike is Military / Fixed Wing / Attack/Strike.
+	EntityAir_MilitaryFixedWingAttackStrike Entity = 110102
+
+	// EntityAir_MilitaryFixedWingBomber is Military / Fixed Wing / Bomber.
+	EntityAir_MilitaryFixedWingBomber Entity = 110103
+
+	// EntityAir_MilitaryFixedWingFighter is Military / Fixed Wing / Fighter.
+	EntityAir_MilitaryFixedWingFighter Entity = 110104
+
+	// EntityAir_MilitaryFixedWingFighterBomber is Military / Fixed Wing / Fighter/Bomber.
+	EntityAir_MilitaryFixedWingFighterBomber Entity = 110105
+
+	// EntityAir_MilitaryFixedWingDisused is Military / Fixed Wing / {Disused}.
+	EntityAir_MilitaryFixedWingDisused Entity = 110106
+
+	// EntityAir_MilitaryFixedWingCargo is Military / Fixed Wing / Cargo.
+	EntityAir_MilitaryFixedWingCargo Entity = 110107
+
+	// EntityAir_MilitaryFixedWingElectronicCombatECJammer is Military / Fixed Wing / Electronic Combat (EC)/Jammer.
+	EntityAir_MilitaryFixedWingElectronicCombatECJammer Entity = 110108
+
+	// EntityAir_MilitaryFixedWingTanker is Military / Fixed Wing / Tanker.
+	EntityAir_MilitaryFixedWingTanker Entity = 110109
+
+	// EntityAir_MilitaryFixedWingPatrol is Military / Fixed Wing / Patrol.
+	EntityAir_MilitaryFixedWingPatrol Entity = 110110
+
+	// EntityAir_MilitaryFixedWingReconnaissance is Military / Fixed Wing / Reconnaissance.
+	EntityAir_MilitaryFixedWingReconnaissance Entity = 110111
+
+	// EntityAir_MilitaryFixedWingTrainer is Military / Fixed Wing / Trainer.
+	EntityAir_MilitaryFixedWingTrainer Entity = 110112
+
+	// EntityAir_MilitaryFixedWingUtility is Military / Fixed Wing / Utility.
+	EntityAir_MilitaryFixedWingUtility Entity = 110113
+
+	// EntityAir_MilitaryFixedWingVerticalOrShortTakeOffAndLandingVSTOL is Military / Fixed Wing / Vertical or Short Take-off and Landing (VSTOL).
+	EntityAir_MilitaryFixedWingVerticalOrShortTakeOffAndLandingVSTOL Entity = 110114
+
+	// EntityAir_MilitaryFixedWingAirborneCommandPostACP is Military / Fixed Wing / Airborne Command Post (ACP).
+	EntityAir_MilitaryFixedWingAirborneCommandPostACP Entity = 110115
+
+	// EntityAir_MilitaryFixedWingAirborneEarlyWarningAEW is Military / Fixed Wing / Airborne Early Warning (AEW).
+	EntityAir_MilitaryFixedWingAirborneEarlyWarningAEW Entity = 110116
+
+	// EntityAir_MilitaryFixedWingAntisurfaceWarfare is Military / Fixed Wing / Antisurface Warfare.
+	EntityAir_MilitaryFixedWingAntisurfaceWarfare Entity = 110117
+
+	// EntityAir_MilitaryFixedWingAntisubmarineWarfare is Military / Fixed Wing / Antisubmarine Warfare.
+	EntityAir_MilitaryFixedWingAntisubmarineWarfare Entity = 110118
+
+	// EntityAir_MilitaryFixedWingCommunications is Military / Fixed Wing / Communications.
+	EntityAir_MilitaryFixedWingCommunications Entity = 110119
+
+	// EntityAir_MilitaryFixedWingCombatSearchAndRescueCSAR is Military / Fixed Wing / Combat Search and Rescue (CSAR).
+	EntityAir_MilitaryFixedWingCombatSearchAndRescueCSAR Entity = 110120
+
+	// EntityAir_MilitaryFixedWingElectronicSupportES is Military / Fixed Wing / Electronic Support (ES).
+	EntityAir_MilitaryFixedWingElectronicSupportES Entity = 110121
+
+	// EntityAir_MilitaryFixedWingGovernment is Military / Fixed Wing / Government.
+	EntityAir_MilitaryFixedWingGovernment Entity = 110122
+
+	// EntityAir_MilitaryFixedWingMineCountermeasuresMCM is Military / Fixed Wing / Mine Countermeasures (MCM).
+	EntityAir_MilitaryFixedWingMineCountermeasuresMCM Entity = 110123
+
+	// EntityAir_MilitaryFixedWingPersonnelRecovery is Military / Fixed Wing / Personnel Recovery.
+	EntityAir_MilitaryFixedWingPersonnelRecovery Entity = 110124
+
+	// EntityAir_MilitaryFixedWingSearchAndRescue is Military / Fixed Wing / Search and Rescue.
+	EntityAir_MilitaryFixedWingSearchAndRescue Entity = 110125
+
+	// EntityAir_MilitaryFixedWingSpecialOperationsForces is Military / Fixed Wing / Special Operations Forces.
+	EntityAir_MilitaryFixedWingSpecialOperationsForces Entity = 110126
+
+	// EntityAir_MilitaryFixedWingUltraLight is Military / Fixed Wing / Ultra Light.
+	EntityAir_MilitaryFixedWingUltraLight Entity = 110127
+
+	// EntityAir_MilitaryFixedWingPhotographicReconnaissance is Military / Fixed Wing / Photographic Reconnaissance.
+	EntityAir_MilitaryFixedWingPhotographicReconnaissance Entity = 110128
+
+	// EntityAir_MilitaryFixedWingVeryImportantPersonVIP is Military / Fixed Wing / Very Important Person (VIP).
+	EntityAir_MilitaryFixedWingVeryImportantPersonVIP Entity = 110129
+
+	// EntityAir_MilitaryFixedWingSuppressionOfEnemyAirDefense is Military / Fixed Wing / Suppression of Enemy Air Defense.
+	EntityAir_MilitaryFixedWingSuppressionOfEnemyAirDefense Entity = 110130
+
+	// EntityAir_MilitaryFixedWingPassenger is Military / Fixed Wing / Passenger.
+	EntityAir_MilitaryFixedWingPassenger Entity = 110131
+
+	// EntityAir_MilitaryFixedWingEscort is Military / Fixed Wing / Escort.
+	EntityAir_MilitaryFixedWingEscort Entity = 110132
+
+	// EntityAir_MilitaryFixedWingElectronicAttackEA is Military / Fixed Wing / Electronic Attack (EA).
+	EntityAir_MilitaryFixedWingElectronicAttackEA Entity = 110133
+
+	// EntityAir_MilitaryRotaryWing is Military / Rotary Wing.
+	EntityAir_MilitaryRotaryWing Entity = 110200
+
+	// EntityAir_MilitaryUnmannedAircraftUAUnmannedAerialVehicleUAVUnmannedAircraftSystemUASRemotelyPilotedVehicleRPV is Military / Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV).
+	EntityAir_MilitaryUnmannedAircraftUAUnmannedAerialVehicleUAVUnmannedAircraftSystemUASRemotelyPilotedVehicleRPV Entity = 110300
+
+	// EntityAir_MilitaryVerticalTakeoffUAVVTUAV is Military / Vertical–Takeoff UAV (VT–UAV).
+	EntityAir_MilitaryVerticalTakeoffUAVVTUAV Entity = 110400
+
+	// EntityAir_MilitaryLighterThanAir is Military / Lighter Than Air.
+	EntityAir_MilitaryLighterThanAir Entity = 110500
+
+	// EntityAir_MilitaryAirship is Military / Airship.
+	EntityAir_MilitaryAirship Entity = 110600
+
+	// EntityAir_MilitaryTetheredLighterThanAir is Military / Tethered Lighter than Air.
+	EntityAir_MilitaryTetheredLighterThanAir Entity = 110700
+
+	// EntityAir_Civilian is Civilian.
+	EntityAir_Civilian Entity = 120000
+
+	// EntityAir_CivilianFixedWing is Civilian / Fixed Wing.
+	EntityAir_CivilianFixedWing Entity = 120100
+
+	// EntityAir_CivilianRotaryWing is Civilian / Rotary Wing.
+	EntityAir_CivilianRotaryWing Entity = 120200
+
+	// EntityAir_CivilianUnmannedAircraftUAUnmannedAerialVehicleUAVUnmannedAircraftSystemUASRemotelyPilotedVehicleRPV is Civilian / Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV).
+	EntityAir_CivilianUnmannedAircraftUAUnmannedAerialVehicleUAVUnmannedAircraftSystemUASRemotelyPilotedVehicleRPV Entity = 120300
+
+	// EntityAir_CivilianLighterThanAir is Civilian / Lighter Than Air.
+	EntityAir_CivilianLighterThanAir Entity = 120400
+
+	// EntityAir_CivilianAirship is Civilian / Airship.
+	EntityAir_CivilianAirship Entity = 120500
+
+	// EntityAir_CivilianTetheredLighterThanAir is Civilian / Tethered Lighter than Air.
+	EntityAir_CivilianTetheredLighterThanAir Entity = 120600
+
+	// EntityAir_CivilianMedicalEvacuationMEDEVAC is Civilian / Medical Evacuation (MEDEVAC).
+	EntityAir_CivilianMedicalEvacuationMEDEVAC Entity = 120700
+
+	// EntityAir_Weapon is Weapon.
+	EntityAir_Weapon Entity = 130000
+
+	// EntityAir_WeaponBomb is Weapon / Bomb.
+	EntityAir_WeaponBomb Entity = 130100
+
+	// EntityAir_WeaponDecoy is Weapon / Decoy.
+	EntityAir_WeaponDecoy Entity = 130200
+
+	// EntityAir_ManualTrackManualTrack is Manual Track / Manual Track.
+	EntityAir_ManualTrackManualTrack Entity = 140000
 )

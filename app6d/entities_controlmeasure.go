@@ -5,632 +5,1887 @@ package app6d
 
 // Entity constants for symbol set 25 (Control Measures).
 const (
-	EntityControlMeasure_CommandAndControlLines                                                                       Entity = 110000 // Command and Control Lines
-	EntityControlMeasure_CommandAndControlLinesBoundary                                                               Entity = 110100 // Command and Control Lines / Boundary
-	EntityControlMeasure_CommandAndControlLinesLightLine                                                              Entity = 110200 // Command and Control Lines / Light Line
-	EntityControlMeasure_CommandAndControlLinesEngineerWorkLine                                                       Entity = 110300 // Command and Control Lines / Engineer Work Line
-	EntityControlMeasure_CommandAndControlLinesGeneric                                                                Entity = 110400 // Command and Control Lines / Generic
-	EntityControlMeasure_CommandAndControlLinesDecisionLine                                                           Entity = 110500 // Command and Control Lines / Decision Line
-	EntityControlMeasure_CommandAndControlAreas                                                                       Entity = 120000 // Command and Control Areas
-	EntityControlMeasure_CommandAndControlAreasAreaOfOperations                                                       Entity = 120100 // Command and Control Areas / Area of Operations
-	EntityControlMeasure_CommandAndControlAreasNamedAreaOfInterest                                                    Entity = 120200 // Command and Control Areas / Named Area of Interest
-	EntityControlMeasure_CommandAndControlAreasTargetedAreaOfInterest                                                 Entity = 120300 // Command and Control Areas / Targeted Area of Interest
-	EntityControlMeasure_CommandAndControlAreasAirfieldZone                                                           Entity = 120400 // Command and Control Areas / Airfield Zone
-	EntityControlMeasure_CommandAndControlAreasBaseCamp                                                               Entity = 120500 // Command and Control Areas / Base Camp
-	EntityControlMeasure_CommandAndControlAreasGuerrillaBase                                                          Entity = 120600 // Command and Control Areas / Guerrilla Base
-	EntityControlMeasure_CommandAndControlAreasGeneric                                                                Entity = 120700 // Command and Control Areas / Generic
-	EntityControlMeasure_CommandAndControlAreasBridgeheadArea                                                         Entity = 120800 // Command and Control Areas / Bridgehead Area
-	EntityControlMeasure_CommandAndControlPoints                                                                      Entity = 130000 // Command and Control Points
-	EntityControlMeasure_CommandAndControlPointsActionPointGeneral                                                    Entity = 130100 // Command and Control Points / Action Point (General)
-	EntityControlMeasure_CommandAndControlPointsAmnestyPoint                                                          Entity = 130200 // Command and Control Points / Amnesty Point
-	EntityControlMeasure_CommandAndControlPointsCheckpoint                                                            Entity = 130300 // Command and Control Points / Checkpoint
-	EntityControlMeasure_CommandAndControlPointsCenterOfMainEffort                                                    Entity = 130400 // Command and Control Points / Center of Main Effort
-	EntityControlMeasure_CommandAndControlPointsContactPoint                                                          Entity = 130500 // Command and Control Points / Contact Point
-	EntityControlMeasure_CommandAndControlPointsCoordinatingPoint                                                     Entity = 130600 // Command and Control Points / Coordinating Point
-	EntityControlMeasure_CommandAndControlPointsDecisionPoint                                                         Entity = 130700 // Command and Control Points / Decision Point
-	EntityControlMeasure_CommandAndControlPointsDistressCall                                                          Entity = 130800 // Command and Control Points / Distress Call
-	EntityControlMeasure_CommandAndControlPointsEntryControlPoint                                                     Entity = 130900 // Command and Control Points / Entry Control Point
-	EntityControlMeasure_CommandAndControlPointsFlyToPoint                                                            Entity = 131000 // Command and Control Points / Fly-To-Point
-	EntityControlMeasure_CommandAndControlPointsFlyToPointSonobuoy                                                    Entity = 131001 // Command and Control Points / Fly-To-Point / Sonobuoy
-	EntityControlMeasure_CommandAndControlPointsFlyToPointWeapon                                                      Entity = 131002 // Command and Control Points / Fly-To-Point / Weapon
-	EntityControlMeasure_CommandAndControlPointsFlyToPointNormal                                                      Entity = 131003 // Command and Control Points / Fly-To-Point / Normal
-	EntityControlMeasure_CommandAndControlPointsLinkupPoint                                                           Entity = 131100 // Command and Control Points / Linkup Point
-	EntityControlMeasure_CommandAndControlPointsPassagePoint                                                          Entity = 131200 // Command and Control Points / Passage Point
-	EntityControlMeasure_CommandAndControlPointsPointOfInterest                                                       Entity = 131300 // Command and Control Points / Point of Interest
-	EntityControlMeasure_CommandAndControlPointsPointOfInterestLaunchEvent                                            Entity = 131301 // Command and Control Points / Point of Interest / Launch Event
-	EntityControlMeasure_CommandAndControlPointsRallyPoint                                                            Entity = 131400 // Command and Control Points / Rally Point
-	EntityControlMeasure_CommandAndControlPointsReleasePoint                                                          Entity = 131500 // Command and Control Points / Release Point
-	EntityControlMeasure_CommandAndControlPointsStartPoint                                                            Entity = 131600 // Command and Control Points / Start Point
-	EntityControlMeasure_CommandAndControlPointsSpecialPoint                                                          Entity = 131700 // Command and Control Points / Special Point
-	EntityControlMeasure_CommandAndControlPointsWaypoint                                                              Entity = 131800 // Command and Control Points / Waypoint
-	EntityControlMeasure_CommandAndControlPointsAirfield                                                              Entity = 131900 // Command and Control Points / Airfield
-	EntityControlMeasure_CommandAndControlPointsTargetHandover                                                        Entity = 132000 // Command and Control Points / Target Handover
-	EntityControlMeasure_CommandAndControlPointsKeyTerrain                                                            Entity = 132100 // Command and Control Points / Key Terrain
-	EntityControlMeasure_CommandAndControlPointsControlPoint                                                          Entity = 132200 // Command and Control Points / Control Point
-	EntityControlMeasure_CommandAndControlPointsVitalGround                                                           Entity = 132300 // Command and Control Points / Vital Ground
-	EntityControlMeasure_ManeuverLines                                                                                Entity = 140000 // Maneuver Lines
-	EntityControlMeasure_ManeuverLinesForwardLineOfTroops                                                             Entity = 140100 // Maneuver Lines / Forward Line of Troops
-	EntityControlMeasure_ManeuverLinesDisused                                                                         Entity = 140200 // Maneuver Lines / {Disused}
-	EntityControlMeasure_ManeuverLinesPhaseLine                                                                       Entity = 140300 // Maneuver Lines / Phase Line
-	EntityControlMeasure_ManeuverLinesForwardEdgeOfTheBattleArea                                                      Entity = 140400 // Maneuver Lines / Forward Edge of the Battle Area
-	EntityControlMeasure_ManeuverLinesPrincipleDirectionOfFire                                                        Entity = 140500 // Maneuver Lines / Principle Direction of Fire
-	EntityControlMeasure_ManeuverLinesDirectionOfAttack                                                               Entity = 140600 // Maneuver Lines / Direction of Attack
-	EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlyAviation                                               Entity = 140601 // Maneuver Lines / Direction of Attack / Friendly Aviation
-	EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlyMainAttackDecisive                                     Entity = 140602 // Maneuver Lines / Direction of Attack / Friendly Main Attack /Decisive
-	EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlySupportingAttack                                       Entity = 140603 // Maneuver Lines / Direction of Attack / Friendly Supporting Attack
-	EntityControlMeasure_ManeuverLinesDirectionOfAttackFeint                                                          Entity = 140605 // Maneuver Lines / Direction of Attack / Feint
-	EntityControlMeasure_ManeuverLinesFinalCoordinationLine                                                           Entity = 140700 // Maneuver Lines / Final Coordination Line
-	EntityControlMeasure_ManeuverLinesInfiltrationLane                                                                Entity = 140800 // Maneuver Lines / Infiltration Lane
-	EntityControlMeasure_ManeuverLinesLimitOfAdvance                                                                  Entity = 140900 // Maneuver Lines / Limit of Advance
-	EntityControlMeasure_ManeuverLinesLineOfDeparture                                                                 Entity = 141000 // Maneuver Lines / Line of Departure
-	EntityControlMeasure_ManeuverLinesLineOfDepartureLineOfContact                                                    Entity = 141100 // Maneuver Lines / Line of Departure/Line of Contact
-	EntityControlMeasure_ManeuverLinesProbableLineOfDeployment                                                        Entity = 141200 // Maneuver Lines / Probable Line of Deployment
-	EntityControlMeasure_ManeuverLinesAirheadLine                                                                     Entity = 141300 // Maneuver Lines / Airhead Line
-	EntityControlMeasure_ManeuverLinesBridgeheadLine                                                                  Entity = 141400 // Maneuver Lines / Bridgehead Line
-	EntityControlMeasure_ManeuverLinesHoldingLine                                                                     Entity = 141500 // Maneuver Lines / Holding Line
-	EntityControlMeasure_ManeuverLinesReleaseLine                                                                     Entity = 141600 // Maneuver Lines / Release Line
-	EntityControlMeasure_ManeuverLinesAmbush                                                                          Entity = 141700 // Maneuver Lines / Ambush
-	EntityControlMeasure_ManeuverLinesHoldoverLine                                                                    Entity = 141800 // Maneuver Lines / Holdover Line
-	EntityControlMeasure_ManeuverLinesBattleHandoverLine                                                              Entity = 141900 // Maneuver Lines / Battle Handover Line
-	EntityControlMeasure_ManeuverLinesNamedAreaOfInterestLine                                                         Entity = 142000 // Maneuver Lines / Named Area of Interest Line
-	EntityControlMeasure_ManeuverLinesMobilityCorridor                                                                Entity = 142100 // Maneuver Lines / Mobility Corridor
-	EntityControlMeasure_ManeuverAreas                                                                                Entity = 150000 // Maneuver Areas
-	EntityControlMeasure_ManeuverAreasArea                                                                            Entity = 150100 // Maneuver Areas / Area
-	EntityControlMeasure_ManeuverAreasAssemblyArea                                                                    Entity = 150200 // Maneuver Areas / Assembly Area
-	EntityControlMeasure_ManeuverAreasDisused                                                                         Entity = 150300 // Maneuver Areas / {Disused}
-	EntityControlMeasure_ManeuverAreasDisused_150400                                                                  Entity = 150400 // Maneuver Areas / {Disused}
-	EntityControlMeasure_ManeuverAreasActionArea                                                                      Entity = 150500 // Maneuver Areas / Action Area
-	EntityControlMeasure_ManeuverAreasActionAreaJointTacticalActionAreaJTAA                                           Entity = 150501 // Maneuver Areas / Action Area / Joint Tactical Action Area (JTAA)
-	EntityControlMeasure_ManeuverAreasActionAreaSubmarineActionAreaSAA                                                Entity = 150502 // Maneuver Areas / Action Area / Submarine Action Area (SAA)
-	EntityControlMeasure_ManeuverAreasActionAreaSubmarineGeneratedActionAreaSGAA                                      Entity = 150503 // Maneuver Areas / Action Area / Submarine-Generated Action Area (SGAA)
-	EntityControlMeasure_ManeuverAreasDropZone                                                                        Entity = 150600 // Maneuver Areas / Drop Zone
-	EntityControlMeasure_ManeuverAreasExtractionZone                                                                  Entity = 150700 // Maneuver Areas / Extraction Zone
-	EntityControlMeasure_ManeuverAreasLandingZone                                                                     Entity = 150800 // Maneuver Areas / Landing Zone
-	EntityControlMeasure_ManeuverAreasPickUpZone                                                                      Entity = 150900 // Maneuver Areas / Pick–Up Zone
-	EntityControlMeasure_ManeuverAreasFortifiedArea                                                                   Entity = 151000 // Maneuver Areas / Fortified Area
-	EntityControlMeasure_ManeuverAreasLimitedAccessArea                                                               Entity = 151100 // Maneuver Areas / Limited Access Area
-	EntityControlMeasure_ManeuverAreasBattlePosition                                                                  Entity = 151200 // Maneuver Areas / Battle Position
-	EntityControlMeasure_ManeuverAreasBattlePositionPreparedPButNotOccupied                                           Entity = 151202 // Maneuver Areas / Battle Position / Prepared (P) but not Occupied
-	EntityControlMeasure_ManeuverAreasBattlePositionStrongPoint                                                       Entity = 151203 // Maneuver Areas / Battle Position / Strong Point
-	EntityControlMeasure_ManeuverAreasBattlePositionContain                                                           Entity = 151204 // Maneuver Areas / Battle Position / Contain
-	EntityControlMeasure_ManeuverAreasBattlePositionRetain                                                            Entity = 151205 // Maneuver Areas / Battle Position / Retain
-	EntityControlMeasure_ManeuverAreasEngagementAreaEA                                                                Entity = 151300 // Maneuver Areas / Engagement Area (EA)
-	EntityControlMeasure_ManeuverAreasAxisOfAdvance                                                                   Entity = 151400 // Maneuver Areas / Axis of Advance
-	EntityControlMeasure_ManeuverAreasAxisOfAdvanceFriendlyAirborneAviation                                           Entity = 151401 // Maneuver Areas / Axis of Advance / Friendly Airborne/Aviation
-	EntityControlMeasure_ManeuverAreasAxisOfAdvanceAttackHelicopter                                                   Entity = 151402 // Maneuver Areas / Axis of Advance / Attack Helicopter
-	EntityControlMeasure_ManeuverAreasAxisOfAdvanceMainAttack                                                         Entity = 151403 // Maneuver Areas / Axis of Advance / Main Attack
-	EntityControlMeasure_ManeuverAreasAxisOfAdvanceSupportingAttack                                                   Entity = 151404 // Maneuver Areas / Axis of Advance / Supporting Attack
-	EntityControlMeasure_ManeuverAreasAxisOfAdvanceFeint                                                              Entity = 151406 // Maneuver Areas / Axis of Advance / Feint
-	EntityControlMeasure_ManeuverAreasAssaultPosition                                                                 Entity = 151500 // Maneuver Areas / Assault Position
-	EntityControlMeasure_ManeuverAreasAttackPosition                                                                  Entity = 151600 // Maneuver Areas / Attack Position
-	EntityControlMeasure_ManeuverAreasObjectiveArea                                                                   Entity = 151700 // Maneuver Areas / Objective Area
-	EntityControlMeasure_ManeuverAreasEncirclement                                                                    Entity = 151800 // Maneuver Areas / Encirclement
-	EntityControlMeasure_ManeuverAreasPenetrationBox                                                                  Entity = 151900 // Maneuver Areas / Penetration Box
-	EntityControlMeasure_ManeuverAreasAttackByFire                                                                    Entity = 152000 // Maneuver Areas / Attack by Fire
-	EntityControlMeasure_ManeuverAreasSupportByFire                                                                   Entity = 152100 // Maneuver Areas / Support by Fire
-	EntityControlMeasure_ManeuverAreasSearchAreaReconnaissanceArea                                                    Entity = 152200 // Maneuver Areas / Search Area/Reconnaissance Area
-	EntityControlMeasure_ManeuverAreasAvenueOfApproach                                                                Entity = 152300 // Maneuver Areas / Avenue of Approach
-	EntityControlMeasure_ManeuverAreasRestrictedTerrain                                                               Entity = 152400 // Maneuver Areas / Restricted Terrain
-	EntityControlMeasure_ManeuverAreasSeverelyRestrictedTerrain                                                       Entity = 152500 // Maneuver Areas / Severely Restricted Terrain
-	EntityControlMeasure_ManeuverPoints                                                                               Entity = 160000 // Maneuver Points
-	EntityControlMeasure_ManeuverPointsObservationPostOutpostUnspecified                                              Entity = 160100 // Maneuver Points / Observation Post/Outpost (unspecified)
-	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecified                                                Entity = 160200 // Maneuver Points / Observation Post/Outpost (specified)
-	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedReconnaissanceOutpost                           Entity = 160201 // Maneuver Points / Observation Post/Outpost (specified) / Reconnaissance Outpost
-	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedForwardObserverSpotterOutpostPosition           Entity = 160202 // Maneuver Points / Observation Post/Outpost (specified) / Forward Observer/Spotter Outpost/Position
-	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedCBRNObservationOutpost                          Entity = 160203 // Maneuver Points / Observation Post/Outpost (specified) / CBRN Observation Outpost
-	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedSensorOutpostListeningPost                      Entity = 160204 // Maneuver Points / Observation Post/Outpost (specified) / Sensor Outpost /Listening Post
-	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedCombatOutpost                                   Entity = 160205 // Maneuver Points / Observation Post/Outpost (specified) / Combat Outpost
-	EntityControlMeasure_ManeuverPointsTargetReferencePoint                                                           Entity = 160300 // Maneuver Points / Target Reference Point
-	EntityControlMeasure_ManeuverPointsPointOfDeparture                                                               Entity = 160400 // Maneuver Points / Point of Departure
-	EntityControlMeasure_AirspaceControlCorridorsAreas                                                                Entity = 170000 // Airspace Control (Corridors) Areas
-	EntityControlMeasure_AirspaceControlCorridorsAreasAirCorridor                                                     Entity = 170100 // Airspace Control (Corridors) Areas / Air Corridor
-	EntityControlMeasure_AirspaceControlCorridorsAreasLowLevelTransitRoute                                            Entity = 170200 // Airspace Control (Corridors) Areas / Low Level Transit Route
-	EntityControlMeasure_AirspaceControlCorridorsAreasMinimumRiskRoute                                                Entity = 170300 // Airspace Control (Corridors) Areas / Minimum–Risk Route
-	EntityControlMeasure_AirspaceControlCorridorsAreasSafeLane                                                        Entity = 170400 // Airspace Control (Corridors) Areas / Safe Lane
-	EntityControlMeasure_AirspaceControlCorridorsAreasStandardUseArmyAircraftFlightRoute                              Entity = 170500 // Airspace Control (Corridors) Areas / Standard Use Army Aircraft Flight Route
-	EntityControlMeasure_AirspaceControlCorridorsAreasTransitCorridor                                                 Entity = 170600 // Airspace Control (Corridors) Areas / Transit Corridor
-	EntityControlMeasure_AirspaceControlCorridorsAreasSpecialCorridor                                                 Entity = 170700 // Airspace Control (Corridors) Areas / Special Corridor
-	EntityControlMeasure_AirspaceControlCorridorsAreasBaseDefenseZone                                                 Entity = 170800 // Airspace Control (Corridors) Areas / Base Defense Zone
-	EntityControlMeasure_AirspaceControlCorridorsAreasHighDensityAirspaceControlZone                                  Entity = 170900 // Airspace Control (Corridors) Areas / High–Density Airspace Control Zone
-	EntityControlMeasure_AirspaceControlCorridorsAreasRestrictedOperationsZoneROZ                                     Entity = 171000 // Airspace Control (Corridors) Areas / Restricted Operations Zone (ROZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasAirToAirRestrictedOperatingZoneAARROZ                           Entity = 171100 // Airspace Control (Corridors) Areas / Air-to-Air Restricted Operating Zone (AARROZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasUnmannedAircraftRestrictedOperatingZoneUAROZ                    Entity = 171200 // Airspace Control (Corridors) Areas / Unmanned Aircraft Restricted Operating Zone (UA-ROZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasWeaponEngagementZone                                            Entity = 171300 // Airspace Control (Corridors) Areas / Weapon Engagement Zone
-	EntityControlMeasure_AirspaceControlCorridorsAreasFighterEngagementZoneFEZ                                        Entity = 171400 // Airspace Control (Corridors) Areas / Fighter Engagement Zone (FEZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasJointEngagementZoneJEZ                                          Entity = 171500 // Airspace Control (Corridors) Areas / Joint Engagement Zone (JEZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasMissileEngagementZoneMEZ                                        Entity = 171600 // Airspace Control (Corridors) Areas / Missile Engagement Zone (MEZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasLowAltitudeMissileEngagementZoneLOMEZ                           Entity = 171700 // Airspace Control (Corridors) Areas / Low Altitude Missile Engagement Zone (LOMEZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasHighAltitudeMissileEngagementZoneHIMEZ                          Entity = 171800 // Airspace Control (Corridors) Areas / High Altitude Missile Engagement Zone (HIMEZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasShortRangeAirDefenseEngagementZoneSHORADEZ                      Entity = 171900 // Airspace Control (Corridors) Areas / Short Range Air Defense Engagement Zone (SHORADEZ)
-	EntityControlMeasure_AirspaceControlCorridorsAreasWeaponsFreeZone                                                 Entity = 172000 // Airspace Control (Corridors) Areas / Weapons Free Zone
-	EntityControlMeasure_AirspaceControlPoints                                                                        Entity = 180000 // Airspace Control Points
-	EntityControlMeasure_AirspaceControlPointsAirControlPoint                                                         Entity = 180100 // Airspace Control Points / Air Control Point
-	EntityControlMeasure_AirspaceControlPointsCommunicationsCheckpoint                                                Entity = 180200 // Airspace Control Points / Communications Checkpoint
-	EntityControlMeasure_AirspaceControlPointsIsolatedPersonnelRecoveryPoint                                          Entity = 180300 // Airspace Control Points / Isolated Personnel Recovery Point
-	EntityControlMeasure_AirspaceControlPointsPopUpPoint                                                              Entity = 180400 // Airspace Control Points / Pop–up Point
-	EntityControlMeasure_AirspaceControlPointsAirControlRendezvous                                                    Entity = 180500 // Airspace Control Points / Air Control Rendezvous
-	EntityControlMeasure_AirspaceControlPointsTacticalAirNavigationTACAN                                              Entity = 180600 // Airspace Control Points / Tactical Air Navigation (TACAN)
-	EntityControlMeasure_AirspaceControlPointsCombatAirPatrolCAPStation                                               Entity = 180700 // Airspace Control Points / Combat Air Patrol (CAP)Station
-	EntityControlMeasure_AirspaceControlPointsAirborneEarlyWarningAEWStation                                          Entity = 180800 // Airspace Control Points / Airborne Early Warning (AEW) Station
-	EntityControlMeasure_AirspaceControlPointsASWHeloAndFWStation                                                     Entity = 180900 // Airspace Control Points / ASW (Helo and F/W) Station
-	EntityControlMeasure_AirspaceControlPointsStrikeInitialPoint                                                      Entity = 181000 // Airspace Control Points / Strike Initial Point
-	EntityControlMeasure_AirspaceControlPointsReplenishmentStation                                                    Entity = 181100 // Airspace Control Points / Replenishment Station
-	EntityControlMeasure_AirspaceControlPointsTanking                                                                 Entity = 181200 // Airspace Control Points / Tanking
-	EntityControlMeasure_AirspaceControlPointsAntisubmarineWarfareRotaryWing                                          Entity = 181300 // Airspace Control Points / Antisubmarine Warfare, Rotary Wing
-	EntityControlMeasure_AirspaceControlPointsSurfaceCombatAirPatrolSUCAPFixedWing                                    Entity = 181400 // Airspace Control Points / Surface Combat Air Patrol (SUCAP) – Fixed Wing
-	EntityControlMeasure_AirspaceControlPointsSUCAPRotaryWing                                                         Entity = 181500 // Airspace Control Points / SUCAP – Rotary Wing
-	EntityControlMeasure_AirspaceControlPointsMIWFixedWing                                                            Entity = 181600 // Airspace Control Points / MIW – Fixed Wing
-	EntityControlMeasure_AirspaceControlPointsMIWRotaryWing                                                           Entity = 181700 // Airspace Control Points / MIW – Rotary Wing
-	EntityControlMeasure_AirspaceControlPointsTomcat                                                                  Entity = 181800 // Airspace Control Points / Tomcat
-	EntityControlMeasure_AirspaceControlPointsRescue                                                                  Entity = 181900 // Airspace Control Points / Rescue
-	EntityControlMeasure_AirspaceControlPointsUnmannedAerialSystemUASUA                                               Entity = 182000 // Airspace Control Points / Unmanned Aerial System (UAS/UA)
-	EntityControlMeasure_AirspaceControlPointsVerticalTakeoffAndLandingVTOLTacticalUnmannedAircraftVTUA               Entity = 182100 // Airspace Control Points / Vertical Takeoff and Landing (VTOL) Tactical Unmanned Aircraft (VTUA)
-	EntityControlMeasure_AirspaceControlPointsOrbit                                                                   Entity = 182200 // Airspace Control Points / Orbit
-	EntityControlMeasure_AirspaceControlPointsOrbitFigureEight                                                        Entity = 182300 // Airspace Control Points / Orbit – Figure Eight
-	EntityControlMeasure_AirspaceControlPointsOrbitRaceTrack                                                          Entity = 182400 // Airspace Control Points / Orbit – Race Track
-	EntityControlMeasure_AirspaceControlPointsOrbitRandomClosed                                                       Entity = 182500 // Airspace Control Points / Orbit – Random Closed
-	EntityControlMeasure_AirspaceControlPointsIsolatedPersonnelLocation                                               Entity = 182600 // Airspace Control Points / Isolated Personnel Location
-	EntityControlMeasure_AirspaceControlLines                                                                         Entity = 190000 // Airspace Control Lines
-	EntityControlMeasure_AirspaceControlLinesIdentificationFriendOrFoeIFFOffLine                                      Entity = 190100 // Airspace Control Lines / Identification Friend or Foe (IFF) Off Line
-	EntityControlMeasure_AirspaceControlLinesIdentificationFriendOrFoeIFFOnLine                                       Entity = 190200 // Airspace Control Lines / Identification Friend or Foe (IFF) On Line
-	EntityControlMeasure_MaritimeControlAreas                                                                         Entity = 200000 // Maritime Control Areas
-	EntityControlMeasure_MaritimeControlAreasLaunchArea                                                               Entity = 200100 // Maritime Control Areas / Launch Area
-	EntityControlMeasure_MaritimeControlAreasLaunchAreaEllipseCircle                                                  Entity = 200101 // Maritime Control Areas / Launch Area / Ellipse/Circle
-	EntityControlMeasure_MaritimeControlAreasDefendedArea                                                             Entity = 200200 // Maritime Control Areas / Defended Area
-	EntityControlMeasure_MaritimeControlAreasDefendedAreaEllipseCircle                                                Entity = 200201 // Maritime Control Areas / Defended Area / Ellipse/Circle
-	EntityControlMeasure_MaritimeControlAreasDefendedAreaRectangle                                                    Entity = 200202 // Maritime Control Areas / Defended Area / Rectangle
-	EntityControlMeasure_MaritimeControlAreasNoAttackNOTACKZone                                                       Entity = 200300 // Maritime Control Areas / No Attack (NOTACK) Zone
-	EntityControlMeasure_MaritimeControlAreasShipAreaOfInterest                                                       Entity = 200400 // Maritime Control Areas / Ship Area of Interest
-	EntityControlMeasure_MaritimeControlAreasShipAreaOfInterestEllipseCircle                                          Entity = 200401 // Maritime Control Areas / Ship Area of Interest / Ellipse/Circle
-	EntityControlMeasure_MaritimeControlAreasShipAreaOfInterestRectangle                                              Entity = 200402 // Maritime Control Areas / Ship Area of Interest / Rectangle
-	EntityControlMeasure_MaritimeControlAreasActiveManeuverArea                                                       Entity = 200500 // Maritime Control Areas / Active Maneuver Area
-	EntityControlMeasure_MaritimeControlAreasCuedAcquisitionDoctrine                                                  Entity = 200600 // Maritime Control Areas / Cued Acquisition Doctrine
-	EntityControlMeasure_MaritimeControlAreasRadarSearchDoctrine                                                      Entity = 200700 // Maritime Control Areas / Radar Search Doctrine
-	EntityControlMeasure_MaritimeControlPoints                                                                        Entity = 210000 // Maritime Control Points
-	EntityControlMeasure_MaritimeControlPointsPlanShip                                                                Entity = 210100 // Maritime Control Points / Plan Ship
-	EntityControlMeasure_MaritimeControlPointsAimPoint                                                                Entity = 210200 // Maritime Control Points / Aim Point
-	EntityControlMeasure_MaritimeControlPointsDefendedAsset                                                           Entity = 210300 // Maritime Control Points / Defended Asset
-	EntityControlMeasure_MaritimeControlPointsDropPoint                                                               Entity = 210400 // Maritime Control Points / Drop Point
-	EntityControlMeasure_MaritimeControlPointsEntryPoint                                                              Entity = 210500 // Maritime Control Points / Entry Point
-	EntityControlMeasure_MaritimeControlPointsAirDetonation                                                           Entity = 210600 // Maritime Control Points / Air Detonation
-	EntityControlMeasure_MaritimeControlPointsGroundZero                                                              Entity = 210700 // Maritime Control Points / Ground Zero
-	EntityControlMeasure_MaritimeControlPointsImpactPoint                                                             Entity = 210800 // Maritime Control Points / Impact Point
-	EntityControlMeasure_MaritimeControlPointsPredictedImpactPoint                                                    Entity = 210900 // Maritime Control Points / Predicted Impact Point
-	EntityControlMeasure_MaritimeControlPointsLaunchedTorpedo                                                         Entity = 211000 // Maritime Control Points / Launched Torpedo
-	EntityControlMeasure_MaritimeControlPointsMissileDetectionPoint                                                   Entity = 211100 // Maritime Control Points / Missile Detection Point
-	EntityControlMeasure_MaritimeControlPointsAcousticCountermeasureDecoy                                             Entity = 211200 // Maritime Control Points / Acoustic Countermeasure (Decoy)
-	EntityControlMeasure_MaritimeControlPointsElectronicCountermeasuresECMDecoy                                       Entity = 211300 // Maritime Control Points / Electronic Countermeasures (ECM) Decoy
-	EntityControlMeasure_MaritimeControlPointsBriefContact                                                            Entity = 211400 // Maritime Control Points / Brief Contact
-	EntityControlMeasure_MaritimeControlPointsDatumLostContact                                                        Entity = 211500 // Maritime Control Points / Datum Lost Contact
-	EntityControlMeasure_MaritimeControlPointsBTBuoyDrop                                                              Entity = 211600 // Maritime Control Points / BT Buoy Drop
-	EntityControlMeasure_MaritimeControlPointsReportedBottomedSub                                                     Entity = 211700 // Maritime Control Points / Reported Bottomed Sub
-	EntityControlMeasure_MaritimeControlPointsMovingHaven                                                             Entity = 211800 // Maritime Control Points / Moving Haven
-	EntityControlMeasure_MaritimeControlPointsScreenCenter                                                            Entity = 211900 // Maritime Control Points / Screen Center
-	EntityControlMeasure_MaritimeControlPointsLostContact                                                             Entity = 212000 // Maritime Control Points / Lost Contact
-	EntityControlMeasure_MaritimeControlPointsSinker                                                                  Entity = 212100 // Maritime Control Points / Sinker
-	EntityControlMeasure_MaritimeControlPointsTrialTrack                                                              Entity = 212200 // Maritime Control Points / Trial Track
-	EntityControlMeasure_MaritimeControlPointsAcousticFix                                                             Entity = 212300 // Maritime Control Points / Acoustic Fix
-	EntityControlMeasure_MaritimeControlPointsElectromagneticFix                                                      Entity = 212400 // Maritime Control Points / Electromagnetic Fix
-	EntityControlMeasure_MaritimeControlPointsElectromagneticMagneticAnomalyDetectionMAD                              Entity = 212500 // Maritime Control Points / Electromagnetic – Magnetic Anomaly Detection (MAD)
-	EntityControlMeasure_MaritimeControlPointsOpticalFix                                                              Entity = 212600 // Maritime Control Points / Optical Fix
-	EntityControlMeasure_MaritimeControlPointsFormation                                                               Entity = 212700 // Maritime Control Points / Formation
-	EntityControlMeasure_MaritimeControlPointsHarbor                                                                  Entity = 212800 // Maritime Control Points / Harbor
-	EntityControlMeasure_MaritimeControlPointsHarborEntrancePoint                                                     Entity = 212900 // Maritime Control Points / Harbor Entrance Point
-	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointA                                                    Entity = 212901 // Maritime Control Points / Harbor Entrance Point / A
-	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointQ                                                    Entity = 212902 // Maritime Control Points / Harbor Entrance Point / Q
-	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointX                                                    Entity = 212903 // Maritime Control Points / Harbor Entrance Point / X
-	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointY                                                    Entity = 212904 // Maritime Control Points / Harbor Entrance Point / Y
-	EntityControlMeasure_MaritimeControlPointsDipPosition                                                             Entity = 213000 // Maritime Control Points / Dip Position
-	EntityControlMeasure_MaritimeControlPointsSearch                                                                  Entity = 213100 // Maritime Control Points / Search
-	EntityControlMeasure_MaritimeControlPointsSearchArea                                                              Entity = 213200 // Maritime Control Points / Search Area
-	EntityControlMeasure_MaritimeControlPointsSearchCenter                                                            Entity = 213300 // Maritime Control Points / Search Center
-	EntityControlMeasure_MaritimeControlPointsNavigationalReferencePoint                                              Entity = 213400 // Maritime Control Points / Navigational Reference Point
-	EntityControlMeasure_MaritimeControlPointsSonobuoy                                                                Entity = 213500 // Maritime Control Points / Sonobuoy
-	EntityControlMeasure_MaritimeControlPointsSonobuoyAmbientNoise                                                    Entity = 213501 // Maritime Control Points / Sonobuoy / Ambient Noise
-	EntityControlMeasure_MaritimeControlPointsSonobuoyAirTransportableCommunicationATAC                               Entity = 213502 // Maritime Control Points / Sonobuoy / Air Transportable Communication (ATAC)
-	EntityControlMeasure_MaritimeControlPointsSonobuoyBarra                                                           Entity = 213503 // Maritime Control Points / Sonobuoy / Barra
-	EntityControlMeasure_MaritimeControlPointsSonobuoyBathythermographTransmitting                                    Entity = 213504 // Maritime Control Points / Sonobuoy / Bathythermograph Transmitting
-	EntityControlMeasure_MaritimeControlPointsSonobuoyCommandActiveMultiBeamSonobuoyCAMBS                             Entity = 213505 // Maritime Control Points / Sonobuoy / Command Active Multi-Beam Sonobuoy (CAMBS)
-	EntityControlMeasure_MaritimeControlPointsSonobuoyCommandActiveSonobuoyDirectionalCommandActiveSonobuoySystemCASS Entity = 213506 // Maritime Control Points / Sonobuoy / Command Active Sonobuoy Directional Command Active Sonobuoy System (CASS)
-	EntityControlMeasure_MaritimeControlPointsSonobuoyDirectionalFrequencyAnalysisAndRecordingDIFAR                   Entity = 213507 // Maritime Control Points / Sonobuoy / Directional Frequency Analysis and Recording (DIFAR)
-	EntityControlMeasure_MaritimeControlPointsSonobuoyDirectionalCommandActiveSonobuoySystemDICASS                    Entity = 213508 // Maritime Control Points / Sonobuoy / Directional Command Active Sonobuoy System (DICASS)
-	EntityControlMeasure_MaritimeControlPointsSonobuoyExpendableReliableAcousticPathSonobuoyERAPS                     Entity = 213509 // Maritime Control Points / Sonobuoy / Expendable Reliable Acoustic Path Sonobuoy (ERAPS)
-	EntityControlMeasure_MaritimeControlPointsSonobuoyExpired                                                         Entity = 213510 // Maritime Control Points / Sonobuoy / Expired
-	EntityControlMeasure_MaritimeControlPointsSonobuoyKingpin                                                         Entity = 213511 // Maritime Control Points / Sonobuoy / Kingpin
-	EntityControlMeasure_MaritimeControlPointsSonobuoyLowFrequencyAnalysisAndRecordingLOFAR                           Entity = 213512 // Maritime Control Points / Sonobuoy / Low Frequency Analysis and Recording (LOFAR)
-	EntityControlMeasure_MaritimeControlPointsSonobuoyPatternCenter                                                   Entity = 213513 // Maritime Control Points / Sonobuoy / Pattern Center
-	EntityControlMeasure_MaritimeControlPointsSonobuoyRangeOnly                                                       Entity = 213514 // Maritime Control Points / Sonobuoy / Range Only
-	EntityControlMeasure_MaritimeControlPointsSonobuoyVerticalLineArrayDirectionalFrequencyAnalysisAndRecordingDIFAR  Entity = 213515 // Maritime Control Points / Sonobuoy / Vertical Line Array Directional Frequency Analysis and Recording (DIFAR)
-	EntityControlMeasure_MaritimeControlPointsReferencePoint                                                          Entity = 213600 // Maritime Control Points / Reference Point
-	EntityControlMeasure_MaritimeControlPointsSpecialPoint                                                            Entity = 213700 // Maritime Control Points / Special Point
-	EntityControlMeasure_MaritimeControlPointsNavigationalReferencePoint_213800                                       Entity = 213800 // Maritime Control Points / Navigational Reference Point
-	EntityControlMeasure_MaritimeControlPointsDataLinkReferencePoint                                                  Entity = 213900 // Maritime Control Points / Data Link Reference Point
-	EntityControlMeasure_MaritimeControlPointsDisused                                                                 Entity = 214000 // Maritime Control Points / {Disused}
-	EntityControlMeasure_MaritimeControlPointsVitalAreaCenter                                                         Entity = 214100 // Maritime Control Points / Vital Area Center
-	EntityControlMeasure_MaritimeControlPointsCorridorTabPoint                                                        Entity = 214200 // Maritime Control Points / Corridor Tab Point
-	EntityControlMeasure_MaritimeControlPointsEnemyPoint                                                              Entity = 214300 // Maritime Control Points / Enemy Point
-	EntityControlMeasure_MaritimeControlPointsMarshallPoint                                                           Entity = 214400 // Maritime Control Points / Marshall Point
-	EntityControlMeasure_MaritimeControlPointsPositionAndIntendedMovementPIM                                          Entity = 214500 // Maritime Control Points / Position and Intended Movement (PIM)
-	EntityControlMeasure_MaritimeControlPointsPreLandfallWaypoint                                                     Entity = 214600 // Maritime Control Points / Pre-Landfall Waypoint
-	EntityControlMeasure_MaritimeControlPointsEstimatedPositionEP                                                     Entity = 214700 // Maritime Control Points / Estimated Position (EP)
-	EntityControlMeasure_MaritimeControlPointsWaypoint                                                                Entity = 214800 // Maritime Control Points / Waypoint
-	EntityControlMeasure_MaritimeControlPointsGeneralSeaSubsurfaceStation                                             Entity = 214900 // Maritime Control Points / General Sea Subsurface Station
-	EntityControlMeasure_MaritimeControlPointsSubmarineSeaSubsurfaceStation                                           Entity = 215000 // Maritime Control Points / Submarine Sea Subsurface Station
-	EntityControlMeasure_MaritimeControlPointsSubmarineAntisubmarineWarfareSeaSubsurfaceStation                       Entity = 215100 // Maritime Control Points / Submarine Antisubmarine Warfare Sea Subsurface Station
-	EntityControlMeasure_MaritimeControlPointsUnmannedUnderwaterVehicleSeaSubsurfaceStation                           Entity = 215200 // Maritime Control Points / Unmanned Underwater Vehicle Sea Subsurface Station
-	EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWUnmannedUnderwaterVehicleSeaSubsurfaceStation    Entity = 215300 // Maritime Control Points / Antisubmarine Warfare (ASW) Unmanned Underwater Vehicle Sea Subsurface Station
-	EntityControlMeasure_MaritimeControlPointsMineWarfareUnmannedUnderwaterVehicleSeaSubsurfaceStation                Entity = 215400 // Maritime Control Points / Mine Warfare Unmanned Underwater Vehicle Sea Subsurface Station
-	EntityControlMeasure_MaritimeControlPointsSeaSurfaceWarfareUnmannedUnderwaterVehicleSubsurfaceStation             Entity = 215500 // Maritime Control Points / Sea Surface Warfare Unmanned Underwater Vehicle Subsurface Station
-	EntityControlMeasure_MaritimeControlPointsGeneralSeaSurfaceStation                                                Entity = 215600 // Maritime Control Points / General Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWSeaSurfaceStation                                Entity = 215700 // Maritime Control Points / Antisubmarine Warfare (ASW) Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsMineWarfareSeaSurfaceStation                                            Entity = 215800 // Maritime Control Points / Mine Warfare Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsNonCombatantSeaSurfaceStation                                           Entity = 215900 // Maritime Control Points / Non-Combatant Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsPicketSeaSurfaceStation                                                 Entity = 216000 // Maritime Control Points / Picket Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsRendezvousSeaSurfaceStation                                             Entity = 216100 // Maritime Control Points / Rendezvous Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsReplenishmentAtSeaSurfaceStation                                        Entity = 216200 // Maritime Control Points / Replenishment at Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsRescueSeaSurfaceStation                                                 Entity = 216300 // Maritime Control Points / Rescue Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsSurfaceWarfareSeaSurfaceStation                                         Entity = 216400 // Maritime Control Points / Surface Warfare Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsUnmannedUnderwaterVehicleSeaSurfaceStation                              Entity = 216500 // Maritime Control Points / Unmanned Underwater Vehicle Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWUnmannedUnderwaterVehicleSeaSurfaceStation       Entity = 216600 // Maritime Control Points / Antisubmarine Warfare (ASW) Unmanned Underwater Vehicle Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsMineWarfareUnmannedUnderwaterVehicleSeaSurfaceStation                   Entity = 216700 // Maritime Control Points / Mine Warfare Unmanned Underwater Vehicle Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsRemoteMultiMissionVehicleMineWarfareUnmannedUnderwaterSeaSurfaceStation Entity = 216800 // Maritime Control Points / Remote Multi-Mission Vehicle Mine Warfare Unmanned Underwater Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsSurfaceWarfareMineWarfareUnmannedUnderwaterVehicleSeaSurfaceStation     Entity = 216900 // Maritime Control Points / Surface Warfare Mine Warfare Unmanned Underwater Vehicle Sea Surface Station
-	EntityControlMeasure_MaritimeControlPointsShoreControlStation                                                     Entity = 217000 // Maritime Control Points / Shore Control Station
-	EntityControlMeasure_MaritimeControlPointsGeneralRoute                                                            Entity = 217100 // Maritime Control Points / General Route
-	EntityControlMeasure_MaritimeControlPointsDiversionRoute                                                          Entity = 217200 // Maritime Control Points / Diversion Route
-	EntityControlMeasure_MaritimeControlPointsPositionAndIntendedMovementPIMRoute                                     Entity = 217300 // Maritime Control Points / Position and Intended Movement (PIM) Route
-	EntityControlMeasure_MaritimeControlPointsPicketRoute                                                             Entity = 217400 // Maritime Control Points / Picket Route
-	EntityControlMeasure_MaritimeControlPointsPointRRoute                                                             Entity = 217500 // Maritime Control Points / Point R Route
-	EntityControlMeasure_MaritimeControlPointsRendezvousRoute                                                         Entity = 217600 // Maritime Control Points / Rendezvous Route
-	EntityControlMeasure_MaritimeControlPointsWaypointRoute                                                           Entity = 217700 // Maritime Control Points / Waypoint Route
-	EntityControlMeasure_MaritimeControlPointsClutterStationaryOrCeaseReporting                                       Entity = 217800 // Maritime Control Points / Clutter, Stationary or Cease Reporting
-	EntityControlMeasure_MaritimeControlPointsTentativeOrProvisionalTrack                                             Entity = 217900 // Maritime Control Points / Tentative or Provisional Track
-	EntityControlMeasure_MaritimeControlPointsDistressedVessel                                                        Entity = 218000 // Maritime Control Points / Distressed Vessel
-	EntityControlMeasure_MaritimeControlPointsDitchedAircraftDownedAircraft                                           Entity = 218100 // Maritime Control Points / Ditched Aircraft/Downed Aircraft
-	EntityControlMeasure_MaritimeControlPointsPersonInWaterBailout                                                    Entity = 218200 // Maritime Control Points / Person in Water/Bailout
-	EntityControlMeasure_MaritimeControlPointsIceberg                                                                 Entity = 218300 // Maritime Control Points / Iceberg
-	EntityControlMeasure_MaritimeControlPointsNavigational                                                            Entity = 218400 // Maritime Control Points / Navigational
-	EntityControlMeasure_MaritimeControlPointsOilRig                                                                  Entity = 218500 // Maritime Control Points / Oil Rig
-	EntityControlMeasure_MaritimeControlPointsSeaMineLike                                                             Entity = 218600 // Maritime Control Points / Sea Mine–Like
-	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMineMineLikeBottomObjectNOMBO                            Entity = 218700 // Maritime Control Points / Bottom Return/Non-Mine, Mine-Like Bottom Object (NOMBO)
-	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMineMineLikeBottomObjectNOMBOInstallationManmade         Entity = 218800 // Maritime Control Points / Bottom Return/Non-Mine, Mine-Like Bottom Object (NOMBO)/Installation Manmade
-	EntityControlMeasure_MaritimeControlPointsMarineLife                                                              Entity = 218900 // Maritime Control Points / Marine Life
-	EntityControlMeasure_MaritimeControlPointsSeaAnomalyWakeCurrentKnuckle                                            Entity = 219000 // Maritime Control Points / Sea Anomaly (Wake, Current, Knuckle)
-	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMILCOWreckDangerous                                      Entity = 219100 // Maritime Control Points / Bottom Return/Non-MILCO, Wreck, Dangerous
-	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMILCOWreckNonDangerous                                   Entity = 219200 // Maritime Control Points / Bottom Return/Non-MILCO, Wreck, Non Dangerous
-	EntityControlMeasure_MaritimeControlLines                                                                         Entity = 220000 // Maritime Control Lines
-	EntityControlMeasure_MaritimeControlLinesBearingLine                                                              Entity = 220100 // Maritime Control Lines / Bearing Line
-	EntityControlMeasure_MaritimeControlLinesBearingLineElectronic                                                    Entity = 220101 // Maritime Control Lines / Bearing Line / Electronic
-	EntityControlMeasure_MaritimeControlLinesBearingLineElectronicWarfareEW                                           Entity = 220102 // Maritime Control Lines / Bearing Line / Electronic Warfare (EW)
-	EntityControlMeasure_MaritimeControlLinesBearingLineAcoustic                                                      Entity = 220103 // Maritime Control Lines / Bearing Line / Acoustic
-	EntityControlMeasure_MaritimeControlLinesBearingLineAcousticAmbiguous                                             Entity = 220104 // Maritime Control Lines / Bearing Line / Acoustic (Ambiguous)
-	EntityControlMeasure_MaritimeControlLinesBearingLineTorpedo                                                       Entity = 220105 // Maritime Control Lines / Bearing Line / Torpedo
-	EntityControlMeasure_MaritimeControlLinesBearingLineElectroOpticalIntercept                                       Entity = 220106 // Maritime Control Lines / Bearing Line / Electro-Optical Intercept
-	EntityControlMeasure_MaritimeControlLinesBearingLineJammer                                                        Entity = 220107 // Maritime Control Lines / Bearing Line / Jammer
-	EntityControlMeasure_MaritimeControlLinesBearingLineRadioDirectionFinderRDF                                       Entity = 220108 // Maritime Control Lines / Bearing Line / Radio Direction Finder (RDF)
-	EntityControlMeasure_Deception                                                                                    Entity = 230000 // Deception
-	EntityControlMeasure_DeceptionDeceiveDecoyDummyFeint                                                              Entity = 230200 // Deception / Deceive/Decoy/Dummy/Feint
-	EntityControlMeasure_FiresAreas                                                                                   Entity = 240000 // Fires Areas
-	EntityControlMeasure_FiresAreasAirspaceCoordinationArea                                                           Entity = 240100 // Fires Areas / Airspace Coordination Area
-	EntityControlMeasure_FiresAreasAirspaceCoordinationAreaIrregular                                                  Entity = 240101 // Fires Areas / Airspace Coordination Area / Irregular
-	EntityControlMeasure_FiresAreasAirspaceCoordinationAreaRectangular                                                Entity = 240102 // Fires Areas / Airspace Coordination Area / Rectangular
-	EntityControlMeasure_FiresAreasAirspaceCoordinationAreaCircular                                                   Entity = 240103 // Fires Areas / Airspace Coordination Area / Circular
-	EntityControlMeasure_FiresAreasFreeFireArea                                                                       Entity = 240200 // Fires Areas / Free Fire Area
-	EntityControlMeasure_FiresAreasFreeFireAreaIrregular                                                              Entity = 240201 // Fires Areas / Free Fire Area / Irregular
-	EntityControlMeasure_FiresAreasFreeFireAreaRectangular                                                            Entity = 240202 // Fires Areas / Free Fire Area / Rectangular
-	EntityControlMeasure_FiresAreasFreeFireAreaCircular                                                               Entity = 240203 // Fires Areas / Free Fire Area / Circular
-	EntityControlMeasure_FiresAreasNoFireArea                                                                         Entity = 240300 // Fires Areas / No Fire Area
-	EntityControlMeasure_FiresAreasNoFireAreaIrregular                                                                Entity = 240301 // Fires Areas / No Fire Area / Irregular
-	EntityControlMeasure_FiresAreasNoFireAreaRectangular                                                              Entity = 240302 // Fires Areas / No Fire Area / Rectangular
-	EntityControlMeasure_FiresAreasNoFireAreaCircular                                                                 Entity = 240303 // Fires Areas / No Fire Area / Circular
-	EntityControlMeasure_FiresAreasRestrictedFireArea                                                                 Entity = 240400 // Fires Areas / Restricted Fire Area
-	EntityControlMeasure_FiresAreasRestrictedFireAreaIrregular                                                        Entity = 240401 // Fires Areas / Restricted Fire Area / Irregular
-	EntityControlMeasure_FiresAreasRestrictedFireAreaRectangular                                                      Entity = 240402 // Fires Areas / Restricted Fire Area / Rectangular
-	EntityControlMeasure_FiresAreasRestrictedFireAreaCircular                                                         Entity = 240403 // Fires Areas / Restricted Fire Area / Circular
-	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAA                                                        Entity = 240500 // Fires Areas / Position Area For Artillery (PAA)
-	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAARectangular                                             Entity = 240501 // Fires Areas / Position Area For Artillery (PAA) / Rectangular
-	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAACircular                                                Entity = 240502 // Fires Areas / Position Area For Artillery (PAA) / Circular
-	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAAIrregular                                               Entity = 240503 // Fires Areas / Position Area For Artillery (PAA) / Irregular
-	EntityControlMeasure_FiresAreasPointTargets                                                                       Entity = 240600 // Fires Areas / Point Targets
-	EntityControlMeasure_FiresAreasPointTargetsPointOrSingleTarget                                                    Entity = 240601 // Fires Areas / Point Targets / Point or Single Target
-	EntityControlMeasure_FiresAreasPointTargetsNuclearTarget                                                          Entity = 240602 // Fires Areas / Point Targets / Nuclear Target
-	EntityControlMeasure_FiresAreasPointTargetsTargetRecorded                                                         Entity = 240603 // Fires Areas / Point Targets / Target-Recorded
-	EntityControlMeasure_FiresAreasLinearTargets                                                                      Entity = 240700 // Fires Areas / Linear Targets
-	EntityControlMeasure_FiresAreasLinearTargetsLinearTarget                                                          Entity = 240701 // Fires Areas / Linear Targets / Linear Target
-	EntityControlMeasure_FiresAreasLinearTargetsLinearSmokeTarget                                                     Entity = 240702 // Fires Areas / Linear Targets / Linear Smoke Target
-	EntityControlMeasure_FiresAreasLinearTargetsFinalProtectiveFireFPF                                                Entity = 240703 // Fires Areas / Linear Targets / Final Protective Fire (FPF)
-	EntityControlMeasure_FiresAreasAreaTargets                                                                        Entity = 240800 // Fires Areas / Area Targets
-	EntityControlMeasure_FiresAreasAreaTargetsAreaTarget                                                              Entity = 240801 // Fires Areas / Area Targets / Area Target
-	EntityControlMeasure_FiresAreasAreaTargetsRectangularTarget                                                       Entity = 240802 // Fires Areas / Area Targets / Rectangular Target
-	EntityControlMeasure_FiresAreasAreaTargetsCircularTarget                                                          Entity = 240803 // Fires Areas / Area Targets / Circular Target
-	EntityControlMeasure_FiresAreasAreaTargetsRectangularTargetSingleTarget                                           Entity = 240804 // Fires Areas / Area Targets / Rectangular Target – Single Target
-	EntityControlMeasure_FiresAreasAreaTargetsSeriesOrGroupsOfTargets                                                 Entity = 240805 // Fires Areas / Area Targets / Series or Groups of Targets
-	EntityControlMeasure_FiresAreasAreaTargetsSmoke                                                                   Entity = 240806 // Fires Areas / Area Targets / Smoke
-	EntityControlMeasure_FiresAreasAreaTargetsDisused                                                                 Entity = 240807 // Fires Areas / Area Targets / {Disused}
-	EntityControlMeasure_FiresAreasAreaTargetsBombArea                                                                Entity = 240808 // Fires Areas / Area Targets / Bomb Area
-	EntityControlMeasure_FiresAreasFireSupportStation                                                                 Entity = 240900 // Fires Areas / Fire Support Station
-	EntityControlMeasure_FiresAreasFireSupportArea                                                                    Entity = 241000 // Fires Areas / Fire Support Area
-	EntityControlMeasure_FiresAreasFireSupportAreaIrregular                                                           Entity = 241001 // Fires Areas / Fire Support Area / Irregular
-	EntityControlMeasure_FiresAreasFireSupportAreaRectangular                                                         Entity = 241002 // Fires Areas / Fire Support Area / Rectangular
-	EntityControlMeasure_FiresAreasFireSupportAreaCircular                                                            Entity = 241003 // Fires Areas / Fire Support Area / Circular
-	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZone                                                    Entity = 241100 // Fires Areas / Artillery Target Intelligence Zone
-	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneIrregular                                           Entity = 241101 // Fires Areas / Artillery Target Intelligence Zone / Irregular
-	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneRectangular                                         Entity = 241102 // Fires Areas / Artillery Target Intelligence Zone / Rectangular
-	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneCircular                                            Entity = 241103 // Fires Areas / Artillery Target Intelligence Zone / Circular
-	EntityControlMeasure_FiresAreasCallForFireArea                                                                    Entity = 241200 // Fires Areas / Call for Fire Area
-	EntityControlMeasure_FiresAreasCallForFireAreaIrregular                                                           Entity = 241201 // Fires Areas / Call for Fire Area / Irregular
-	EntityControlMeasure_FiresAreasCallForFireAreaRectangular                                                         Entity = 241202 // Fires Areas / Call for Fire Area / Rectangular
-	EntityControlMeasure_FiresAreasCallForFireAreaCircular                                                            Entity = 241203 // Fires Areas / Call for Fire Area / Circular
-	EntityControlMeasure_FiresAreasCensorZone                                                                         Entity = 241300 // Fires Areas / Censor Zone
-	EntityControlMeasure_FiresAreasCensorZoneIrregular                                                                Entity = 241301 // Fires Areas / Censor Zone / Irregular
-	EntityControlMeasure_FiresAreasCensorZoneRectangular                                                              Entity = 241302 // Fires Areas / Censor Zone / Rectangular
-	EntityControlMeasure_FiresAreasCensorZoneCircular                                                                 Entity = 241303 // Fires Areas / Censor Zone / Circular
-	EntityControlMeasure_FiresAreasCriticalFriendlyZone                                                               Entity = 241400 // Fires Areas / Critical Friendly Zone
-	EntityControlMeasure_FiresAreasCriticalFriendlyZoneIrregular                                                      Entity = 241401 // Fires Areas / Critical Friendly Zone / Irregular
-	EntityControlMeasure_FiresAreasCriticalFriendlyZoneRectangular                                                    Entity = 241402 // Fires Areas / Critical Friendly Zone / Rectangular
-	EntityControlMeasure_FiresAreasCriticalFriendlyZoneCircular                                                       Entity = 241403 // Fires Areas / Critical Friendly Zone / Circular
-	EntityControlMeasure_FiresAreasDeadSpaceArea                                                                      Entity = 241500 // Fires Areas / Dead Space Area
-	EntityControlMeasure_FiresAreasDeadSpaceAreaIrregular                                                             Entity = 241501 // Fires Areas / Dead Space Area / Irregular
-	EntityControlMeasure_FiresAreasDeadSpaceAreaRectangular                                                           Entity = 241502 // Fires Areas / Dead Space Area / Rectangular
-	EntityControlMeasure_FiresAreasDeadSpaceAreaCircular                                                              Entity = 241503 // Fires Areas / Dead Space Area / Circular
-	EntityControlMeasure_FiresAreasDisused                                                                            Entity = 241600 // Fires Areas / {Disused}
-	EntityControlMeasure_FiresAreasTargetBuildUpArea                                                                  Entity = 241700 // Fires Areas / Target Build–up Area
-	EntityControlMeasure_FiresAreasTargetBuildUpAreaIrregular                                                         Entity = 241701 // Fires Areas / Target Build–up Area / Irregular
-	EntityControlMeasure_FiresAreasTargetBuildUpAreaRectangular                                                       Entity = 241702 // Fires Areas / Target Build–up Area / Rectangular
-	EntityControlMeasure_FiresAreasTargetBuildUpAreaCircular                                                          Entity = 241703 // Fires Areas / Target Build–up Area / Circular
-	EntityControlMeasure_FiresAreasTargetValueArea                                                                    Entity = 241800 // Fires Areas / Target Value Area
-	EntityControlMeasure_FiresAreasTargetValueAreaIrregular                                                           Entity = 241801 // Fires Areas / Target Value Area / Irregular
-	EntityControlMeasure_FiresAreasTargetValueAreaRectangular                                                         Entity = 241802 // Fires Areas / Target Value Area / Rectangular
-	EntityControlMeasure_FiresAreasTargetValueAreaCircular                                                            Entity = 241803 // Fires Areas / Target Value Area / Circular
-	EntityControlMeasure_FiresAreasZoneOfResponsibility                                                               Entity = 241900 // Fires Areas / Zone of Responsibility
-	EntityControlMeasure_FiresAreasZoneOfResponsibilityIrregular                                                      Entity = 241901 // Fires Areas / Zone of Responsibility / Irregular
-	EntityControlMeasure_FiresAreasZoneOfResponsibilityRectangular                                                    Entity = 241902 // Fires Areas / Zone of Responsibility / Rectangular
-	EntityControlMeasure_FiresAreasZoneOfResponsibilityCircular                                                       Entity = 241903 // Fires Areas / Zone of Responsibility / Circular
-	EntityControlMeasure_FiresAreasTerminallyGuidedMunitionFootprintTGMF                                              Entity = 242000 // Fires Areas / Terminally Guided Munition Footprint (TGMF)
-	EntityControlMeasure_FiresAreasWeaponSensorRangeFanCircular                                                       Entity = 242100 // Fires Areas / Weapon/Sensor Range fan, Circular
-	EntityControlMeasure_FiresAreasWeaponSensorRangeFanSector                                                         Entity = 242200 // Fires Areas / Weapon/Sensor Range fan, Sector
-	EntityControlMeasure_FiresAreasKillBox                                                                            Entity = 242300 // Fires Areas / Kill Box
-	EntityControlMeasure_FiresAreasKillBoxIrregularBlue                                                               Entity = 242301 // Fires Areas / Kill Box / Irregular, Blue
-	EntityControlMeasure_FiresAreasKillBoxRectangularBlue                                                             Entity = 242302 // Fires Areas / Kill Box / Rectangular, Blue
-	EntityControlMeasure_FiresAreasKillBoxCircularBlue                                                                Entity = 242303 // Fires Areas / Kill Box / Circular, Blue
-	EntityControlMeasure_FiresAreasKillBoxIrregularPurple                                                             Entity = 242304 // Fires Areas / Kill Box / Irregular, Purple
-	EntityControlMeasure_FiresAreasKillBoxRectangularPurple                                                           Entity = 242305 // Fires Areas / Kill Box / Rectangular, Purple
-	EntityControlMeasure_FiresAreasKillBoxCircularPurple                                                              Entity = 242306 // Fires Areas / Kill Box / Circular, Purple
-	EntityControlMeasure_FiresAreasArtilleryManeuverArea                                                              Entity = 242400 // Fires Areas / Artillery Maneuver Area
-	EntityControlMeasure_FiresAreasArtilleryReservedArea                                                              Entity = 242500 // Fires Areas / Artillery Reserved Area
-	EntityControlMeasure_FiresPoints                                                                                  Entity = 250000 // Fires Points
-	EntityControlMeasure_FiresPointsFiringPoint                                                                       Entity = 250100 // Fires Points / Firing Point
-	EntityControlMeasure_FiresPointsHidePoint                                                                         Entity = 250200 // Fires Points / Hide Point
-	EntityControlMeasure_FiresPointsLaunchPoint                                                                       Entity = 250300 // Fires Points / Launch Point
-	EntityControlMeasure_FiresPointsReloadPoint                                                                       Entity = 250400 // Fires Points / Reload Point
-	EntityControlMeasure_FiresPointsSurveyControlPoint                                                                Entity = 250500 // Fires Points / Survey Control Point
-	EntityControlMeasure_FiresPointsKnownPoint                                                                        Entity = 250600 // Fires Points / Known Point
-	EntityControlMeasure_FireLines                                                                                    Entity = 260000 // Fire Lines
-	EntityControlMeasure_FireLinesFireSupportCoordinationLineFSCL                                                     Entity = 260100 // Fire Lines / Fire Support Coordination Line (FSCL)
-	EntityControlMeasure_FireLinesCoordinatedFireLineCFL                                                              Entity = 260200 // Fire Lines / Coordinated Fire Line (CFL)
-	EntityControlMeasure_FireLinesNoFireLine                                                                          Entity = 260300 // Fire Lines / No Fire Line
-	EntityControlMeasure_FireLinesBattlefieldCoordinationLine                                                         Entity = 260400 // Fire Lines / Battlefield Coordination Line
-	EntityControlMeasure_FireLinesRestrictiveFireLine                                                                 Entity = 260500 // Fire Lines / Restrictive Fire Line
-	EntityControlMeasure_FireLinesMunitionFlightPath                                                                  Entity = 260600 // Fire Lines / Munition Flight Path
-	EntityControlMeasure_ProtectionAreas                                                                              Entity = 270000 // Protection Areas
-	EntityControlMeasure_ProtectionAreasObstacleBelt                                                                  Entity = 270100 // Protection Areas / Obstacle Belt
-	EntityControlMeasure_ProtectionAreasObstacleZone                                                                  Entity = 270200 // Protection Areas / Obstacle Zone
-	EntityControlMeasure_ProtectionAreasObstacleFreeZone                                                              Entity = 270300 // Protection Areas / Obstacle Free Zone
-	EntityControlMeasure_ProtectionAreasObstacleRestrictedZone                                                        Entity = 270400 // Protection Areas / Obstacle Restricted Zone
-	EntityControlMeasure_ProtectionAreasObstacleEffects                                                               Entity = 270500 // Protection Areas / Obstacle Effects
-	EntityControlMeasure_ProtectionAreasObstacleEffectsBlock                                                          Entity = 270501 // Protection Areas / Obstacle Effects / Block
-	EntityControlMeasure_ProtectionAreasObstacleEffectsDisrupt                                                        Entity = 270502 // Protection Areas / Obstacle Effects / Disrupt
-	EntityControlMeasure_ProtectionAreasObstacleEffectsFix                                                            Entity = 270503 // Protection Areas / Obstacle Effects / Fix
-	EntityControlMeasure_ProtectionAreasObstacleEffectsTurn                                                           Entity = 270504 // Protection Areas / Obstacle Effects / Turn
-	EntityControlMeasure_ProtectionAreasObstacleBypass                                                                Entity = 270600 // Protection Areas / Obstacle Bypass
-	EntityControlMeasure_ProtectionAreasObstacleBypassEasy                                                            Entity = 270601 // Protection Areas / Obstacle Bypass / Easy
-	EntityControlMeasure_ProtectionAreasObstacleBypassDifficult                                                       Entity = 270602 // Protection Areas / Obstacle Bypass / Difficult
-	EntityControlMeasure_ProtectionAreasObstacleBypassImpossible                                                      Entity = 270603 // Protection Areas / Obstacle Bypass / Impossible
-	EntityControlMeasure_ProtectionAreasMinefield                                                                     Entity = 270700 // Protection Areas / Minefield
-	EntityControlMeasure_ProtectionAreasMinefieldStaticDepiction                                                      Entity = 270701 // Protection Areas / Minefield / Static Depiction
-	EntityControlMeasure_ProtectionAreasMinefieldDynamicDepiction                                                     Entity = 270707 // Protection Areas / Minefield / Dynamic Depiction
-	EntityControlMeasure_ProtectionAreasMinedArea                                                                     Entity = 270800 // Protection Areas / Mined Area
-	EntityControlMeasure_ProtectionAreasMinedAreaFenced                                                               Entity = 270801 // Protection Areas / Mined Area / Fenced
-	EntityControlMeasure_ProtectionAreasUnexplodedExplosiveOrdnanceUXOArea                                            Entity = 271000 // Protection Areas / Unexploded Explosive Ordnance (UXO) Area
-	EntityControlMeasure_ProtectionAreasBridgeOrGap                                                                   Entity = 271100 // Protection Areas / Bridge or Gap
-	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridges                                              Entity = 271200 // Protection Areas / Roadblocks, Craters and Blown Bridges
-	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesPlanned                                       Entity = 271201 // Protection Areas / Roadblocks, Craters and Blown Bridges / Planned
-	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesExplosivesStateOfReadiness1Safe               Entity = 271202 // Protection Areas / Roadblocks, Craters and Blown Bridges / Explosives, State of Readiness 1 (Safe)
-	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesExplosivesStateOfReadiness2ArmedButPassable   Entity = 271203 // Protection Areas / Roadblocks, Craters and Blown Bridges / Explosives, State of Readiness 2 (armed but passable)
-	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesRoadblockCompleteExecuted                     Entity = 271204 // Protection Areas / Roadblocks, Craters and Blown Bridges / Roadblock Complete (Executed)
-	EntityControlMeasure_ProtectionAreasAssaultCrossing                                                               Entity = 271300 // Protection Areas / Assault Crossing
-	EntityControlMeasure_ProtectionAreasDisused                                                                       Entity = 271400 // Protection Areas / {Disused}
-	EntityControlMeasure_ProtectionAreasFordEasy                                                                      Entity = 271500 // Protection Areas / Ford Easy
-	EntityControlMeasure_ProtectionAreasFordDifficult                                                                 Entity = 271600 // Protection Areas / Ford Difficult
-	EntityControlMeasure_ProtectionAreasBiologicalContaminatedArea                                                    Entity = 271700 // Protection Areas / Biological Contaminated Area
-	EntityControlMeasure_ProtectionAreasBiologicalContaminatedAreaToxicIndustrialMaterial                             Entity = 271701 // Protection Areas / Biological Contaminated Area / Toxic Industrial Material
-	EntityControlMeasure_ProtectionAreasChemicalContaminatedArea                                                      Entity = 271800 // Protection Areas / Chemical Contaminated Area
-	EntityControlMeasure_ProtectionAreasChemicalContaminatedAreaToxicIndustrialMaterial                               Entity = 271801 // Protection Areas / Chemical Contaminated Area / Toxic Industrial Material
-	EntityControlMeasure_ProtectionAreasNuclearContaminatedArea                                                       Entity = 271900 // Protection Areas / Nuclear Contaminated Area
-	EntityControlMeasure_ProtectionAreasRadiologicalContaminatedArea                                                  Entity = 272000 // Protection Areas / Radiological Contaminated Area
-	EntityControlMeasure_ProtectionAreasRadiologicalContaminatedAreaToxicIndustrialMaterial                           Entity = 272001 // Protection Areas / Radiological Contaminated Area / Toxic Industrial Material
-	EntityControlMeasure_ProtectionAreasMinimumSafeDistanceZone                                                       Entity = 272100 // Protection Areas / Minimum Safe Distance Zone
-	EntityControlMeasure_ProtectionAreasMinimumSafeDistanceZoneMultipleStrikesSTRIKWARN                               Entity = 272101 // Protection Areas / Minimum Safe Distance Zone / Multiple Strikes – STRIKWARN
-	EntityControlMeasure_ProtectionAreasRadiationDoseRateContourLines                                                 Entity = 272200 // Protection Areas / Radiation Dose Rate Contour Lines
-	EntityControlMeasure_ProtectionPoints                                                                             Entity = 280000 // Protection Points
-	EntityControlMeasure_ProtectionPointsAbatis                                                                       Entity = 280100 // Protection Points / Abatis
-	EntityControlMeasure_ProtectionPointsAntipersonnelMine                                                            Entity = 280200 // Protection Points / Antipersonnel Mine
-	EntityControlMeasure_ProtectionPointsAntipersonnelMineAntipersonnelMineWithDirectionalEffects                     Entity = 280201 // Protection Points / Antipersonnel Mine / Antipersonnel Mine with Directional Effects
-	EntityControlMeasure_ProtectionPointsAntitankMine                                                                 Entity = 280300 // Protection Points / Antitank Mine
-	EntityControlMeasure_ProtectionPointsAntitankMineWithAntiHandlingDevice                                           Entity = 280400 // Protection Points / Antitank Mine with Anti-handling Device
-	EntityControlMeasure_ProtectionPointsWideAreaAntitankMine                                                         Entity = 280500 // Protection Points / Wide Area Antitank Mine
-	EntityControlMeasure_ProtectionPointsUnspecifiedMine                                                              Entity = 280600 // Protection Points / Unspecified Mine
-	EntityControlMeasure_ProtectionPointsBoobyTrap                                                                    Entity = 280700 // Protection Points / Booby Trap
-	EntityControlMeasure_ProtectionPointsEngineerRegulatingPoint                                                      Entity = 280800 // Protection Points / Engineer Regulating Point
-	EntityControlMeasure_ProtectionPointsShelter                                                                      Entity = 280900 // Protection Points / Shelter
-	EntityControlMeasure_ProtectionPointsAboveGroundShelter                                                           Entity = 281000 // Protection Points / Above Ground Shelter
-	EntityControlMeasure_ProtectionPointsBelowGroundShelter                                                           Entity = 281100 // Protection Points / Below Ground Shelter
-	EntityControlMeasure_ProtectionPointsFort                                                                         Entity = 281200 // Protection Points / Fort
-	EntityControlMeasure_ProtectionPointsChemicalEvent                                                                Entity = 281300 // Protection Points / Chemical Event
-	EntityControlMeasure_ProtectionPointsChemicalEventToxicIndustrialMaterial                                         Entity = 281301 // Protection Points / Chemical Event / Toxic Industrial Material
-	EntityControlMeasure_ProtectionPointsBiologicalEvent                                                              Entity = 281400 // Protection Points / Biological Event
-	EntityControlMeasure_ProtectionPointsBiologicalEventToxicIndustrialMaterial                                       Entity = 281401 // Protection Points / Biological Event / Toxic Industrial Material
-	EntityControlMeasure_ProtectionPointsNuclearEvent                                                                 Entity = 281500 // Protection Points / Nuclear Event
-	EntityControlMeasure_ProtectionPointsNuclearFalloutProducingEvent                                                 Entity = 281600 // Protection Points / Nuclear Fallout Producing Event
-	EntityControlMeasure_ProtectionPointsRadiologicalEvent                                                            Entity = 281700 // Protection Points / Radiological Event
-	EntityControlMeasure_ProtectionPointsRadiologicalEventToxicIndustrialMaterial                                     Entity = 281701 // Protection Points / Radiological Event / Toxic Industrial Material
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSite                                              Entity = 281800 // Protection Points / General Decontamination Point/Site
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteAlternate                                     Entity = 281801 // Protection Points / General Decontamination Point/Site / Alternate
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteEquipment                                     Entity = 281802 // Protection Points / General Decontamination Point/Site / Equipment
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteTroop                                         Entity = 281803 // Protection Points / General Decontamination Point/Site / Troop
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteEquipmentTroop                                Entity = 281804 // Protection Points / General Decontamination Point/Site / Equipment/Troop
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteOperational                                   Entity = 281805 // Protection Points / General Decontamination Point/Site / Operational
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteThorough                                      Entity = 281806 // Protection Points / General Decontamination Point/Site / Thorough
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteMainEquipment                                 Entity = 281807 // Protection Points / General Decontamination Point/Site / Main Equipment
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteForwardTroop                                  Entity = 281808 // Protection Points / General Decontamination Point/Site / Forward Troop
-	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteWoundedPersonnel                              Entity = 281809 // Protection Points / General Decontamination Point/Site / Wounded Personnel
-	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstacles                             Entity = 281900 // Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles
-	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesFixedAndPrefabricated        Entity = 281901 // Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Fixed and Prefabricated
-	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesMovable                      Entity = 281902 // Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable
-	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesMovableAndPrefabricated      Entity = 281903 // Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable and Prefabricated
-	EntityControlMeasure_ProtectionPointsVerticalObstructions                                                         Entity = 282000 // Protection Points / Vertical Obstructions
-	EntityControlMeasure_ProtectionPointsVerticalObstructionsTowerLow                                                 Entity = 282001 // Protection Points / Vertical Obstructions / Tower, Low
-	EntityControlMeasure_ProtectionPointsVerticalObstructionsTowerHigh                                                Entity = 282002 // Protection Points / Vertical Obstructions / Tower, High
-	EntityControlMeasure_ProtectionPointsVerticalObstructionsOverheadWire                                             Entity = 282003 // Protection Points / Vertical Obstructions / Overhead Wire
-	EntityControlMeasure_ProtectionLines                                                                              Entity = 290000 // Protection Lines
-	EntityControlMeasure_ProtectionLinesObstacleLine                                                                  Entity = 290100 // Protection Lines / Obstacle Line
-	EntityControlMeasure_ProtectionLinesObstacleLineMineline                                                          Entity = 290101 // Protection Lines / Obstacle Line / Mineline
-	EntityControlMeasure_ProtectionLinesAntitankObstacles                                                             Entity = 290200 // Protection Lines / Antitank Obstacles
-	EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchUnderConstruction                                       Entity = 290201 // Protection Lines / Antitank Obstacles / Ditch Under Construction
-	EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchCompleted                                               Entity = 290202 // Protection Lines / Antitank Obstacles / Ditch Completed
-	EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchReinforcedWithAntitankMines                             Entity = 290203 // Protection Lines / Antitank Obstacles / Ditch Reinforced, with Antitank Mines
-	EntityControlMeasure_ProtectionLinesAntitankObstaclesAntitankWall                                                 Entity = 290204 // Protection Lines / Antitank Obstacles / Antitank Wall
-	EntityControlMeasure_ProtectionLinesWireObstacles                                                                 Entity = 290300 // Protection Lines / Wire Obstacles
-	EntityControlMeasure_ProtectionLinesWireObstaclesUnspecified                                                      Entity = 290301 // Protection Lines / Wire Obstacles / Unspecified
-	EntityControlMeasure_ProtectionLinesWireObstaclesSingleFence                                                      Entity = 290302 // Protection Lines / Wire Obstacles / Single Fence
-	EntityControlMeasure_ProtectionLinesWireObstaclesDoubleFence                                                      Entity = 290303 // Protection Lines / Wire Obstacles / Double Fence
-	EntityControlMeasure_ProtectionLinesWireObstaclesDoubleApronFence                                                 Entity = 290304 // Protection Lines / Wire Obstacles / Double Apron Fence
-	EntityControlMeasure_ProtectionLinesWireObstaclesLowWireFence                                                     Entity = 290305 // Protection Lines / Wire Obstacles / Low Wire Fence
-	EntityControlMeasure_ProtectionLinesWireObstaclesHighWireFence                                                    Entity = 290306 // Protection Lines / Wire Obstacles / High Wire Fence
-	EntityControlMeasure_ProtectionLinesWireObstaclesSingleConcertina                                                 Entity = 290307 // Protection Lines / Wire Obstacles / Single Concertina
-	EntityControlMeasure_ProtectionLinesWireObstaclesDoubleStrandConcertina                                           Entity = 290308 // Protection Lines / Wire Obstacles / Double Strand Concertina
-	EntityControlMeasure_ProtectionLinesWireObstaclesTripleStrandConcertina                                           Entity = 290309 // Protection Lines / Wire Obstacles / Triple Strand Concertina
-	EntityControlMeasure_ProtectionLinesMineCluster                                                                   Entity = 290400 // Protection Lines / Mine Cluster
-	EntityControlMeasure_ProtectionLinesTripWire                                                                      Entity = 290500 // Protection Lines / Trip Wire
-	EntityControlMeasure_ProtectionLinesLane                                                                          Entity = 290600 // Protection Lines / Lane
-	EntityControlMeasure_ProtectionLinesFerry                                                                         Entity = 290700 // Protection Lines / Ferry
-	EntityControlMeasure_ProtectionLinesRaftSite                                                                      Entity = 290800 // Protection Lines / Raft Site
-	EntityControlMeasure_ProtectionLinesFortifiedLine                                                                 Entity = 290900 // Protection Lines / Fortified Line
-	EntityControlMeasure_ProtectionLinesFightingPosition                                                              Entity = 291000 // Protection Lines / Fighting Position
-	EntityControlMeasure_IntelligenceLines                                                                            Entity = 300000 // Intelligence Lines
-	EntityControlMeasure_IntelligenceLinesIntelligenceCoordinationLine                                                Entity = 300100 // Intelligence Lines / Intelligence Coordination Line
-	EntityControlMeasure_SustainmentAreas                                                                             Entity = 310000 // Sustainment Areas
-	EntityControlMeasure_SustainmentAreasDetaineeHoldingArea                                                          Entity = 310100 // Sustainment Areas / Detainee Holding Area
-	EntityControlMeasure_SustainmentAreasEnemyPrisonerOfWarEPWHoldingArea                                             Entity = 310200 // Sustainment Areas / Enemy Prisoner of War (EPW) Holding Area
-	EntityControlMeasure_SustainmentAreasForwardArmingAndRefuelingPointFARP                                           Entity = 310300 // Sustainment Areas / Forward Arming and Refueling Point (FARP)
-	EntityControlMeasure_SustainmentAreasRefugeeHoldingArea                                                           Entity = 310400 // Sustainment Areas / Refugee Holding Area
-	EntityControlMeasure_SustainmentAreasRegimentalSupportArea                                                        Entity = 310500 // Sustainment Areas / Regimental Support Area
-	EntityControlMeasure_SustainmentAreasBrigadeSupportArea                                                           Entity = 310600 // Sustainment Areas / Brigade Support Area
-	EntityControlMeasure_SustainmentAreasDivisionSupportArea                                                          Entity = 310700 // Sustainment Areas / Division Support Area
-	EntityControlMeasure_SustainmentAreasCorpsSupportArea                                                             Entity = 310800 // Sustainment Areas / Corps Support Area
-	EntityControlMeasure_SustainmentPoints                                                                            Entity = 320000 // Sustainment Points
-	EntityControlMeasure_SustainmentPointsAmbulancePoints                                                             Entity = 320100 // Sustainment Points / Ambulance Points
-	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceExchangePoint                                       Entity = 320101 // Sustainment Points / Ambulance Points / Ambulance Exchange Point
-	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceControlPoint                                        Entity = 320102 // Sustainment Points / Ambulance Points / Ambulance Control Point
-	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceLoadPoint                                           Entity = 320103 // Sustainment Points / Ambulance Points / Ambulance Load Point
-	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceRelayPoint                                          Entity = 320104 // Sustainment Points / Ambulance Points / Ambulance Relay Point
-	EntityControlMeasure_SustainmentPointsAmmunitionSupplyPoint                                                       Entity = 320200 // Sustainment Points / Ammunition Supply Point
-	EntityControlMeasure_SustainmentPointsAmmunitionTransferAndHoldingPoint                                           Entity = 320300 // Sustainment Points / Ammunition Transfer and Holding Point
-	EntityControlMeasure_SustainmentPointsCannibalizationPoint                                                        Entity = 320400 // Sustainment Points / Cannibalization Point
-	EntityControlMeasure_SustainmentPointsCasualtyCollectionPoint                                                     Entity = 320500 // Sustainment Points / Casualty Collection Point
-	EntityControlMeasure_SustainmentPointsCivilianCollectionPoint                                                     Entity = 320600 // Sustainment Points / Civilian Collection Point
-	EntityControlMeasure_SustainmentPointsDetaineeCollectionPoint                                                     Entity = 320700 // Sustainment Points / Detainee Collection Point
-	EntityControlMeasure_SustainmentPointsEnemyPrisonerOfWarEPWCollectionPoint                                        Entity = 320800 // Sustainment Points / Enemy Prisoner of War (EPW) Collection Point
-	EntityControlMeasure_SustainmentPointsLogisticsReleasePointLRP                                                    Entity = 320900 // Sustainment Points / Logistics Release Point (LRP)
-	EntityControlMeasure_SustainmentPointsMaintenanceCollectionPointMCP                                               Entity = 321000 // Sustainment Points / Maintenance Collection Point (MCP)
-	EntityControlMeasure_SustainmentPointsMedicalEvacuationPointMEDEVACPickUpPoint                                    Entity = 321100 // Sustainment Points / Medical Evacuation Point (MEDEVAC) Pick-Up Point
-	EntityControlMeasure_SustainmentPointsRearmRefuelAndResupplyPointR3P                                              Entity = 321200 // Sustainment Points / Rearm, Refuel and Resupply Point (R3P)
-	EntityControlMeasure_SustainmentPointsRefuelOnTheMoveROMPoint                                                     Entity = 321300 // Sustainment Points / Refuel on the Move (ROM) Point
-	EntityControlMeasure_SustainmentPointsTrafficControlPostTCP                                                       Entity = 321400 // Sustainment Points / Traffic Control Post (TCP)
-	EntityControlMeasure_SustainmentPointsTrailerTransferPointTTP                                                     Entity = 321500 // Sustainment Points / Trailer Transfer Point (TTP)
-	EntityControlMeasure_SustainmentPointsUnitMaintenanceCollectionPointUNCP                                          Entity = 321600 // Sustainment Points / Unit Maintenance Collection Point (UNCP)
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPoint                                                          Entity = 321700 // Sustainment Points / General Supply Point
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassI                                                Entity = 321701 // Sustainment Points / General Supply Point / NATO Class I
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassII                                               Entity = 321702 // Sustainment Points / General Supply Point / NATO Class II
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassIII                                              Entity = 321703 // Sustainment Points / General Supply Point / NATO Class III
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassIV                                               Entity = 321704 // Sustainment Points / General Supply Point / NATO Class IV
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassV                                                Entity = 321705 // Sustainment Points / General Supply Point / NATO Class V
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOMultipleClass                                         Entity = 321706 // Sustainment Points / General Supply Point / NATO Multiple Class
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassI                                                  Entity = 321707 // Sustainment Points / General Supply Point / US Class I
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassII                                                 Entity = 321708 // Sustainment Points / General Supply Point / US Class II
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIII                                                Entity = 321709 // Sustainment Points / General Supply Point / US Class III
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIV                                                 Entity = 321710 // Sustainment Points / General Supply Point / US Class IV
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassV                                                  Entity = 321711 // Sustainment Points / General Supply Point / US Class V
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVI                                                 Entity = 321712 // Sustainment Points / General Supply Point / US Class VI
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVII                                                Entity = 321713 // Sustainment Points / General Supply Point / US Class VII
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVIII                                               Entity = 321714 // Sustainment Points / General Supply Point / US Class VIII
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIX                                                 Entity = 321715 // Sustainment Points / General Supply Point / US Class IX
-	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassX                                                  Entity = 321716 // Sustainment Points / General Supply Point / US Class X
-	EntityControlMeasure_SustainmentPointsMedicalSupplyPoint                                                          Entity = 321800 // Sustainment Points / Medical Supply Point
-	EntityControlMeasure_SustainmentPointsMortuaryAffairsCollectionPoint                                              Entity = 321900 // Sustainment Points / Mortuary Affairs Collection Point
-	EntityControlMeasure_SustainmentLines                                                                             Entity = 330000 // Sustainment Lines
-	EntityControlMeasure_SustainmentLinesMovingConvoy                                                                 Entity = 330100 // Sustainment Lines / Moving Convoy
-	EntityControlMeasure_SustainmentLinesHaltedConvoy                                                                 Entity = 330200 // Sustainment Lines / Halted Convoy
-	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSR                                                           Entity = 330300 // Sustainment Lines / Main Supply Route (MSR)
-	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSROneWayTraffic                                              Entity = 330301 // Sustainment Lines / Main Supply Route (MSR) / One Way Traffic
-	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSRTwoWayTraffic                                              Entity = 330302 // Sustainment Lines / Main Supply Route (MSR) / Two Way Traffic
-	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSRAlternatingTraffic                                         Entity = 330303 // Sustainment Lines / Main Supply Route (MSR) / Alternating Traffic
-	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASR                                                      Entity = 330400 // Sustainment Lines / Alternate Supply Route (ASR)
-	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASROneWayTraffic                                         Entity = 330401 // Sustainment Lines / Alternate Supply Route (ASR) / One Way Traffic
-	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASRTwoWayTraffic                                         Entity = 330402 // Sustainment Lines / Alternate Supply Route (ASR) / Two Way Traffic
-	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASRAlternatingTraffic                                    Entity = 330403 // Sustainment Lines / Alternate Supply Route (ASR) / Alternating Traffic
-	EntityControlMeasure_SustainmentLinesTrafficRoute                                                                 Entity = 330500 // Sustainment Lines / Traffic Route
-	EntityControlMeasure_SustainmentLinesTrafficRouteOneWayTraffic                                                    Entity = 330501 // Sustainment Lines / Traffic Route / One Way Traffic
-	EntityControlMeasure_SustainmentLinesTrafficRouteAlternatingTraffic                                               Entity = 330502 // Sustainment Lines / Traffic Route / Alternating Traffic
-	EntityControlMeasure_MissionTasks                                                                                 Entity = 340000 // Mission Tasks
-	EntityControlMeasure_MissionTasksBlock                                                                            Entity = 340100 // Mission Tasks / Block
-	EntityControlMeasure_MissionTasksBreach                                                                           Entity = 340200 // Mission Tasks / Breach
-	EntityControlMeasure_MissionTasksBypass                                                                           Entity = 340300 // Mission Tasks / Bypass
-	EntityControlMeasure_MissionTasksCanalize                                                                         Entity = 340400 // Mission Tasks / Canalize
-	EntityControlMeasure_MissionTasksClear                                                                            Entity = 340500 // Mission Tasks / Clear
-	EntityControlMeasure_MissionTasksCounterattack                                                                    Entity = 340600 // Mission Tasks / Counterattack
-	EntityControlMeasure_MissionTasksCounterattackByFire                                                              Entity = 340700 // Mission Tasks / Counterattack by Fire
-	EntityControlMeasure_MissionTasksDelay                                                                            Entity = 340800 // Mission Tasks / Delay
-	EntityControlMeasure_MissionTasksDestroy                                                                          Entity = 340900 // Mission Tasks / Destroy
-	EntityControlMeasure_MissionTasksDisrupt                                                                          Entity = 341000 // Mission Tasks / Disrupt
-	EntityControlMeasure_MissionTasksFix                                                                              Entity = 341100 // Mission Tasks / Fix
-	EntityControlMeasure_MissionTasksFollowAndAssume                                                                  Entity = 341200 // Mission Tasks / Follow and Assume
-	EntityControlMeasure_MissionTasksFollowAndSupport                                                                 Entity = 341300 // Mission Tasks / Follow and Support
-	EntityControlMeasure_MissionTasksInterdict                                                                        Entity = 341400 // Mission Tasks / Interdict
-	EntityControlMeasure_MissionTasksIsolate                                                                          Entity = 341500 // Mission Tasks / Isolate
-	EntityControlMeasure_MissionTasksNeutralize                                                                       Entity = 341600 // Mission Tasks / Neutralize
-	EntityControlMeasure_MissionTasksOccupy                                                                           Entity = 341700 // Mission Tasks / Occupy
-	EntityControlMeasure_MissionTasksPenetrate                                                                        Entity = 341800 // Mission Tasks / Penetrate
-	EntityControlMeasure_MissionTasksReliefInPlaceRIP                                                                 Entity = 341900 // Mission Tasks / Relief in Place (RIP)
-	EntityControlMeasure_MissionTasksRetireRetirement                                                                 Entity = 342000 // Mission Tasks / Retire/Retirement
-	EntityControlMeasure_MissionTasksSecure                                                                           Entity = 342100 // Mission Tasks / Secure
-	EntityControlMeasure_MissionTasksSecurity                                                                         Entity = 342200 // Mission Tasks / Security
-	EntityControlMeasure_MissionTasksSecurityCover                                                                    Entity = 342201 // Mission Tasks / Security / Cover
-	EntityControlMeasure_MissionTasksSecurityGuard                                                                    Entity = 342202 // Mission Tasks / Security / Guard
-	EntityControlMeasure_MissionTasksSecurityScreen                                                                   Entity = 342203 // Mission Tasks / Security / Screen
-	EntityControlMeasure_MissionTasksSeize                                                                            Entity = 342300 // Mission Tasks / Seize
-	EntityControlMeasure_MissionTasksWithdraw                                                                         Entity = 342400 // Mission Tasks / Withdraw
-	EntityControlMeasure_MissionTasksWithdrawUnderPressure                                                            Entity = 342500 // Mission Tasks / Withdraw Under Pressure
-	EntityControlMeasure_MissionTasksCordonAndKnock                                                                   Entity = 342600 // Mission Tasks / Cordon and Knock
-	EntityControlMeasure_MissionTasksCordonAndSearch                                                                  Entity = 342700 // Mission Tasks / Cordon and Search
-	EntityControlMeasure_MissionTasksSuppress                                                                         Entity = 342800 // Mission Tasks / Suppress
-	EntityControlMeasure_MissionTasksAdvanceToContact                                                                 Entity = 342900 // Mission Tasks / Advance to Contact
-	EntityControlMeasure_MissionTasksCapture                                                                          Entity = 343000 // Mission Tasks / Capture
-	EntityControlMeasure_MissionTasksExploitExploitation                                                              Entity = 343100 // Mission Tasks / Exploit/Exploitation
-	EntityControlMeasure_MissionTasksControl                                                                          Entity = 343200 // Mission Tasks / Control
-	EntityControlMeasure_MissionTasksDemonstrationDemonstrate                                                         Entity = 343300 // Mission Tasks / Demonstration/Demonstrate
-	EntityControlMeasure_MissionTasksDeny                                                                             Entity = 343400 // Mission Tasks / Deny
-	EntityControlMeasure_MissionTasksEnvelop                                                                          Entity = 343500 // Mission Tasks / Envelop
-	EntityControlMeasure_MissionTasksEscort                                                                           Entity = 343600 // Mission Tasks / Escort
-	EntityControlMeasure_MissionTasksExfiltrate                                                                       Entity = 343700 // Mission Tasks / Exfiltrate
-	EntityControlMeasure_MissionTasksInfiltrate                                                                       Entity = 343800 // Mission Tasks / Infiltrate
-	EntityControlMeasure_MissionTasksLocate                                                                           Entity = 343900 // Mission Tasks / Locate
-	EntityControlMeasure_MissionTasksPursue                                                                           Entity = 344000 // Mission Tasks / Pursue
-	EntityControlMeasure_MissionTasksForwardPassageOfLines                                                            Entity = 344100 // Mission Tasks / Forward Passage of Lines
-	EntityControlMeasure_MissionTasksRearwardPassageOfLines                                                           Entity = 344200 // Mission Tasks / Rearward Passage of Lines
-	EntityControlMeasure_MissionTasksDefeat                                                                           Entity = 344300 // Mission Tasks / Defeat
-	EntityControlMeasure_MissionTasksDisengage                                                                        Entity = 344400 // Mission Tasks / Disengage
-	EntityControlMeasure_MissionTasksEvacuate                                                                         Entity = 344500 // Mission Tasks / Evacuate
-	EntityControlMeasure_MissionTasksRecover                                                                          Entity = 344600 // Mission Tasks / Recover
-	EntityControlMeasure_MissionTasksTurn                                                                             Entity = 344700 // Mission Tasks / Turn
+	// EntityControlMeasure_CommandAndControlLines is Command and Control Lines.
+	EntityControlMeasure_CommandAndControlLines Entity = 110000
+
+	// EntityControlMeasure_CommandAndControlLinesBoundary is Command and Control Lines / Boundary.
+	EntityControlMeasure_CommandAndControlLinesBoundary Entity = 110100
+
+	// EntityControlMeasure_CommandAndControlLinesLightLine is Command and Control Lines / Light Line.
+	EntityControlMeasure_CommandAndControlLinesLightLine Entity = 110200
+
+	// EntityControlMeasure_CommandAndControlLinesEngineerWorkLine is Command and Control Lines / Engineer Work Line.
+	EntityControlMeasure_CommandAndControlLinesEngineerWorkLine Entity = 110300
+
+	// EntityControlMeasure_CommandAndControlLinesGeneric is Command and Control Lines / Generic.
+	EntityControlMeasure_CommandAndControlLinesGeneric Entity = 110400
+
+	// EntityControlMeasure_CommandAndControlLinesDecisionLine is Command and Control Lines / Decision Line.
+	EntityControlMeasure_CommandAndControlLinesDecisionLine Entity = 110500
+
+	// EntityControlMeasure_CommandAndControlAreas is Command and Control Areas.
+	EntityControlMeasure_CommandAndControlAreas Entity = 120000
+
+	// EntityControlMeasure_CommandAndControlAreasAreaOfOperations is Command and Control Areas / Area of Operations.
+	EntityControlMeasure_CommandAndControlAreasAreaOfOperations Entity = 120100
+
+	// EntityControlMeasure_CommandAndControlAreasNamedAreaOfInterest is Command and Control Areas / Named Area of Interest.
+	EntityControlMeasure_CommandAndControlAreasNamedAreaOfInterest Entity = 120200
+
+	// EntityControlMeasure_CommandAndControlAreasTargetedAreaOfInterest is Command and Control Areas / Targeted Area of Interest.
+	EntityControlMeasure_CommandAndControlAreasTargetedAreaOfInterest Entity = 120300
+
+	// EntityControlMeasure_CommandAndControlAreasAirfieldZone is Command and Control Areas / Airfield Zone.
+	EntityControlMeasure_CommandAndControlAreasAirfieldZone Entity = 120400
+
+	// EntityControlMeasure_CommandAndControlAreasBaseCamp is Command and Control Areas / Base Camp.
+	EntityControlMeasure_CommandAndControlAreasBaseCamp Entity = 120500
+
+	// EntityControlMeasure_CommandAndControlAreasGuerrillaBase is Command and Control Areas / Guerrilla Base.
+	EntityControlMeasure_CommandAndControlAreasGuerrillaBase Entity = 120600
+
+	// EntityControlMeasure_CommandAndControlAreasGeneric is Command and Control Areas / Generic.
+	EntityControlMeasure_CommandAndControlAreasGeneric Entity = 120700
+
+	// EntityControlMeasure_CommandAndControlAreasBridgeheadArea is Command and Control Areas / Bridgehead Area.
+	EntityControlMeasure_CommandAndControlAreasBridgeheadArea Entity = 120800
+
+	// EntityControlMeasure_CommandAndControlPoints is Command and Control Points.
+	EntityControlMeasure_CommandAndControlPoints Entity = 130000
+
+	// EntityControlMeasure_CommandAndControlPointsActionPointGeneral is Command and Control Points / Action Point (General).
+	EntityControlMeasure_CommandAndControlPointsActionPointGeneral Entity = 130100
+
+	// EntityControlMeasure_CommandAndControlPointsAmnestyPoint is Command and Control Points / Amnesty Point.
+	EntityControlMeasure_CommandAndControlPointsAmnestyPoint Entity = 130200
+
+	// EntityControlMeasure_CommandAndControlPointsCheckpoint is Command and Control Points / Checkpoint.
+	EntityControlMeasure_CommandAndControlPointsCheckpoint Entity = 130300
+
+	// EntityControlMeasure_CommandAndControlPointsCenterOfMainEffort is Command and Control Points / Center of Main Effort.
+	EntityControlMeasure_CommandAndControlPointsCenterOfMainEffort Entity = 130400
+
+	// EntityControlMeasure_CommandAndControlPointsContactPoint is Command and Control Points / Contact Point.
+	EntityControlMeasure_CommandAndControlPointsContactPoint Entity = 130500
+
+	// EntityControlMeasure_CommandAndControlPointsCoordinatingPoint is Command and Control Points / Coordinating Point.
+	EntityControlMeasure_CommandAndControlPointsCoordinatingPoint Entity = 130600
+
+	// EntityControlMeasure_CommandAndControlPointsDecisionPoint is Command and Control Points / Decision Point.
+	EntityControlMeasure_CommandAndControlPointsDecisionPoint Entity = 130700
+
+	// EntityControlMeasure_CommandAndControlPointsDistressCall is Command and Control Points / Distress Call.
+	EntityControlMeasure_CommandAndControlPointsDistressCall Entity = 130800
+
+	// EntityControlMeasure_CommandAndControlPointsEntryControlPoint is Command and Control Points / Entry Control Point.
+	EntityControlMeasure_CommandAndControlPointsEntryControlPoint Entity = 130900
+
+	// EntityControlMeasure_CommandAndControlPointsFlyToPoint is Command and Control Points / Fly-To-Point.
+	EntityControlMeasure_CommandAndControlPointsFlyToPoint Entity = 131000
+
+	// EntityControlMeasure_CommandAndControlPointsFlyToPointSonobuoy is Command and Control Points / Fly-To-Point / Sonobuoy.
+	EntityControlMeasure_CommandAndControlPointsFlyToPointSonobuoy Entity = 131001
+
+	// EntityControlMeasure_CommandAndControlPointsFlyToPointWeapon is Command and Control Points / Fly-To-Point / Weapon.
+	EntityControlMeasure_CommandAndControlPointsFlyToPointWeapon Entity = 131002
+
+	// EntityControlMeasure_CommandAndControlPointsFlyToPointNormal is Command and Control Points / Fly-To-Point / Normal.
+	EntityControlMeasure_CommandAndControlPointsFlyToPointNormal Entity = 131003
+
+	// EntityControlMeasure_CommandAndControlPointsLinkupPoint is Command and Control Points / Linkup Point.
+	EntityControlMeasure_CommandAndControlPointsLinkupPoint Entity = 131100
+
+	// EntityControlMeasure_CommandAndControlPointsPassagePoint is Command and Control Points / Passage Point.
+	EntityControlMeasure_CommandAndControlPointsPassagePoint Entity = 131200
+
+	// EntityControlMeasure_CommandAndControlPointsPointOfInterest is Command and Control Points / Point of Interest.
+	EntityControlMeasure_CommandAndControlPointsPointOfInterest Entity = 131300
+
+	// EntityControlMeasure_CommandAndControlPointsPointOfInterestLaunchEvent is Command and Control Points / Point of Interest / Launch Event.
+	EntityControlMeasure_CommandAndControlPointsPointOfInterestLaunchEvent Entity = 131301
+
+	// EntityControlMeasure_CommandAndControlPointsRallyPoint is Command and Control Points / Rally Point.
+	EntityControlMeasure_CommandAndControlPointsRallyPoint Entity = 131400
+
+	// EntityControlMeasure_CommandAndControlPointsReleasePoint is Command and Control Points / Release Point.
+	EntityControlMeasure_CommandAndControlPointsReleasePoint Entity = 131500
+
+	// EntityControlMeasure_CommandAndControlPointsStartPoint is Command and Control Points / Start Point.
+	EntityControlMeasure_CommandAndControlPointsStartPoint Entity = 131600
+
+	// EntityControlMeasure_CommandAndControlPointsSpecialPoint is Command and Control Points / Special Point.
+	EntityControlMeasure_CommandAndControlPointsSpecialPoint Entity = 131700
+
+	// EntityControlMeasure_CommandAndControlPointsWaypoint is Command and Control Points / Waypoint.
+	EntityControlMeasure_CommandAndControlPointsWaypoint Entity = 131800
+
+	// EntityControlMeasure_CommandAndControlPointsAirfield is Command and Control Points / Airfield.
+	EntityControlMeasure_CommandAndControlPointsAirfield Entity = 131900
+
+	// EntityControlMeasure_CommandAndControlPointsTargetHandover is Command and Control Points / Target Handover.
+	EntityControlMeasure_CommandAndControlPointsTargetHandover Entity = 132000
+
+	// EntityControlMeasure_CommandAndControlPointsKeyTerrain is Command and Control Points / Key Terrain.
+	EntityControlMeasure_CommandAndControlPointsKeyTerrain Entity = 132100
+
+	// EntityControlMeasure_CommandAndControlPointsControlPoint is Command and Control Points / Control Point.
+	EntityControlMeasure_CommandAndControlPointsControlPoint Entity = 132200
+
+	// EntityControlMeasure_CommandAndControlPointsVitalGround is Command and Control Points / Vital Ground.
+	EntityControlMeasure_CommandAndControlPointsVitalGround Entity = 132300
+
+	// EntityControlMeasure_ManeuverLines is Maneuver Lines.
+	EntityControlMeasure_ManeuverLines Entity = 140000
+
+	// EntityControlMeasure_ManeuverLinesForwardLineOfTroops is Maneuver Lines / Forward Line of Troops.
+	EntityControlMeasure_ManeuverLinesForwardLineOfTroops Entity = 140100
+
+	// EntityControlMeasure_ManeuverLinesDisused is Maneuver Lines / {Disused}.
+	EntityControlMeasure_ManeuverLinesDisused Entity = 140200
+
+	// EntityControlMeasure_ManeuverLinesPhaseLine is Maneuver Lines / Phase Line.
+	EntityControlMeasure_ManeuverLinesPhaseLine Entity = 140300
+
+	// EntityControlMeasure_ManeuverLinesForwardEdgeOfTheBattleArea is Maneuver Lines / Forward Edge of the Battle Area.
+	EntityControlMeasure_ManeuverLinesForwardEdgeOfTheBattleArea Entity = 140400
+
+	// EntityControlMeasure_ManeuverLinesPrincipleDirectionOfFire is Maneuver Lines / Principle Direction of Fire.
+	EntityControlMeasure_ManeuverLinesPrincipleDirectionOfFire Entity = 140500
+
+	// EntityControlMeasure_ManeuverLinesDirectionOfAttack is Maneuver Lines / Direction of Attack.
+	EntityControlMeasure_ManeuverLinesDirectionOfAttack Entity = 140600
+
+	// EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlyAviation is Maneuver Lines / Direction of Attack / Friendly Aviation.
+	EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlyAviation Entity = 140601
+
+	// EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlyMainAttackDecisive is Maneuver Lines / Direction of Attack / Friendly Main Attack /Decisive.
+	EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlyMainAttackDecisive Entity = 140602
+
+	// EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlySupportingAttack is Maneuver Lines / Direction of Attack / Friendly Supporting Attack.
+	EntityControlMeasure_ManeuverLinesDirectionOfAttackFriendlySupportingAttack Entity = 140603
+
+	// EntityControlMeasure_ManeuverLinesDirectionOfAttackFeint is Maneuver Lines / Direction of Attack / Feint.
+	EntityControlMeasure_ManeuverLinesDirectionOfAttackFeint Entity = 140605
+
+	// EntityControlMeasure_ManeuverLinesFinalCoordinationLine is Maneuver Lines / Final Coordination Line.
+	EntityControlMeasure_ManeuverLinesFinalCoordinationLine Entity = 140700
+
+	// EntityControlMeasure_ManeuverLinesInfiltrationLane is Maneuver Lines / Infiltration Lane.
+	EntityControlMeasure_ManeuverLinesInfiltrationLane Entity = 140800
+
+	// EntityControlMeasure_ManeuverLinesLimitOfAdvance is Maneuver Lines / Limit of Advance.
+	EntityControlMeasure_ManeuverLinesLimitOfAdvance Entity = 140900
+
+	// EntityControlMeasure_ManeuverLinesLineOfDeparture is Maneuver Lines / Line of Departure.
+	EntityControlMeasure_ManeuverLinesLineOfDeparture Entity = 141000
+
+	// EntityControlMeasure_ManeuverLinesLineOfDepartureLineOfContact is Maneuver Lines / Line of Departure/Line of Contact.
+	EntityControlMeasure_ManeuverLinesLineOfDepartureLineOfContact Entity = 141100
+
+	// EntityControlMeasure_ManeuverLinesProbableLineOfDeployment is Maneuver Lines / Probable Line of Deployment.
+	EntityControlMeasure_ManeuverLinesProbableLineOfDeployment Entity = 141200
+
+	// EntityControlMeasure_ManeuverLinesAirheadLine is Maneuver Lines / Airhead Line.
+	EntityControlMeasure_ManeuverLinesAirheadLine Entity = 141300
+
+	// EntityControlMeasure_ManeuverLinesBridgeheadLine is Maneuver Lines / Bridgehead Line.
+	EntityControlMeasure_ManeuverLinesBridgeheadLine Entity = 141400
+
+	// EntityControlMeasure_ManeuverLinesHoldingLine is Maneuver Lines / Holding Line.
+	EntityControlMeasure_ManeuverLinesHoldingLine Entity = 141500
+
+	// EntityControlMeasure_ManeuverLinesReleaseLine is Maneuver Lines / Release Line.
+	EntityControlMeasure_ManeuverLinesReleaseLine Entity = 141600
+
+	// EntityControlMeasure_ManeuverLinesAmbush is Maneuver Lines / Ambush.
+	EntityControlMeasure_ManeuverLinesAmbush Entity = 141700
+
+	// EntityControlMeasure_ManeuverLinesHoldoverLine is Maneuver Lines / Holdover Line.
+	EntityControlMeasure_ManeuverLinesHoldoverLine Entity = 141800
+
+	// EntityControlMeasure_ManeuverLinesBattleHandoverLine is Maneuver Lines / Battle Handover Line.
+	EntityControlMeasure_ManeuverLinesBattleHandoverLine Entity = 141900
+
+	// EntityControlMeasure_ManeuverLinesNamedAreaOfInterestLine is Maneuver Lines / Named Area of Interest Line.
+	EntityControlMeasure_ManeuverLinesNamedAreaOfInterestLine Entity = 142000
+
+	// EntityControlMeasure_ManeuverLinesMobilityCorridor is Maneuver Lines / Mobility Corridor.
+	EntityControlMeasure_ManeuverLinesMobilityCorridor Entity = 142100
+
+	// EntityControlMeasure_ManeuverAreas is Maneuver Areas.
+	EntityControlMeasure_ManeuverAreas Entity = 150000
+
+	// EntityControlMeasure_ManeuverAreasArea is Maneuver Areas / Area.
+	EntityControlMeasure_ManeuverAreasArea Entity = 150100
+
+	// EntityControlMeasure_ManeuverAreasAssemblyArea is Maneuver Areas / Assembly Area.
+	EntityControlMeasure_ManeuverAreasAssemblyArea Entity = 150200
+
+	// EntityControlMeasure_ManeuverAreasDisused is Maneuver Areas / {Disused}.
+	EntityControlMeasure_ManeuverAreasDisused Entity = 150300
+
+	// EntityControlMeasure_ManeuverAreasDisused_150400 is Maneuver Areas / {Disused}.
+	EntityControlMeasure_ManeuverAreasDisused_150400 Entity = 150400
+
+	// EntityControlMeasure_ManeuverAreasActionArea is Maneuver Areas / Action Area.
+	EntityControlMeasure_ManeuverAreasActionArea Entity = 150500
+
+	// EntityControlMeasure_ManeuverAreasActionAreaJointTacticalActionAreaJTAA is Maneuver Areas / Action Area / Joint Tactical Action Area (JTAA).
+	EntityControlMeasure_ManeuverAreasActionAreaJointTacticalActionAreaJTAA Entity = 150501
+
+	// EntityControlMeasure_ManeuverAreasActionAreaSubmarineActionAreaSAA is Maneuver Areas / Action Area / Submarine Action Area (SAA).
+	EntityControlMeasure_ManeuverAreasActionAreaSubmarineActionAreaSAA Entity = 150502
+
+	// EntityControlMeasure_ManeuverAreasActionAreaSubmarineGeneratedActionAreaSGAA is Maneuver Areas / Action Area / Submarine-Generated Action Area (SGAA).
+	EntityControlMeasure_ManeuverAreasActionAreaSubmarineGeneratedActionAreaSGAA Entity = 150503
+
+	// EntityControlMeasure_ManeuverAreasDropZone is Maneuver Areas / Drop Zone.
+	EntityControlMeasure_ManeuverAreasDropZone Entity = 150600
+
+	// EntityControlMeasure_ManeuverAreasExtractionZone is Maneuver Areas / Extraction Zone.
+	EntityControlMeasure_ManeuverAreasExtractionZone Entity = 150700
+
+	// EntityControlMeasure_ManeuverAreasLandingZone is Maneuver Areas / Landing Zone.
+	EntityControlMeasure_ManeuverAreasLandingZone Entity = 150800
+
+	// EntityControlMeasure_ManeuverAreasPickUpZone is Maneuver Areas / Pick–Up Zone.
+	EntityControlMeasure_ManeuverAreasPickUpZone Entity = 150900
+
+	// EntityControlMeasure_ManeuverAreasFortifiedArea is Maneuver Areas / Fortified Area.
+	EntityControlMeasure_ManeuverAreasFortifiedArea Entity = 151000
+
+	// EntityControlMeasure_ManeuverAreasLimitedAccessArea is Maneuver Areas / Limited Access Area.
+	EntityControlMeasure_ManeuverAreasLimitedAccessArea Entity = 151100
+
+	// EntityControlMeasure_ManeuverAreasBattlePosition is Maneuver Areas / Battle Position.
+	EntityControlMeasure_ManeuverAreasBattlePosition Entity = 151200
+
+	// EntityControlMeasure_ManeuverAreasBattlePositionPreparedPButNotOccupied is Maneuver Areas / Battle Position / Prepared (P) but not Occupied.
+	EntityControlMeasure_ManeuverAreasBattlePositionPreparedPButNotOccupied Entity = 151202
+
+	// EntityControlMeasure_ManeuverAreasBattlePositionStrongPoint is Maneuver Areas / Battle Position / Strong Point.
+	EntityControlMeasure_ManeuverAreasBattlePositionStrongPoint Entity = 151203
+
+	// EntityControlMeasure_ManeuverAreasBattlePositionContain is Maneuver Areas / Battle Position / Contain.
+	EntityControlMeasure_ManeuverAreasBattlePositionContain Entity = 151204
+
+	// EntityControlMeasure_ManeuverAreasBattlePositionRetain is Maneuver Areas / Battle Position / Retain.
+	EntityControlMeasure_ManeuverAreasBattlePositionRetain Entity = 151205
+
+	// EntityControlMeasure_ManeuverAreasEngagementAreaEA is Maneuver Areas / Engagement Area (EA).
+	EntityControlMeasure_ManeuverAreasEngagementAreaEA Entity = 151300
+
+	// EntityControlMeasure_ManeuverAreasAxisOfAdvance is Maneuver Areas / Axis of Advance.
+	EntityControlMeasure_ManeuverAreasAxisOfAdvance Entity = 151400
+
+	// EntityControlMeasure_ManeuverAreasAxisOfAdvanceFriendlyAirborneAviation is Maneuver Areas / Axis of Advance / Friendly Airborne/Aviation.
+	EntityControlMeasure_ManeuverAreasAxisOfAdvanceFriendlyAirborneAviation Entity = 151401
+
+	// EntityControlMeasure_ManeuverAreasAxisOfAdvanceAttackHelicopter is Maneuver Areas / Axis of Advance / Attack Helicopter.
+	EntityControlMeasure_ManeuverAreasAxisOfAdvanceAttackHelicopter Entity = 151402
+
+	// EntityControlMeasure_ManeuverAreasAxisOfAdvanceMainAttack is Maneuver Areas / Axis of Advance / Main Attack.
+	EntityControlMeasure_ManeuverAreasAxisOfAdvanceMainAttack Entity = 151403
+
+	// EntityControlMeasure_ManeuverAreasAxisOfAdvanceSupportingAttack is Maneuver Areas / Axis of Advance / Supporting Attack.
+	EntityControlMeasure_ManeuverAreasAxisOfAdvanceSupportingAttack Entity = 151404
+
+	// EntityControlMeasure_ManeuverAreasAxisOfAdvanceFeint is Maneuver Areas / Axis of Advance / Feint.
+	EntityControlMeasure_ManeuverAreasAxisOfAdvanceFeint Entity = 151406
+
+	// EntityControlMeasure_ManeuverAreasAssaultPosition is Maneuver Areas / Assault Position.
+	EntityControlMeasure_ManeuverAreasAssaultPosition Entity = 151500
+
+	// EntityControlMeasure_ManeuverAreasAttackPosition is Maneuver Areas / Attack Position.
+	EntityControlMeasure_ManeuverAreasAttackPosition Entity = 151600
+
+	// EntityControlMeasure_ManeuverAreasObjectiveArea is Maneuver Areas / Objective Area.
+	EntityControlMeasure_ManeuverAreasObjectiveArea Entity = 151700
+
+	// EntityControlMeasure_ManeuverAreasEncirclement is Maneuver Areas / Encirclement.
+	EntityControlMeasure_ManeuverAreasEncirclement Entity = 151800
+
+	// EntityControlMeasure_ManeuverAreasPenetrationBox is Maneuver Areas / Penetration Box.
+	EntityControlMeasure_ManeuverAreasPenetrationBox Entity = 151900
+
+	// EntityControlMeasure_ManeuverAreasAttackByFire is Maneuver Areas / Attack by Fire.
+	EntityControlMeasure_ManeuverAreasAttackByFire Entity = 152000
+
+	// EntityControlMeasure_ManeuverAreasSupportByFire is Maneuver Areas / Support by Fire.
+	EntityControlMeasure_ManeuverAreasSupportByFire Entity = 152100
+
+	// EntityControlMeasure_ManeuverAreasSearchAreaReconnaissanceArea is Maneuver Areas / Search Area/Reconnaissance Area.
+	EntityControlMeasure_ManeuverAreasSearchAreaReconnaissanceArea Entity = 152200
+
+	// EntityControlMeasure_ManeuverAreasAvenueOfApproach is Maneuver Areas / Avenue of Approach.
+	EntityControlMeasure_ManeuverAreasAvenueOfApproach Entity = 152300
+
+	// EntityControlMeasure_ManeuverAreasRestrictedTerrain is Maneuver Areas / Restricted Terrain.
+	EntityControlMeasure_ManeuverAreasRestrictedTerrain Entity = 152400
+
+	// EntityControlMeasure_ManeuverAreasSeverelyRestrictedTerrain is Maneuver Areas / Severely Restricted Terrain.
+	EntityControlMeasure_ManeuverAreasSeverelyRestrictedTerrain Entity = 152500
+
+	// EntityControlMeasure_ManeuverPoints is Maneuver Points.
+	EntityControlMeasure_ManeuverPoints Entity = 160000
+
+	// EntityControlMeasure_ManeuverPointsObservationPostOutpostUnspecified is Maneuver Points / Observation Post/Outpost (unspecified).
+	EntityControlMeasure_ManeuverPointsObservationPostOutpostUnspecified Entity = 160100
+
+	// EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecified is Maneuver Points / Observation Post/Outpost (specified).
+	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecified Entity = 160200
+
+	// EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedReconnaissanceOutpost is Maneuver Points / Observation Post/Outpost (specified) / Reconnaissance Outpost.
+	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedReconnaissanceOutpost Entity = 160201
+
+	// EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedForwardObserverSpotterOutpostPosition is Maneuver Points / Observation Post/Outpost (specified) / Forward Observer/Spotter Outpost/Position.
+	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedForwardObserverSpotterOutpostPosition Entity = 160202
+
+	// EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedCBRNObservationOutpost is Maneuver Points / Observation Post/Outpost (specified) / CBRN Observation Outpost.
+	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedCBRNObservationOutpost Entity = 160203
+
+	// EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedSensorOutpostListeningPost is Maneuver Points / Observation Post/Outpost (specified) / Sensor Outpost /Listening Post.
+	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedSensorOutpostListeningPost Entity = 160204
+
+	// EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedCombatOutpost is Maneuver Points / Observation Post/Outpost (specified) / Combat Outpost.
+	EntityControlMeasure_ManeuverPointsObservationPostOutpostSpecifiedCombatOutpost Entity = 160205
+
+	// EntityControlMeasure_ManeuverPointsTargetReferencePoint is Maneuver Points / Target Reference Point.
+	EntityControlMeasure_ManeuverPointsTargetReferencePoint Entity = 160300
+
+	// EntityControlMeasure_ManeuverPointsPointOfDeparture is Maneuver Points / Point of Departure.
+	EntityControlMeasure_ManeuverPointsPointOfDeparture Entity = 160400
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreas is Airspace Control (Corridors) Areas.
+	EntityControlMeasure_AirspaceControlCorridorsAreas Entity = 170000
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasAirCorridor is Airspace Control (Corridors) Areas / Air Corridor.
+	EntityControlMeasure_AirspaceControlCorridorsAreasAirCorridor Entity = 170100
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasLowLevelTransitRoute is Airspace Control (Corridors) Areas / Low Level Transit Route.
+	EntityControlMeasure_AirspaceControlCorridorsAreasLowLevelTransitRoute Entity = 170200
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasMinimumRiskRoute is Airspace Control (Corridors) Areas / Minimum–Risk Route.
+	EntityControlMeasure_AirspaceControlCorridorsAreasMinimumRiskRoute Entity = 170300
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasSafeLane is Airspace Control (Corridors) Areas / Safe Lane.
+	EntityControlMeasure_AirspaceControlCorridorsAreasSafeLane Entity = 170400
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasStandardUseArmyAircraftFlightRoute is Airspace Control (Corridors) Areas / Standard Use Army Aircraft Flight Route.
+	EntityControlMeasure_AirspaceControlCorridorsAreasStandardUseArmyAircraftFlightRoute Entity = 170500
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasTransitCorridor is Airspace Control (Corridors) Areas / Transit Corridor.
+	EntityControlMeasure_AirspaceControlCorridorsAreasTransitCorridor Entity = 170600
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasSpecialCorridor is Airspace Control (Corridors) Areas / Special Corridor.
+	EntityControlMeasure_AirspaceControlCorridorsAreasSpecialCorridor Entity = 170700
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasBaseDefenseZone is Airspace Control (Corridors) Areas / Base Defense Zone.
+	EntityControlMeasure_AirspaceControlCorridorsAreasBaseDefenseZone Entity = 170800
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasHighDensityAirspaceControlZone is Airspace Control (Corridors) Areas / High–Density Airspace Control Zone.
+	EntityControlMeasure_AirspaceControlCorridorsAreasHighDensityAirspaceControlZone Entity = 170900
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasRestrictedOperationsZoneROZ is Airspace Control (Corridors) Areas / Restricted Operations Zone (ROZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasRestrictedOperationsZoneROZ Entity = 171000
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasAirToAirRestrictedOperatingZoneAARROZ is Airspace Control (Corridors) Areas / Air-to-Air Restricted Operating Zone (AARROZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasAirToAirRestrictedOperatingZoneAARROZ Entity = 171100
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasUnmannedAircraftRestrictedOperatingZoneUAROZ is Airspace Control (Corridors) Areas / Unmanned Aircraft Restricted Operating Zone (UA-ROZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasUnmannedAircraftRestrictedOperatingZoneUAROZ Entity = 171200
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasWeaponEngagementZone is Airspace Control (Corridors) Areas / Weapon Engagement Zone.
+	EntityControlMeasure_AirspaceControlCorridorsAreasWeaponEngagementZone Entity = 171300
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasFighterEngagementZoneFEZ is Airspace Control (Corridors) Areas / Fighter Engagement Zone (FEZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasFighterEngagementZoneFEZ Entity = 171400
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasJointEngagementZoneJEZ is Airspace Control (Corridors) Areas / Joint Engagement Zone (JEZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasJointEngagementZoneJEZ Entity = 171500
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasMissileEngagementZoneMEZ is Airspace Control (Corridors) Areas / Missile Engagement Zone (MEZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasMissileEngagementZoneMEZ Entity = 171600
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasLowAltitudeMissileEngagementZoneLOMEZ is Airspace Control (Corridors) Areas / Low Altitude Missile Engagement Zone (LOMEZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasLowAltitudeMissileEngagementZoneLOMEZ Entity = 171700
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasHighAltitudeMissileEngagementZoneHIMEZ is Airspace Control (Corridors) Areas / High Altitude Missile Engagement Zone (HIMEZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasHighAltitudeMissileEngagementZoneHIMEZ Entity = 171800
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasShortRangeAirDefenseEngagementZoneSHORADEZ is Airspace Control (Corridors) Areas / Short Range Air Defense Engagement Zone (SHORADEZ).
+	EntityControlMeasure_AirspaceControlCorridorsAreasShortRangeAirDefenseEngagementZoneSHORADEZ Entity = 171900
+
+	// EntityControlMeasure_AirspaceControlCorridorsAreasWeaponsFreeZone is Airspace Control (Corridors) Areas / Weapons Free Zone.
+	EntityControlMeasure_AirspaceControlCorridorsAreasWeaponsFreeZone Entity = 172000
+
+	// EntityControlMeasure_AirspaceControlPoints is Airspace Control Points.
+	EntityControlMeasure_AirspaceControlPoints Entity = 180000
+
+	// EntityControlMeasure_AirspaceControlPointsAirControlPoint is Airspace Control Points / Air Control Point.
+	EntityControlMeasure_AirspaceControlPointsAirControlPoint Entity = 180100
+
+	// EntityControlMeasure_AirspaceControlPointsCommunicationsCheckpoint is Airspace Control Points / Communications Checkpoint.
+	EntityControlMeasure_AirspaceControlPointsCommunicationsCheckpoint Entity = 180200
+
+	// EntityControlMeasure_AirspaceControlPointsIsolatedPersonnelRecoveryPoint is Airspace Control Points / Isolated Personnel Recovery Point.
+	EntityControlMeasure_AirspaceControlPointsIsolatedPersonnelRecoveryPoint Entity = 180300
+
+	// EntityControlMeasure_AirspaceControlPointsPopUpPoint is Airspace Control Points / Pop–up Point.
+	EntityControlMeasure_AirspaceControlPointsPopUpPoint Entity = 180400
+
+	// EntityControlMeasure_AirspaceControlPointsAirControlRendezvous is Airspace Control Points / Air Control Rendezvous.
+	EntityControlMeasure_AirspaceControlPointsAirControlRendezvous Entity = 180500
+
+	// EntityControlMeasure_AirspaceControlPointsTacticalAirNavigationTACAN is Airspace Control Points / Tactical Air Navigation (TACAN).
+	EntityControlMeasure_AirspaceControlPointsTacticalAirNavigationTACAN Entity = 180600
+
+	// EntityControlMeasure_AirspaceControlPointsCombatAirPatrolCAPStation is Airspace Control Points / Combat Air Patrol (CAP)Station.
+	EntityControlMeasure_AirspaceControlPointsCombatAirPatrolCAPStation Entity = 180700
+
+	// EntityControlMeasure_AirspaceControlPointsAirborneEarlyWarningAEWStation is Airspace Control Points / Airborne Early Warning (AEW) Station.
+	EntityControlMeasure_AirspaceControlPointsAirborneEarlyWarningAEWStation Entity = 180800
+
+	// EntityControlMeasure_AirspaceControlPointsASWHeloAndFWStation is Airspace Control Points / ASW (Helo and F/W) Station.
+	EntityControlMeasure_AirspaceControlPointsASWHeloAndFWStation Entity = 180900
+
+	// EntityControlMeasure_AirspaceControlPointsStrikeInitialPoint is Airspace Control Points / Strike Initial Point.
+	EntityControlMeasure_AirspaceControlPointsStrikeInitialPoint Entity = 181000
+
+	// EntityControlMeasure_AirspaceControlPointsReplenishmentStation is Airspace Control Points / Replenishment Station.
+	EntityControlMeasure_AirspaceControlPointsReplenishmentStation Entity = 181100
+
+	// EntityControlMeasure_AirspaceControlPointsTanking is Airspace Control Points / Tanking.
+	EntityControlMeasure_AirspaceControlPointsTanking Entity = 181200
+
+	// EntityControlMeasure_AirspaceControlPointsAntisubmarineWarfareRotaryWing is Airspace Control Points / Antisubmarine Warfare, Rotary Wing.
+	EntityControlMeasure_AirspaceControlPointsAntisubmarineWarfareRotaryWing Entity = 181300
+
+	// EntityControlMeasure_AirspaceControlPointsSurfaceCombatAirPatrolSUCAPFixedWing is Airspace Control Points / Surface Combat Air Patrol (SUCAP) – Fixed Wing.
+	EntityControlMeasure_AirspaceControlPointsSurfaceCombatAirPatrolSUCAPFixedWing Entity = 181400
+
+	// EntityControlMeasure_AirspaceControlPointsSUCAPRotaryWing is Airspace Control Points / SUCAP – Rotary Wing.
+	EntityControlMeasure_AirspaceControlPointsSUCAPRotaryWing Entity = 181500
+
+	// EntityControlMeasure_AirspaceControlPointsMIWFixedWing is Airspace Control Points / MIW – Fixed Wing.
+	EntityControlMeasure_AirspaceControlPointsMIWFixedWing Entity = 181600
+
+	// EntityControlMeasure_AirspaceControlPointsMIWRotaryWing is Airspace Control Points / MIW – Rotary Wing.
+	EntityControlMeasure_AirspaceControlPointsMIWRotaryWing Entity = 181700
+
+	// EntityControlMeasure_AirspaceControlPointsTomcat is Airspace Control Points / Tomcat.
+	EntityControlMeasure_AirspaceControlPointsTomcat Entity = 181800
+
+	// EntityControlMeasure_AirspaceControlPointsRescue is Airspace Control Points / Rescue.
+	EntityControlMeasure_AirspaceControlPointsRescue Entity = 181900
+
+	// EntityControlMeasure_AirspaceControlPointsUnmannedAerialSystemUASUA is Airspace Control Points / Unmanned Aerial System (UAS/UA).
+	EntityControlMeasure_AirspaceControlPointsUnmannedAerialSystemUASUA Entity = 182000
+
+	// EntityControlMeasure_AirspaceControlPointsVerticalTakeoffAndLandingVTOLTacticalUnmannedAircraftVTUA is Airspace Control Points / Vertical Takeoff and Landing (VTOL) Tactical Unmanned Aircraft (VTUA).
+	EntityControlMeasure_AirspaceControlPointsVerticalTakeoffAndLandingVTOLTacticalUnmannedAircraftVTUA Entity = 182100
+
+	// EntityControlMeasure_AirspaceControlPointsOrbit is Airspace Control Points / Orbit.
+	EntityControlMeasure_AirspaceControlPointsOrbit Entity = 182200
+
+	// EntityControlMeasure_AirspaceControlPointsOrbitFigureEight is Airspace Control Points / Orbit – Figure Eight.
+	EntityControlMeasure_AirspaceControlPointsOrbitFigureEight Entity = 182300
+
+	// EntityControlMeasure_AirspaceControlPointsOrbitRaceTrack is Airspace Control Points / Orbit – Race Track.
+	EntityControlMeasure_AirspaceControlPointsOrbitRaceTrack Entity = 182400
+
+	// EntityControlMeasure_AirspaceControlPointsOrbitRandomClosed is Airspace Control Points / Orbit – Random Closed.
+	EntityControlMeasure_AirspaceControlPointsOrbitRandomClosed Entity = 182500
+
+	// EntityControlMeasure_AirspaceControlPointsIsolatedPersonnelLocation is Airspace Control Points / Isolated Personnel Location.
+	EntityControlMeasure_AirspaceControlPointsIsolatedPersonnelLocation Entity = 182600
+
+	// EntityControlMeasure_AirspaceControlLines is Airspace Control Lines.
+	EntityControlMeasure_AirspaceControlLines Entity = 190000
+
+	// EntityControlMeasure_AirspaceControlLinesIdentificationFriendOrFoeIFFOffLine is Airspace Control Lines / Identification Friend or Foe (IFF) Off Line.
+	EntityControlMeasure_AirspaceControlLinesIdentificationFriendOrFoeIFFOffLine Entity = 190100
+
+	// EntityControlMeasure_AirspaceControlLinesIdentificationFriendOrFoeIFFOnLine is Airspace Control Lines / Identification Friend or Foe (IFF) On Line.
+	EntityControlMeasure_AirspaceControlLinesIdentificationFriendOrFoeIFFOnLine Entity = 190200
+
+	// EntityControlMeasure_MaritimeControlAreas is Maritime Control Areas.
+	EntityControlMeasure_MaritimeControlAreas Entity = 200000
+
+	// EntityControlMeasure_MaritimeControlAreasLaunchArea is Maritime Control Areas / Launch Area.
+	EntityControlMeasure_MaritimeControlAreasLaunchArea Entity = 200100
+
+	// EntityControlMeasure_MaritimeControlAreasLaunchAreaEllipseCircle is Maritime Control Areas / Launch Area / Ellipse/Circle.
+	EntityControlMeasure_MaritimeControlAreasLaunchAreaEllipseCircle Entity = 200101
+
+	// EntityControlMeasure_MaritimeControlAreasDefendedArea is Maritime Control Areas / Defended Area.
+	EntityControlMeasure_MaritimeControlAreasDefendedArea Entity = 200200
+
+	// EntityControlMeasure_MaritimeControlAreasDefendedAreaEllipseCircle is Maritime Control Areas / Defended Area / Ellipse/Circle.
+	EntityControlMeasure_MaritimeControlAreasDefendedAreaEllipseCircle Entity = 200201
+
+	// EntityControlMeasure_MaritimeControlAreasDefendedAreaRectangle is Maritime Control Areas / Defended Area / Rectangle.
+	EntityControlMeasure_MaritimeControlAreasDefendedAreaRectangle Entity = 200202
+
+	// EntityControlMeasure_MaritimeControlAreasNoAttackNOTACKZone is Maritime Control Areas / No Attack (NOTACK) Zone.
+	EntityControlMeasure_MaritimeControlAreasNoAttackNOTACKZone Entity = 200300
+
+	// EntityControlMeasure_MaritimeControlAreasShipAreaOfInterest is Maritime Control Areas / Ship Area of Interest.
+	EntityControlMeasure_MaritimeControlAreasShipAreaOfInterest Entity = 200400
+
+	// EntityControlMeasure_MaritimeControlAreasShipAreaOfInterestEllipseCircle is Maritime Control Areas / Ship Area of Interest / Ellipse/Circle.
+	EntityControlMeasure_MaritimeControlAreasShipAreaOfInterestEllipseCircle Entity = 200401
+
+	// EntityControlMeasure_MaritimeControlAreasShipAreaOfInterestRectangle is Maritime Control Areas / Ship Area of Interest / Rectangle.
+	EntityControlMeasure_MaritimeControlAreasShipAreaOfInterestRectangle Entity = 200402
+
+	// EntityControlMeasure_MaritimeControlAreasActiveManeuverArea is Maritime Control Areas / Active Maneuver Area.
+	EntityControlMeasure_MaritimeControlAreasActiveManeuverArea Entity = 200500
+
+	// EntityControlMeasure_MaritimeControlAreasCuedAcquisitionDoctrine is Maritime Control Areas / Cued Acquisition Doctrine.
+	EntityControlMeasure_MaritimeControlAreasCuedAcquisitionDoctrine Entity = 200600
+
+	// EntityControlMeasure_MaritimeControlAreasRadarSearchDoctrine is Maritime Control Areas / Radar Search Doctrine.
+	EntityControlMeasure_MaritimeControlAreasRadarSearchDoctrine Entity = 200700
+
+	// EntityControlMeasure_MaritimeControlPoints is Maritime Control Points.
+	EntityControlMeasure_MaritimeControlPoints Entity = 210000
+
+	// EntityControlMeasure_MaritimeControlPointsPlanShip is Maritime Control Points / Plan Ship.
+	EntityControlMeasure_MaritimeControlPointsPlanShip Entity = 210100
+
+	// EntityControlMeasure_MaritimeControlPointsAimPoint is Maritime Control Points / Aim Point.
+	EntityControlMeasure_MaritimeControlPointsAimPoint Entity = 210200
+
+	// EntityControlMeasure_MaritimeControlPointsDefendedAsset is Maritime Control Points / Defended Asset.
+	EntityControlMeasure_MaritimeControlPointsDefendedAsset Entity = 210300
+
+	// EntityControlMeasure_MaritimeControlPointsDropPoint is Maritime Control Points / Drop Point.
+	EntityControlMeasure_MaritimeControlPointsDropPoint Entity = 210400
+
+	// EntityControlMeasure_MaritimeControlPointsEntryPoint is Maritime Control Points / Entry Point.
+	EntityControlMeasure_MaritimeControlPointsEntryPoint Entity = 210500
+
+	// EntityControlMeasure_MaritimeControlPointsAirDetonation is Maritime Control Points / Air Detonation.
+	EntityControlMeasure_MaritimeControlPointsAirDetonation Entity = 210600
+
+	// EntityControlMeasure_MaritimeControlPointsGroundZero is Maritime Control Points / Ground Zero.
+	EntityControlMeasure_MaritimeControlPointsGroundZero Entity = 210700
+
+	// EntityControlMeasure_MaritimeControlPointsImpactPoint is Maritime Control Points / Impact Point.
+	EntityControlMeasure_MaritimeControlPointsImpactPoint Entity = 210800
+
+	// EntityControlMeasure_MaritimeControlPointsPredictedImpactPoint is Maritime Control Points / Predicted Impact Point.
+	EntityControlMeasure_MaritimeControlPointsPredictedImpactPoint Entity = 210900
+
+	// EntityControlMeasure_MaritimeControlPointsLaunchedTorpedo is Maritime Control Points / Launched Torpedo.
+	EntityControlMeasure_MaritimeControlPointsLaunchedTorpedo Entity = 211000
+
+	// EntityControlMeasure_MaritimeControlPointsMissileDetectionPoint is Maritime Control Points / Missile Detection Point.
+	EntityControlMeasure_MaritimeControlPointsMissileDetectionPoint Entity = 211100
+
+	// EntityControlMeasure_MaritimeControlPointsAcousticCountermeasureDecoy is Maritime Control Points / Acoustic Countermeasure (Decoy).
+	EntityControlMeasure_MaritimeControlPointsAcousticCountermeasureDecoy Entity = 211200
+
+	// EntityControlMeasure_MaritimeControlPointsElectronicCountermeasuresECMDecoy is Maritime Control Points / Electronic Countermeasures (ECM) Decoy.
+	EntityControlMeasure_MaritimeControlPointsElectronicCountermeasuresECMDecoy Entity = 211300
+
+	// EntityControlMeasure_MaritimeControlPointsBriefContact is Maritime Control Points / Brief Contact.
+	EntityControlMeasure_MaritimeControlPointsBriefContact Entity = 211400
+
+	// EntityControlMeasure_MaritimeControlPointsDatumLostContact is Maritime Control Points / Datum Lost Contact.
+	EntityControlMeasure_MaritimeControlPointsDatumLostContact Entity = 211500
+
+	// EntityControlMeasure_MaritimeControlPointsBTBuoyDrop is Maritime Control Points / BT Buoy Drop.
+	EntityControlMeasure_MaritimeControlPointsBTBuoyDrop Entity = 211600
+
+	// EntityControlMeasure_MaritimeControlPointsReportedBottomedSub is Maritime Control Points / Reported Bottomed Sub.
+	EntityControlMeasure_MaritimeControlPointsReportedBottomedSub Entity = 211700
+
+	// EntityControlMeasure_MaritimeControlPointsMovingHaven is Maritime Control Points / Moving Haven.
+	EntityControlMeasure_MaritimeControlPointsMovingHaven Entity = 211800
+
+	// EntityControlMeasure_MaritimeControlPointsScreenCenter is Maritime Control Points / Screen Center.
+	EntityControlMeasure_MaritimeControlPointsScreenCenter Entity = 211900
+
+	// EntityControlMeasure_MaritimeControlPointsLostContact is Maritime Control Points / Lost Contact.
+	EntityControlMeasure_MaritimeControlPointsLostContact Entity = 212000
+
+	// EntityControlMeasure_MaritimeControlPointsSinker is Maritime Control Points / Sinker.
+	EntityControlMeasure_MaritimeControlPointsSinker Entity = 212100
+
+	// EntityControlMeasure_MaritimeControlPointsTrialTrack is Maritime Control Points / Trial Track.
+	EntityControlMeasure_MaritimeControlPointsTrialTrack Entity = 212200
+
+	// EntityControlMeasure_MaritimeControlPointsAcousticFix is Maritime Control Points / Acoustic Fix.
+	EntityControlMeasure_MaritimeControlPointsAcousticFix Entity = 212300
+
+	// EntityControlMeasure_MaritimeControlPointsElectromagneticFix is Maritime Control Points / Electromagnetic Fix.
+	EntityControlMeasure_MaritimeControlPointsElectromagneticFix Entity = 212400
+
+	// EntityControlMeasure_MaritimeControlPointsElectromagneticMagneticAnomalyDetectionMAD is Maritime Control Points / Electromagnetic – Magnetic Anomaly Detection (MAD).
+	EntityControlMeasure_MaritimeControlPointsElectromagneticMagneticAnomalyDetectionMAD Entity = 212500
+
+	// EntityControlMeasure_MaritimeControlPointsOpticalFix is Maritime Control Points / Optical Fix.
+	EntityControlMeasure_MaritimeControlPointsOpticalFix Entity = 212600
+
+	// EntityControlMeasure_MaritimeControlPointsFormation is Maritime Control Points / Formation.
+	EntityControlMeasure_MaritimeControlPointsFormation Entity = 212700
+
+	// EntityControlMeasure_MaritimeControlPointsHarbor is Maritime Control Points / Harbor.
+	EntityControlMeasure_MaritimeControlPointsHarbor Entity = 212800
+
+	// EntityControlMeasure_MaritimeControlPointsHarborEntrancePoint is Maritime Control Points / Harbor Entrance Point.
+	EntityControlMeasure_MaritimeControlPointsHarborEntrancePoint Entity = 212900
+
+	// EntityControlMeasure_MaritimeControlPointsHarborEntrancePointA is Maritime Control Points / Harbor Entrance Point / A.
+	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointA Entity = 212901
+
+	// EntityControlMeasure_MaritimeControlPointsHarborEntrancePointQ is Maritime Control Points / Harbor Entrance Point / Q.
+	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointQ Entity = 212902
+
+	// EntityControlMeasure_MaritimeControlPointsHarborEntrancePointX is Maritime Control Points / Harbor Entrance Point / X.
+	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointX Entity = 212903
+
+	// EntityControlMeasure_MaritimeControlPointsHarborEntrancePointY is Maritime Control Points / Harbor Entrance Point / Y.
+	EntityControlMeasure_MaritimeControlPointsHarborEntrancePointY Entity = 212904
+
+	// EntityControlMeasure_MaritimeControlPointsDipPosition is Maritime Control Points / Dip Position.
+	EntityControlMeasure_MaritimeControlPointsDipPosition Entity = 213000
+
+	// EntityControlMeasure_MaritimeControlPointsSearch is Maritime Control Points / Search.
+	EntityControlMeasure_MaritimeControlPointsSearch Entity = 213100
+
+	// EntityControlMeasure_MaritimeControlPointsSearchArea is Maritime Control Points / Search Area.
+	EntityControlMeasure_MaritimeControlPointsSearchArea Entity = 213200
+
+	// EntityControlMeasure_MaritimeControlPointsSearchCenter is Maritime Control Points / Search Center.
+	EntityControlMeasure_MaritimeControlPointsSearchCenter Entity = 213300
+
+	// EntityControlMeasure_MaritimeControlPointsNavigationalReferencePoint is Maritime Control Points / Navigational Reference Point.
+	EntityControlMeasure_MaritimeControlPointsNavigationalReferencePoint Entity = 213400
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoy is Maritime Control Points / Sonobuoy.
+	EntityControlMeasure_MaritimeControlPointsSonobuoy Entity = 213500
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyAmbientNoise is Maritime Control Points / Sonobuoy / Ambient Noise.
+	EntityControlMeasure_MaritimeControlPointsSonobuoyAmbientNoise Entity = 213501
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyAirTransportableCommunicationATAC is Maritime Control Points / Sonobuoy / Air Transportable Communication (ATAC).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyAirTransportableCommunicationATAC Entity = 213502
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyBarra is Maritime Control Points / Sonobuoy / Barra.
+	EntityControlMeasure_MaritimeControlPointsSonobuoyBarra Entity = 213503
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyBathythermographTransmitting is Maritime Control Points / Sonobuoy / Bathythermograph Transmitting.
+	EntityControlMeasure_MaritimeControlPointsSonobuoyBathythermographTransmitting Entity = 213504
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyCommandActiveMultiBeamSonobuoyCAMBS is Maritime Control Points / Sonobuoy / Command Active Multi-Beam Sonobuoy (CAMBS).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyCommandActiveMultiBeamSonobuoyCAMBS Entity = 213505
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyCommandActiveSonobuoyDirectionalCommandActiveSonobuoySystemCASS is Maritime Control Points / Sonobuoy / Command Active Sonobuoy Directional Command Active Sonobuoy System (CASS).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyCommandActiveSonobuoyDirectionalCommandActiveSonobuoySystemCASS Entity = 213506
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyDirectionalFrequencyAnalysisAndRecordingDIFAR is Maritime Control Points / Sonobuoy / Directional Frequency Analysis and Recording (DIFAR).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyDirectionalFrequencyAnalysisAndRecordingDIFAR Entity = 213507
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyDirectionalCommandActiveSonobuoySystemDICASS is Maritime Control Points / Sonobuoy / Directional Command Active Sonobuoy System (DICASS).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyDirectionalCommandActiveSonobuoySystemDICASS Entity = 213508
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyExpendableReliableAcousticPathSonobuoyERAPS is Maritime Control Points / Sonobuoy / Expendable Reliable Acoustic Path Sonobuoy (ERAPS).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyExpendableReliableAcousticPathSonobuoyERAPS Entity = 213509
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyExpired is Maritime Control Points / Sonobuoy / Expired.
+	EntityControlMeasure_MaritimeControlPointsSonobuoyExpired Entity = 213510
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyKingpin is Maritime Control Points / Sonobuoy / Kingpin.
+	EntityControlMeasure_MaritimeControlPointsSonobuoyKingpin Entity = 213511
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyLowFrequencyAnalysisAndRecordingLOFAR is Maritime Control Points / Sonobuoy / Low Frequency Analysis and Recording (LOFAR).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyLowFrequencyAnalysisAndRecordingLOFAR Entity = 213512
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyPatternCenter is Maritime Control Points / Sonobuoy / Pattern Center.
+	EntityControlMeasure_MaritimeControlPointsSonobuoyPatternCenter Entity = 213513
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyRangeOnly is Maritime Control Points / Sonobuoy / Range Only.
+	EntityControlMeasure_MaritimeControlPointsSonobuoyRangeOnly Entity = 213514
+
+	// EntityControlMeasure_MaritimeControlPointsSonobuoyVerticalLineArrayDirectionalFrequencyAnalysisAndRecordingDIFAR is Maritime Control Points / Sonobuoy / Vertical Line Array Directional Frequency Analysis and Recording (DIFAR).
+	EntityControlMeasure_MaritimeControlPointsSonobuoyVerticalLineArrayDirectionalFrequencyAnalysisAndRecordingDIFAR Entity = 213515
+
+	// EntityControlMeasure_MaritimeControlPointsReferencePoint is Maritime Control Points / Reference Point.
+	EntityControlMeasure_MaritimeControlPointsReferencePoint Entity = 213600
+
+	// EntityControlMeasure_MaritimeControlPointsSpecialPoint is Maritime Control Points / Special Point.
+	EntityControlMeasure_MaritimeControlPointsSpecialPoint Entity = 213700
+
+	// EntityControlMeasure_MaritimeControlPointsNavigationalReferencePoint_213800 is Maritime Control Points / Navigational Reference Point.
+	EntityControlMeasure_MaritimeControlPointsNavigationalReferencePoint_213800 Entity = 213800
+
+	// EntityControlMeasure_MaritimeControlPointsDataLinkReferencePoint is Maritime Control Points / Data Link Reference Point.
+	EntityControlMeasure_MaritimeControlPointsDataLinkReferencePoint Entity = 213900
+
+	// EntityControlMeasure_MaritimeControlPointsDisused is Maritime Control Points / {Disused}.
+	EntityControlMeasure_MaritimeControlPointsDisused Entity = 214000
+
+	// EntityControlMeasure_MaritimeControlPointsVitalAreaCenter is Maritime Control Points / Vital Area Center.
+	EntityControlMeasure_MaritimeControlPointsVitalAreaCenter Entity = 214100
+
+	// EntityControlMeasure_MaritimeControlPointsCorridorTabPoint is Maritime Control Points / Corridor Tab Point.
+	EntityControlMeasure_MaritimeControlPointsCorridorTabPoint Entity = 214200
+
+	// EntityControlMeasure_MaritimeControlPointsEnemyPoint is Maritime Control Points / Enemy Point.
+	EntityControlMeasure_MaritimeControlPointsEnemyPoint Entity = 214300
+
+	// EntityControlMeasure_MaritimeControlPointsMarshallPoint is Maritime Control Points / Marshall Point.
+	EntityControlMeasure_MaritimeControlPointsMarshallPoint Entity = 214400
+
+	// EntityControlMeasure_MaritimeControlPointsPositionAndIntendedMovementPIM is Maritime Control Points / Position and Intended Movement (PIM).
+	EntityControlMeasure_MaritimeControlPointsPositionAndIntendedMovementPIM Entity = 214500
+
+	// EntityControlMeasure_MaritimeControlPointsPreLandfallWaypoint is Maritime Control Points / Pre-Landfall Waypoint.
+	EntityControlMeasure_MaritimeControlPointsPreLandfallWaypoint Entity = 214600
+
+	// EntityControlMeasure_MaritimeControlPointsEstimatedPositionEP is Maritime Control Points / Estimated Position (EP).
+	EntityControlMeasure_MaritimeControlPointsEstimatedPositionEP Entity = 214700
+
+	// EntityControlMeasure_MaritimeControlPointsWaypoint is Maritime Control Points / Waypoint.
+	EntityControlMeasure_MaritimeControlPointsWaypoint Entity = 214800
+
+	// EntityControlMeasure_MaritimeControlPointsGeneralSeaSubsurfaceStation is Maritime Control Points / General Sea Subsurface Station.
+	EntityControlMeasure_MaritimeControlPointsGeneralSeaSubsurfaceStation Entity = 214900
+
+	// EntityControlMeasure_MaritimeControlPointsSubmarineSeaSubsurfaceStation is Maritime Control Points / Submarine Sea Subsurface Station.
+	EntityControlMeasure_MaritimeControlPointsSubmarineSeaSubsurfaceStation Entity = 215000
+
+	// EntityControlMeasure_MaritimeControlPointsSubmarineAntisubmarineWarfareSeaSubsurfaceStation is Maritime Control Points / Submarine Antisubmarine Warfare Sea Subsurface Station.
+	EntityControlMeasure_MaritimeControlPointsSubmarineAntisubmarineWarfareSeaSubsurfaceStation Entity = 215100
+
+	// EntityControlMeasure_MaritimeControlPointsUnmannedUnderwaterVehicleSeaSubsurfaceStation is Maritime Control Points / Unmanned Underwater Vehicle Sea Subsurface Station.
+	EntityControlMeasure_MaritimeControlPointsUnmannedUnderwaterVehicleSeaSubsurfaceStation Entity = 215200
+
+	// EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWUnmannedUnderwaterVehicleSeaSubsurfaceStation is Maritime Control Points / Antisubmarine Warfare (ASW) Unmanned Underwater Vehicle Sea Subsurface Station.
+	EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWUnmannedUnderwaterVehicleSeaSubsurfaceStation Entity = 215300
+
+	// EntityControlMeasure_MaritimeControlPointsMineWarfareUnmannedUnderwaterVehicleSeaSubsurfaceStation is Maritime Control Points / Mine Warfare Unmanned Underwater Vehicle Sea Subsurface Station.
+	EntityControlMeasure_MaritimeControlPointsMineWarfareUnmannedUnderwaterVehicleSeaSubsurfaceStation Entity = 215400
+
+	// EntityControlMeasure_MaritimeControlPointsSeaSurfaceWarfareUnmannedUnderwaterVehicleSubsurfaceStation is Maritime Control Points / Sea Surface Warfare Unmanned Underwater Vehicle Subsurface Station.
+	EntityControlMeasure_MaritimeControlPointsSeaSurfaceWarfareUnmannedUnderwaterVehicleSubsurfaceStation Entity = 215500
+
+	// EntityControlMeasure_MaritimeControlPointsGeneralSeaSurfaceStation is Maritime Control Points / General Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsGeneralSeaSurfaceStation Entity = 215600
+
+	// EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWSeaSurfaceStation is Maritime Control Points / Antisubmarine Warfare (ASW) Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWSeaSurfaceStation Entity = 215700
+
+	// EntityControlMeasure_MaritimeControlPointsMineWarfareSeaSurfaceStation is Maritime Control Points / Mine Warfare Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsMineWarfareSeaSurfaceStation Entity = 215800
+
+	// EntityControlMeasure_MaritimeControlPointsNonCombatantSeaSurfaceStation is Maritime Control Points / Non-Combatant Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsNonCombatantSeaSurfaceStation Entity = 215900
+
+	// EntityControlMeasure_MaritimeControlPointsPicketSeaSurfaceStation is Maritime Control Points / Picket Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsPicketSeaSurfaceStation Entity = 216000
+
+	// EntityControlMeasure_MaritimeControlPointsRendezvousSeaSurfaceStation is Maritime Control Points / Rendezvous Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsRendezvousSeaSurfaceStation Entity = 216100
+
+	// EntityControlMeasure_MaritimeControlPointsReplenishmentAtSeaSurfaceStation is Maritime Control Points / Replenishment at Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsReplenishmentAtSeaSurfaceStation Entity = 216200
+
+	// EntityControlMeasure_MaritimeControlPointsRescueSeaSurfaceStation is Maritime Control Points / Rescue Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsRescueSeaSurfaceStation Entity = 216300
+
+	// EntityControlMeasure_MaritimeControlPointsSurfaceWarfareSeaSurfaceStation is Maritime Control Points / Surface Warfare Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsSurfaceWarfareSeaSurfaceStation Entity = 216400
+
+	// EntityControlMeasure_MaritimeControlPointsUnmannedUnderwaterVehicleSeaSurfaceStation is Maritime Control Points / Unmanned Underwater Vehicle Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsUnmannedUnderwaterVehicleSeaSurfaceStation Entity = 216500
+
+	// EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWUnmannedUnderwaterVehicleSeaSurfaceStation is Maritime Control Points / Antisubmarine Warfare (ASW) Unmanned Underwater Vehicle Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsAntisubmarineWarfareASWUnmannedUnderwaterVehicleSeaSurfaceStation Entity = 216600
+
+	// EntityControlMeasure_MaritimeControlPointsMineWarfareUnmannedUnderwaterVehicleSeaSurfaceStation is Maritime Control Points / Mine Warfare Unmanned Underwater Vehicle Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsMineWarfareUnmannedUnderwaterVehicleSeaSurfaceStation Entity = 216700
+
+	// EntityControlMeasure_MaritimeControlPointsRemoteMultiMissionVehicleMineWarfareUnmannedUnderwaterSeaSurfaceStation is Maritime Control Points / Remote Multi-Mission Vehicle Mine Warfare Unmanned Underwater Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsRemoteMultiMissionVehicleMineWarfareUnmannedUnderwaterSeaSurfaceStation Entity = 216800
+
+	// EntityControlMeasure_MaritimeControlPointsSurfaceWarfareMineWarfareUnmannedUnderwaterVehicleSeaSurfaceStation is Maritime Control Points / Surface Warfare Mine Warfare Unmanned Underwater Vehicle Sea Surface Station.
+	EntityControlMeasure_MaritimeControlPointsSurfaceWarfareMineWarfareUnmannedUnderwaterVehicleSeaSurfaceStation Entity = 216900
+
+	// EntityControlMeasure_MaritimeControlPointsShoreControlStation is Maritime Control Points / Shore Control Station.
+	EntityControlMeasure_MaritimeControlPointsShoreControlStation Entity = 217000
+
+	// EntityControlMeasure_MaritimeControlPointsGeneralRoute is Maritime Control Points / General Route.
+	EntityControlMeasure_MaritimeControlPointsGeneralRoute Entity = 217100
+
+	// EntityControlMeasure_MaritimeControlPointsDiversionRoute is Maritime Control Points / Diversion Route.
+	EntityControlMeasure_MaritimeControlPointsDiversionRoute Entity = 217200
+
+	// EntityControlMeasure_MaritimeControlPointsPositionAndIntendedMovementPIMRoute is Maritime Control Points / Position and Intended Movement (PIM) Route.
+	EntityControlMeasure_MaritimeControlPointsPositionAndIntendedMovementPIMRoute Entity = 217300
+
+	// EntityControlMeasure_MaritimeControlPointsPicketRoute is Maritime Control Points / Picket Route.
+	EntityControlMeasure_MaritimeControlPointsPicketRoute Entity = 217400
+
+	// EntityControlMeasure_MaritimeControlPointsPointRRoute is Maritime Control Points / Point R Route.
+	EntityControlMeasure_MaritimeControlPointsPointRRoute Entity = 217500
+
+	// EntityControlMeasure_MaritimeControlPointsRendezvousRoute is Maritime Control Points / Rendezvous Route.
+	EntityControlMeasure_MaritimeControlPointsRendezvousRoute Entity = 217600
+
+	// EntityControlMeasure_MaritimeControlPointsWaypointRoute is Maritime Control Points / Waypoint Route.
+	EntityControlMeasure_MaritimeControlPointsWaypointRoute Entity = 217700
+
+	// EntityControlMeasure_MaritimeControlPointsClutterStationaryOrCeaseReporting is Maritime Control Points / Clutter, Stationary or Cease Reporting.
+	EntityControlMeasure_MaritimeControlPointsClutterStationaryOrCeaseReporting Entity = 217800
+
+	// EntityControlMeasure_MaritimeControlPointsTentativeOrProvisionalTrack is Maritime Control Points / Tentative or Provisional Track.
+	EntityControlMeasure_MaritimeControlPointsTentativeOrProvisionalTrack Entity = 217900
+
+	// EntityControlMeasure_MaritimeControlPointsDistressedVessel is Maritime Control Points / Distressed Vessel.
+	EntityControlMeasure_MaritimeControlPointsDistressedVessel Entity = 218000
+
+	// EntityControlMeasure_MaritimeControlPointsDitchedAircraftDownedAircraft is Maritime Control Points / Ditched Aircraft/Downed Aircraft.
+	EntityControlMeasure_MaritimeControlPointsDitchedAircraftDownedAircraft Entity = 218100
+
+	// EntityControlMeasure_MaritimeControlPointsPersonInWaterBailout is Maritime Control Points / Person in Water/Bailout.
+	EntityControlMeasure_MaritimeControlPointsPersonInWaterBailout Entity = 218200
+
+	// EntityControlMeasure_MaritimeControlPointsIceberg is Maritime Control Points / Iceberg.
+	EntityControlMeasure_MaritimeControlPointsIceberg Entity = 218300
+
+	// EntityControlMeasure_MaritimeControlPointsNavigational is Maritime Control Points / Navigational.
+	EntityControlMeasure_MaritimeControlPointsNavigational Entity = 218400
+
+	// EntityControlMeasure_MaritimeControlPointsOilRig is Maritime Control Points / Oil Rig.
+	EntityControlMeasure_MaritimeControlPointsOilRig Entity = 218500
+
+	// EntityControlMeasure_MaritimeControlPointsSeaMineLike is Maritime Control Points / Sea Mine–Like.
+	EntityControlMeasure_MaritimeControlPointsSeaMineLike Entity = 218600
+
+	// EntityControlMeasure_MaritimeControlPointsBottomReturnNonMineMineLikeBottomObjectNOMBO is Maritime Control Points / Bottom Return/Non-Mine, Mine-Like Bottom Object (NOMBO).
+	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMineMineLikeBottomObjectNOMBO Entity = 218700
+
+	// EntityControlMeasure_MaritimeControlPointsBottomReturnNonMineMineLikeBottomObjectNOMBOInstallationManmade is Maritime Control Points / Bottom Return/Non-Mine, Mine-Like Bottom Object (NOMBO)/Installation Manmade.
+	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMineMineLikeBottomObjectNOMBOInstallationManmade Entity = 218800
+
+	// EntityControlMeasure_MaritimeControlPointsMarineLife is Maritime Control Points / Marine Life.
+	EntityControlMeasure_MaritimeControlPointsMarineLife Entity = 218900
+
+	// EntityControlMeasure_MaritimeControlPointsSeaAnomalyWakeCurrentKnuckle is Maritime Control Points / Sea Anomaly (Wake, Current, Knuckle).
+	EntityControlMeasure_MaritimeControlPointsSeaAnomalyWakeCurrentKnuckle Entity = 219000
+
+	// EntityControlMeasure_MaritimeControlPointsBottomReturnNonMILCOWreckDangerous is Maritime Control Points / Bottom Return/Non-MILCO, Wreck, Dangerous.
+	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMILCOWreckDangerous Entity = 219100
+
+	// EntityControlMeasure_MaritimeControlPointsBottomReturnNonMILCOWreckNonDangerous is Maritime Control Points / Bottom Return/Non-MILCO, Wreck, Non Dangerous.
+	EntityControlMeasure_MaritimeControlPointsBottomReturnNonMILCOWreckNonDangerous Entity = 219200
+
+	// EntityControlMeasure_MaritimeControlLines is Maritime Control Lines.
+	EntityControlMeasure_MaritimeControlLines Entity = 220000
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLine is Maritime Control Lines / Bearing Line.
+	EntityControlMeasure_MaritimeControlLinesBearingLine Entity = 220100
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineElectronic is Maritime Control Lines / Bearing Line / Electronic.
+	EntityControlMeasure_MaritimeControlLinesBearingLineElectronic Entity = 220101
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineElectronicWarfareEW is Maritime Control Lines / Bearing Line / Electronic Warfare (EW).
+	EntityControlMeasure_MaritimeControlLinesBearingLineElectronicWarfareEW Entity = 220102
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineAcoustic is Maritime Control Lines / Bearing Line / Acoustic.
+	EntityControlMeasure_MaritimeControlLinesBearingLineAcoustic Entity = 220103
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineAcousticAmbiguous is Maritime Control Lines / Bearing Line / Acoustic (Ambiguous).
+	EntityControlMeasure_MaritimeControlLinesBearingLineAcousticAmbiguous Entity = 220104
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineTorpedo is Maritime Control Lines / Bearing Line / Torpedo.
+	EntityControlMeasure_MaritimeControlLinesBearingLineTorpedo Entity = 220105
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineElectroOpticalIntercept is Maritime Control Lines / Bearing Line / Electro-Optical Intercept.
+	EntityControlMeasure_MaritimeControlLinesBearingLineElectroOpticalIntercept Entity = 220106
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineJammer is Maritime Control Lines / Bearing Line / Jammer.
+	EntityControlMeasure_MaritimeControlLinesBearingLineJammer Entity = 220107
+
+	// EntityControlMeasure_MaritimeControlLinesBearingLineRadioDirectionFinderRDF is Maritime Control Lines / Bearing Line / Radio Direction Finder (RDF).
+	EntityControlMeasure_MaritimeControlLinesBearingLineRadioDirectionFinderRDF Entity = 220108
+
+	// EntityControlMeasure_Deception is Deception.
+	EntityControlMeasure_Deception Entity = 230000
+
+	// EntityControlMeasure_DeceptionDeceiveDecoyDummyFeint is Deception / Deceive/Decoy/Dummy/Feint.
+	EntityControlMeasure_DeceptionDeceiveDecoyDummyFeint Entity = 230200
+
+	// EntityControlMeasure_FiresAreas is Fires Areas.
+	EntityControlMeasure_FiresAreas Entity = 240000
+
+	// EntityControlMeasure_FiresAreasAirspaceCoordinationArea is Fires Areas / Airspace Coordination Area.
+	EntityControlMeasure_FiresAreasAirspaceCoordinationArea Entity = 240100
+
+	// EntityControlMeasure_FiresAreasAirspaceCoordinationAreaIrregular is Fires Areas / Airspace Coordination Area / Irregular.
+	EntityControlMeasure_FiresAreasAirspaceCoordinationAreaIrregular Entity = 240101
+
+	// EntityControlMeasure_FiresAreasAirspaceCoordinationAreaRectangular is Fires Areas / Airspace Coordination Area / Rectangular.
+	EntityControlMeasure_FiresAreasAirspaceCoordinationAreaRectangular Entity = 240102
+
+	// EntityControlMeasure_FiresAreasAirspaceCoordinationAreaCircular is Fires Areas / Airspace Coordination Area / Circular.
+	EntityControlMeasure_FiresAreasAirspaceCoordinationAreaCircular Entity = 240103
+
+	// EntityControlMeasure_FiresAreasFreeFireArea is Fires Areas / Free Fire Area.
+	EntityControlMeasure_FiresAreasFreeFireArea Entity = 240200
+
+	// EntityControlMeasure_FiresAreasFreeFireAreaIrregular is Fires Areas / Free Fire Area / Irregular.
+	EntityControlMeasure_FiresAreasFreeFireAreaIrregular Entity = 240201
+
+	// EntityControlMeasure_FiresAreasFreeFireAreaRectangular is Fires Areas / Free Fire Area / Rectangular.
+	EntityControlMeasure_FiresAreasFreeFireAreaRectangular Entity = 240202
+
+	// EntityControlMeasure_FiresAreasFreeFireAreaCircular is Fires Areas / Free Fire Area / Circular.
+	EntityControlMeasure_FiresAreasFreeFireAreaCircular Entity = 240203
+
+	// EntityControlMeasure_FiresAreasNoFireArea is Fires Areas / No Fire Area.
+	EntityControlMeasure_FiresAreasNoFireArea Entity = 240300
+
+	// EntityControlMeasure_FiresAreasNoFireAreaIrregular is Fires Areas / No Fire Area / Irregular.
+	EntityControlMeasure_FiresAreasNoFireAreaIrregular Entity = 240301
+
+	// EntityControlMeasure_FiresAreasNoFireAreaRectangular is Fires Areas / No Fire Area / Rectangular.
+	EntityControlMeasure_FiresAreasNoFireAreaRectangular Entity = 240302
+
+	// EntityControlMeasure_FiresAreasNoFireAreaCircular is Fires Areas / No Fire Area / Circular.
+	EntityControlMeasure_FiresAreasNoFireAreaCircular Entity = 240303
+
+	// EntityControlMeasure_FiresAreasRestrictedFireArea is Fires Areas / Restricted Fire Area.
+	EntityControlMeasure_FiresAreasRestrictedFireArea Entity = 240400
+
+	// EntityControlMeasure_FiresAreasRestrictedFireAreaIrregular is Fires Areas / Restricted Fire Area / Irregular.
+	EntityControlMeasure_FiresAreasRestrictedFireAreaIrregular Entity = 240401
+
+	// EntityControlMeasure_FiresAreasRestrictedFireAreaRectangular is Fires Areas / Restricted Fire Area / Rectangular.
+	EntityControlMeasure_FiresAreasRestrictedFireAreaRectangular Entity = 240402
+
+	// EntityControlMeasure_FiresAreasRestrictedFireAreaCircular is Fires Areas / Restricted Fire Area / Circular.
+	EntityControlMeasure_FiresAreasRestrictedFireAreaCircular Entity = 240403
+
+	// EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAA is Fires Areas / Position Area For Artillery (PAA).
+	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAA Entity = 240500
+
+	// EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAARectangular is Fires Areas / Position Area For Artillery (PAA) / Rectangular.
+	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAARectangular Entity = 240501
+
+	// EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAACircular is Fires Areas / Position Area For Artillery (PAA) / Circular.
+	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAACircular Entity = 240502
+
+	// EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAAIrregular is Fires Areas / Position Area For Artillery (PAA) / Irregular.
+	EntityControlMeasure_FiresAreasPositionAreaForArtilleryPAAIrregular Entity = 240503
+
+	// EntityControlMeasure_FiresAreasPointTargets is Fires Areas / Point Targets.
+	EntityControlMeasure_FiresAreasPointTargets Entity = 240600
+
+	// EntityControlMeasure_FiresAreasPointTargetsPointOrSingleTarget is Fires Areas / Point Targets / Point or Single Target.
+	EntityControlMeasure_FiresAreasPointTargetsPointOrSingleTarget Entity = 240601
+
+	// EntityControlMeasure_FiresAreasPointTargetsNuclearTarget is Fires Areas / Point Targets / Nuclear Target.
+	EntityControlMeasure_FiresAreasPointTargetsNuclearTarget Entity = 240602
+
+	// EntityControlMeasure_FiresAreasPointTargetsTargetRecorded is Fires Areas / Point Targets / Target-Recorded.
+	EntityControlMeasure_FiresAreasPointTargetsTargetRecorded Entity = 240603
+
+	// EntityControlMeasure_FiresAreasLinearTargets is Fires Areas / Linear Targets.
+	EntityControlMeasure_FiresAreasLinearTargets Entity = 240700
+
+	// EntityControlMeasure_FiresAreasLinearTargetsLinearTarget is Fires Areas / Linear Targets / Linear Target.
+	EntityControlMeasure_FiresAreasLinearTargetsLinearTarget Entity = 240701
+
+	// EntityControlMeasure_FiresAreasLinearTargetsLinearSmokeTarget is Fires Areas / Linear Targets / Linear Smoke Target.
+	EntityControlMeasure_FiresAreasLinearTargetsLinearSmokeTarget Entity = 240702
+
+	// EntityControlMeasure_FiresAreasLinearTargetsFinalProtectiveFireFPF is Fires Areas / Linear Targets / Final Protective Fire (FPF).
+	EntityControlMeasure_FiresAreasLinearTargetsFinalProtectiveFireFPF Entity = 240703
+
+	// EntityControlMeasure_FiresAreasAreaTargets is Fires Areas / Area Targets.
+	EntityControlMeasure_FiresAreasAreaTargets Entity = 240800
+
+	// EntityControlMeasure_FiresAreasAreaTargetsAreaTarget is Fires Areas / Area Targets / Area Target.
+	EntityControlMeasure_FiresAreasAreaTargetsAreaTarget Entity = 240801
+
+	// EntityControlMeasure_FiresAreasAreaTargetsRectangularTarget is Fires Areas / Area Targets / Rectangular Target.
+	EntityControlMeasure_FiresAreasAreaTargetsRectangularTarget Entity = 240802
+
+	// EntityControlMeasure_FiresAreasAreaTargetsCircularTarget is Fires Areas / Area Targets / Circular Target.
+	EntityControlMeasure_FiresAreasAreaTargetsCircularTarget Entity = 240803
+
+	// EntityControlMeasure_FiresAreasAreaTargetsRectangularTargetSingleTarget is Fires Areas / Area Targets / Rectangular Target – Single Target.
+	EntityControlMeasure_FiresAreasAreaTargetsRectangularTargetSingleTarget Entity = 240804
+
+	// EntityControlMeasure_FiresAreasAreaTargetsSeriesOrGroupsOfTargets is Fires Areas / Area Targets / Series or Groups of Targets.
+	EntityControlMeasure_FiresAreasAreaTargetsSeriesOrGroupsOfTargets Entity = 240805
+
+	// EntityControlMeasure_FiresAreasAreaTargetsSmoke is Fires Areas / Area Targets / Smoke.
+	EntityControlMeasure_FiresAreasAreaTargetsSmoke Entity = 240806
+
+	// EntityControlMeasure_FiresAreasAreaTargetsDisused is Fires Areas / Area Targets / {Disused}.
+	EntityControlMeasure_FiresAreasAreaTargetsDisused Entity = 240807
+
+	// EntityControlMeasure_FiresAreasAreaTargetsBombArea is Fires Areas / Area Targets / Bomb Area.
+	EntityControlMeasure_FiresAreasAreaTargetsBombArea Entity = 240808
+
+	// EntityControlMeasure_FiresAreasFireSupportStation is Fires Areas / Fire Support Station.
+	EntityControlMeasure_FiresAreasFireSupportStation Entity = 240900
+
+	// EntityControlMeasure_FiresAreasFireSupportArea is Fires Areas / Fire Support Area.
+	EntityControlMeasure_FiresAreasFireSupportArea Entity = 241000
+
+	// EntityControlMeasure_FiresAreasFireSupportAreaIrregular is Fires Areas / Fire Support Area / Irregular.
+	EntityControlMeasure_FiresAreasFireSupportAreaIrregular Entity = 241001
+
+	// EntityControlMeasure_FiresAreasFireSupportAreaRectangular is Fires Areas / Fire Support Area / Rectangular.
+	EntityControlMeasure_FiresAreasFireSupportAreaRectangular Entity = 241002
+
+	// EntityControlMeasure_FiresAreasFireSupportAreaCircular is Fires Areas / Fire Support Area / Circular.
+	EntityControlMeasure_FiresAreasFireSupportAreaCircular Entity = 241003
+
+	// EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZone is Fires Areas / Artillery Target Intelligence Zone.
+	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZone Entity = 241100
+
+	// EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneIrregular is Fires Areas / Artillery Target Intelligence Zone / Irregular.
+	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneIrregular Entity = 241101
+
+	// EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneRectangular is Fires Areas / Artillery Target Intelligence Zone / Rectangular.
+	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneRectangular Entity = 241102
+
+	// EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneCircular is Fires Areas / Artillery Target Intelligence Zone / Circular.
+	EntityControlMeasure_FiresAreasArtilleryTargetIntelligenceZoneCircular Entity = 241103
+
+	// EntityControlMeasure_FiresAreasCallForFireArea is Fires Areas / Call for Fire Area.
+	EntityControlMeasure_FiresAreasCallForFireArea Entity = 241200
+
+	// EntityControlMeasure_FiresAreasCallForFireAreaIrregular is Fires Areas / Call for Fire Area / Irregular.
+	EntityControlMeasure_FiresAreasCallForFireAreaIrregular Entity = 241201
+
+	// EntityControlMeasure_FiresAreasCallForFireAreaRectangular is Fires Areas / Call for Fire Area / Rectangular.
+	EntityControlMeasure_FiresAreasCallForFireAreaRectangular Entity = 241202
+
+	// EntityControlMeasure_FiresAreasCallForFireAreaCircular is Fires Areas / Call for Fire Area / Circular.
+	EntityControlMeasure_FiresAreasCallForFireAreaCircular Entity = 241203
+
+	// EntityControlMeasure_FiresAreasCensorZone is Fires Areas / Censor Zone.
+	EntityControlMeasure_FiresAreasCensorZone Entity = 241300
+
+	// EntityControlMeasure_FiresAreasCensorZoneIrregular is Fires Areas / Censor Zone / Irregular.
+	EntityControlMeasure_FiresAreasCensorZoneIrregular Entity = 241301
+
+	// EntityControlMeasure_FiresAreasCensorZoneRectangular is Fires Areas / Censor Zone / Rectangular.
+	EntityControlMeasure_FiresAreasCensorZoneRectangular Entity = 241302
+
+	// EntityControlMeasure_FiresAreasCensorZoneCircular is Fires Areas / Censor Zone / Circular.
+	EntityControlMeasure_FiresAreasCensorZoneCircular Entity = 241303
+
+	// EntityControlMeasure_FiresAreasCriticalFriendlyZone is Fires Areas / Critical Friendly Zone.
+	EntityControlMeasure_FiresAreasCriticalFriendlyZone Entity = 241400
+
+	// EntityControlMeasure_FiresAreasCriticalFriendlyZoneIrregular is Fires Areas / Critical Friendly Zone / Irregular.
+	EntityControlMeasure_FiresAreasCriticalFriendlyZoneIrregular Entity = 241401
+
+	// EntityControlMeasure_FiresAreasCriticalFriendlyZoneRectangular is Fires Areas / Critical Friendly Zone / Rectangular.
+	EntityControlMeasure_FiresAreasCriticalFriendlyZoneRectangular Entity = 241402
+
+	// EntityControlMeasure_FiresAreasCriticalFriendlyZoneCircular is Fires Areas / Critical Friendly Zone / Circular.
+	EntityControlMeasure_FiresAreasCriticalFriendlyZoneCircular Entity = 241403
+
+	// EntityControlMeasure_FiresAreasDeadSpaceArea is Fires Areas / Dead Space Area.
+	EntityControlMeasure_FiresAreasDeadSpaceArea Entity = 241500
+
+	// EntityControlMeasure_FiresAreasDeadSpaceAreaIrregular is Fires Areas / Dead Space Area / Irregular.
+	EntityControlMeasure_FiresAreasDeadSpaceAreaIrregular Entity = 241501
+
+	// EntityControlMeasure_FiresAreasDeadSpaceAreaRectangular is Fires Areas / Dead Space Area / Rectangular.
+	EntityControlMeasure_FiresAreasDeadSpaceAreaRectangular Entity = 241502
+
+	// EntityControlMeasure_FiresAreasDeadSpaceAreaCircular is Fires Areas / Dead Space Area / Circular.
+	EntityControlMeasure_FiresAreasDeadSpaceAreaCircular Entity = 241503
+
+	// EntityControlMeasure_FiresAreasDisused is Fires Areas / {Disused}.
+	EntityControlMeasure_FiresAreasDisused Entity = 241600
+
+	// EntityControlMeasure_FiresAreasTargetBuildUpArea is Fires Areas / Target Build–up Area.
+	EntityControlMeasure_FiresAreasTargetBuildUpArea Entity = 241700
+
+	// EntityControlMeasure_FiresAreasTargetBuildUpAreaIrregular is Fires Areas / Target Build–up Area / Irregular.
+	EntityControlMeasure_FiresAreasTargetBuildUpAreaIrregular Entity = 241701
+
+	// EntityControlMeasure_FiresAreasTargetBuildUpAreaRectangular is Fires Areas / Target Build–up Area / Rectangular.
+	EntityControlMeasure_FiresAreasTargetBuildUpAreaRectangular Entity = 241702
+
+	// EntityControlMeasure_FiresAreasTargetBuildUpAreaCircular is Fires Areas / Target Build–up Area / Circular.
+	EntityControlMeasure_FiresAreasTargetBuildUpAreaCircular Entity = 241703
+
+	// EntityControlMeasure_FiresAreasTargetValueArea is Fires Areas / Target Value Area.
+	EntityControlMeasure_FiresAreasTargetValueArea Entity = 241800
+
+	// EntityControlMeasure_FiresAreasTargetValueAreaIrregular is Fires Areas / Target Value Area / Irregular.
+	EntityControlMeasure_FiresAreasTargetValueAreaIrregular Entity = 241801
+
+	// EntityControlMeasure_FiresAreasTargetValueAreaRectangular is Fires Areas / Target Value Area / Rectangular.
+	EntityControlMeasure_FiresAreasTargetValueAreaRectangular Entity = 241802
+
+	// EntityControlMeasure_FiresAreasTargetValueAreaCircular is Fires Areas / Target Value Area / Circular.
+	EntityControlMeasure_FiresAreasTargetValueAreaCircular Entity = 241803
+
+	// EntityControlMeasure_FiresAreasZoneOfResponsibility is Fires Areas / Zone of Responsibility.
+	EntityControlMeasure_FiresAreasZoneOfResponsibility Entity = 241900
+
+	// EntityControlMeasure_FiresAreasZoneOfResponsibilityIrregular is Fires Areas / Zone of Responsibility / Irregular.
+	EntityControlMeasure_FiresAreasZoneOfResponsibilityIrregular Entity = 241901
+
+	// EntityControlMeasure_FiresAreasZoneOfResponsibilityRectangular is Fires Areas / Zone of Responsibility / Rectangular.
+	EntityControlMeasure_FiresAreasZoneOfResponsibilityRectangular Entity = 241902
+
+	// EntityControlMeasure_FiresAreasZoneOfResponsibilityCircular is Fires Areas / Zone of Responsibility / Circular.
+	EntityControlMeasure_FiresAreasZoneOfResponsibilityCircular Entity = 241903
+
+	// EntityControlMeasure_FiresAreasTerminallyGuidedMunitionFootprintTGMF is Fires Areas / Terminally Guided Munition Footprint (TGMF).
+	EntityControlMeasure_FiresAreasTerminallyGuidedMunitionFootprintTGMF Entity = 242000
+
+	// EntityControlMeasure_FiresAreasWeaponSensorRangeFanCircular is Fires Areas / Weapon/Sensor Range fan, Circular.
+	EntityControlMeasure_FiresAreasWeaponSensorRangeFanCircular Entity = 242100
+
+	// EntityControlMeasure_FiresAreasWeaponSensorRangeFanSector is Fires Areas / Weapon/Sensor Range fan, Sector.
+	EntityControlMeasure_FiresAreasWeaponSensorRangeFanSector Entity = 242200
+
+	// EntityControlMeasure_FiresAreasKillBox is Fires Areas / Kill Box.
+	EntityControlMeasure_FiresAreasKillBox Entity = 242300
+
+	// EntityControlMeasure_FiresAreasKillBoxIrregularBlue is Fires Areas / Kill Box / Irregular, Blue.
+	EntityControlMeasure_FiresAreasKillBoxIrregularBlue Entity = 242301
+
+	// EntityControlMeasure_FiresAreasKillBoxRectangularBlue is Fires Areas / Kill Box / Rectangular, Blue.
+	EntityControlMeasure_FiresAreasKillBoxRectangularBlue Entity = 242302
+
+	// EntityControlMeasure_FiresAreasKillBoxCircularBlue is Fires Areas / Kill Box / Circular, Blue.
+	EntityControlMeasure_FiresAreasKillBoxCircularBlue Entity = 242303
+
+	// EntityControlMeasure_FiresAreasKillBoxIrregularPurple is Fires Areas / Kill Box / Irregular, Purple.
+	EntityControlMeasure_FiresAreasKillBoxIrregularPurple Entity = 242304
+
+	// EntityControlMeasure_FiresAreasKillBoxRectangularPurple is Fires Areas / Kill Box / Rectangular, Purple.
+	EntityControlMeasure_FiresAreasKillBoxRectangularPurple Entity = 242305
+
+	// EntityControlMeasure_FiresAreasKillBoxCircularPurple is Fires Areas / Kill Box / Circular, Purple.
+	EntityControlMeasure_FiresAreasKillBoxCircularPurple Entity = 242306
+
+	// EntityControlMeasure_FiresAreasArtilleryManeuverArea is Fires Areas / Artillery Maneuver Area.
+	EntityControlMeasure_FiresAreasArtilleryManeuverArea Entity = 242400
+
+	// EntityControlMeasure_FiresAreasArtilleryReservedArea is Fires Areas / Artillery Reserved Area.
+	EntityControlMeasure_FiresAreasArtilleryReservedArea Entity = 242500
+
+	// EntityControlMeasure_FiresPoints is Fires Points.
+	EntityControlMeasure_FiresPoints Entity = 250000
+
+	// EntityControlMeasure_FiresPointsFiringPoint is Fires Points / Firing Point.
+	EntityControlMeasure_FiresPointsFiringPoint Entity = 250100
+
+	// EntityControlMeasure_FiresPointsHidePoint is Fires Points / Hide Point.
+	EntityControlMeasure_FiresPointsHidePoint Entity = 250200
+
+	// EntityControlMeasure_FiresPointsLaunchPoint is Fires Points / Launch Point.
+	EntityControlMeasure_FiresPointsLaunchPoint Entity = 250300
+
+	// EntityControlMeasure_FiresPointsReloadPoint is Fires Points / Reload Point.
+	EntityControlMeasure_FiresPointsReloadPoint Entity = 250400
+
+	// EntityControlMeasure_FiresPointsSurveyControlPoint is Fires Points / Survey Control Point.
+	EntityControlMeasure_FiresPointsSurveyControlPoint Entity = 250500
+
+	// EntityControlMeasure_FiresPointsKnownPoint is Fires Points / Known Point.
+	EntityControlMeasure_FiresPointsKnownPoint Entity = 250600
+
+	// EntityControlMeasure_FireLines is Fire Lines.
+	EntityControlMeasure_FireLines Entity = 260000
+
+	// EntityControlMeasure_FireLinesFireSupportCoordinationLineFSCL is Fire Lines / Fire Support Coordination Line (FSCL).
+	EntityControlMeasure_FireLinesFireSupportCoordinationLineFSCL Entity = 260100
+
+	// EntityControlMeasure_FireLinesCoordinatedFireLineCFL is Fire Lines / Coordinated Fire Line (CFL).
+	EntityControlMeasure_FireLinesCoordinatedFireLineCFL Entity = 260200
+
+	// EntityControlMeasure_FireLinesNoFireLine is Fire Lines / No Fire Line.
+	EntityControlMeasure_FireLinesNoFireLine Entity = 260300
+
+	// EntityControlMeasure_FireLinesBattlefieldCoordinationLine is Fire Lines / Battlefield Coordination Line.
+	EntityControlMeasure_FireLinesBattlefieldCoordinationLine Entity = 260400
+
+	// EntityControlMeasure_FireLinesRestrictiveFireLine is Fire Lines / Restrictive Fire Line.
+	EntityControlMeasure_FireLinesRestrictiveFireLine Entity = 260500
+
+	// EntityControlMeasure_FireLinesMunitionFlightPath is Fire Lines / Munition Flight Path.
+	EntityControlMeasure_FireLinesMunitionFlightPath Entity = 260600
+
+	// EntityControlMeasure_ProtectionAreas is Protection Areas.
+	EntityControlMeasure_ProtectionAreas Entity = 270000
+
+	// EntityControlMeasure_ProtectionAreasObstacleBelt is Protection Areas / Obstacle Belt.
+	EntityControlMeasure_ProtectionAreasObstacleBelt Entity = 270100
+
+	// EntityControlMeasure_ProtectionAreasObstacleZone is Protection Areas / Obstacle Zone.
+	EntityControlMeasure_ProtectionAreasObstacleZone Entity = 270200
+
+	// EntityControlMeasure_ProtectionAreasObstacleFreeZone is Protection Areas / Obstacle Free Zone.
+	EntityControlMeasure_ProtectionAreasObstacleFreeZone Entity = 270300
+
+	// EntityControlMeasure_ProtectionAreasObstacleRestrictedZone is Protection Areas / Obstacle Restricted Zone.
+	EntityControlMeasure_ProtectionAreasObstacleRestrictedZone Entity = 270400
+
+	// EntityControlMeasure_ProtectionAreasObstacleEffects is Protection Areas / Obstacle Effects.
+	EntityControlMeasure_ProtectionAreasObstacleEffects Entity = 270500
+
+	// EntityControlMeasure_ProtectionAreasObstacleEffectsBlock is Protection Areas / Obstacle Effects / Block.
+	EntityControlMeasure_ProtectionAreasObstacleEffectsBlock Entity = 270501
+
+	// EntityControlMeasure_ProtectionAreasObstacleEffectsDisrupt is Protection Areas / Obstacle Effects / Disrupt.
+	EntityControlMeasure_ProtectionAreasObstacleEffectsDisrupt Entity = 270502
+
+	// EntityControlMeasure_ProtectionAreasObstacleEffectsFix is Protection Areas / Obstacle Effects / Fix.
+	EntityControlMeasure_ProtectionAreasObstacleEffectsFix Entity = 270503
+
+	// EntityControlMeasure_ProtectionAreasObstacleEffectsTurn is Protection Areas / Obstacle Effects / Turn.
+	EntityControlMeasure_ProtectionAreasObstacleEffectsTurn Entity = 270504
+
+	// EntityControlMeasure_ProtectionAreasObstacleBypass is Protection Areas / Obstacle Bypass.
+	EntityControlMeasure_ProtectionAreasObstacleBypass Entity = 270600
+
+	// EntityControlMeasure_ProtectionAreasObstacleBypassEasy is Protection Areas / Obstacle Bypass / Easy.
+	EntityControlMeasure_ProtectionAreasObstacleBypassEasy Entity = 270601
+
+	// EntityControlMeasure_ProtectionAreasObstacleBypassDifficult is Protection Areas / Obstacle Bypass / Difficult.
+	EntityControlMeasure_ProtectionAreasObstacleBypassDifficult Entity = 270602
+
+	// EntityControlMeasure_ProtectionAreasObstacleBypassImpossible is Protection Areas / Obstacle Bypass / Impossible.
+	EntityControlMeasure_ProtectionAreasObstacleBypassImpossible Entity = 270603
+
+	// EntityControlMeasure_ProtectionAreasMinefield is Protection Areas / Minefield.
+	EntityControlMeasure_ProtectionAreasMinefield Entity = 270700
+
+	// EntityControlMeasure_ProtectionAreasMinefieldStaticDepiction is Protection Areas / Minefield / Static Depiction.
+	EntityControlMeasure_ProtectionAreasMinefieldStaticDepiction Entity = 270701
+
+	// EntityControlMeasure_ProtectionAreasMinefieldDynamicDepiction is Protection Areas / Minefield / Dynamic Depiction.
+	EntityControlMeasure_ProtectionAreasMinefieldDynamicDepiction Entity = 270707
+
+	// EntityControlMeasure_ProtectionAreasMinedArea is Protection Areas / Mined Area.
+	EntityControlMeasure_ProtectionAreasMinedArea Entity = 270800
+
+	// EntityControlMeasure_ProtectionAreasMinedAreaFenced is Protection Areas / Mined Area / Fenced.
+	EntityControlMeasure_ProtectionAreasMinedAreaFenced Entity = 270801
+
+	// EntityControlMeasure_ProtectionAreasUnexplodedExplosiveOrdnanceUXOArea is Protection Areas / Unexploded Explosive Ordnance (UXO) Area.
+	EntityControlMeasure_ProtectionAreasUnexplodedExplosiveOrdnanceUXOArea Entity = 271000
+
+	// EntityControlMeasure_ProtectionAreasBridgeOrGap is Protection Areas / Bridge or Gap.
+	EntityControlMeasure_ProtectionAreasBridgeOrGap Entity = 271100
+
+	// EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridges is Protection Areas / Roadblocks, Craters and Blown Bridges.
+	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridges Entity = 271200
+
+	// EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesPlanned is Protection Areas / Roadblocks, Craters and Blown Bridges / Planned.
+	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesPlanned Entity = 271201
+
+	// EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesExplosivesStateOfReadiness1Safe is Protection Areas / Roadblocks, Craters and Blown Bridges / Explosives, State of Readiness 1 (Safe).
+	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesExplosivesStateOfReadiness1Safe Entity = 271202
+
+	// EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesExplosivesStateOfReadiness2ArmedButPassable is Protection Areas / Roadblocks, Craters and Blown Bridges / Explosives, State of Readiness 2 (armed but passable).
+	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesExplosivesStateOfReadiness2ArmedButPassable Entity = 271203
+
+	// EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesRoadblockCompleteExecuted is Protection Areas / Roadblocks, Craters and Blown Bridges / Roadblock Complete (Executed).
+	EntityControlMeasure_ProtectionAreasRoadblocksCratersAndBlownBridgesRoadblockCompleteExecuted Entity = 271204
+
+	// EntityControlMeasure_ProtectionAreasAssaultCrossing is Protection Areas / Assault Crossing.
+	EntityControlMeasure_ProtectionAreasAssaultCrossing Entity = 271300
+
+	// EntityControlMeasure_ProtectionAreasDisused is Protection Areas / {Disused}.
+	EntityControlMeasure_ProtectionAreasDisused Entity = 271400
+
+	// EntityControlMeasure_ProtectionAreasFordEasy is Protection Areas / Ford Easy.
+	EntityControlMeasure_ProtectionAreasFordEasy Entity = 271500
+
+	// EntityControlMeasure_ProtectionAreasFordDifficult is Protection Areas / Ford Difficult.
+	EntityControlMeasure_ProtectionAreasFordDifficult Entity = 271600
+
+	// EntityControlMeasure_ProtectionAreasBiologicalContaminatedArea is Protection Areas / Biological Contaminated Area.
+	EntityControlMeasure_ProtectionAreasBiologicalContaminatedArea Entity = 271700
+
+	// EntityControlMeasure_ProtectionAreasBiologicalContaminatedAreaToxicIndustrialMaterial is Protection Areas / Biological Contaminated Area / Toxic Industrial Material.
+	EntityControlMeasure_ProtectionAreasBiologicalContaminatedAreaToxicIndustrialMaterial Entity = 271701
+
+	// EntityControlMeasure_ProtectionAreasChemicalContaminatedArea is Protection Areas / Chemical Contaminated Area.
+	EntityControlMeasure_ProtectionAreasChemicalContaminatedArea Entity = 271800
+
+	// EntityControlMeasure_ProtectionAreasChemicalContaminatedAreaToxicIndustrialMaterial is Protection Areas / Chemical Contaminated Area / Toxic Industrial Material.
+	EntityControlMeasure_ProtectionAreasChemicalContaminatedAreaToxicIndustrialMaterial Entity = 271801
+
+	// EntityControlMeasure_ProtectionAreasNuclearContaminatedArea is Protection Areas / Nuclear Contaminated Area.
+	EntityControlMeasure_ProtectionAreasNuclearContaminatedArea Entity = 271900
+
+	// EntityControlMeasure_ProtectionAreasRadiologicalContaminatedArea is Protection Areas / Radiological Contaminated Area.
+	EntityControlMeasure_ProtectionAreasRadiologicalContaminatedArea Entity = 272000
+
+	// EntityControlMeasure_ProtectionAreasRadiologicalContaminatedAreaToxicIndustrialMaterial is Protection Areas / Radiological Contaminated Area / Toxic Industrial Material.
+	EntityControlMeasure_ProtectionAreasRadiologicalContaminatedAreaToxicIndustrialMaterial Entity = 272001
+
+	// EntityControlMeasure_ProtectionAreasMinimumSafeDistanceZone is Protection Areas / Minimum Safe Distance Zone.
+	EntityControlMeasure_ProtectionAreasMinimumSafeDistanceZone Entity = 272100
+
+	// EntityControlMeasure_ProtectionAreasMinimumSafeDistanceZoneMultipleStrikesSTRIKWARN is Protection Areas / Minimum Safe Distance Zone / Multiple Strikes – STRIKWARN.
+	EntityControlMeasure_ProtectionAreasMinimumSafeDistanceZoneMultipleStrikesSTRIKWARN Entity = 272101
+
+	// EntityControlMeasure_ProtectionAreasRadiationDoseRateContourLines is Protection Areas / Radiation Dose Rate Contour Lines.
+	EntityControlMeasure_ProtectionAreasRadiationDoseRateContourLines Entity = 272200
+
+	// EntityControlMeasure_ProtectionPoints is Protection Points.
+	EntityControlMeasure_ProtectionPoints Entity = 280000
+
+	// EntityControlMeasure_ProtectionPointsAbatis is Protection Points / Abatis.
+	EntityControlMeasure_ProtectionPointsAbatis Entity = 280100
+
+	// EntityControlMeasure_ProtectionPointsAntipersonnelMine is Protection Points / Antipersonnel Mine.
+	EntityControlMeasure_ProtectionPointsAntipersonnelMine Entity = 280200
+
+	// EntityControlMeasure_ProtectionPointsAntipersonnelMineAntipersonnelMineWithDirectionalEffects is Protection Points / Antipersonnel Mine / Antipersonnel Mine with Directional Effects.
+	EntityControlMeasure_ProtectionPointsAntipersonnelMineAntipersonnelMineWithDirectionalEffects Entity = 280201
+
+	// EntityControlMeasure_ProtectionPointsAntitankMine is Protection Points / Antitank Mine.
+	EntityControlMeasure_ProtectionPointsAntitankMine Entity = 280300
+
+	// EntityControlMeasure_ProtectionPointsAntitankMineWithAntiHandlingDevice is Protection Points / Antitank Mine with Anti-handling Device.
+	EntityControlMeasure_ProtectionPointsAntitankMineWithAntiHandlingDevice Entity = 280400
+
+	// EntityControlMeasure_ProtectionPointsWideAreaAntitankMine is Protection Points / Wide Area Antitank Mine.
+	EntityControlMeasure_ProtectionPointsWideAreaAntitankMine Entity = 280500
+
+	// EntityControlMeasure_ProtectionPointsUnspecifiedMine is Protection Points / Unspecified Mine.
+	EntityControlMeasure_ProtectionPointsUnspecifiedMine Entity = 280600
+
+	// EntityControlMeasure_ProtectionPointsBoobyTrap is Protection Points / Booby Trap.
+	EntityControlMeasure_ProtectionPointsBoobyTrap Entity = 280700
+
+	// EntityControlMeasure_ProtectionPointsEngineerRegulatingPoint is Protection Points / Engineer Regulating Point.
+	EntityControlMeasure_ProtectionPointsEngineerRegulatingPoint Entity = 280800
+
+	// EntityControlMeasure_ProtectionPointsShelter is Protection Points / Shelter.
+	EntityControlMeasure_ProtectionPointsShelter Entity = 280900
+
+	// EntityControlMeasure_ProtectionPointsAboveGroundShelter is Protection Points / Above Ground Shelter.
+	EntityControlMeasure_ProtectionPointsAboveGroundShelter Entity = 281000
+
+	// EntityControlMeasure_ProtectionPointsBelowGroundShelter is Protection Points / Below Ground Shelter.
+	EntityControlMeasure_ProtectionPointsBelowGroundShelter Entity = 281100
+
+	// EntityControlMeasure_ProtectionPointsFort is Protection Points / Fort.
+	EntityControlMeasure_ProtectionPointsFort Entity = 281200
+
+	// EntityControlMeasure_ProtectionPointsChemicalEvent is Protection Points / Chemical Event.
+	EntityControlMeasure_ProtectionPointsChemicalEvent Entity = 281300
+
+	// EntityControlMeasure_ProtectionPointsChemicalEventToxicIndustrialMaterial is Protection Points / Chemical Event / Toxic Industrial Material.
+	EntityControlMeasure_ProtectionPointsChemicalEventToxicIndustrialMaterial Entity = 281301
+
+	// EntityControlMeasure_ProtectionPointsBiologicalEvent is Protection Points / Biological Event.
+	EntityControlMeasure_ProtectionPointsBiologicalEvent Entity = 281400
+
+	// EntityControlMeasure_ProtectionPointsBiologicalEventToxicIndustrialMaterial is Protection Points / Biological Event / Toxic Industrial Material.
+	EntityControlMeasure_ProtectionPointsBiologicalEventToxicIndustrialMaterial Entity = 281401
+
+	// EntityControlMeasure_ProtectionPointsNuclearEvent is Protection Points / Nuclear Event.
+	EntityControlMeasure_ProtectionPointsNuclearEvent Entity = 281500
+
+	// EntityControlMeasure_ProtectionPointsNuclearFalloutProducingEvent is Protection Points / Nuclear Fallout Producing Event.
+	EntityControlMeasure_ProtectionPointsNuclearFalloutProducingEvent Entity = 281600
+
+	// EntityControlMeasure_ProtectionPointsRadiologicalEvent is Protection Points / Radiological Event.
+	EntityControlMeasure_ProtectionPointsRadiologicalEvent Entity = 281700
+
+	// EntityControlMeasure_ProtectionPointsRadiologicalEventToxicIndustrialMaterial is Protection Points / Radiological Event / Toxic Industrial Material.
+	EntityControlMeasure_ProtectionPointsRadiologicalEventToxicIndustrialMaterial Entity = 281701
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSite is Protection Points / General Decontamination Point/Site.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSite Entity = 281800
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteAlternate is Protection Points / General Decontamination Point/Site / Alternate.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteAlternate Entity = 281801
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteEquipment is Protection Points / General Decontamination Point/Site / Equipment.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteEquipment Entity = 281802
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteTroop is Protection Points / General Decontamination Point/Site / Troop.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteTroop Entity = 281803
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteEquipmentTroop is Protection Points / General Decontamination Point/Site / Equipment/Troop.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteEquipmentTroop Entity = 281804
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteOperational is Protection Points / General Decontamination Point/Site / Operational.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteOperational Entity = 281805
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteThorough is Protection Points / General Decontamination Point/Site / Thorough.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteThorough Entity = 281806
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteMainEquipment is Protection Points / General Decontamination Point/Site / Main Equipment.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteMainEquipment Entity = 281807
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteForwardTroop is Protection Points / General Decontamination Point/Site / Forward Troop.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteForwardTroop Entity = 281808
+
+	// EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteWoundedPersonnel is Protection Points / General Decontamination Point/Site / Wounded Personnel.
+	EntityControlMeasure_ProtectionPointsGeneralDecontaminationPointSiteWoundedPersonnel Entity = 281809
+
+	// EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstacles is Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles.
+	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstacles Entity = 281900
+
+	// EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesFixedAndPrefabricated is Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Fixed and Prefabricated.
+	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesFixedAndPrefabricated Entity = 281901
+
+	// EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesMovable is Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable.
+	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesMovable Entity = 281902
+
+	// EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesMovableAndPrefabricated is Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable and Prefabricated.
+	EntityControlMeasure_ProtectionPointsTetrahedronsDragonsTeethAndOtherSimilarObstaclesMovableAndPrefabricated Entity = 281903
+
+	// EntityControlMeasure_ProtectionPointsVerticalObstructions is Protection Points / Vertical Obstructions.
+	EntityControlMeasure_ProtectionPointsVerticalObstructions Entity = 282000
+
+	// EntityControlMeasure_ProtectionPointsVerticalObstructionsTowerLow is Protection Points / Vertical Obstructions / Tower, Low.
+	EntityControlMeasure_ProtectionPointsVerticalObstructionsTowerLow Entity = 282001
+
+	// EntityControlMeasure_ProtectionPointsVerticalObstructionsTowerHigh is Protection Points / Vertical Obstructions / Tower, High.
+	EntityControlMeasure_ProtectionPointsVerticalObstructionsTowerHigh Entity = 282002
+
+	// EntityControlMeasure_ProtectionPointsVerticalObstructionsOverheadWire is Protection Points / Vertical Obstructions / Overhead Wire.
+	EntityControlMeasure_ProtectionPointsVerticalObstructionsOverheadWire Entity = 282003
+
+	// EntityControlMeasure_ProtectionLines is Protection Lines.
+	EntityControlMeasure_ProtectionLines Entity = 290000
+
+	// EntityControlMeasure_ProtectionLinesObstacleLine is Protection Lines / Obstacle Line.
+	EntityControlMeasure_ProtectionLinesObstacleLine Entity = 290100
+
+	// EntityControlMeasure_ProtectionLinesObstacleLineMineline is Protection Lines / Obstacle Line / Mineline.
+	EntityControlMeasure_ProtectionLinesObstacleLineMineline Entity = 290101
+
+	// EntityControlMeasure_ProtectionLinesAntitankObstacles is Protection Lines / Antitank Obstacles.
+	EntityControlMeasure_ProtectionLinesAntitankObstacles Entity = 290200
+
+	// EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchUnderConstruction is Protection Lines / Antitank Obstacles / Ditch Under Construction.
+	EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchUnderConstruction Entity = 290201
+
+	// EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchCompleted is Protection Lines / Antitank Obstacles / Ditch Completed.
+	EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchCompleted Entity = 290202
+
+	// EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchReinforcedWithAntitankMines is Protection Lines / Antitank Obstacles / Ditch Reinforced, with Antitank Mines.
+	EntityControlMeasure_ProtectionLinesAntitankObstaclesDitchReinforcedWithAntitankMines Entity = 290203
+
+	// EntityControlMeasure_ProtectionLinesAntitankObstaclesAntitankWall is Protection Lines / Antitank Obstacles / Antitank Wall.
+	EntityControlMeasure_ProtectionLinesAntitankObstaclesAntitankWall Entity = 290204
+
+	// EntityControlMeasure_ProtectionLinesWireObstacles is Protection Lines / Wire Obstacles.
+	EntityControlMeasure_ProtectionLinesWireObstacles Entity = 290300
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesUnspecified is Protection Lines / Wire Obstacles / Unspecified.
+	EntityControlMeasure_ProtectionLinesWireObstaclesUnspecified Entity = 290301
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesSingleFence is Protection Lines / Wire Obstacles / Single Fence.
+	EntityControlMeasure_ProtectionLinesWireObstaclesSingleFence Entity = 290302
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesDoubleFence is Protection Lines / Wire Obstacles / Double Fence.
+	EntityControlMeasure_ProtectionLinesWireObstaclesDoubleFence Entity = 290303
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesDoubleApronFence is Protection Lines / Wire Obstacles / Double Apron Fence.
+	EntityControlMeasure_ProtectionLinesWireObstaclesDoubleApronFence Entity = 290304
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesLowWireFence is Protection Lines / Wire Obstacles / Low Wire Fence.
+	EntityControlMeasure_ProtectionLinesWireObstaclesLowWireFence Entity = 290305
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesHighWireFence is Protection Lines / Wire Obstacles / High Wire Fence.
+	EntityControlMeasure_ProtectionLinesWireObstaclesHighWireFence Entity = 290306
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesSingleConcertina is Protection Lines / Wire Obstacles / Single Concertina.
+	EntityControlMeasure_ProtectionLinesWireObstaclesSingleConcertina Entity = 290307
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesDoubleStrandConcertina is Protection Lines / Wire Obstacles / Double Strand Concertina.
+	EntityControlMeasure_ProtectionLinesWireObstaclesDoubleStrandConcertina Entity = 290308
+
+	// EntityControlMeasure_ProtectionLinesWireObstaclesTripleStrandConcertina is Protection Lines / Wire Obstacles / Triple Strand Concertina.
+	EntityControlMeasure_ProtectionLinesWireObstaclesTripleStrandConcertina Entity = 290309
+
+	// EntityControlMeasure_ProtectionLinesMineCluster is Protection Lines / Mine Cluster.
+	EntityControlMeasure_ProtectionLinesMineCluster Entity = 290400
+
+	// EntityControlMeasure_ProtectionLinesTripWire is Protection Lines / Trip Wire.
+	EntityControlMeasure_ProtectionLinesTripWire Entity = 290500
+
+	// EntityControlMeasure_ProtectionLinesLane is Protection Lines / Lane.
+	EntityControlMeasure_ProtectionLinesLane Entity = 290600
+
+	// EntityControlMeasure_ProtectionLinesFerry is Protection Lines / Ferry.
+	EntityControlMeasure_ProtectionLinesFerry Entity = 290700
+
+	// EntityControlMeasure_ProtectionLinesRaftSite is Protection Lines / Raft Site.
+	EntityControlMeasure_ProtectionLinesRaftSite Entity = 290800
+
+	// EntityControlMeasure_ProtectionLinesFortifiedLine is Protection Lines / Fortified Line.
+	EntityControlMeasure_ProtectionLinesFortifiedLine Entity = 290900
+
+	// EntityControlMeasure_ProtectionLinesFightingPosition is Protection Lines / Fighting Position.
+	EntityControlMeasure_ProtectionLinesFightingPosition Entity = 291000
+
+	// EntityControlMeasure_IntelligenceLines is Intelligence Lines.
+	EntityControlMeasure_IntelligenceLines Entity = 300000
+
+	// EntityControlMeasure_IntelligenceLinesIntelligenceCoordinationLine is Intelligence Lines / Intelligence Coordination Line.
+	EntityControlMeasure_IntelligenceLinesIntelligenceCoordinationLine Entity = 300100
+
+	// EntityControlMeasure_SustainmentAreas is Sustainment Areas.
+	EntityControlMeasure_SustainmentAreas Entity = 310000
+
+	// EntityControlMeasure_SustainmentAreasDetaineeHoldingArea is Sustainment Areas / Detainee Holding Area.
+	EntityControlMeasure_SustainmentAreasDetaineeHoldingArea Entity = 310100
+
+	// EntityControlMeasure_SustainmentAreasEnemyPrisonerOfWarEPWHoldingArea is Sustainment Areas / Enemy Prisoner of War (EPW) Holding Area.
+	EntityControlMeasure_SustainmentAreasEnemyPrisonerOfWarEPWHoldingArea Entity = 310200
+
+	// EntityControlMeasure_SustainmentAreasForwardArmingAndRefuelingPointFARP is Sustainment Areas / Forward Arming and Refueling Point (FARP).
+	EntityControlMeasure_SustainmentAreasForwardArmingAndRefuelingPointFARP Entity = 310300
+
+	// EntityControlMeasure_SustainmentAreasRefugeeHoldingArea is Sustainment Areas / Refugee Holding Area.
+	EntityControlMeasure_SustainmentAreasRefugeeHoldingArea Entity = 310400
+
+	// EntityControlMeasure_SustainmentAreasRegimentalSupportArea is Sustainment Areas / Regimental Support Area.
+	EntityControlMeasure_SustainmentAreasRegimentalSupportArea Entity = 310500
+
+	// EntityControlMeasure_SustainmentAreasBrigadeSupportArea is Sustainment Areas / Brigade Support Area.
+	EntityControlMeasure_SustainmentAreasBrigadeSupportArea Entity = 310600
+
+	// EntityControlMeasure_SustainmentAreasDivisionSupportArea is Sustainment Areas / Division Support Area.
+	EntityControlMeasure_SustainmentAreasDivisionSupportArea Entity = 310700
+
+	// EntityControlMeasure_SustainmentAreasCorpsSupportArea is Sustainment Areas / Corps Support Area.
+	EntityControlMeasure_SustainmentAreasCorpsSupportArea Entity = 310800
+
+	// EntityControlMeasure_SustainmentPoints is Sustainment Points.
+	EntityControlMeasure_SustainmentPoints Entity = 320000
+
+	// EntityControlMeasure_SustainmentPointsAmbulancePoints is Sustainment Points / Ambulance Points.
+	EntityControlMeasure_SustainmentPointsAmbulancePoints Entity = 320100
+
+	// EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceExchangePoint is Sustainment Points / Ambulance Points / Ambulance Exchange Point.
+	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceExchangePoint Entity = 320101
+
+	// EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceControlPoint is Sustainment Points / Ambulance Points / Ambulance Control Point.
+	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceControlPoint Entity = 320102
+
+	// EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceLoadPoint is Sustainment Points / Ambulance Points / Ambulance Load Point.
+	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceLoadPoint Entity = 320103
+
+	// EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceRelayPoint is Sustainment Points / Ambulance Points / Ambulance Relay Point.
+	EntityControlMeasure_SustainmentPointsAmbulancePointsAmbulanceRelayPoint Entity = 320104
+
+	// EntityControlMeasure_SustainmentPointsAmmunitionSupplyPoint is Sustainment Points / Ammunition Supply Point.
+	EntityControlMeasure_SustainmentPointsAmmunitionSupplyPoint Entity = 320200
+
+	// EntityControlMeasure_SustainmentPointsAmmunitionTransferAndHoldingPoint is Sustainment Points / Ammunition Transfer and Holding Point.
+	EntityControlMeasure_SustainmentPointsAmmunitionTransferAndHoldingPoint Entity = 320300
+
+	// EntityControlMeasure_SustainmentPointsCannibalizationPoint is Sustainment Points / Cannibalization Point.
+	EntityControlMeasure_SustainmentPointsCannibalizationPoint Entity = 320400
+
+	// EntityControlMeasure_SustainmentPointsCasualtyCollectionPoint is Sustainment Points / Casualty Collection Point.
+	EntityControlMeasure_SustainmentPointsCasualtyCollectionPoint Entity = 320500
+
+	// EntityControlMeasure_SustainmentPointsCivilianCollectionPoint is Sustainment Points / Civilian Collection Point.
+	EntityControlMeasure_SustainmentPointsCivilianCollectionPoint Entity = 320600
+
+	// EntityControlMeasure_SustainmentPointsDetaineeCollectionPoint is Sustainment Points / Detainee Collection Point.
+	EntityControlMeasure_SustainmentPointsDetaineeCollectionPoint Entity = 320700
+
+	// EntityControlMeasure_SustainmentPointsEnemyPrisonerOfWarEPWCollectionPoint is Sustainment Points / Enemy Prisoner of War (EPW) Collection Point.
+	EntityControlMeasure_SustainmentPointsEnemyPrisonerOfWarEPWCollectionPoint Entity = 320800
+
+	// EntityControlMeasure_SustainmentPointsLogisticsReleasePointLRP is Sustainment Points / Logistics Release Point (LRP).
+	EntityControlMeasure_SustainmentPointsLogisticsReleasePointLRP Entity = 320900
+
+	// EntityControlMeasure_SustainmentPointsMaintenanceCollectionPointMCP is Sustainment Points / Maintenance Collection Point (MCP).
+	EntityControlMeasure_SustainmentPointsMaintenanceCollectionPointMCP Entity = 321000
+
+	// EntityControlMeasure_SustainmentPointsMedicalEvacuationPointMEDEVACPickUpPoint is Sustainment Points / Medical Evacuation Point (MEDEVAC) Pick-Up Point.
+	EntityControlMeasure_SustainmentPointsMedicalEvacuationPointMEDEVACPickUpPoint Entity = 321100
+
+	// EntityControlMeasure_SustainmentPointsRearmRefuelAndResupplyPointR3P is Sustainment Points / Rearm, Refuel and Resupply Point (R3P).
+	EntityControlMeasure_SustainmentPointsRearmRefuelAndResupplyPointR3P Entity = 321200
+
+	// EntityControlMeasure_SustainmentPointsRefuelOnTheMoveROMPoint is Sustainment Points / Refuel on the Move (ROM) Point.
+	EntityControlMeasure_SustainmentPointsRefuelOnTheMoveROMPoint Entity = 321300
+
+	// EntityControlMeasure_SustainmentPointsTrafficControlPostTCP is Sustainment Points / Traffic Control Post (TCP).
+	EntityControlMeasure_SustainmentPointsTrafficControlPostTCP Entity = 321400
+
+	// EntityControlMeasure_SustainmentPointsTrailerTransferPointTTP is Sustainment Points / Trailer Transfer Point (TTP).
+	EntityControlMeasure_SustainmentPointsTrailerTransferPointTTP Entity = 321500
+
+	// EntityControlMeasure_SustainmentPointsUnitMaintenanceCollectionPointUNCP is Sustainment Points / Unit Maintenance Collection Point (UNCP).
+	EntityControlMeasure_SustainmentPointsUnitMaintenanceCollectionPointUNCP Entity = 321600
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPoint is Sustainment Points / General Supply Point.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPoint Entity = 321700
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassI is Sustainment Points / General Supply Point / NATO Class I.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassI Entity = 321701
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassII is Sustainment Points / General Supply Point / NATO Class II.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassII Entity = 321702
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassIII is Sustainment Points / General Supply Point / NATO Class III.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassIII Entity = 321703
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassIV is Sustainment Points / General Supply Point / NATO Class IV.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassIV Entity = 321704
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassV is Sustainment Points / General Supply Point / NATO Class V.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOClassV Entity = 321705
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOMultipleClass is Sustainment Points / General Supply Point / NATO Multiple Class.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointNATOMultipleClass Entity = 321706
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassI is Sustainment Points / General Supply Point / US Class I.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassI Entity = 321707
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassII is Sustainment Points / General Supply Point / US Class II.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassII Entity = 321708
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIII is Sustainment Points / General Supply Point / US Class III.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIII Entity = 321709
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIV is Sustainment Points / General Supply Point / US Class IV.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIV Entity = 321710
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassV is Sustainment Points / General Supply Point / US Class V.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassV Entity = 321711
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVI is Sustainment Points / General Supply Point / US Class VI.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVI Entity = 321712
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVII is Sustainment Points / General Supply Point / US Class VII.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVII Entity = 321713
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVIII is Sustainment Points / General Supply Point / US Class VIII.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassVIII Entity = 321714
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIX is Sustainment Points / General Supply Point / US Class IX.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassIX Entity = 321715
+
+	// EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassX is Sustainment Points / General Supply Point / US Class X.
+	EntityControlMeasure_SustainmentPointsGeneralSupplyPointUSClassX Entity = 321716
+
+	// EntityControlMeasure_SustainmentPointsMedicalSupplyPoint is Sustainment Points / Medical Supply Point.
+	EntityControlMeasure_SustainmentPointsMedicalSupplyPoint Entity = 321800
+
+	// EntityControlMeasure_SustainmentPointsMortuaryAffairsCollectionPoint is Sustainment Points / Mortuary Affairs Collection Point.
+	EntityControlMeasure_SustainmentPointsMortuaryAffairsCollectionPoint Entity = 321900
+
+	// EntityControlMeasure_SustainmentLines is Sustainment Lines.
+	EntityControlMeasure_SustainmentLines Entity = 330000
+
+	// EntityControlMeasure_SustainmentLinesMovingConvoy is Sustainment Lines / Moving Convoy.
+	EntityControlMeasure_SustainmentLinesMovingConvoy Entity = 330100
+
+	// EntityControlMeasure_SustainmentLinesHaltedConvoy is Sustainment Lines / Halted Convoy.
+	EntityControlMeasure_SustainmentLinesHaltedConvoy Entity = 330200
+
+	// EntityControlMeasure_SustainmentLinesMainSupplyRouteMSR is Sustainment Lines / Main Supply Route (MSR).
+	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSR Entity = 330300
+
+	// EntityControlMeasure_SustainmentLinesMainSupplyRouteMSROneWayTraffic is Sustainment Lines / Main Supply Route (MSR) / One Way Traffic.
+	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSROneWayTraffic Entity = 330301
+
+	// EntityControlMeasure_SustainmentLinesMainSupplyRouteMSRTwoWayTraffic is Sustainment Lines / Main Supply Route (MSR) / Two Way Traffic.
+	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSRTwoWayTraffic Entity = 330302
+
+	// EntityControlMeasure_SustainmentLinesMainSupplyRouteMSRAlternatingTraffic is Sustainment Lines / Main Supply Route (MSR) / Alternating Traffic.
+	EntityControlMeasure_SustainmentLinesMainSupplyRouteMSRAlternatingTraffic Entity = 330303
+
+	// EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASR is Sustainment Lines / Alternate Supply Route (ASR).
+	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASR Entity = 330400
+
+	// EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASROneWayTraffic is Sustainment Lines / Alternate Supply Route (ASR) / One Way Traffic.
+	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASROneWayTraffic Entity = 330401
+
+	// EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASRTwoWayTraffic is Sustainment Lines / Alternate Supply Route (ASR) / Two Way Traffic.
+	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASRTwoWayTraffic Entity = 330402
+
+	// EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASRAlternatingTraffic is Sustainment Lines / Alternate Supply Route (ASR) / Alternating Traffic.
+	EntityControlMeasure_SustainmentLinesAlternateSupplyRouteASRAlternatingTraffic Entity = 330403
+
+	// EntityControlMeasure_SustainmentLinesTrafficRoute is Sustainment Lines / Traffic Route.
+	EntityControlMeasure_SustainmentLinesTrafficRoute Entity = 330500
+
+	// EntityControlMeasure_SustainmentLinesTrafficRouteOneWayTraffic is Sustainment Lines / Traffic Route / One Way Traffic.
+	EntityControlMeasure_SustainmentLinesTrafficRouteOneWayTraffic Entity = 330501
+
+	// EntityControlMeasure_SustainmentLinesTrafficRouteAlternatingTraffic is Sustainment Lines / Traffic Route / Alternating Traffic.
+	EntityControlMeasure_SustainmentLinesTrafficRouteAlternatingTraffic Entity = 330502
+
+	// EntityControlMeasure_MissionTasks is Mission Tasks.
+	EntityControlMeasure_MissionTasks Entity = 340000
+
+	// EntityControlMeasure_MissionTasksBlock is Mission Tasks / Block.
+	EntityControlMeasure_MissionTasksBlock Entity = 340100
+
+	// EntityControlMeasure_MissionTasksBreach is Mission Tasks / Breach.
+	EntityControlMeasure_MissionTasksBreach Entity = 340200
+
+	// EntityControlMeasure_MissionTasksBypass is Mission Tasks / Bypass.
+	EntityControlMeasure_MissionTasksBypass Entity = 340300
+
+	// EntityControlMeasure_MissionTasksCanalize is Mission Tasks / Canalize.
+	EntityControlMeasure_MissionTasksCanalize Entity = 340400
+
+	// EntityControlMeasure_MissionTasksClear is Mission Tasks / Clear.
+	EntityControlMeasure_MissionTasksClear Entity = 340500
+
+	// EntityControlMeasure_MissionTasksCounterattack is Mission Tasks / Counterattack.
+	EntityControlMeasure_MissionTasksCounterattack Entity = 340600
+
+	// EntityControlMeasure_MissionTasksCounterattackByFire is Mission Tasks / Counterattack by Fire.
+	EntityControlMeasure_MissionTasksCounterattackByFire Entity = 340700
+
+	// EntityControlMeasure_MissionTasksDelay is Mission Tasks / Delay.
+	EntityControlMeasure_MissionTasksDelay Entity = 340800
+
+	// EntityControlMeasure_MissionTasksDestroy is Mission Tasks / Destroy.
+	EntityControlMeasure_MissionTasksDestroy Entity = 340900
+
+	// EntityControlMeasure_MissionTasksDisrupt is Mission Tasks / Disrupt.
+	EntityControlMeasure_MissionTasksDisrupt Entity = 341000
+
+	// EntityControlMeasure_MissionTasksFix is Mission Tasks / Fix.
+	EntityControlMeasure_MissionTasksFix Entity = 341100
+
+	// EntityControlMeasure_MissionTasksFollowAndAssume is Mission Tasks / Follow and Assume.
+	EntityControlMeasure_MissionTasksFollowAndAssume Entity = 341200
+
+	// EntityControlMeasure_MissionTasksFollowAndSupport is Mission Tasks / Follow and Support.
+	EntityControlMeasure_MissionTasksFollowAndSupport Entity = 341300
+
+	// EntityControlMeasure_MissionTasksInterdict is Mission Tasks / Interdict.
+	EntityControlMeasure_MissionTasksInterdict Entity = 341400
+
+	// EntityControlMeasure_MissionTasksIsolate is Mission Tasks / Isolate.
+	EntityControlMeasure_MissionTasksIsolate Entity = 341500
+
+	// EntityControlMeasure_MissionTasksNeutralize is Mission Tasks / Neutralize.
+	EntityControlMeasure_MissionTasksNeutralize Entity = 341600
+
+	// EntityControlMeasure_MissionTasksOccupy is Mission Tasks / Occupy.
+	EntityControlMeasure_MissionTasksOccupy Entity = 341700
+
+	// EntityControlMeasure_MissionTasksPenetrate is Mission Tasks / Penetrate.
+	EntityControlMeasure_MissionTasksPenetrate Entity = 341800
+
+	// EntityControlMeasure_MissionTasksReliefInPlaceRIP is Mission Tasks / Relief in Place (RIP).
+	EntityControlMeasure_MissionTasksReliefInPlaceRIP Entity = 341900
+
+	// EntityControlMeasure_MissionTasksRetireRetirement is Mission Tasks / Retire/Retirement.
+	EntityControlMeasure_MissionTasksRetireRetirement Entity = 342000
+
+	// EntityControlMeasure_MissionTasksSecure is Mission Tasks / Secure.
+	EntityControlMeasure_MissionTasksSecure Entity = 342100
+
+	// EntityControlMeasure_MissionTasksSecurity is Mission Tasks / Security.
+	EntityControlMeasure_MissionTasksSecurity Entity = 342200
+
+	// EntityControlMeasure_MissionTasksSecurityCover is Mission Tasks / Security / Cover.
+	EntityControlMeasure_MissionTasksSecurityCover Entity = 342201
+
+	// EntityControlMeasure_MissionTasksSecurityGuard is Mission Tasks / Security / Guard.
+	EntityControlMeasure_MissionTasksSecurityGuard Entity = 342202
+
+	// EntityControlMeasure_MissionTasksSecurityScreen is Mission Tasks / Security / Screen.
+	EntityControlMeasure_MissionTasksSecurityScreen Entity = 342203
+
+	// EntityControlMeasure_MissionTasksSeize is Mission Tasks / Seize.
+	EntityControlMeasure_MissionTasksSeize Entity = 342300
+
+	// EntityControlMeasure_MissionTasksWithdraw is Mission Tasks / Withdraw.
+	EntityControlMeasure_MissionTasksWithdraw Entity = 342400
+
+	// EntityControlMeasure_MissionTasksWithdrawUnderPressure is Mission Tasks / Withdraw Under Pressure.
+	EntityControlMeasure_MissionTasksWithdrawUnderPressure Entity = 342500
+
+	// EntityControlMeasure_MissionTasksCordonAndKnock is Mission Tasks / Cordon and Knock.
+	EntityControlMeasure_MissionTasksCordonAndKnock Entity = 342600
+
+	// EntityControlMeasure_MissionTasksCordonAndSearch is Mission Tasks / Cordon and Search.
+	EntityControlMeasure_MissionTasksCordonAndSearch Entity = 342700
+
+	// EntityControlMeasure_MissionTasksSuppress is Mission Tasks / Suppress.
+	EntityControlMeasure_MissionTasksSuppress Entity = 342800
+
+	// EntityControlMeasure_MissionTasksAdvanceToContact is Mission Tasks / Advance to Contact.
+	EntityControlMeasure_MissionTasksAdvanceToContact Entity = 342900
+
+	// EntityControlMeasure_MissionTasksCapture is Mission Tasks / Capture.
+	EntityControlMeasure_MissionTasksCapture Entity = 343000
+
+	// EntityControlMeasure_MissionTasksExploitExploitation is Mission Tasks / Exploit/Exploitation.
+	EntityControlMeasure_MissionTasksExploitExploitation Entity = 343100
+
+	// EntityControlMeasure_MissionTasksControl is Mission Tasks / Control.
+	EntityControlMeasure_MissionTasksControl Entity = 343200
+
+	// EntityControlMeasure_MissionTasksDemonstrationDemonstrate is Mission Tasks / Demonstration/Demonstrate.
+	EntityControlMeasure_MissionTasksDemonstrationDemonstrate Entity = 343300
+
+	// EntityControlMeasure_MissionTasksDeny is Mission Tasks / Deny.
+	EntityControlMeasure_MissionTasksDeny Entity = 343400
+
+	// EntityControlMeasure_MissionTasksEnvelop is Mission Tasks / Envelop.
+	EntityControlMeasure_MissionTasksEnvelop Entity = 343500
+
+	// EntityControlMeasure_MissionTasksEscort is Mission Tasks / Escort.
+	EntityControlMeasure_MissionTasksEscort Entity = 343600
+
+	// EntityControlMeasure_MissionTasksExfiltrate is Mission Tasks / Exfiltrate.
+	EntityControlMeasure_MissionTasksExfiltrate Entity = 343700
+
+	// EntityControlMeasure_MissionTasksInfiltrate is Mission Tasks / Infiltrate.
+	EntityControlMeasure_MissionTasksInfiltrate Entity = 343800
+
+	// EntityControlMeasure_MissionTasksLocate is Mission Tasks / Locate.
+	EntityControlMeasure_MissionTasksLocate Entity = 343900
+
+	// EntityControlMeasure_MissionTasksPursue is Mission Tasks / Pursue.
+	EntityControlMeasure_MissionTasksPursue Entity = 344000
+
+	// EntityControlMeasure_MissionTasksForwardPassageOfLines is Mission Tasks / Forward Passage of Lines.
+	EntityControlMeasure_MissionTasksForwardPassageOfLines Entity = 344100
+
+	// EntityControlMeasure_MissionTasksRearwardPassageOfLines is Mission Tasks / Rearward Passage of Lines.
+	EntityControlMeasure_MissionTasksRearwardPassageOfLines Entity = 344200
+
+	// EntityControlMeasure_MissionTasksDefeat is Mission Tasks / Defeat.
+	EntityControlMeasure_MissionTasksDefeat Entity = 344300
+
+	// EntityControlMeasure_MissionTasksDisengage is Mission Tasks / Disengage.
+	EntityControlMeasure_MissionTasksDisengage Entity = 344400
+
+	// EntityControlMeasure_MissionTasksEvacuate is Mission Tasks / Evacuate.
+	EntityControlMeasure_MissionTasksEvacuate Entity = 344500
+
+	// EntityControlMeasure_MissionTasksRecover is Mission Tasks / Recover.
+	EntityControlMeasure_MissionTasksRecover Entity = 344600
+
+	// EntityControlMeasure_MissionTasksTurn is Mission Tasks / Turn.
+	EntityControlMeasure_MissionTasksTurn Entity = 344700
 )

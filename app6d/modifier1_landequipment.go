@@ -5,31 +5,84 @@ package app6d
 
 // Modifier 1 constants for symbol set 15 (Land equipment).
 const (
-	Modifier1LandEquipment_Biological                Modifier1 = 1  // Biological
-	Modifier1LandEquipment_Disused                   Modifier1 = 2  // {Disused}
-	Modifier1LandEquipment_EarlyWarningRadar         Modifier1 = 3  // Early Warning Radar
-	Modifier1LandEquipment_Intrusion                 Modifier1 = 4  // Intrusion
-	Modifier1LandEquipment_Disused_05                Modifier1 = 5  // {Disused}
-	Modifier1LandEquipment_Disused_06                Modifier1 = 6  // {Disused}
-	Modifier1LandEquipment_UpgradedEarlyWarningRadar Modifier1 = 7  // Upgraded Early Warning Radar
-	Modifier1LandEquipment_Disused_08                Modifier1 = 8  // {Disused}
-	Modifier1LandEquipment_Disused_09                Modifier1 = 9  // {Disused}
-	Modifier1LandEquipment_Disused_10                Modifier1 = 10 // {Disused}
-	Modifier1LandEquipment_Disused_11                Modifier1 = 11 // {Disused}
-	Modifier1LandEquipment_MultiPurposeBlade         Modifier1 = 12 // Multi-purpose Blade
-	Modifier1LandEquipment_TankWidthMinePlow         Modifier1 = 13 // Tank-width Mine Plow
-	Modifier1LandEquipment_Disused_14                Modifier1 = 14 // {Disused}
-	Modifier1LandEquipment_Disused_15                Modifier1 = 15 // {Disused}
-	Modifier1LandEquipment_Disused_16                Modifier1 = 16 // {Disused}
-	Modifier1LandEquipment_Disused_17                Modifier1 = 17 // {Disused}
-	Modifier1LandEquipment_Disused_18                Modifier1 = 18 // {Disused}
-	Modifier1LandEquipment_Disused_19                Modifier1 = 19 // {Disused}
-	Modifier1LandEquipment_Disused_20                Modifier1 = 20 // {Disused}
-	Modifier1LandEquipment_Disused_21                Modifier1 = 21 // {Disused}
-	Modifier1LandEquipment_Disused_22                Modifier1 = 22 // {Disused}
-	Modifier1LandEquipment_Disused_23                Modifier1 = 23 // {Disused}
-	Modifier1LandEquipment_Disused_24                Modifier1 = 24 // {Disused}
-	Modifier1LandEquipment_Disused_25                Modifier1 = 25 // {Disused}
-	Modifier1LandEquipment_Disused_26                Modifier1 = 26 // {Disused}
-	Modifier1LandEquipment_Disused_27                Modifier1 = 27 // {Disused}
+	// Modifier1LandEquipment_Biological is Biological.
+	Modifier1LandEquipment_Biological Modifier1 = 1
+
+	// Modifier1LandEquipment_Disused is {Disused}.
+	Modifier1LandEquipment_Disused Modifier1 = 2
+
+	// Modifier1LandEquipment_EarlyWarningRadar is Early Warning Radar.
+	Modifier1LandEquipment_EarlyWarningRadar Modifier1 = 3
+
+	// Modifier1LandEquipment_Intrusion is Intrusion.
+	Modifier1LandEquipment_Intrusion Modifier1 = 4
+
+	// Modifier1LandEquipment_Disused_05 is {Disused}.
+	Modifier1LandEquipment_Disused_05 Modifier1 = 5
+
+	// Modifier1LandEquipment_Disused_06 is {Disused}.
+	Modifier1LandEquipment_Disused_06 Modifier1 = 6
+
+	// Modifier1LandEquipment_UpgradedEarlyWarningRadar is Upgraded Early Warning Radar.
+	Modifier1LandEquipment_UpgradedEarlyWarningRadar Modifier1 = 7
+
+	// Modifier1LandEquipment_Disused_08 is {Disused}.
+	Modifier1LandEquipment_Disused_08 Modifier1 = 8
+
+	// Modifier1LandEquipment_Disused_09 is {Disused}.
+	Modifier1LandEquipment_Disused_09 Modifier1 = 9
+
+	// Modifier1LandEquipment_Disused_10 is {Disused}.
+	Modifier1LandEquipment_Disused_10 Modifier1 = 10
+
+	// Modifier1LandEquipment_Disused_11 is {Disused}.
+	Modifier1LandEquipment_Disused_11 Modifier1 = 11
+
+	// Modifier1LandEquipment_MultiPurposeBlade is Multi-purpose Blade.
+	Modifier1LandEquipment_MultiPurposeBlade Modifier1 = 12
+
+	// Modifier1LandEquipment_TankWidthMinePlow is Tank-width Mine Plow.
+	Modifier1LandEquipment_TankWidthMinePlow Modifier1 = 13
+
+	// Modifier1LandEquipment_Disused_14 is {Disused}.
+	Modifier1LandEquipment_Disused_14 Modifier1 = 14
+
+	// Modifier1LandEquipment_Disused_15 is {Disused}.
+	Modifier1LandEquipment_Disused_15 Modifier1 = 15
+
+	// Modifier1LandEquipment_Disused_16 is {Disused}.
+	Modifier1LandEquipment_Disused_16 Modifier1 = 16
+
+	// Modifier1LandEquipment_Disused_17 is {Disused}.
+	Modifier1LandEquipment_Disused_17 Modifier1 = 17
+
+	// Modifier1LandEquipment_Disused_18 is {Disused}.
+	Modifier1LandEquipment_Disused_18 Modifier1 = 18
+
+	// Modifier1LandEquipment_Disused_19 is {Disused}.
+	Modifier1LandEquipment_Disused_19 Modifier1 = 19
+
+	// Modifier1LandEquipment_Disused_20 is {Disused}.
+	Modifier1LandEquipment_Disused_20 Modifier1 = 20
+
+	// Modifier1LandEquipment_Disused_21 is {Disused}.
+	Modifier1LandEquipment_Disused_21 Modifier1 = 21
+
+	// Modifier1LandEquipment_Disused_22 is {Disused}.
+	Modifier1LandEquipment_Disused_22 Modifier1 = 22
+
+	// Modifier1LandEquipment_Disused_23 is {Disused}.
+	Modifier1LandEquipment_Disused_23 Modifier1 = 23
+
+	// Modifier1LandEquipment_Disused_24 is {Disused}.
+	Modifier1LandEquipment_Disused_24 Modifier1 = 24
+
+	// Modifier1LandEquipment_Disused_25 is {Disused}.
+	Modifier1LandEquipment_Disused_25 Modifier1 = 25
+
+	// Modifier1LandEquipment_Disused_26 is {Disused}.
+	Modifier1LandEquipment_Disused_26 Modifier1 = 26
+
+	// Modifier1LandEquipment_Disused_27 is {Disused}.
+	Modifier1LandEquipment_Disused_27 Modifier1 = 27
 )

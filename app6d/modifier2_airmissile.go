@@ -5,20 +5,51 @@ package app6d
 
 // Modifier 2 constants for symbol set 02 (Air missile).
 const (
-	Modifier2AirMissile_Air                          Modifier2 = 1  // Air
-	Modifier2AirMissile_Surface                      Modifier2 = 2  // Surface
-	Modifier2AirMissile_Subsurface                   Modifier2 = 3  // Subsurface
-	Modifier2AirMissile_Space                        Modifier2 = 4  // Space
-	Modifier2AirMissile_Launched                     Modifier2 = 5  // Launched
-	Modifier2AirMissile_Disused                      Modifier2 = 6  // {Disused}
-	Modifier2AirMissile_Patriot                      Modifier2 = 7  // Patriot
-	Modifier2AirMissile_StandardMissile2SM2          Modifier2 = 8  // Standard Missile-2 (SM-2)
-	Modifier2AirMissile_StandardMissile6SM6          Modifier2 = 9  // Standard Missile-6 (SM-6)
-	Modifier2AirMissile_EvolvedSeaSparrowMissileESSM Modifier2 = 10 // Evolved Sea Sparrow Missile (ESSM)
-	Modifier2AirMissile_RollingAirframeMissileRAM    Modifier2 = 11 // Rolling Airframe Missile (RAM)
-	Modifier2AirMissile_ShortRange                   Modifier2 = 12 // Short Range
-	Modifier2AirMissile_MediumRange                  Modifier2 = 13 // Medium Range
-	Modifier2AirMissile_IntermediateRange            Modifier2 = 14 // Intermediate Range
-	Modifier2AirMissile_LongRange                    Modifier2 = 15 // Long Range
-	Modifier2AirMissile_Intercontinental             Modifier2 = 16 // Intercontinental
+	// Modifier2AirMissile_Air is Air.
+	Modifier2AirMissile_Air Modifier2 = 1
+
+	// Modifier2AirMissile_Surface is Surface.
+	Modifier2AirMissile_Surface Modifier2 = 2
+
+	// Modifier2AirMissile_Subsurface is Subsurface.
+	Modifier2AirMissile_Subsurface Modifier2 = 3
+
+	// Modifier2AirMissile_Space is Space.
+	Modifier2AirMissile_Space Modifier2 = 4
+
+	// Modifier2AirMissile_Launched is Launched.
+	Modifier2AirMissile_Launched Modifier2 = 5
+
+	// Modifier2AirMissile_Disused is {Disused}.
+	Modifier2AirMissile_Disused Modifier2 = 6
+
+	// Modifier2AirMissile_Patriot is Patriot.
+	Modifier2AirMissile_Patriot Modifier2 = 7
+
+	// Modifier2AirMissile_StandardMissile2SM2 is Standard Missile-2 (SM-2).
+	Modifier2AirMissile_StandardMissile2SM2 Modifier2 = 8
+
+	// Modifier2AirMissile_StandardMissile6SM6 is Standard Missile-6 (SM-6).
+	Modifier2AirMissile_StandardMissile6SM6 Modifier2 = 9
+
+	// Modifier2AirMissile_EvolvedSeaSparrowMissileESSM is Evolved Sea Sparrow Missile (ESSM).
+	Modifier2AirMissile_EvolvedSeaSparrowMissileESSM Modifier2 = 10
+
+	// Modifier2AirMissile_RollingAirframeMissileRAM is Rolling Airframe Missile (RAM).
+	Modifier2AirMissile_RollingAirframeMissileRAM Modifier2 = 11
+
+	// Modifier2AirMissile_ShortRange is Short Range.
+	Modifier2AirMissile_ShortRange Modifier2 = 12
+
+	// Modifier2AirMissile_MediumRange is Medium Range.
+	Modifier2AirMissile_MediumRange Modifier2 = 13
+
+	// Modifier2AirMissile_IntermediateRange is Intermediate Range.
+	Modifier2AirMissile_IntermediateRange Modifier2 = 14
+
+	// Modifier2AirMissile_LongRange is Long Range.
+	Modifier2AirMissile_LongRange Modifier2 = 15
+
+	// Modifier2AirMissile_Intercontinental is Intercontinental.
+	Modifier2AirMissile_Intercontinental Modifier2 = 16
 )

@@ -5,11 +5,24 @@ package app6d
 
 // Modifier 1 constants for symbol set 05 (Space).
 const (
-	Modifier1Space_LowEarthOrbitLEO       Modifier1 = 1 // Low Earth Orbit (LEO)
-	Modifier1Space_MediumEarthOrbitMEO    Modifier1 = 2 // Medium Earth Orbit  (MEO)
-	Modifier1Space_HighEarthOrbitHEO      Modifier1 = 3 // High Earth Orbit  (HEO)
-	Modifier1Space_GeosynchronousOrbitGSO Modifier1 = 4 // Geosynchronous Orbit (GSO)
-	Modifier1Space_GeostationaryOrbitGO   Modifier1 = 5 // Geostationary Orbit (GO)
-	Modifier1Space_MolniyaOrbitMO         Modifier1 = 6 // Molniya Orbit (MO)
-	Modifier1Space_Disused                Modifier1 = 7 // {Disused}
+	// Modifier1Space_LowEarthOrbitLEO is Low Earth Orbit (LEO).
+	Modifier1Space_LowEarthOrbitLEO Modifier1 = 1
+
+	// Modifier1Space_MediumEarthOrbitMEO is Medium Earth Orbit  (MEO).
+	Modifier1Space_MediumEarthOrbitMEO Modifier1 = 2
+
+	// Modifier1Space_HighEarthOrbitHEO is High Earth Orbit  (HEO).
+	Modifier1Space_HighEarthOrbitHEO Modifier1 = 3
+
+	// Modifier1Space_GeosynchronousOrbitGSO is Geosynchronous Orbit (GSO).
+	Modifier1Space_GeosynchronousOrbitGSO Modifier1 = 4
+
+	// Modifier1Space_GeostationaryOrbitGO is Geostationary Orbit (GO).
+	Modifier1Space_GeostationaryOrbitGO Modifier1 = 5
+
+	// Modifier1Space_MolniyaOrbitMO is Molniya Orbit (MO).
+	Modifier1Space_MolniyaOrbitMO Modifier1 = 6
+
+	// Modifier1Space_Disused is {Disused}.
+	Modifier1Space_Disused Modifier1 = 7
 )

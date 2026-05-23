@@ -5,21 +5,54 @@ package app6d
 
 // Modifier 2 constants for symbol set 35 (Sea subsurface).
 const (
-	Modifier2SeaSubsurface_AirIndependentPropulsion Modifier2 = 1  // Air Independent Propulsion
-	Modifier2SeaSubsurface_DieselElectricGeneral    Modifier2 = 2  // Diesel Electric, General
-	Modifier2SeaSubsurface_DieselType1              Modifier2 = 3  // Diesel – Type 1
-	Modifier2SeaSubsurface_DieselType2              Modifier2 = 4  // Diesel – Type 2
-	Modifier2SeaSubsurface_DieselType3              Modifier2 = 5  // Diesel – Type 3
-	Modifier2SeaSubsurface_NuclearPoweredGeneral    Modifier2 = 6  // Nuclear Powered, General
-	Modifier2SeaSubsurface_NuclearType1             Modifier2 = 7  // Nuclear – Type 1
-	Modifier2SeaSubsurface_NuclearType2             Modifier2 = 8  // Nuclear – Type 2
-	Modifier2SeaSubsurface_NuclearType3             Modifier2 = 9  // Nuclear – Type 3
-	Modifier2SeaSubsurface_NuclearType4             Modifier2 = 10 // Nuclear – Type 4
-	Modifier2SeaSubsurface_NuclearType5             Modifier2 = 11 // Nuclear – Type 5
-	Modifier2SeaSubsurface_NuclearType6             Modifier2 = 12 // Nuclear – Type 6
-	Modifier2SeaSubsurface_NuclearType7             Modifier2 = 13 // Nuclear – Type 7
-	Modifier2SeaSubsurface_Disused                  Modifier2 = 14 // {Disused}
-	Modifier2SeaSubsurface_Disused_15               Modifier2 = 15 // {Disused}
-	Modifier2SeaSubsurface_Disused_16               Modifier2 = 16 // {Disused}
-	Modifier2SeaSubsurface_Disused_17               Modifier2 = 17 // {Disused}
+	// Modifier2SeaSubsurface_AirIndependentPropulsion is Air Independent Propulsion.
+	Modifier2SeaSubsurface_AirIndependentPropulsion Modifier2 = 1
+
+	// Modifier2SeaSubsurface_DieselElectricGeneral is Diesel Electric, General.
+	Modifier2SeaSubsurface_DieselElectricGeneral Modifier2 = 2
+
+	// Modifier2SeaSubsurface_DieselType1 is Diesel – Type 1.
+	Modifier2SeaSubsurface_DieselType1 Modifier2 = 3
+
+	// Modifier2SeaSubsurface_DieselType2 is Diesel – Type 2.
+	Modifier2SeaSubsurface_DieselType2 Modifier2 = 4
+
+	// Modifier2SeaSubsurface_DieselType3 is Diesel – Type 3.
+	Modifier2SeaSubsurface_DieselType3 Modifier2 = 5
+
+	// Modifier2SeaSubsurface_NuclearPoweredGeneral is Nuclear Powered, General.
+	Modifier2SeaSubsurface_NuclearPoweredGeneral Modifier2 = 6
+
+	// Modifier2SeaSubsurface_NuclearType1 is Nuclear – Type 1.
+	Modifier2SeaSubsurface_NuclearType1 Modifier2 = 7
+
+	// Modifier2SeaSubsurface_NuclearType2 is Nuclear – Type 2.
+	Modifier2SeaSubsurface_NuclearType2 Modifier2 = 8
+
+	// Modifier2SeaSubsurface_NuclearType3 is Nuclear – Type 3.
+	Modifier2SeaSubsurface_NuclearType3 Modifier2 = 9
+
+	// Modifier2SeaSubsurface_NuclearType4 is Nuclear – Type 4.
+	Modifier2SeaSubsurface_NuclearType4 Modifier2 = 10
+
+	// Modifier2SeaSubsurface_NuclearType5 is Nuclear – Type 5.
+	Modifier2SeaSubsurface_NuclearType5 Modifier2 = 11
+
+	// Modifier2SeaSubsurface_NuclearType6 is Nuclear – Type 6.
+	Modifier2SeaSubsurface_NuclearType6 Modifier2 = 12
+
+	// Modifier2SeaSubsurface_NuclearType7 is Nuclear – Type 7.
+	Modifier2SeaSubsurface_NuclearType7 Modifier2 = 13
+
+	// Modifier2SeaSubsurface_Disused is {Disused}.
+	Modifier2SeaSubsurface_Disused Modifier2 = 14
+
+	// Modifier2SeaSubsurface_Disused_15 is {Disused}.
+	Modifier2SeaSubsurface_Disused_15 Modifier2 = 15
+
+	// Modifier2SeaSubsurface_Disused_16 is {Disused}.
+	Modifier2SeaSubsurface_Disused_16 Modifier2 = 16
+
+	// Modifier2SeaSubsurface_Disused_17 is {Disused}.
+	Modifier2SeaSubsurface_Disused_17 Modifier2 = 17
 )

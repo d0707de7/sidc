@@ -433,19 +433,20 @@ func writeEntityFiles(log *slog.Logger, outDir string, sets []symbolSetTables) e
 		fmt.Fprintf(&src, "const (\n")
 
 		seen := map[string]bool{}
-		for _, e := range entries {
+		for i, e := range entries {
 			suffix := goIdent(e.name)
 			ident := fmt.Sprintf("Entity%s_%s", set.goName, suffix)
-			// Disambiguate duplicates by appending the code.
 			if seen[ident] {
 				ident = fmt.Sprintf("%s_%06d", ident, e.code)
 			}
 			seen[ident] = true
-			if e.name != "" {
-				fmt.Fprintf(&src, "\t%s Entity = %d // %s\n", ident, e.code, escapeComment(e.name))
-			} else {
-				fmt.Fprintf(&src, "\t%s Entity = %d\n", ident, e.code)
+			if i > 0 {
+				fmt.Fprintln(&src)
 			}
+			if e.name != "" {
+				fmt.Fprintf(&src, "\t// %s is %s.\n", ident, escapeComment(e.name))
+			}
+			fmt.Fprintf(&src, "\t%s Entity = %d\n", ident, e.code)
 		}
 		fmt.Fprintf(&src, ")\n")
 
@@ -480,13 +481,19 @@ func writeModifierFiles(log *slog.Logger, outDir string, sets []symbolSetTables)
 			fmt.Fprintf(&src, "const (\n")
 			seen := map[string]bool{}
 			modType := fmt.Sprintf("Modifier%d", sector)
-			for _, m := range mods {
+			for i, m := range mods {
 				ident := fmt.Sprintf("%s%s_%s", modType, set.goName, goIdent(m.name))
 				if seen[ident] {
 					ident = fmt.Sprintf("%s_%02d", ident, m.code)
 				}
 				seen[ident] = true
-				fmt.Fprintf(&src, "\t%s %s = %d // %s\n", ident, modType, m.code, escapeComment(m.name))
+				if i > 0 {
+					fmt.Fprintln(&src)
+				}
+				if m.name != "" {
+					fmt.Fprintf(&src, "\t// %s is %s.\n", ident, escapeComment(m.name))
+				}
+				fmt.Fprintf(&src, "\t%s %s = %d\n", ident, modType, m.code)
 			}
 			fmt.Fprintf(&src, ")\n")
 

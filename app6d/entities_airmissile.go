@@ -5,5 +5,6 @@ package app6d
 
 // Entity constants for symbol set 02 (Air missile).
 const (
-	EntityAirMissile_Missile Entity = 110000 // Missile
+	// EntityAirMissile_Missile is Missile.
+	EntityAirMissile_Missile Entity = 110000
 )

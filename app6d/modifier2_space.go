@@ -5,16 +5,39 @@ package app6d
 
 // Modifier 2 constants for symbol set 05 (Space).
 const (
-	Modifier2Space_Optical                    Modifier2 = 1  // Optical
-	Modifier2Space_Infrared                   Modifier2 = 2  // Infrared
-	Modifier2Space_Radar                      Modifier2 = 3  // Radar
-	Modifier2Space_SignalsIntelligenceSIGINT  Modifier2 = 4  // Signals Intelligence (SIGINT)
-	Modifier2Space_Disused                    Modifier2 = 5  // {Disused}
-	Modifier2Space_ElectromagneticWarfareASAT Modifier2 = 6  // Electromagnetic Warfare (ASAT)
-	Modifier2Space_HighPowerMicrowaveASAT     Modifier2 = 7  // High Power Microwave (ASAT)
-	Modifier2Space_LaserASAT                  Modifier2 = 8  // Laser (ASAT)
-	Modifier2Space_MineASAT                   Modifier2 = 9  // Mine (ASAT)
-	Modifier2Space_Maintenance                Modifier2 = 10 // Maintenance
-	Modifier2Space_Refuel                     Modifier2 = 11 // Refuel
-	Modifier2Space_Tug                        Modifier2 = 12 // Tug
+	// Modifier2Space_Optical is Optical.
+	Modifier2Space_Optical Modifier2 = 1
+
+	// Modifier2Space_Infrared is Infrared.
+	Modifier2Space_Infrared Modifier2 = 2
+
+	// Modifier2Space_Radar is Radar.
+	Modifier2Space_Radar Modifier2 = 3
+
+	// Modifier2Space_SignalsIntelligenceSIGINT is Signals Intelligence (SIGINT).
+	Modifier2Space_SignalsIntelligenceSIGINT Modifier2 = 4
+
+	// Modifier2Space_Disused is {Disused}.
+	Modifier2Space_Disused Modifier2 = 5
+
+	// Modifier2Space_ElectromagneticWarfareASAT is Electromagnetic Warfare (ASAT).
+	Modifier2Space_ElectromagneticWarfareASAT Modifier2 = 6
+
+	// Modifier2Space_HighPowerMicrowaveASAT is High Power Microwave (ASAT).
+	Modifier2Space_HighPowerMicrowaveASAT Modifier2 = 7
+
+	// Modifier2Space_LaserASAT is Laser (ASAT).
+	Modifier2Space_LaserASAT Modifier2 = 8
+
+	// Modifier2Space_MineASAT is Mine (ASAT).
+	Modifier2Space_MineASAT Modifier2 = 9
+
+	// Modifier2Space_Maintenance is Maintenance.
+	Modifier2Space_Maintenance Modifier2 = 10
+
+	// Modifier2Space_Refuel is Refuel.
+	Modifier2Space_Refuel Modifier2 = 11
+
+	// Modifier2Space_Tug is Tug.
+	Modifier2Space_Tug Modifier2 = 12
 )

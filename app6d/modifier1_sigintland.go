@@ -5,69 +5,198 @@ package app6d
 
 // Modifier 1 constants for symbol set 52 (Signals intelligence).
 const (
-	Modifier1SIGINTLand_AntiAircraftFireControl                Modifier1 = 1  // Anti-Aircraft Fire Control
-	Modifier1SIGINTLand_AirborneSearchAndBombing               Modifier1 = 2  // Airborne Search and Bombing
-	Modifier1SIGINTLand_AirborneIntercept                      Modifier1 = 3  // Airborne Intercept
-	Modifier1SIGINTLand_Altimeter                              Modifier1 = 4  // Altimeter
-	Modifier1SIGINTLand_AirborneReconnaissanceAndMapping       Modifier1 = 5  // Airborne Reconnaissance and Mapping
-	Modifier1SIGINTLand_AirTrafficControl                      Modifier1 = 6  // Air Traffic Control
-	Modifier1SIGINTLand_BeaconTransponderNotIFF                Modifier1 = 7  // Beacon Transponder (not IFF)
-	Modifier1SIGINTLand_BattlefieldSurveillance                Modifier1 = 8  // Battlefield Surveillance
-	Modifier1SIGINTLand_ControlledApproach                     Modifier1 = 9  // Controlled Approach
-	Modifier1SIGINTLand_ControlledIntercept                    Modifier1 = 10 // Controlled Intercept
-	Modifier1SIGINTLand_CellularMobile                         Modifier1 = 11 // Cellular/Mobile
-	Modifier1SIGINTLand_CoastalSurveillance                    Modifier1 = 12 // Coastal Surveillance
-	Modifier1SIGINTLand_DecoyMimic                             Modifier1 = 13 // Decoy/Mimic
-	Modifier1SIGINTLand_DataTransmission                       Modifier1 = 14 // Data Transmission
-	Modifier1SIGINTLand_EarthSurveillance                      Modifier1 = 15 // Earth Surveillance
-	Modifier1SIGINTLand_EarlyWarning                           Modifier1 = 16 // Early Warning
-	Modifier1SIGINTLand_FireControl                            Modifier1 = 17 // Fire Control
-	Modifier1SIGINTLand_GroundMapping                          Modifier1 = 18 // Ground Mapping
-	Modifier1SIGINTLand_HeightFinding                          Modifier1 = 19 // Height Finding
-	Modifier1SIGINTLand_HarborSurveillance                     Modifier1 = 20 // Harbor Surveillance
-	Modifier1SIGINTLand_IdentificationFriendOrFoeInterrogator  Modifier1 = 21 // Identification, Friend or Foe (Interrogator)
-	Modifier1SIGINTLand_InstrumentLandingSystem                Modifier1 = 22 // Instrument Landing System
-	Modifier1SIGINTLand_IonosphericSounding                    Modifier1 = 23 // Ionospheric Sounding
-	Modifier1SIGINTLand_IdentificationFriendOrFoeTransponder   Modifier1 = 24 // Identification, Friend or Foe (Transponder)
-	Modifier1SIGINTLand_BarrageJammer                          Modifier1 = 25 // Barrage Jammer
-	Modifier1SIGINTLand_ClickJammer                            Modifier1 = 26 // Click Jammer
-	Modifier1SIGINTLand_DeceptiveJammer                        Modifier1 = 27 // Deceptive Jammer
-	Modifier1SIGINTLand_FrequencySweptJammer                   Modifier1 = 28 // Frequency Swept Jammer
-	Modifier1SIGINTLand_JammerGeneral                          Modifier1 = 29 // Jammer (general)
-	Modifier1SIGINTLand_NoiseJammer                            Modifier1 = 30 // Noise Jammer
-	Modifier1SIGINTLand_PulsedJammer                           Modifier1 = 31 // Pulsed Jammer
-	Modifier1SIGINTLand_RepeaterJammer                         Modifier1 = 32 // Repeater Jammer
-	Modifier1SIGINTLand_SpotNoiseJammer                        Modifier1 = 33 // Spot Noise Jammer
-	Modifier1SIGINTLand_TransponderJammer                      Modifier1 = 34 // Transponder Jammer
-	Modifier1SIGINTLand_MissileAcquisition                     Modifier1 = 35 // Missile Acquisition
-	Modifier1SIGINTLand_MissileControl                         Modifier1 = 36 // Missile Control
-	Modifier1SIGINTLand_MissileDownlink                        Modifier1 = 37 // Missile Downlink
-	Modifier1SIGINTLand_Meteorological                         Modifier1 = 38 // Meteorological
-	Modifier1SIGINTLand_MultiFunction                          Modifier1 = 39 // Multi-Function
-	Modifier1SIGINTLand_MissileGuidance                        Modifier1 = 40 // Missile Guidance
-	Modifier1SIGINTLand_MissileHoming                          Modifier1 = 41 // Missile Homing
-	Modifier1SIGINTLand_MissileTracking                        Modifier1 = 42 // Missile Tracking
-	Modifier1SIGINTLand_NavigationalGeneral                    Modifier1 = 43 // Navigational/General
-	Modifier1SIGINTLand_NavigationalDistanceMeasuringEquipment Modifier1 = 44 // Navigational/Distance Measuring Equipment
-	Modifier1SIGINTLand_NavigationTerrainFollowing             Modifier1 = 45 // Navigation/Terrain Following
-	Modifier1SIGINTLand_NavigationalWeatherAvoidance           Modifier1 = 46 // Navigational/Weather Avoidance
-	Modifier1SIGINTLand_OmniLineOfSightLOS                     Modifier1 = 47 // Omni-Line of Sight (LOS)
-	Modifier1SIGINTLand_ProximityUse                           Modifier1 = 48 // Proximity Use
-	Modifier1SIGINTLand_PointToPointLineOfSightLOS             Modifier1 = 49 // Point-to-Point Line of Sight (LOS)
-	Modifier1SIGINTLand_Instrumentation                        Modifier1 = 50 // Instrumentation
-	Modifier1SIGINTLand_RangeOnly                              Modifier1 = 51 // Range Only
-	Modifier1SIGINTLand_Sonobuoy                               Modifier1 = 52 // Sonobuoy
-	Modifier1SIGINTLand_SatelliteDownlink                      Modifier1 = 53 // Satellite Downlink
-	Modifier1SIGINTLand_Space                                  Modifier1 = 54 // Space
-	Modifier1SIGINTLand_SurfaceSearch                          Modifier1 = 55 // Surface Search
-	Modifier1SIGINTLand_ShellTracking                          Modifier1 = 56 // Shell Tracking
-	Modifier1SIGINTLand_SatelliteUplink                        Modifier1 = 57 // Satellite Uplink
-	Modifier1SIGINTLand_TargetAcquisition                      Modifier1 = 58 // Target Acquisition
-	Modifier1SIGINTLand_TargetIllumination                     Modifier1 = 59 // Target Illumination
-	Modifier1SIGINTLand_TroposphericScatter                    Modifier1 = 60 // Tropospheric Scatter
-	Modifier1SIGINTLand_TargetTracking                         Modifier1 = 61 // Target Tracking
-	Modifier1SIGINTLand_Unknown                                Modifier1 = 62 // Unknown
-	Modifier1SIGINTLand_VideoRemoting                          Modifier1 = 63 // Video Remoting
-	Modifier1SIGINTLand_Experimental                           Modifier1 = 64 // Experimental
-	Modifier1SIGINTLand_Disused                                Modifier1 = 65 // {Disused}
+	// Modifier1SIGINTLand_AntiAircraftFireControl is Anti-Aircraft Fire Control.
+	Modifier1SIGINTLand_AntiAircraftFireControl Modifier1 = 1
+
+	// Modifier1SIGINTLand_AirborneSearchAndBombing is Airborne Search and Bombing.
+	Modifier1SIGINTLand_AirborneSearchAndBombing Modifier1 = 2
+
+	// Modifier1SIGINTLand_AirborneIntercept is Airborne Intercept.
+	Modifier1SIGINTLand_AirborneIntercept Modifier1 = 3
+
+	// Modifier1SIGINTLand_Altimeter is Altimeter.
+	Modifier1SIGINTLand_Altimeter Modifier1 = 4
+
+	// Modifier1SIGINTLand_AirborneReconnaissanceAndMapping is Airborne Reconnaissance and Mapping.
+	Modifier1SIGINTLand_AirborneReconnaissanceAndMapping Modifier1 = 5
+
+	// Modifier1SIGINTLand_AirTrafficControl is Air Traffic Control.
+	Modifier1SIGINTLand_AirTrafficControl Modifier1 = 6
+
+	// Modifier1SIGINTLand_BeaconTransponderNotIFF is Beacon Transponder (not IFF).
+	Modifier1SIGINTLand_BeaconTransponderNotIFF Modifier1 = 7
+
+	// Modifier1SIGINTLand_BattlefieldSurveillance is Battlefield Surveillance.
+	Modifier1SIGINTLand_BattlefieldSurveillance Modifier1 = 8
+
+	// Modifier1SIGINTLand_ControlledApproach is Controlled Approach.
+	Modifier1SIGINTLand_ControlledApproach Modifier1 = 9
+
+	// Modifier1SIGINTLand_ControlledIntercept is Controlled Intercept.
+	Modifier1SIGINTLand_ControlledIntercept Modifier1 = 10
+
+	// Modifier1SIGINTLand_CellularMobile is Cellular/Mobile.
+	Modifier1SIGINTLand_CellularMobile Modifier1 = 11
+
+	// Modifier1SIGINTLand_CoastalSurveillance is Coastal Surveillance.
+	Modifier1SIGINTLand_CoastalSurveillance Modifier1 = 12
+
+	// Modifier1SIGINTLand_DecoyMimic is Decoy/Mimic.
+	Modifier1SIGINTLand_DecoyMimic Modifier1 = 13
+
+	// Modifier1SIGINTLand_DataTransmission is Data Transmission.
+	Modifier1SIGINTLand_DataTransmission Modifier1 = 14
+
+	// Modifier1SIGINTLand_EarthSurveillance is Earth Surveillance.
+	Modifier1SIGINTLand_EarthSurveillance Modifier1 = 15
+
+	// Modifier1SIGINTLand_EarlyWarning is Early Warning.
+	Modifier1SIGINTLand_EarlyWarning Modifier1 = 16
+
+	// Modifier1SIGINTLand_FireControl is Fire Control.
+	Modifier1SIGINTLand_FireControl Modifier1 = 17
+
+	// Modifier1SIGINTLand_GroundMapping is Ground Mapping.
+	Modifier1SIGINTLand_GroundMapping Modifier1 = 18
+
+	// Modifier1SIGINTLand_HeightFinding is Height Finding.
+	Modifier1SIGINTLand_HeightFinding Modifier1 = 19
+
+	// Modifier1SIGINTLand_HarborSurveillance is Harbor Surveillance.
+	Modifier1SIGINTLand_HarborSurveillance Modifier1 = 20
+
+	// Modifier1SIGINTLand_IdentificationFriendOrFoeInterrogator is Identification, Friend or Foe (Interrogator).
+	Modifier1SIGINTLand_IdentificationFriendOrFoeInterrogator Modifier1 = 21
+
+	// Modifier1SIGINTLand_InstrumentLandingSystem is Instrument Landing System.
+	Modifier1SIGINTLand_InstrumentLandingSystem Modifier1 = 22
+
+	// Modifier1SIGINTLand_IonosphericSounding is Ionospheric Sounding.
+	Modifier1SIGINTLand_IonosphericSounding Modifier1 = 23
+
+	// Modifier1SIGINTLand_IdentificationFriendOrFoeTransponder is Identification, Friend or Foe (Transponder).
+	Modifier1SIGINTLand_IdentificationFriendOrFoeTransponder Modifier1 = 24
+
+	// Modifier1SIGINTLand_BarrageJammer is Barrage Jammer.
+	Modifier1SIGINTLand_BarrageJammer Modifier1 = 25
+
+	// Modifier1SIGINTLand_ClickJammer is Click Jammer.
+	Modifier1SIGINTLand_ClickJammer Modifier1 = 26
+
+	// Modifier1SIGINTLand_DeceptiveJammer is Deceptive Jammer.
+	Modifier1SIGINTLand_DeceptiveJammer Modifier1 = 27
+
+	// Modifier1SIGINTLand_FrequencySweptJammer is Frequency Swept Jammer.
+	Modifier1SIGINTLand_FrequencySweptJammer Modifier1 = 28
+
+	// Modifier1SIGINTLand_JammerGeneral is Jammer (general).
+	Modifier1SIGINTLand_JammerGeneral Modifier1 = 29
+
+	// Modifier1SIGINTLand_NoiseJammer is Noise Jammer.
+	Modifier1SIGINTLand_NoiseJammer Modifier1 = 30
+
+	// Modifier1SIGINTLand_PulsedJammer is Pulsed Jammer.
+	Modifier1SIGINTLand_PulsedJammer Modifier1 = 31
+
+	// Modifier1SIGINTLand_RepeaterJammer is Repeater Jammer.
+	Modifier1SIGINTLand_RepeaterJammer Modifier1 = 32
+
+	// Modifier1SIGINTLand_SpotNoiseJammer is Spot Noise Jammer.
+	Modifier1SIGINTLand_SpotNoiseJammer Modifier1 = 33
+
+	// Modifier1SIGINTLand_TransponderJammer is Transponder Jammer.
+	Modifier1SIGINTLand_TransponderJammer Modifier1 = 34
+
+	// Modifier1SIGINTLand_MissileAcquisition is Missile Acquisition.
+	Modifier1SIGINTLand_MissileAcquisition Modifier1 = 35
+
+	// Modifier1SIGINTLand_MissileControl is Missile Control.
+	Modifier1SIGINTLand_MissileControl Modifier1 = 36
+
+	// Modifier1SIGINTLand_MissileDownlink is Missile Downlink.
+	Modifier1SIGINTLand_MissileDownlink Modifier1 = 37
+
+	// Modifier1SIGINTLand_Meteorological is Meteorological.
+	Modifier1SIGINTLand_Meteorological Modifier1 = 38
+
+	// Modifier1SIGINTLand_MultiFunction is Multi-Function.
+	Modifier1SIGINTLand_MultiFunction Modifier1 = 39
+
+	// Modifier1SIGINTLand_MissileGuidance is Missile Guidance.
+	Modifier1SIGINTLand_MissileGuidance Modifier1 = 40
+
+	// Modifier1SIGINTLand_MissileHoming is Missile Homing.
+	Modifier1SIGINTLand_MissileHoming Modifier1 = 41
+
+	// Modifier1SIGINTLand_MissileTracking is Missile Tracking.
+	Modifier1SIGINTLand_MissileTracking Modifier1 = 42
+
+	// Modifier1SIGINTLand_NavigationalGeneral is Navigational/General.
+	Modifier1SIGINTLand_NavigationalGeneral Modifier1 = 43
+
+	// Modifier1SIGINTLand_NavigationalDistanceMeasuringEquipment is Navigational/Distance Measuring Equipment.
+	Modifier1SIGINTLand_NavigationalDistanceMeasuringEquipment Modifier1 = 44
+
+	// Modifier1SIGINTLand_NavigationTerrainFollowing is Navigation/Terrain Following.
+	Modifier1SIGINTLand_NavigationTerrainFollowing Modifier1 = 45
+
+	// Modifier1SIGINTLand_NavigationalWeatherAvoidance is Navigational/Weather Avoidance.
+	Modifier1SIGINTLand_NavigationalWeatherAvoidance Modifier1 = 46
+
+	// Modifier1SIGINTLand_OmniLineOfSightLOS is Omni-Line of Sight (LOS).
+	Modifier1SIGINTLand_OmniLineOfSightLOS Modifier1 = 47
+
+	// Modifier1SIGINTLand_ProximityUse is Proximity Use.
+	Modifier1SIGINTLand_ProximityUse Modifier1 = 48
+
+	// Modifier1SIGINTLand_PointToPointLineOfSightLOS is Point-to-Point Line of Sight (LOS).
+	Modifier1SIGINTLand_PointToPointLineOfSightLOS Modifier1 = 49
+
+	// Modifier1SIGINTLand_Instrumentation is Instrumentation.
+	Modifier1SIGINTLand_Instrumentation Modifier1 = 50
+
+	// Modifier1SIGINTLand_RangeOnly is Range Only.
+	Modifier1SIGINTLand_RangeOnly Modifier1 = 51
+
+	// Modifier1SIGINTLand_Sonobuoy is Sonobuoy.
+	Modifier1SIGINTLand_Sonobuoy Modifier1 = 52
+
+	// Modifier1SIGINTLand_SatelliteDownlink is Satellite Downlink.
+	Modifier1SIGINTLand_SatelliteDownlink Modifier1 = 53
+
+	// Modifier1SIGINTLand_Space is Space.
+	Modifier1SIGINTLand_Space Modifier1 = 54
+
+	// Modifier1SIGINTLand_SurfaceSearch is Surface Search.
+	Modifier1SIGINTLand_SurfaceSearch Modifier1 = 55
+
+	// Modifier1SIGINTLand_ShellTracking is Shell Tracking.
+	Modifier1SIGINTLand_ShellTracking Modifier1 = 56
+
+	// Modifier1SIGINTLand_SatelliteUplink is Satellite Uplink.
+	Modifier1SIGINTLand_SatelliteUplink Modifier1 = 57
+
+	// Modifier1SIGINTLand_TargetAcquisition is Target Acquisition.
+	Modifier1SIGINTLand_TargetAcquisition Modifier1 = 58
+
+	// Modifier1SIGINTLand_TargetIllumination is Target Illumination.
+	Modifier1SIGINTLand_TargetIllumination Modifier1 = 59
+
+	// Modifier1SIGINTLand_TroposphericScatter is Tropospheric Scatter.
+	Modifier1SIGINTLand_TroposphericScatter Modifier1 = 60
+
+	// Modifier1SIGINTLand_TargetTracking is Target Tracking.
+	Modifier1SIGINTLand_TargetTracking Modifier1 = 61
+
+	// Modifier1SIGINTLand_Unknown is Unknown.
+	Modifier1SIGINTLand_Unknown Modifier1 = 62
+
+	// Modifier1SIGINTLand_VideoRemoting is Video Remoting.
+	Modifier1SIGINTLand_VideoRemoting Modifier1 = 63
+
+	// Modifier1SIGINTLand_Experimental is Experimental.
+	Modifier1SIGINTLand_Experimental Modifier1 = 64
+
+	// Modifier1SIGINTLand_Disused is {Disused}.
+	Modifier1SIGINTLand_Disused Modifier1 = 65
 )

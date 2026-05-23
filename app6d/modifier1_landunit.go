@@ -5,103 +5,300 @@ package app6d
 
 // Modifier 1 constants for symbol set 10 (Land unit).
 const (
-	Modifier1LandUnit_TacticalSatelliteCommunications                          Modifier1 = 1  // Tactical Satellite Communications
-	Modifier1LandUnit_Area                                                     Modifier1 = 2  // Area
-	Modifier1LandUnit_Disused                                                  Modifier1 = 3  // {Disused}
-	Modifier1LandUnit_Biological                                               Modifier1 = 4  // Biological
-	Modifier1LandUnit_Border                                                   Modifier1 = 5  // Border
-	Modifier1LandUnit_Disused_06                                               Modifier1 = 6  // {Disused}
-	Modifier1LandUnit_Disused_07                                               Modifier1 = 7  // {Disused}
-	Modifier1LandUnit_Disused_08                                               Modifier1 = 8  // {Disused}
-	Modifier1LandUnit_Disused_09                                               Modifier1 = 9  // {Disused}
-	Modifier1LandUnit_Disused_10                                               Modifier1 = 10 // {Disused}
-	Modifier1LandUnit_CommunicationsContingencyPackage                         Modifier1 = 11 // Communications Contingency Package
-	Modifier1LandUnit_Construction                                             Modifier1 = 12 // Construction
-	Modifier1LandUnit_CrossCulturalCommunication                               Modifier1 = 13 // Cross Cultural Communication
-	Modifier1LandUnit_Disused_14                                               Modifier1 = 14 // {Disused}
-	Modifier1LandUnit_Disused_15                                               Modifier1 = 15 // {Disused}
-	Modifier1LandUnit_Detention                                                Modifier1 = 16 // Detention
-	Modifier1LandUnit_DirectCommunications                                     Modifier1 = 17 // Direct Communications
-	Modifier1LandUnit_Diving                                                   Modifier1 = 18 // Diving
-	Modifier1LandUnit_Division                                                 Modifier1 = 19 // Division
-	Modifier1LandUnit_Dog                                                      Modifier1 = 20 // Dog
-	Modifier1LandUnit_Drilling                                                 Modifier1 = 21 // Drilling
-	Modifier1LandUnit_ElectroOptical                                           Modifier1 = 22 // Electro–Optical
-	Modifier1LandUnit_Enhanced                                                 Modifier1 = 23 // Enhanced
-	Modifier1LandUnit_Disused_24                                               Modifier1 = 24 // {Disused}
-	Modifier1LandUnit_FireDirectionCenter                                      Modifier1 = 25 // Fire Direction Center
-	Modifier1LandUnit_Force                                                    Modifier1 = 26 // Force
-	Modifier1LandUnit_Forward                                                  Modifier1 = 27 // Forward
-	Modifier1LandUnit_GroundStationModule                                      Modifier1 = 28 // Ground Station Module
-	Modifier1LandUnit_LandingSupport                                           Modifier1 = 29 // Landing Support
-	Modifier1LandUnit_Disused_30                                               Modifier1 = 30 // {Disused}
-	Modifier1LandUnit_Disused_31                                               Modifier1 = 31 // {Disused}
-	Modifier1LandUnit_Meteorological                                           Modifier1 = 32 // Meteorological
-	Modifier1LandUnit_Disused_33                                               Modifier1 = 33 // {Disused}
-	Modifier1LandUnit_Missile                                                  Modifier1 = 34 // Missile
-	Modifier1LandUnit_MobileAdvisorAndSupport                                  Modifier1 = 35 // Mobile Advisor and Support
-	Modifier1LandUnit_MobileSubscriberEquipment                                Modifier1 = 36 // Mobile Subscriber Equipment
-	Modifier1LandUnit_MobilitySupport                                          Modifier1 = 37 // Mobility Support
-	Modifier1LandUnit_Disused_38                                               Modifier1 = 38 // {Disused}
-	Modifier1LandUnit_Multinational                                            Modifier1 = 39 // Multinational
-	Modifier1LandUnit_MultinationalSpecializedUnit                             Modifier1 = 40 // Multinational Specialized Unit
-	Modifier1LandUnit_MultipleRocketLauncher                                   Modifier1 = 41 // Multiple Rocket Launcher
-	Modifier1LandUnit_NATOMedicalRole1                                         Modifier1 = 42 // NATO Medical Role 1
-	Modifier1LandUnit_NATOMedicalRole2                                         Modifier1 = 43 // NATO Medical Role 2
-	Modifier1LandUnit_NATOMedicalRole3                                         Modifier1 = 44 // NATO Medical Role 3
-	Modifier1LandUnit_NATOMedicalRole4                                         Modifier1 = 45 // NATO Medical Role 4
-	Modifier1LandUnit_Naval                                                    Modifier1 = 46 // Naval
-	Modifier1LandUnit_UnmannedAerialSystemsUAS                                 Modifier1 = 47 // Unmanned Aerial Systems (UAS)
-	Modifier1LandUnit_Disused_48                                               Modifier1 = 48 // {Disused}
-	Modifier1LandUnit_Operations                                               Modifier1 = 49 // Operations
-	Modifier1LandUnit_Radar                                                    Modifier1 = 50 // Radar
-	Modifier1LandUnit_RadioFrequencyIdentificationRFIDInterrogatorSensor       Modifier1 = 51 // Radio Frequency Identification (RFID) Interrogator / Sensor
-	Modifier1LandUnit_Disused_52                                               Modifier1 = 52 // {Disused}
-	Modifier1LandUnit_Disused_53                                               Modifier1 = 53 // {Disused}
-	Modifier1LandUnit_Disused_54                                               Modifier1 = 54 // {Disused}
-	Modifier1LandUnit_Sensor                                                   Modifier1 = 55 // Sensor
-	Modifier1LandUnit_Weapon                                                   Modifier1 = 56 // Weapon
-	Modifier1LandUnit_SignalsIntelligence                                      Modifier1 = 57 // Signals Intelligence
-	Modifier1LandUnit_Disused_58                                               Modifier1 = 58 // {Disused}
-	Modifier1LandUnit_SingleRocketLauncher                                     Modifier1 = 59 // Single Rocket Launcher
-	Modifier1LandUnit_Smoke                                                    Modifier1 = 60 // Smoke
-	Modifier1LandUnit_Disused_61                                               Modifier1 = 61 // {Disused}
-	Modifier1LandUnit_SoundRanging                                             Modifier1 = 62 // Sound Ranging
-	Modifier1LandUnit_Disused_63                                               Modifier1 = 63 // {Disused}
-	Modifier1LandUnit_Disused_64                                               Modifier1 = 64 // {Disused}
-	Modifier1LandUnit_Survey                                                   Modifier1 = 65 // Survey
-	Modifier1LandUnit_TacticalExploitation                                     Modifier1 = 66 // Tactical Exploitation
-	Modifier1LandUnit_TargetAcquisition                                        Modifier1 = 67 // Target Acquisition
-	Modifier1LandUnit_TopographicGeospatial                                    Modifier1 = 68 // Topographic/Geospatial
-	Modifier1LandUnit_Disused_69                                               Modifier1 = 69 // {Disused}
-	Modifier1LandUnit_VideoImageryCombatCamera                                 Modifier1 = 70 // Video Imagery (Combat Camera)
-	Modifier1LandUnit_MobilityAssault                                          Modifier1 = 71 // Mobility Assault
-	Modifier1LandUnit_AmphibiousWarfareShip                                    Modifier1 = 72 // Amphibious Warfare Ship
-	Modifier1LandUnit_LoadHandlingSystem                                       Modifier1 = 73 // Load Handling System
-	Modifier1LandUnit_PalletizedLoadSystem                                     Modifier1 = 74 // Palletized Load System
-	Modifier1LandUnit_Disused_75                                               Modifier1 = 75 // {Disused}
-	Modifier1LandUnit_Disused_76                                               Modifier1 = 76 // {Disused}
-	Modifier1LandUnit_Support                                                  Modifier1 = 77 // Support
-	Modifier1LandUnit_Disused_78                                               Modifier1 = 78 // {Disused}
-	Modifier1LandUnit_RouteReconnaissanceAndClearance                          Modifier1 = 79 // Route, Reconnaissance, and Clearance
-	Modifier1LandUnit_Disused_80                                               Modifier1 = 80 // {Disused}
-	Modifier1LandUnit_NATOMedicalRole2Basic                                    Modifier1 = 81 // NATO Medical Role 2 Basic
-	Modifier1LandUnit_NATOMedicalRole2Enhanced                                 Modifier1 = 82 // NATO Medical Role 2 Enhanced
-	Modifier1LandUnit_NATOMedicalRoleForward                                   Modifier1 = 83 // NATO Medical Role Forward
-	Modifier1LandUnit_Assault                                                  Modifier1 = 84 // Assault
-	Modifier1LandUnit_Disused_85                                               Modifier1 = 85 // {Disused}
-	Modifier1LandUnit_CriminalInvestigationDivision                            Modifier1 = 86 // Criminal Investigation Division
-	Modifier1LandUnit_Digital                                                  Modifier1 = 87 // Digital
-	Modifier1LandUnit_NetworkOrNetworkOperations                               Modifier1 = 88 // Network or Network Operations
-	Modifier1LandUnit_AirfieldAerialPortOfDebarkationOrAerialPortOfEmbarkation Modifier1 = 89 // Airfield, Aerial Port of Debarkation, or Aerial Port of Embarkation
-	Modifier1LandUnit_Pipeline                                                 Modifier1 = 90 // Pipeline
-	Modifier1LandUnit_Postal                                                   Modifier1 = 91 // Postal
-	Modifier1LandUnit_Disused_92                                               Modifier1 = 92 // {Disused}
-	Modifier1LandUnit_IndependentCommand                                       Modifier1 = 93 // Independent Command
-	Modifier1LandUnit_Theater                                                  Modifier1 = 94 // Theater
-	Modifier1LandUnit_ArmyOrTheaterArmy                                        Modifier1 = 95 // Army or Theater Army
-	Modifier1LandUnit_Corps                                                    Modifier1 = 96 // Corps
-	Modifier1LandUnit_Disused_97                                               Modifier1 = 97 // {Disused}
-	Modifier1LandUnit_HeadquartersOrHeadquartersStaffElement                   Modifier1 = 98 // Headquarters or Headquarters Staff Element
-	Modifier1LandUnit_MultiDomainOperations                                    Modifier1 = 99 // Multi-Domain Operations
+	// Modifier1LandUnit_TacticalSatelliteCommunications is Tactical Satellite Communications.
+	Modifier1LandUnit_TacticalSatelliteCommunications Modifier1 = 1
+
+	// Modifier1LandUnit_Area is Area.
+	Modifier1LandUnit_Area Modifier1 = 2
+
+	// Modifier1LandUnit_Disused is {Disused}.
+	Modifier1LandUnit_Disused Modifier1 = 3
+
+	// Modifier1LandUnit_Biological is Biological.
+	Modifier1LandUnit_Biological Modifier1 = 4
+
+	// Modifier1LandUnit_Border is Border.
+	Modifier1LandUnit_Border Modifier1 = 5
+
+	// Modifier1LandUnit_Disused_06 is {Disused}.
+	Modifier1LandUnit_Disused_06 Modifier1 = 6
+
+	// Modifier1LandUnit_Disused_07 is {Disused}.
+	Modifier1LandUnit_Disused_07 Modifier1 = 7
+
+	// Modifier1LandUnit_Disused_08 is {Disused}.
+	Modifier1LandUnit_Disused_08 Modifier1 = 8
+
+	// Modifier1LandUnit_Disused_09 is {Disused}.
+	Modifier1LandUnit_Disused_09 Modifier1 = 9
+
+	// Modifier1LandUnit_Disused_10 is {Disused}.
+	Modifier1LandUnit_Disused_10 Modifier1 = 10
+
+	// Modifier1LandUnit_CommunicationsContingencyPackage is Communications Contingency Package.
+	Modifier1LandUnit_CommunicationsContingencyPackage Modifier1 = 11
+
+	// Modifier1LandUnit_Construction is Construction.
+	Modifier1LandUnit_Construction Modifier1 = 12
+
+	// Modifier1LandUnit_CrossCulturalCommunication is Cross Cultural Communication.
+	Modifier1LandUnit_CrossCulturalCommunication Modifier1 = 13
+
+	// Modifier1LandUnit_Disused_14 is {Disused}.
+	Modifier1LandUnit_Disused_14 Modifier1 = 14
+
+	// Modifier1LandUnit_Disused_15 is {Disused}.
+	Modifier1LandUnit_Disused_15 Modifier1 = 15
+
+	// Modifier1LandUnit_Detention is Detention.
+	Modifier1LandUnit_Detention Modifier1 = 16
+
+	// Modifier1LandUnit_DirectCommunications is Direct Communications.
+	Modifier1LandUnit_DirectCommunications Modifier1 = 17
+
+	// Modifier1LandUnit_Diving is Diving.
+	Modifier1LandUnit_Diving Modifier1 = 18
+
+	// Modifier1LandUnit_Division is Division.
+	Modifier1LandUnit_Division Modifier1 = 19
+
+	// Modifier1LandUnit_Dog is Dog.
+	Modifier1LandUnit_Dog Modifier1 = 20
+
+	// Modifier1LandUnit_Drilling is Drilling.
+	Modifier1LandUnit_Drilling Modifier1 = 21
+
+	// Modifier1LandUnit_ElectroOptical is Electro–Optical.
+	Modifier1LandUnit_ElectroOptical Modifier1 = 22
+
+	// Modifier1LandUnit_Enhanced is Enhanced.
+	Modifier1LandUnit_Enhanced Modifier1 = 23
+
+	// Modifier1LandUnit_Disused_24 is {Disused}.
+	Modifier1LandUnit_Disused_24 Modifier1 = 24
+
+	// Modifier1LandUnit_FireDirectionCenter is Fire Direction Center.
+	Modifier1LandUnit_FireDirectionCenter Modifier1 = 25
+
+	// Modifier1LandUnit_Force is Force.
+	Modifier1LandUnit_Force Modifier1 = 26
+
+	// Modifier1LandUnit_Forward is Forward.
+	Modifier1LandUnit_Forward Modifier1 = 27
+
+	// Modifier1LandUnit_GroundStationModule is Ground Station Module.
+	Modifier1LandUnit_GroundStationModule Modifier1 = 28
+
+	// Modifier1LandUnit_LandingSupport is Landing Support.
+	Modifier1LandUnit_LandingSupport Modifier1 = 29
+
+	// Modifier1LandUnit_Disused_30 is {Disused}.
+	Modifier1LandUnit_Disused_30 Modifier1 = 30
+
+	// Modifier1LandUnit_Disused_31 is {Disused}.
+	Modifier1LandUnit_Disused_31 Modifier1 = 31
+
+	// Modifier1LandUnit_Meteorological is Meteorological.
+	Modifier1LandUnit_Meteorological Modifier1 = 32
+
+	// Modifier1LandUnit_Disused_33 is {Disused}.
+	Modifier1LandUnit_Disused_33 Modifier1 = 33
+
+	// Modifier1LandUnit_Missile is Missile.
+	Modifier1LandUnit_Missile Modifier1 = 34
+
+	// Modifier1LandUnit_MobileAdvisorAndSupport is Mobile Advisor and Support.
+	Modifier1LandUnit_MobileAdvisorAndSupport Modifier1 = 35
+
+	// Modifier1LandUnit_MobileSubscriberEquipment is Mobile Subscriber Equipment.
+	Modifier1LandUnit_MobileSubscriberEquipment Modifier1 = 36
+
+	// Modifier1LandUnit_MobilitySupport is Mobility Support.
+	Modifier1LandUnit_MobilitySupport Modifier1 = 37
+
+	// Modifier1LandUnit_Disused_38 is {Disused}.
+	Modifier1LandUnit_Disused_38 Modifier1 = 38
+
+	// Modifier1LandUnit_Multinational is Multinational.
+	Modifier1LandUnit_Multinational Modifier1 = 39
+
+	// Modifier1LandUnit_MultinationalSpecializedUnit is Multinational Specialized Unit.
+	Modifier1LandUnit_MultinationalSpecializedUnit Modifier1 = 40
+
+	// Modifier1LandUnit_MultipleRocketLauncher is Multiple Rocket Launcher.
+	Modifier1LandUnit_MultipleRocketLauncher Modifier1 = 41
+
+	// Modifier1LandUnit_NATOMedicalRole1 is NATO Medical Role 1.
+	Modifier1LandUnit_NATOMedicalRole1 Modifier1 = 42
+
+	// Modifier1LandUnit_NATOMedicalRole2 is NATO Medical Role 2.
+	Modifier1LandUnit_NATOMedicalRole2 Modifier1 = 43
+
+	// Modifier1LandUnit_NATOMedicalRole3 is NATO Medical Role 3.
+	Modifier1LandUnit_NATOMedicalRole3 Modifier1 = 44
+
+	// Modifier1LandUnit_NATOMedicalRole4 is NATO Medical Role 4.
+	Modifier1LandUnit_NATOMedicalRole4 Modifier1 = 45
+
+	// Modifier1LandUnit_Naval is Naval.
+	Modifier1LandUnit_Naval Modifier1 = 46
+
+	// Modifier1LandUnit_UnmannedAerialSystemsUAS is Unmanned Aerial Systems (UAS).
+	Modifier1LandUnit_UnmannedAerialSystemsUAS Modifier1 = 47
+
+	// Modifier1LandUnit_Disused_48 is {Disused}.
+	Modifier1LandUnit_Disused_48 Modifier1 = 48
+
+	// Modifier1LandUnit_Operations is Operations.
+	Modifier1LandUnit_Operations Modifier1 = 49
+
+	// Modifier1LandUnit_Radar is Radar.
+	Modifier1LandUnit_Radar Modifier1 = 50
+
+	// Modifier1LandUnit_RadioFrequencyIdentificationRFIDInterrogatorSensor is Radio Frequency Identification (RFID) Interrogator / Sensor.
+	Modifier1LandUnit_RadioFrequencyIdentificationRFIDInterrogatorSensor Modifier1 = 51
+
+	// Modifier1LandUnit_Disused_52 is {Disused}.
+	Modifier1LandUnit_Disused_52 Modifier1 = 52
+
+	// Modifier1LandUnit_Disused_53 is {Disused}.
+	Modifier1LandUnit_Disused_53 Modifier1 = 53
+
+	// Modifier1LandUnit_Disused_54 is {Disused}.
+	Modifier1LandUnit_Disused_54 Modifier1 = 54
+
+	// Modifier1LandUnit_Sensor is Sensor.
+	Modifier1LandUnit_Sensor Modifier1 = 55
+
+	// Modifier1LandUnit_Weapon is Weapon.
+	Modifier1LandUnit_Weapon Modifier1 = 56
+
+	// Modifier1LandUnit_SignalsIntelligence is Signals Intelligence.
+	Modifier1LandUnit_SignalsIntelligence Modifier1 = 57
+
+	// Modifier1LandUnit_Disused_58 is {Disused}.
+	Modifier1LandUnit_Disused_58 Modifier1 = 58
+
+	// Modifier1LandUnit_SingleRocketLauncher is Single Rocket Launcher.
+	Modifier1LandUnit_SingleRocketLauncher Modifier1 = 59
+
+	// Modifier1LandUnit_Smoke is Smoke.
+	Modifier1LandUnit_Smoke Modifier1 = 60
+
+	// Modifier1LandUnit_Disused_61 is {Disused}.
+	Modifier1LandUnit_Disused_61 Modifier1 = 61
+
+	// Modifier1LandUnit_SoundRanging is Sound Ranging.
+	Modifier1LandUnit_SoundRanging Modifier1 = 62
+
+	// Modifier1LandUnit_Disused_63 is {Disused}.
+	Modifier1LandUnit_Disused_63 Modifier1 = 63
+
+	// Modifier1LandUnit_Disused_64 is {Disused}.
+	Modifier1LandUnit_Disused_64 Modifier1 = 64
+
+	// Modifier1LandUnit_Survey is Survey.
+	Modifier1LandUnit_Survey Modifier1 = 65
+
+	// Modifier1LandUnit_TacticalExploitation is Tactical Exploitation.
+	Modifier1LandUnit_TacticalExploitation Modifier1 = 66
+
+	// Modifier1LandUnit_TargetAcquisition is Target Acquisition.
+	Modifier1LandUnit_TargetAcquisition Modifier1 = 67
+
+	// Modifier1LandUnit_TopographicGeospatial is Topographic/Geospatial.
+	Modifier1LandUnit_TopographicGeospatial Modifier1 = 68
+
+	// Modifier1LandUnit_Disused_69 is {Disused}.
+	Modifier1LandUnit_Disused_69 Modifier1 = 69
+
+	// Modifier1LandUnit_VideoImageryCombatCamera is Video Imagery (Combat Camera).
+	Modifier1LandUnit_VideoImageryCombatCamera Modifier1 = 70
+
+	// Modifier1LandUnit_MobilityAssault is Mobility Assault.
+	Modifier1LandUnit_MobilityAssault Modifier1 = 71
+
+	// Modifier1LandUnit_AmphibiousWarfareShip is Amphibious Warfare Ship.
+	Modifier1LandUnit_AmphibiousWarfareShip Modifier1 = 72
+
+	// Modifier1LandUnit_LoadHandlingSystem is Load Handling System.
+	Modifier1LandUnit_LoadHandlingSystem Modifier1 = 73
+
+	// Modifier1LandUnit_PalletizedLoadSystem is Palletized Load System.
+	Modifier1LandUnit_PalletizedLoadSystem Modifier1 = 74
+
+	// Modifier1LandUnit_Disused_75 is {Disused}.
+	Modifier1LandUnit_Disused_75 Modifier1 = 75
+
+	// Modifier1LandUnit_Disused_76 is {Disused}.
+	Modifier1LandUnit_Disused_76 Modifier1 = 76
+
+	// Modifier1LandUnit_Support is Support.
+	Modifier1LandUnit_Support Modifier1 = 77
+
+	// Modifier1LandUnit_Disused_78 is {Disused}.
+	Modifier1LandUnit_Disused_78 Modifier1 = 78
+
+	// Modifier1LandUnit_RouteReconnaissanceAndClearance is Route, Reconnaissance, and Clearance.
+	Modifier1LandUnit_RouteReconnaissanceAndClearance Modifier1 = 79
+
+	// Modifier1LandUnit_Disused_80 is {Disused}.
+	Modifier1LandUnit_Disused_80 Modifier1 = 80
+
+	// Modifier1LandUnit_NATOMedicalRole2Basic is NATO Medical Role 2 Basic.
+	Modifier1LandUnit_NATOMedicalRole2Basic Modifier1 = 81
+
+	// Modifier1LandUnit_NATOMedicalRole2Enhanced is NATO Medical Role 2 Enhanced.
+	Modifier1LandUnit_NATOMedicalRole2Enhanced Modifier1 = 82
+
+	// Modifier1LandUnit_NATOMedicalRoleForward is NATO Medical Role Forward.
+	Modifier1LandUnit_NATOMedicalRoleForward Modifier1 = 83
+
+	// Modifier1LandUnit_Assault is Assault.
+	Modifier1LandUnit_Assault Modifier1 = 84
+
+	// Modifier1LandUnit_Disused_85 is {Disused}.
+	Modifier1LandUnit_Disused_85 Modifier1 = 85
+
+	// Modifier1LandUnit_CriminalInvestigationDivision is Criminal Investigation Division.
+	Modifier1LandUnit_CriminalInvestigationDivision Modifier1 = 86
+
+	// Modifier1LandUnit_Digital is Digital.
+	Modifier1LandUnit_Digital Modifier1 = 87
+
+	// Modifier1LandUnit_NetworkOrNetworkOperations is Network or Network Operations.
+	Modifier1LandUnit_NetworkOrNetworkOperations Modifier1 = 88
+
+	// Modifier1LandUnit_AirfieldAerialPortOfDebarkationOrAerialPortOfEmbarkation is Airfield, Aerial Port of Debarkation, or Aerial Port of Embarkation.
+	Modifier1LandUnit_AirfieldAerialPortOfDebarkationOrAerialPortOfEmbarkation Modifier1 = 89
+
+	// Modifier1LandUnit_Pipeline is Pipeline.
+	Modifier1LandUnit_Pipeline Modifier1 = 90
+
+	// Modifier1LandUnit_Postal is Postal.
+	Modifier1LandUnit_Postal Modifier1 = 91
+
+	// Modifier1LandUnit_Disused_92 is {Disused}.
+	Modifier1LandUnit_Disused_92 Modifier1 = 92
+
+	// Modifier1LandUnit_IndependentCommand is Independent Command.
+	Modifier1LandUnit_IndependentCommand Modifier1 = 93
+
+	// Modifier1LandUnit_Theater is Theater.
+	Modifier1LandUnit_Theater Modifier1 = 94
+
+	// Modifier1LandUnit_ArmyOrTheaterArmy is Army or Theater Army.
+	Modifier1LandUnit_ArmyOrTheaterArmy Modifier1 = 95
+
+	// Modifier1LandUnit_Corps is Corps.
+	Modifier1LandUnit_Corps Modifier1 = 96
+
+	// Modifier1LandUnit_Disused_97 is {Disused}.
+	Modifier1LandUnit_Disused_97 Modifier1 = 97
+
+	// Modifier1LandUnit_HeadquartersOrHeadquartersStaffElement is Headquarters or Headquarters Staff Element.
+	Modifier1LandUnit_HeadquartersOrHeadquartersStaffElement Modifier1 = 98
+
+	// Modifier1LandUnit_MultiDomainOperations is Multi-Domain Operations.
+	Modifier1LandUnit_MultiDomainOperations Modifier1 = 99
 )

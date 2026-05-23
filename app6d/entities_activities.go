@@ -5,156 +5,459 @@ package app6d
 
 // Entity constants for symbol set 40 (Activities).
 const (
-	EntityActivities_Incident                                                                                          Entity = 110000 // Incident
-	EntityActivities_IncidentCriminalActivityIncident                                                                  Entity = 110100 // Incident / Criminal Activity Incident
-	EntityActivities_IncidentCriminalActivityIncidentArrestApprehendDetain                                             Entity = 110101 // Incident / Criminal Activity Incident / Arrest/Apprehend/Detain
-	EntityActivities_IncidentCriminalActivityIncidentArson                                                             Entity = 110102 // Incident / Criminal Activity Incident / Arson
-	EntityActivities_IncidentCriminalActivityIncidentAttemptedCriminalActivity                                         Entity = 110103 // Incident / Criminal Activity Incident / Attempted Criminal Activity
-	EntityActivities_IncidentCriminalActivityIncidentDriveByShooting                                                   Entity = 110104 // Incident / Criminal Activity Incident / Drive-by Shooting
-	EntityActivities_IncidentCriminalActivityIncidentDisused                                                           Entity = 110105 // Incident / Criminal Activity Incident / {Disused}
-	EntityActivities_IncidentCriminalActivityIncidentExtortion                                                         Entity = 110106 // Incident / Criminal Activity Incident / Extortion
-	EntityActivities_IncidentCriminalActivityIncidentGraffiti                                                          Entity = 110107 // Incident / Criminal Activity Incident / Graffiti
-	EntityActivities_IncidentCriminalActivityIncidentKilling                                                           Entity = 110108 // Incident / Criminal Activity Incident / Killing
-	EntityActivities_IncidentCriminalActivityIncidentPoisoning                                                         Entity = 110109 // Incident / Criminal Activity Incident / Poisoning
-	EntityActivities_IncidentCriminalActivityIncidentCivilRioting                                                      Entity = 110110 // Incident / Criminal Activity Incident / Civil Rioting
-	EntityActivities_IncidentCriminalActivityIncidentBoobyTrap                                                         Entity = 110111 // Incident / Criminal Activity Incident / Booby Trap
-	EntityActivities_IncidentCriminalActivityIncidentDisused_110112                                                    Entity = 110112 // Incident / Criminal Activity Incident / {Disused}
-	EntityActivities_IncidentCriminalActivityIncidentBlackMarketing                                                    Entity = 110113 // Incident / Criminal Activity Incident / Black Marketing
-	EntityActivities_IncidentCriminalActivityIncidentVandalismLootRansackPlunder                                       Entity = 110114 // Incident / Criminal Activity Incident / Vandalism/Loot/Ransack/Plunder
-	EntityActivities_IncidentCriminalActivityIncidentJailBreak                                                         Entity = 110115 // Incident / Criminal Activity Incident / Jail Break
-	EntityActivities_IncidentCriminalActivityIncidentRobbery                                                           Entity = 110116 // Incident / Criminal Activity Incident / Robbery
-	EntityActivities_IncidentCriminalActivityIncidentTheft                                                             Entity = 110117 // Incident / Criminal Activity Incident / Theft
-	EntityActivities_IncidentCriminalActivityIncidentBurglary                                                          Entity = 110118 // Incident / Criminal Activity Incident / Burglary
-	EntityActivities_IncidentCriminalActivityIncidentSmuggling                                                         Entity = 110119 // Incident / Criminal Activity Incident / Smuggling
-	EntityActivities_IncidentCriminalActivityIncidentRockThrowing                                                      Entity = 110120 // Incident / Criminal Activity Incident / Rock Throwing
-	EntityActivities_IncidentCriminalActivityIncidentDeadBody                                                          Entity = 110121 // Incident / Criminal Activity Incident / Dead Body
-	EntityActivities_IncidentCriminalActivityIncidentSabotage                                                          Entity = 110122 // Incident / Criminal Activity Incident / Sabotage
-	EntityActivities_IncidentCriminalActivityIncidentSuspiciousActivity                                                Entity = 110123 // Incident / Criminal Activity Incident / Suspicious Activity
-	EntityActivities_IncidentBombBombing                                                                               Entity = 110200 // Incident / Bomb/Bombing
-	EntityActivities_IncidentBombBombingBombThreat                                                                     Entity = 110201 // Incident / Bomb/Bombing / Bomb Threat
-	EntityActivities_IncidentIEDEvent                                                                                  Entity = 110300 // Incident / IED Event
-	EntityActivities_IncidentIEDEventIEDExplosion                                                                      Entity = 110301 // Incident / IED Event / IED Explosion
-	EntityActivities_IncidentIEDEventPrematureIEDExplosion                                                             Entity = 110302 // Incident / IED Event / Premature IED Explosion
-	EntityActivities_IncidentIEDEventIEDCache                                                                          Entity = 110303 // Incident / IED Event / IED Cache
-	EntityActivities_IncidentIEDEventIEDSuicideBomber                                                                  Entity = 110304 // Incident / IED Event / IED Suicide Bomber
-	EntityActivities_IncidentShooting                                                                                  Entity = 110400 // Incident / Shooting
-	EntityActivities_IncidentShootingSniping                                                                           Entity = 110401 // Incident / Shooting / Sniping
-	EntityActivities_IncidentIllegalDrugOperation                                                                      Entity = 110500 // Incident / Illegal Drug Operation
-	EntityActivities_IncidentIllegalDrugOperationTrafficking                                                           Entity = 110501 // Incident / Illegal Drug Operation / Trafficking
-	EntityActivities_IncidentIllegalDrugOperationIllegalDrugLab                                                        Entity = 110502 // Incident / Illegal Drug Operation / Illegal Drug Lab
-	EntityActivities_IncidentExplosion                                                                                 Entity = 110600 // Incident / Explosion
-	EntityActivities_IncidentExplosionGrenadeExplosion                                                                 Entity = 110601 // Incident / Explosion / Grenade Explosion
-	EntityActivities_IncidentExplosionIncendiaryExplosion                                                              Entity = 110602 // Incident / Explosion / Incendiary Explosion
-	EntityActivities_IncidentExplosionMineExplosion                                                                    Entity = 110603 // Incident / Explosion / Mine Explosion
-	EntityActivities_IncidentExplosionMortarFireExplosion                                                              Entity = 110604 // Incident / Explosion / Mortar Fire Explosion
-	EntityActivities_IncidentExplosionRocketExplosion                                                                  Entity = 110605 // Incident / Explosion / Rocket Explosion
-	EntityActivities_IncidentExplosionBombExplosion                                                                    Entity = 110606 // Incident / Explosion / Bomb Explosion
-	EntityActivities_IncidentHomeHouse                                                                                 Entity = 110700 // Incident / Home/House
-	EntityActivities_CivilDisturbance                                                                                  Entity = 120000 // Civil Disturbance
-	EntityActivities_CivilDisturbanceDemonstration                                                                     Entity = 120100 // Civil Disturbance / Demonstration
-	EntityActivities_Operation                                                                                         Entity = 130000 // Operation
-	EntityActivities_OperationPatrolling                                                                               Entity = 130100 // Operation / Patrolling
-	EntityActivities_OperationMilitaryInformationSupportOperationMISO                                                  Entity = 130200 // Operation / Military Information Support Operation (MISO)
-	EntityActivities_OperationMilitaryInformationSupportOperationMISOTVAndRadioPropaganda                              Entity = 130201 // Operation / Military Information Support Operation (MISO) / TV and Radio Propaganda
-	EntityActivities_OperationForagingSearching                                                                        Entity = 130300 // Operation / Foraging/Searching
-	EntityActivities_OperationRecruitment                                                                              Entity = 130400 // Operation / Recruitment
-	EntityActivities_OperationRecruitmentWilling                                                                       Entity = 130401 // Operation / Recruitment / Willing
-	EntityActivities_OperationRecruitmentUnwillingCoerced                                                              Entity = 130402 // Operation / Recruitment / Unwilling/Coerced
-	EntityActivities_OperationMineLaying                                                                               Entity = 130500 // Operation / Mine Laying
-	EntityActivities_OperationSpy                                                                                      Entity = 130600 // Operation / Spy
-	EntityActivities_OperationWarrantServed                                                                            Entity = 130700 // Operation / Warrant Served
-	EntityActivities_OperationExfiltration                                                                             Entity = 130800 // Operation / Exfiltration
-	EntityActivities_OperationInfiltration                                                                             Entity = 130900 // Operation / Infiltration
-	EntityActivities_OperationMeeting                                                                                  Entity = 131000 // Operation / Meeting
-	EntityActivities_OperationMeetingPollingPlaceElection                                                              Entity = 131001 // Operation / Meeting / Polling Place/Election
-	EntityActivities_OperationRaidOnHouse                                                                              Entity = 131100 // Operation / Raid on House
-	EntityActivities_OperationEmergencyOperation                                                                       Entity = 131200 // Operation / Emergency Operation
-	EntityActivities_OperationEmergencyOperationEmergencyCollectionEvacuationPoint                                     Entity = 131201 // Operation / Emergency Operation / Emergency Collection Evacuation Point
-	EntityActivities_OperationEmergencyOperationEmergencyFoodDistribution                                              Entity = 131202 // Operation / Emergency Operation / Emergency Food Distribution
-	EntityActivities_OperationEmergencyOperationEmergencyIncidentCommandCenter                                         Entity = 131203 // Operation / Emergency Operation / Emergency Incident Command Center
-	EntityActivities_OperationEmergencyOperationEmergencyOperationsCenter                                              Entity = 131204 // Operation / Emergency Operation / Emergency Operations Center
-	EntityActivities_OperationEmergencyOperationEmergencyPublicInformationCenter                                       Entity = 131205 // Operation / Emergency Operation / Emergency Public Information Center
-	EntityActivities_OperationEmergencyOperationEmergencyShelter                                                       Entity = 131206 // Operation / Emergency Operation / Emergency Shelter
-	EntityActivities_OperationEmergencyOperationEmergencyStagingArea                                                   Entity = 131207 // Operation / Emergency Operation / Emergency Staging Area
-	EntityActivities_OperationEmergencyOperationEmergencyWaterDistributionCenter                                       Entity = 131208 // Operation / Emergency Operation / Emergency Water Distribution Center
-	EntityActivities_OperationEmergencyMedicalOperation                                                                Entity = 131300 // Operation / Emergency Medical Operation
-	EntityActivities_OperationEmergencyMedicalOperationEMTStationLocation                                              Entity = 131301 // Operation / Emergency Medical Operation / EMT Station Location
-	EntityActivities_OperationEmergencyMedicalOperationHealthDepartmentFacility                                        Entity = 131302 // Operation / Emergency Medical Operation / Health Department Facility
-	EntityActivities_OperationEmergencyMedicalOperationMedicalFacilitiesOutpatient                                     Entity = 131303 // Operation / Emergency Medical Operation / Medical Facilities Outpatient
-	EntityActivities_OperationEmergencyMedicalOperationMorgue                                                          Entity = 131304 // Operation / Emergency Medical Operation / Morgue
-	EntityActivities_OperationEmergencyMedicalOperationPharmacy                                                        Entity = 131305 // Operation / Emergency Medical Operation / Pharmacy
-	EntityActivities_OperationEmergencyMedicalOperationTriage                                                          Entity = 131306 // Operation / Emergency Medical Operation / Triage
-	EntityActivities_OperationFireFightingOperation                                                                    Entity = 131400 // Operation / Fire Fighting Operation
-	EntityActivities_OperationFireFightingOperationFireHydrant                                                         Entity = 131401 // Operation / Fire Fighting Operation / Fire Hydrant
-	EntityActivities_OperationFireFightingOperationDisused                                                             Entity = 131402 // Operation / Fire Fighting Operation / {Disused}
-	EntityActivities_OperationFireFightingOperationOtherWaterSupplyLocation                                            Entity = 131403 // Operation / Fire Fighting Operation / Other Water Supply Location
-	EntityActivities_OperationLawEnforcementOperation                                                                  Entity = 131500 // Operation / Law Enforcement Operation
-	EntityActivities_OperationLawEnforcementOperationBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice Entity = 131501 // Operation / Law Enforcement Operation / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice)
-	EntityActivities_OperationLawEnforcementOperationBorderPatrol                                                      Entity = 131502 // Operation / Law Enforcement Operation / Border Patrol
-	EntityActivities_OperationLawEnforcementOperationCustomsService                                                    Entity = 131503 // Operation / Law Enforcement Operation / Customs Service
-	EntityActivities_OperationLawEnforcementOperationDrugEnforcementAdministrationDEA                                  Entity = 131504 // Operation / Law Enforcement Operation / Drug Enforcement Administration (DEA)
-	EntityActivities_OperationLawEnforcementOperationDepartmentOfJusticeDOJ                                            Entity = 131505 // Operation / Law Enforcement Operation / Department of Justice (DOJ)
-	EntityActivities_OperationLawEnforcementOperationFederalBureauOfInvestigationFBI                                   Entity = 131506 // Operation / Law Enforcement Operation / Federal Bureau of Investigation (FBI)
-	EntityActivities_OperationLawEnforcementOperationPolice                                                            Entity = 131507 // Operation / Law Enforcement Operation / Police
-	EntityActivities_OperationLawEnforcementOperationPrison                                                            Entity = 131508 // Operation / Law Enforcement Operation / Prison
-	EntityActivities_OperationLawEnforcementOperationUnitedStatesSecretServiceUSSS                                     Entity = 131509 // Operation / Law Enforcement Operation / United States Secret Service (USSS)
-	EntityActivities_OperationLawEnforcementOperationTransportationSecurityAdministrationTSA                           Entity = 131510 // Operation / Law Enforcement Operation / Transportation Security Administration (TSA)
-	EntityActivities_OperationLawEnforcementOperationCoastGuard                                                        Entity = 131511 // Operation / Law Enforcement Operation / Coast Guard
-	EntityActivities_OperationLawEnforcementOperationUSMarshalsService                                                 Entity = 131512 // Operation / Law Enforcement Operation / US Marshals Service
-	EntityActivities_OperationLawEnforcementOperationInternalSecurityForce                                             Entity = 131513 // Operation / Law Enforcement Operation / Internal Security Force
-	EntityActivities_FireEvent                                                                                         Entity = 140000 // Fire Event
-	EntityActivities_FireEventFireOrigin                                                                               Entity = 140100 // Fire Event / Fire Origin
-	EntityActivities_FireEventSmoke                                                                                    Entity = 140200 // Fire Event / Smoke
-	EntityActivities_FireEventHotSpot                                                                                  Entity = 140300 // Fire Event / Hot Spot
-	EntityActivities_FireEventNonResidentialFire                                                                       Entity = 140400 // Fire Event / Non-Residential Fire
-	EntityActivities_FireEventResidentialFire                                                                          Entity = 140500 // Fire Event / Residential Fire
-	EntityActivities_FireEventSchoolFire                                                                               Entity = 140600 // Fire Event / School Fire
-	EntityActivities_FireEventSpecialNeedsFire                                                                         Entity = 140700 // Fire Event / Special Needs Fire
-	EntityActivities_FireEventWildFire                                                                                 Entity = 140800 // Fire Event / WildFire
-	EntityActivities_HazardousMaterials                                                                                Entity = 150000 // Hazardous Materials
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncident                                                      Entity = 150100 // Hazardous Materials / Hazardous Materials Incident
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentChemicalAgent                                         Entity = 150101 // Hazardous Materials / Hazardous Materials Incident / Chemical Agent
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentCorrosiveMaterial                                     Entity = 150102 // Hazardous Materials / Hazardous Materials Incident / Corrosive Material
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentHazardousWhenWet                                      Entity = 150103 // Hazardous Materials / Hazardous Materials Incident / Hazardous when Wet
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentExplosiveMaterial                                     Entity = 150104 // Hazardous Materials / Hazardous Materials Incident / Explosive Material
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableGas                                          Entity = 150105 // Hazardous Materials / Hazardous Materials Incident / Flammable Gas
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableLiquid                                       Entity = 150106 // Hazardous Materials / Hazardous Materials Incident / Flammable Liquid
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableSolid                                        Entity = 150107 // Hazardous Materials / Hazardous Materials Incident / Flammable Solid
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentNonFlammableGas                                       Entity = 150108 // Hazardous Materials / Hazardous Materials Incident / Non-Flammable Gas
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentOrganicPeroxide                                       Entity = 150109 // Hazardous Materials / Hazardous Materials Incident / Organic Peroxide
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentOxidizer                                              Entity = 150110 // Hazardous Materials / Hazardous Materials Incident / Oxidizer
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentRadioactiveMaterial                                   Entity = 150111 // Hazardous Materials / Hazardous Materials Incident / Radioactive Material
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentSpontaneouslyCombustibleMaterial                      Entity = 150112 // Hazardous Materials / Hazardous Materials Incident / Spontaneously Combustible Material
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentToxicGas                                              Entity = 150113 // Hazardous Materials / Hazardous Materials Incident / Toxic Gas
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentToxicInfectiousMaterial                               Entity = 150114 // Hazardous Materials / Hazardous Materials Incident / Toxic Infectious Material
-	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentUnexplodedOrdnance                                    Entity = 150115 // Hazardous Materials / Hazardous Materials Incident / Unexploded Ordnance
-	EntityActivities_TransportationIncident                                                                            Entity = 160000 // Transportation Incident
-	EntityActivities_TransportationIncidentAir                                                                         Entity = 160100 // Transportation Incident / Air
-	EntityActivities_TransportationIncidentMarine                                                                      Entity = 160200 // Transportation Incident / Marine
-	EntityActivities_TransportationIncidentRail                                                                        Entity = 160300 // Transportation Incident / Rail
-	EntityActivities_TransportationIncidentVehicle                                                                     Entity = 160400 // Transportation Incident / Vehicle
-	EntityActivities_TransportationIncidentWheeledVehicleExplosion                                                     Entity = 160500 // Transportation Incident / Wheeled Vehicle Explosion
-	EntityActivities_NaturalEvent                                                                                      Entity = 170000 // Natural Event
-	EntityActivities_NaturalEventGeologic                                                                              Entity = 170100 // Natural Event / Geologic
-	EntityActivities_NaturalEventGeologicAftershock                                                                    Entity = 170101 // Natural Event / Geologic / Aftershock
-	EntityActivities_NaturalEventGeologicAvalanche                                                                     Entity = 170102 // Natural Event / Geologic / Avalanche
-	EntityActivities_NaturalEventGeologicEarthquakeEpicenter                                                           Entity = 170103 // Natural Event / Geologic / Earthquake Epicenter
-	EntityActivities_NaturalEventGeologicLandslide                                                                     Entity = 170104 // Natural Event / Geologic / Landslide
-	EntityActivities_NaturalEventGeologicSubsidence                                                                    Entity = 170105 // Natural Event / Geologic / Subsidence
-	EntityActivities_NaturalEventGeologicVolcanicEruption                                                              Entity = 170106 // Natural Event / Geologic / Volcanic Eruption
-	EntityActivities_NaturalEventGeologicVolcanicThreat                                                                Entity = 170107 // Natural Event / Geologic / Volcanic Threat
-	EntityActivities_NaturalEventGeologicCaveEntrance                                                                  Entity = 170108 // Natural Event / Geologic / Cave Entrance
-	EntityActivities_NaturalEventHydroMeteorological                                                                   Entity = 170200 // Natural Event / Hydro-Meteorological
-	EntityActivities_NaturalEventHydroMeteorologicalDrought                                                            Entity = 170201 // Natural Event / Hydro-Meteorological / Drought
-	EntityActivities_NaturalEventHydroMeteorologicalFlood                                                              Entity = 170202 // Natural Event / Hydro-Meteorological / Flood
-	EntityActivities_NaturalEventHydroMeteorologicalTsunami                                                            Entity = 170203 // Natural Event / Hydro-Meteorological / Tsunami
-	EntityActivities_NaturalEventInfestation                                                                           Entity = 170300 // Natural Event / Infestation
-	EntityActivities_NaturalEventInfestationBird                                                                       Entity = 170301 // Natural Event / Infestation / Bird
-	EntityActivities_NaturalEventInfestationInsect                                                                     Entity = 170302 // Natural Event / Infestation / Insect
-	EntityActivities_NaturalEventInfestationMicrobial                                                                  Entity = 170303 // Natural Event / Infestation / Microbial
-	EntityActivities_NaturalEventInfestationReptile                                                                    Entity = 170304 // Natural Event / Infestation / Reptile
-	EntityActivities_NaturalEventInfestationRodent                                                                     Entity = 170305 // Natural Event / Infestation / Rodent
-	EntityActivities_Individual                                                                                        Entity = 180000 // Individual
-	EntityActivities_IndividualReligiousLeader                                                                         Entity = 180100 // Individual / Religious Leader
-	EntityActivities_IndividualSpeaker                                                                                 Entity = 180200 // Individual / Speaker
+	// EntityActivities_Incident is Incident.
+	EntityActivities_Incident Entity = 110000
+
+	// EntityActivities_IncidentCriminalActivityIncident is Incident / Criminal Activity Incident.
+	EntityActivities_IncidentCriminalActivityIncident Entity = 110100
+
+	// EntityActivities_IncidentCriminalActivityIncidentArrestApprehendDetain is Incident / Criminal Activity Incident / Arrest/Apprehend/Detain.
+	EntityActivities_IncidentCriminalActivityIncidentArrestApprehendDetain Entity = 110101
+
+	// EntityActivities_IncidentCriminalActivityIncidentArson is Incident / Criminal Activity Incident / Arson.
+	EntityActivities_IncidentCriminalActivityIncidentArson Entity = 110102
+
+	// EntityActivities_IncidentCriminalActivityIncidentAttemptedCriminalActivity is Incident / Criminal Activity Incident / Attempted Criminal Activity.
+	EntityActivities_IncidentCriminalActivityIncidentAttemptedCriminalActivity Entity = 110103
+
+	// EntityActivities_IncidentCriminalActivityIncidentDriveByShooting is Incident / Criminal Activity Incident / Drive-by Shooting.
+	EntityActivities_IncidentCriminalActivityIncidentDriveByShooting Entity = 110104
+
+	// EntityActivities_IncidentCriminalActivityIncidentDisused is Incident / Criminal Activity Incident / {Disused}.
+	EntityActivities_IncidentCriminalActivityIncidentDisused Entity = 110105
+
+	// EntityActivities_IncidentCriminalActivityIncidentExtortion is Incident / Criminal Activity Incident / Extortion.
+	EntityActivities_IncidentCriminalActivityIncidentExtortion Entity = 110106
+
+	// EntityActivities_IncidentCriminalActivityIncidentGraffiti is Incident / Criminal Activity Incident / Graffiti.
+	EntityActivities_IncidentCriminalActivityIncidentGraffiti Entity = 110107
+
+	// EntityActivities_IncidentCriminalActivityIncidentKilling is Incident / Criminal Activity Incident / Killing.
+	EntityActivities_IncidentCriminalActivityIncidentKilling Entity = 110108
+
+	// EntityActivities_IncidentCriminalActivityIncidentPoisoning is Incident / Criminal Activity Incident / Poisoning.
+	EntityActivities_IncidentCriminalActivityIncidentPoisoning Entity = 110109
+
+	// EntityActivities_IncidentCriminalActivityIncidentCivilRioting is Incident / Criminal Activity Incident / Civil Rioting.
+	EntityActivities_IncidentCriminalActivityIncidentCivilRioting Entity = 110110
+
+	// EntityActivities_IncidentCriminalActivityIncidentBoobyTrap is Incident / Criminal Activity Incident / Booby Trap.
+	EntityActivities_IncidentCriminalActivityIncidentBoobyTrap Entity = 110111
+
+	// EntityActivities_IncidentCriminalActivityIncidentDisused_110112 is Incident / Criminal Activity Incident / {Disused}.
+	EntityActivities_IncidentCriminalActivityIncidentDisused_110112 Entity = 110112
+
+	// EntityActivities_IncidentCriminalActivityIncidentBlackMarketing is Incident / Criminal Activity Incident / Black Marketing.
+	EntityActivities_IncidentCriminalActivityIncidentBlackMarketing Entity = 110113
+
+	// EntityActivities_IncidentCriminalActivityIncidentVandalismLootRansackPlunder is Incident / Criminal Activity Incident / Vandalism/Loot/Ransack/Plunder.
+	EntityActivities_IncidentCriminalActivityIncidentVandalismLootRansackPlunder Entity = 110114
+
+	// EntityActivities_IncidentCriminalActivityIncidentJailBreak is Incident / Criminal Activity Incident / Jail Break.
+	EntityActivities_IncidentCriminalActivityIncidentJailBreak Entity = 110115
+
+	// EntityActivities_IncidentCriminalActivityIncidentRobbery is Incident / Criminal Activity Incident / Robbery.
+	EntityActivities_IncidentCriminalActivityIncidentRobbery Entity = 110116
+
+	// EntityActivities_IncidentCriminalActivityIncidentTheft is Incident / Criminal Activity Incident / Theft.
+	EntityActivities_IncidentCriminalActivityIncidentTheft Entity = 110117
+
+	// EntityActivities_IncidentCriminalActivityIncidentBurglary is Incident / Criminal Activity Incident / Burglary.
+	EntityActivities_IncidentCriminalActivityIncidentBurglary Entity = 110118
+
+	// EntityActivities_IncidentCriminalActivityIncidentSmuggling is Incident / Criminal Activity Incident / Smuggling.
+	EntityActivities_IncidentCriminalActivityIncidentSmuggling Entity = 110119
+
+	// EntityActivities_IncidentCriminalActivityIncidentRockThrowing is Incident / Criminal Activity Incident / Rock Throwing.
+	EntityActivities_IncidentCriminalActivityIncidentRockThrowing Entity = 110120
+
+	// EntityActivities_IncidentCriminalActivityIncidentDeadBody is Incident / Criminal Activity Incident / Dead Body.
+	EntityActivities_IncidentCriminalActivityIncidentDeadBody Entity = 110121
+
+	// EntityActivities_IncidentCriminalActivityIncidentSabotage is Incident / Criminal Activity Incident / Sabotage.
+	EntityActivities_IncidentCriminalActivityIncidentSabotage Entity = 110122
+
+	// EntityActivities_IncidentCriminalActivityIncidentSuspiciousActivity is Incident / Criminal Activity Incident / Suspicious Activity.
+	EntityActivities_IncidentCriminalActivityIncidentSuspiciousActivity Entity = 110123
+
+	// EntityActivities_IncidentBombBombing is Incident / Bomb/Bombing.
+	EntityActivities_IncidentBombBombing Entity = 110200
+
+	// EntityActivities_IncidentBombBombingBombThreat is Incident / Bomb/Bombing / Bomb Threat.
+	EntityActivities_IncidentBombBombingBombThreat Entity = 110201
+
+	// EntityActivities_IncidentIEDEvent is Incident / IED Event.
+	EntityActivities_IncidentIEDEvent Entity = 110300
+
+	// EntityActivities_IncidentIEDEventIEDExplosion is Incident / IED Event / IED Explosion.
+	EntityActivities_IncidentIEDEventIEDExplosion Entity = 110301
+
+	// EntityActivities_IncidentIEDEventPrematureIEDExplosion is Incident / IED Event / Premature IED Explosion.
+	EntityActivities_IncidentIEDEventPrematureIEDExplosion Entity = 110302
+
+	// EntityActivities_IncidentIEDEventIEDCache is Incident / IED Event / IED Cache.
+	EntityActivities_IncidentIEDEventIEDCache Entity = 110303
+
+	// EntityActivities_IncidentIEDEventIEDSuicideBomber is Incident / IED Event / IED Suicide Bomber.
+	EntityActivities_IncidentIEDEventIEDSuicideBomber Entity = 110304
+
+	// EntityActivities_IncidentShooting is Incident / Shooting.
+	EntityActivities_IncidentShooting Entity = 110400
+
+	// EntityActivities_IncidentShootingSniping is Incident / Shooting / Sniping.
+	EntityActivities_IncidentShootingSniping Entity = 110401
+
+	// EntityActivities_IncidentIllegalDrugOperation is Incident / Illegal Drug Operation.
+	EntityActivities_IncidentIllegalDrugOperation Entity = 110500
+
+	// EntityActivities_IncidentIllegalDrugOperationTrafficking is Incident / Illegal Drug Operation / Trafficking.
+	EntityActivities_IncidentIllegalDrugOperationTrafficking Entity = 110501
+
+	// EntityActivities_IncidentIllegalDrugOperationIllegalDrugLab is Incident / Illegal Drug Operation / Illegal Drug Lab.
+	EntityActivities_IncidentIllegalDrugOperationIllegalDrugLab Entity = 110502
+
+	// EntityActivities_IncidentExplosion is Incident / Explosion.
+	EntityActivities_IncidentExplosion Entity = 110600
+
+	// EntityActivities_IncidentExplosionGrenadeExplosion is Incident / Explosion / Grenade Explosion.
+	EntityActivities_IncidentExplosionGrenadeExplosion Entity = 110601
+
+	// EntityActivities_IncidentExplosionIncendiaryExplosion is Incident / Explosion / Incendiary Explosion.
+	EntityActivities_IncidentExplosionIncendiaryExplosion Entity = 110602
+
+	// EntityActivities_IncidentExplosionMineExplosion is Incident / Explosion / Mine Explosion.
+	EntityActivities_IncidentExplosionMineExplosion Entity = 110603
+
+	// EntityActivities_IncidentExplosionMortarFireExplosion is Incident / Explosion / Mortar Fire Explosion.
+	EntityActivities_IncidentExplosionMortarFireExplosion Entity = 110604
+
+	// EntityActivities_IncidentExplosionRocketExplosion is Incident / Explosion / Rocket Explosion.
+	EntityActivities_IncidentExplosionRocketExplosion Entity = 110605
+
+	// EntityActivities_IncidentExplosionBombExplosion is Incident / Explosion / Bomb Explosion.
+	EntityActivities_IncidentExplosionBombExplosion Entity = 110606
+
+	// EntityActivities_IncidentHomeHouse is Incident / Home/House.
+	EntityActivities_IncidentHomeHouse Entity = 110700
+
+	// EntityActivities_CivilDisturbance is Civil Disturbance.
+	EntityActivities_CivilDisturbance Entity = 120000
+
+	// EntityActivities_CivilDisturbanceDemonstration is Civil Disturbance / Demonstration.
+	EntityActivities_CivilDisturbanceDemonstration Entity = 120100
+
+	// EntityActivities_Operation is Operation.
+	EntityActivities_Operation Entity = 130000
+
+	// EntityActivities_OperationPatrolling is Operation / Patrolling.
+	EntityActivities_OperationPatrolling Entity = 130100
+
+	// EntityActivities_OperationMilitaryInformationSupportOperationMISO is Operation / Military Information Support Operation (MISO).
+	EntityActivities_OperationMilitaryInformationSupportOperationMISO Entity = 130200
+
+	// EntityActivities_OperationMilitaryInformationSupportOperationMISOTVAndRadioPropaganda is Operation / Military Information Support Operation (MISO) / TV and Radio Propaganda.
+	EntityActivities_OperationMilitaryInformationSupportOperationMISOTVAndRadioPropaganda Entity = 130201
+
+	// EntityActivities_OperationForagingSearching is Operation / Foraging/Searching.
+	EntityActivities_OperationForagingSearching Entity = 130300
+
+	// EntityActivities_OperationRecruitment is Operation / Recruitment.
+	EntityActivities_OperationRecruitment Entity = 130400
+
+	// EntityActivities_OperationRecruitmentWilling is Operation / Recruitment / Willing.
+	EntityActivities_OperationRecruitmentWilling Entity = 130401
+
+	// EntityActivities_OperationRecruitmentUnwillingCoerced is Operation / Recruitment / Unwilling/Coerced.
+	EntityActivities_OperationRecruitmentUnwillingCoerced Entity = 130402
+
+	// EntityActivities_OperationMineLaying is Operation / Mine Laying.
+	EntityActivities_OperationMineLaying Entity = 130500
+
+	// EntityActivities_OperationSpy is Operation / Spy.
+	EntityActivities_OperationSpy Entity = 130600
+
+	// EntityActivities_OperationWarrantServed is Operation / Warrant Served.
+	EntityActivities_OperationWarrantServed Entity = 130700
+
+	// EntityActivities_OperationExfiltration is Operation / Exfiltration.
+	EntityActivities_OperationExfiltration Entity = 130800
+
+	// EntityActivities_OperationInfiltration is Operation / Infiltration.
+	EntityActivities_OperationInfiltration Entity = 130900
+
+	// EntityActivities_OperationMeeting is Operation / Meeting.
+	EntityActivities_OperationMeeting Entity = 131000
+
+	// EntityActivities_OperationMeetingPollingPlaceElection is Operation / Meeting / Polling Place/Election.
+	EntityActivities_OperationMeetingPollingPlaceElection Entity = 131001
+
+	// EntityActivities_OperationRaidOnHouse is Operation / Raid on House.
+	EntityActivities_OperationRaidOnHouse Entity = 131100
+
+	// EntityActivities_OperationEmergencyOperation is Operation / Emergency Operation.
+	EntityActivities_OperationEmergencyOperation Entity = 131200
+
+	// EntityActivities_OperationEmergencyOperationEmergencyCollectionEvacuationPoint is Operation / Emergency Operation / Emergency Collection Evacuation Point.
+	EntityActivities_OperationEmergencyOperationEmergencyCollectionEvacuationPoint Entity = 131201
+
+	// EntityActivities_OperationEmergencyOperationEmergencyFoodDistribution is Operation / Emergency Operation / Emergency Food Distribution.
+	EntityActivities_OperationEmergencyOperationEmergencyFoodDistribution Entity = 131202
+
+	// EntityActivities_OperationEmergencyOperationEmergencyIncidentCommandCenter is Operation / Emergency Operation / Emergency Incident Command Center.
+	EntityActivities_OperationEmergencyOperationEmergencyIncidentCommandCenter Entity = 131203
+
+	// EntityActivities_OperationEmergencyOperationEmergencyOperationsCenter is Operation / Emergency Operation / Emergency Operations Center.
+	EntityActivities_OperationEmergencyOperationEmergencyOperationsCenter Entity = 131204
+
+	// EntityActivities_OperationEmergencyOperationEmergencyPublicInformationCenter is Operation / Emergency Operation / Emergency Public Information Center.
+	EntityActivities_OperationEmergencyOperationEmergencyPublicInformationCenter Entity = 131205
+
+	// EntityActivities_OperationEmergencyOperationEmergencyShelter is Operation / Emergency Operation / Emergency Shelter.
+	EntityActivities_OperationEmergencyOperationEmergencyShelter Entity = 131206
+
+	// EntityActivities_OperationEmergencyOperationEmergencyStagingArea is Operation / Emergency Operation / Emergency Staging Area.
+	EntityActivities_OperationEmergencyOperationEmergencyStagingArea Entity = 131207
+
+	// EntityActivities_OperationEmergencyOperationEmergencyWaterDistributionCenter is Operation / Emergency Operation / Emergency Water Distribution Center.
+	EntityActivities_OperationEmergencyOperationEmergencyWaterDistributionCenter Entity = 131208
+
+	// EntityActivities_OperationEmergencyMedicalOperation is Operation / Emergency Medical Operation.
+	EntityActivities_OperationEmergencyMedicalOperation Entity = 131300
+
+	// EntityActivities_OperationEmergencyMedicalOperationEMTStationLocation is Operation / Emergency Medical Operation / EMT Station Location.
+	EntityActivities_OperationEmergencyMedicalOperationEMTStationLocation Entity = 131301
+
+	// EntityActivities_OperationEmergencyMedicalOperationHealthDepartmentFacility is Operation / Emergency Medical Operation / Health Department Facility.
+	EntityActivities_OperationEmergencyMedicalOperationHealthDepartmentFacility Entity = 131302
+
+	// EntityActivities_OperationEmergencyMedicalOperationMedicalFacilitiesOutpatient is Operation / Emergency Medical Operation / Medical Facilities Outpatient.
+	EntityActivities_OperationEmergencyMedicalOperationMedicalFacilitiesOutpatient Entity = 131303
+
+	// EntityActivities_OperationEmergencyMedicalOperationMorgue is Operation / Emergency Medical Operation / Morgue.
+	EntityActivities_OperationEmergencyMedicalOperationMorgue Entity = 131304
+
+	// EntityActivities_OperationEmergencyMedicalOperationPharmacy is Operation / Emergency Medical Operation / Pharmacy.
+	EntityActivities_OperationEmergencyMedicalOperationPharmacy Entity = 131305
+
+	// EntityActivities_OperationEmergencyMedicalOperationTriage is Operation / Emergency Medical Operation / Triage.
+	EntityActivities_OperationEmergencyMedicalOperationTriage Entity = 131306
+
+	// EntityActivities_OperationFireFightingOperation is Operation / Fire Fighting Operation.
+	EntityActivities_OperationFireFightingOperation Entity = 131400
+
+	// EntityActivities_OperationFireFightingOperationFireHydrant is Operation / Fire Fighting Operation / Fire Hydrant.
+	EntityActivities_OperationFireFightingOperationFireHydrant Entity = 131401
+
+	// EntityActivities_OperationFireFightingOperationDisused is Operation / Fire Fighting Operation / {Disused}.
+	EntityActivities_OperationFireFightingOperationDisused Entity = 131402
+
+	// EntityActivities_OperationFireFightingOperationOtherWaterSupplyLocation is Operation / Fire Fighting Operation / Other Water Supply Location.
+	EntityActivities_OperationFireFightingOperationOtherWaterSupplyLocation Entity = 131403
+
+	// EntityActivities_OperationLawEnforcementOperation is Operation / Law Enforcement Operation.
+	EntityActivities_OperationLawEnforcementOperation Entity = 131500
+
+	// EntityActivities_OperationLawEnforcementOperationBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice is Operation / Law Enforcement Operation / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice).
+	EntityActivities_OperationLawEnforcementOperationBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice Entity = 131501
+
+	// EntityActivities_OperationLawEnforcementOperationBorderPatrol is Operation / Law Enforcement Operation / Border Patrol.
+	EntityActivities_OperationLawEnforcementOperationBorderPatrol Entity = 131502
+
+	// EntityActivities_OperationLawEnforcementOperationCustomsService is Operation / Law Enforcement Operation / Customs Service.
+	EntityActivities_OperationLawEnforcementOperationCustomsService Entity = 131503
+
+	// EntityActivities_OperationLawEnforcementOperationDrugEnforcementAdministrationDEA is Operation / Law Enforcement Operation / Drug Enforcement Administration (DEA).
+	EntityActivities_OperationLawEnforcementOperationDrugEnforcementAdministrationDEA Entity = 131504
+
+	// EntityActivities_OperationLawEnforcementOperationDepartmentOfJusticeDOJ is Operation / Law Enforcement Operation / Department of Justice (DOJ).
+	EntityActivities_OperationLawEnforcementOperationDepartmentOfJusticeDOJ Entity = 131505
+
+	// EntityActivities_OperationLawEnforcementOperationFederalBureauOfInvestigationFBI is Operation / Law Enforcement Operation / Federal Bureau of Investigation (FBI).
+	EntityActivities_OperationLawEnforcementOperationFederalBureauOfInvestigationFBI Entity = 131506
+
+	// EntityActivities_OperationLawEnforcementOperationPolice is Operation / Law Enforcement Operation / Police.
+	EntityActivities_OperationLawEnforcementOperationPolice Entity = 131507
+
+	// EntityActivities_OperationLawEnforcementOperationPrison is Operation / Law Enforcement Operation / Prison.
+	EntityActivities_OperationLawEnforcementOperationPrison Entity = 131508
+
+	// EntityActivities_OperationLawEnforcementOperationUnitedStatesSecretServiceUSSS is Operation / Law Enforcement Operation / United States Secret Service (USSS).
+	EntityActivities_OperationLawEnforcementOperationUnitedStatesSecretServiceUSSS Entity = 131509
+
+	// EntityActivities_OperationLawEnforcementOperationTransportationSecurityAdministrationTSA is Operation / Law Enforcement Operation / Transportation Security Administration (TSA).
+	EntityActivities_OperationLawEnforcementOperationTransportationSecurityAdministrationTSA Entity = 131510
+
+	// EntityActivities_OperationLawEnforcementOperationCoastGuard is Operation / Law Enforcement Operation / Coast Guard.
+	EntityActivities_OperationLawEnforcementOperationCoastGuard Entity = 131511
+
+	// EntityActivities_OperationLawEnforcementOperationUSMarshalsService is Operation / Law Enforcement Operation / US Marshals Service.
+	EntityActivities_OperationLawEnforcementOperationUSMarshalsService Entity = 131512
+
+	// EntityActivities_OperationLawEnforcementOperationInternalSecurityForce is Operation / Law Enforcement Operation / Internal Security Force.
+	EntityActivities_OperationLawEnforcementOperationInternalSecurityForce Entity = 131513
+
+	// EntityActivities_FireEvent is Fire Event.
+	EntityActivities_FireEvent Entity = 140000
+
+	// EntityActivities_FireEventFireOrigin is Fire Event / Fire Origin.
+	EntityActivities_FireEventFireOrigin Entity = 140100
+
+	// EntityActivities_FireEventSmoke is Fire Event / Smoke.
+	EntityActivities_FireEventSmoke Entity = 140200
+
+	// EntityActivities_FireEventHotSpot is Fire Event / Hot Spot.
+	EntityActivities_FireEventHotSpot Entity = 140300
+
+	// EntityActivities_FireEventNonResidentialFire is Fire Event / Non-Residential Fire.
+	EntityActivities_FireEventNonResidentialFire Entity = 140400
+
+	// EntityActivities_FireEventResidentialFire is Fire Event / Residential Fire.
+	EntityActivities_FireEventResidentialFire Entity = 140500
+
+	// EntityActivities_FireEventSchoolFire is Fire Event / School Fire.
+	EntityActivities_FireEventSchoolFire Entity = 140600
+
+	// EntityActivities_FireEventSpecialNeedsFire is Fire Event / Special Needs Fire.
+	EntityActivities_FireEventSpecialNeedsFire Entity = 140700
+
+	// EntityActivities_FireEventWildFire is Fire Event / WildFire.
+	EntityActivities_FireEventWildFire Entity = 140800
+
+	// EntityActivities_HazardousMaterials is Hazardous Materials.
+	EntityActivities_HazardousMaterials Entity = 150000
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncident is Hazardous Materials / Hazardous Materials Incident.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncident Entity = 150100
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentChemicalAgent is Hazardous Materials / Hazardous Materials Incident / Chemical Agent.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentChemicalAgent Entity = 150101
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentCorrosiveMaterial is Hazardous Materials / Hazardous Materials Incident / Corrosive Material.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentCorrosiveMaterial Entity = 150102
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentHazardousWhenWet is Hazardous Materials / Hazardous Materials Incident / Hazardous when Wet.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentHazardousWhenWet Entity = 150103
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentExplosiveMaterial is Hazardous Materials / Hazardous Materials Incident / Explosive Material.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentExplosiveMaterial Entity = 150104
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableGas is Hazardous Materials / Hazardous Materials Incident / Flammable Gas.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableGas Entity = 150105
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableLiquid is Hazardous Materials / Hazardous Materials Incident / Flammable Liquid.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableLiquid Entity = 150106
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableSolid is Hazardous Materials / Hazardous Materials Incident / Flammable Solid.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentFlammableSolid Entity = 150107
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentNonFlammableGas is Hazardous Materials / Hazardous Materials Incident / Non-Flammable Gas.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentNonFlammableGas Entity = 150108
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentOrganicPeroxide is Hazardous Materials / Hazardous Materials Incident / Organic Peroxide.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentOrganicPeroxide Entity = 150109
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentOxidizer is Hazardous Materials / Hazardous Materials Incident / Oxidizer.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentOxidizer Entity = 150110
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentRadioactiveMaterial is Hazardous Materials / Hazardous Materials Incident / Radioactive Material.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentRadioactiveMaterial Entity = 150111
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentSpontaneouslyCombustibleMaterial is Hazardous Materials / Hazardous Materials Incident / Spontaneously Combustible Material.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentSpontaneouslyCombustibleMaterial Entity = 150112
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentToxicGas is Hazardous Materials / Hazardous Materials Incident / Toxic Gas.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentToxicGas Entity = 150113
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentToxicInfectiousMaterial is Hazardous Materials / Hazardous Materials Incident / Toxic Infectious Material.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentToxicInfectiousMaterial Entity = 150114
+
+	// EntityActivities_HazardousMaterialsHazardousMaterialsIncidentUnexplodedOrdnance is Hazardous Materials / Hazardous Materials Incident / Unexploded Ordnance.
+	EntityActivities_HazardousMaterialsHazardousMaterialsIncidentUnexplodedOrdnance Entity = 150115
+
+	// EntityActivities_TransportationIncident is Transportation Incident.
+	EntityActivities_TransportationIncident Entity = 160000
+
+	// EntityActivities_TransportationIncidentAir is Transportation Incident / Air.
+	EntityActivities_TransportationIncidentAir Entity = 160100
+
+	// EntityActivities_TransportationIncidentMarine is Transportation Incident / Marine.
+	EntityActivities_TransportationIncidentMarine Entity = 160200
+
+	// EntityActivities_TransportationIncidentRail is Transportation Incident / Rail.
+	EntityActivities_TransportationIncidentRail Entity = 160300
+
+	// EntityActivities_TransportationIncidentVehicle is Transportation Incident / Vehicle.
+	EntityActivities_TransportationIncidentVehicle Entity = 160400
+
+	// EntityActivities_TransportationIncidentWheeledVehicleExplosion is Transportation Incident / Wheeled Vehicle Explosion.
+	EntityActivities_TransportationIncidentWheeledVehicleExplosion Entity = 160500
+
+	// EntityActivities_NaturalEvent is Natural Event.
+	EntityActivities_NaturalEvent Entity = 170000
+
+	// EntityActivities_NaturalEventGeologic is Natural Event / Geologic.
+	EntityActivities_NaturalEventGeologic Entity = 170100
+
+	// EntityActivities_NaturalEventGeologicAftershock is Natural Event / Geologic / Aftershock.
+	EntityActivities_NaturalEventGeologicAftershock Entity = 170101
+
+	// EntityActivities_NaturalEventGeologicAvalanche is Natural Event / Geologic / Avalanche.
+	EntityActivities_NaturalEventGeologicAvalanche Entity = 170102
+
+	// EntityActivities_NaturalEventGeologicEarthquakeEpicenter is Natural Event / Geologic / Earthquake Epicenter.
+	EntityActivities_NaturalEventGeologicEarthquakeEpicenter Entity = 170103
+
+	// EntityActivities_NaturalEventGeologicLandslide is Natural Event / Geologic / Landslide.
+	EntityActivities_NaturalEventGeologicLandslide Entity = 170104
+
+	// EntityActivities_NaturalEventGeologicSubsidence is Natural Event / Geologic / Subsidence.
+	EntityActivities_NaturalEventGeologicSubsidence Entity = 170105
+
+	// EntityActivities_NaturalEventGeologicVolcanicEruption is Natural Event / Geologic / Volcanic Eruption.
+	EntityActivities_NaturalEventGeologicVolcanicEruption Entity = 170106
+
+	// EntityActivities_NaturalEventGeologicVolcanicThreat is Natural Event / Geologic / Volcanic Threat.
+	EntityActivities_NaturalEventGeologicVolcanicThreat Entity = 170107
+
+	// EntityActivities_NaturalEventGeologicCaveEntrance is Natural Event / Geologic / Cave Entrance.
+	EntityActivities_NaturalEventGeologicCaveEntrance Entity = 170108
+
+	// EntityActivities_NaturalEventHydroMeteorological is Natural Event / Hydro-Meteorological.
+	EntityActivities_NaturalEventHydroMeteorological Entity = 170200
+
+	// EntityActivities_NaturalEventHydroMeteorologicalDrought is Natural Event / Hydro-Meteorological / Drought.
+	EntityActivities_NaturalEventHydroMeteorologicalDrought Entity = 170201
+
+	// EntityActivities_NaturalEventHydroMeteorologicalFlood is Natural Event / Hydro-Meteorological / Flood.
+	EntityActivities_NaturalEventHydroMeteorologicalFlood Entity = 170202
+
+	// EntityActivities_NaturalEventHydroMeteorologicalTsunami is Natural Event / Hydro-Meteorological / Tsunami.
+	EntityActivities_NaturalEventHydroMeteorologicalTsunami Entity = 170203
+
+	// EntityActivities_NaturalEventInfestation is Natural Event / Infestation.
+	EntityActivities_NaturalEventInfestation Entity = 170300
+
+	// EntityActivities_NaturalEventInfestationBird is Natural Event / Infestation / Bird.
+	EntityActivities_NaturalEventInfestationBird Entity = 170301
+
+	// EntityActivities_NaturalEventInfestationInsect is Natural Event / Infestation / Insect.
+	EntityActivities_NaturalEventInfestationInsect Entity = 170302
+
+	// EntityActivities_NaturalEventInfestationMicrobial is Natural Event / Infestation / Microbial.
+	EntityActivities_NaturalEventInfestationMicrobial Entity = 170303
+
+	// EntityActivities_NaturalEventInfestationReptile is Natural Event / Infestation / Reptile.
+	EntityActivities_NaturalEventInfestationReptile Entity = 170304
+
+	// EntityActivities_NaturalEventInfestationRodent is Natural Event / Infestation / Rodent.
+	EntityActivities_NaturalEventInfestationRodent Entity = 170305
+
+	// EntityActivities_Individual is Individual.
+	EntityActivities_Individual Entity = 180000
+
+	// EntityActivities_IndividualReligiousLeader is Individual / Religious Leader.
+	EntityActivities_IndividualReligiousLeader Entity = 180100
+
+	// EntityActivities_IndividualSpeaker is Individual / Speaker.
+	EntityActivities_IndividualSpeaker Entity = 180200
 )

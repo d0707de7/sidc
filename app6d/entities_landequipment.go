@@ -5,210 +5,621 @@ package app6d
 
 // Entity constants for symbol set 15 (Land equipment).
 const (
-	EntityLandEquipment_WeaponWeaponSystem                                                                            Entity = 110000 // Weapon/Weapon System
-	EntityLandEquipment_WeaponWeaponSystemRifle                                                                       Entity = 110100 // Weapon/Weapon System / Rifle
-	EntityLandEquipment_WeaponWeaponSystemRifleSingleShotRifle                                                        Entity = 110101 // Weapon/Weapon System / Rifle / Single Shot Rifle
-	EntityLandEquipment_WeaponWeaponSystemRifleSemiautomaticRifle                                                     Entity = 110102 // Weapon/Weapon System / Rifle / Semiautomatic Rifle
-	EntityLandEquipment_WeaponWeaponSystemRifleAutomaticRifle                                                         Entity = 110103 // Weapon/Weapon System / Rifle / Automatic Rifle
-	EntityLandEquipment_WeaponWeaponSystemMachineGun                                                                  Entity = 110200 // Weapon/Weapon System / Machine Gun
-	EntityLandEquipment_WeaponWeaponSystemMachineGunLight                                                             Entity = 110201 // Weapon/Weapon System / Machine Gun / Light
-	EntityLandEquipment_WeaponWeaponSystemMachineGunMedium                                                            Entity = 110202 // Weapon/Weapon System / Machine Gun / Medium
-	EntityLandEquipment_WeaponWeaponSystemMachineGunHeavy                                                             Entity = 110203 // Weapon/Weapon System / Machine Gun / Heavy
-	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncher                                                             Entity = 110300 // Weapon/Weapon System / Grenade Launcher
-	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherLight                                                        Entity = 110301 // Weapon/Weapon System / Grenade Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherMedium                                                       Entity = 110302 // Weapon/Weapon System / Grenade Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherHeavy                                                        Entity = 110303 // Weapon/Weapon System / Grenade Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemFlameThrower                                                                Entity = 110400 // Weapon/Weapon System / Flame Thrower
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseGun                                                               Entity = 110500 // Weapon/Weapon System / Air Defense Gun
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseGunLight                                                          Entity = 110501 // Weapon/Weapon System / Air Defense Gun / Light
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseGunMedium                                                         Entity = 110502 // Weapon/Weapon System / Air Defense Gun / Medium
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseGunHeavy                                                          Entity = 110503 // Weapon/Weapon System / Air Defense Gun / Heavy
-	EntityLandEquipment_WeaponWeaponSystemAntitankGun                                                                 Entity = 110600 // Weapon/Weapon System / Antitank Gun
-	EntityLandEquipment_WeaponWeaponSystemAntitankGunLight                                                            Entity = 110601 // Weapon/Weapon System / Antitank Gun / Light
-	EntityLandEquipment_WeaponWeaponSystemAntitankGunMedium                                                           Entity = 110602 // Weapon/Weapon System / Antitank Gun / Medium
-	EntityLandEquipment_WeaponWeaponSystemAntitankGunHeavy                                                            Entity = 110603 // Weapon/Weapon System / Antitank Gun / Heavy
-	EntityLandEquipment_WeaponWeaponSystemDirectFireGun                                                               Entity = 110700 // Weapon/Weapon System / Direct Fire Gun
-	EntityLandEquipment_WeaponWeaponSystemDirectFireGunLight                                                          Entity = 110701 // Weapon/Weapon System / Direct Fire Gun / Light
-	EntityLandEquipment_WeaponWeaponSystemDirectFireGunMedium                                                         Entity = 110702 // Weapon/Weapon System / Direct Fire Gun / Medium
-	EntityLandEquipment_WeaponWeaponSystemDirectFireGunHeavy                                                          Entity = 110703 // Weapon/Weapon System / Direct Fire Gun / Heavy
-	EntityLandEquipment_WeaponWeaponSystemRecoillessGun                                                               Entity = 110800 // Weapon/Weapon System / Recoilless Gun
-	EntityLandEquipment_WeaponWeaponSystemRecoillessGunLight                                                          Entity = 110801 // Weapon/Weapon System / Recoilless Gun / Light
-	EntityLandEquipment_WeaponWeaponSystemRecoillessGunMedium                                                         Entity = 110802 // Weapon/Weapon System / Recoilless Gun / Medium
-	EntityLandEquipment_WeaponWeaponSystemRecoillessGunHeavy                                                          Entity = 110803 // Weapon/Weapon System / Recoilless Gun / Heavy
-	EntityLandEquipment_WeaponWeaponSystemHowitzer                                                                    Entity = 110900 // Weapon/Weapon System / Howitzer
-	EntityLandEquipment_WeaponWeaponSystemHowitzerLight                                                               Entity = 110901 // Weapon/Weapon System / Howitzer / Light
-	EntityLandEquipment_WeaponWeaponSystemHowitzerMedium                                                              Entity = 110902 // Weapon/Weapon System / Howitzer / Medium
-	EntityLandEquipment_WeaponWeaponSystemHowitzerHeavy                                                               Entity = 110903 // Weapon/Weapon System / Howitzer / Heavy
-	EntityLandEquipment_WeaponWeaponSystemMissileLauncher                                                             Entity = 111000 // Weapon/Weapon System / Missile Launcher
-	EntityLandEquipment_WeaponWeaponSystemMissileLauncherLight                                                        Entity = 111001 // Weapon/Weapon System / Missile Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemMissileLauncherMedium                                                       Entity = 111002 // Weapon/Weapon System / Missile Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemMissileLauncherHeavy                                                        Entity = 111003 // Weapon/Weapon System / Missile Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncher                                                   Entity = 111100 // Weapon/Weapon System / Air Defense Missile Launcher
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLight                                              Entity = 111101 // Weapon/Weapon System / Air Defense Missile Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLightLightTransporterLauncherAndRadarTLAR          Entity = 111102 // Weapon/Weapon System / Air Defense Missile Launcher / Light, Light Transporter-Launcher and Radar (TLAR)
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLightLightTacticalLandingApproachRadarTELAR        Entity = 111103 // Weapon/Weapon System / Air Defense Missile Launcher / Light, Light Tactical Landing Approach Radar (TELAR)
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMedium                                             Entity = 111104 // Weapon/Weapon System / Air Defense Missile Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMediumTLAR                                         Entity = 111105 // Weapon/Weapon System / Air Defense Missile Launcher / Medium, TLAR
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMediumTELAR                                        Entity = 111106 // Weapon/Weapon System / Air Defense Missile Launcher / Medium, TELAR
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavy                                              Entity = 111107 // Weapon/Weapon System / Air Defense Missile Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavyTLAR                                          Entity = 111108 // Weapon/Weapon System / Air Defense Missile Launcher / Heavy, TLAR
-	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavyTELAR                                         Entity = 111109 // Weapon/Weapon System / Air Defense Missile Launcher / Heavy, TELAR
-	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncher                                                     Entity = 111200 // Weapon/Weapon System / Antitank Missile Launcher
-	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherLight                                                Entity = 111201 // Weapon/Weapon System / Antitank Missile Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherMedium                                               Entity = 111202 // Weapon/Weapon System / Antitank Missile Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherHeavy                                                Entity = 111203 // Weapon/Weapon System / Antitank Missile Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncher                                             Entity = 111300 // Weapon/Weapon System / Surface-to-Surface Missile Launcher
-	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherLight                                        Entity = 111301 // Weapon/Weapon System / Surface-to-Surface Missile Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherMedium                                       Entity = 111302 // Weapon/Weapon System / Surface-to-Surface Missile Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherHeavy                                        Entity = 111303 // Weapon/Weapon System / Surface-to-Surface Missile Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemMortar                                                                      Entity = 111400 // Weapon/Weapon System / Mortar
-	EntityLandEquipment_WeaponWeaponSystemMortarLight                                                                 Entity = 111401 // Weapon/Weapon System / Mortar / Light
-	EntityLandEquipment_WeaponWeaponSystemMortarMedium                                                                Entity = 111402 // Weapon/Weapon System / Mortar / Medium
-	EntityLandEquipment_WeaponWeaponSystemMortarHeavy                                                                 Entity = 111403 // Weapon/Weapon System / Mortar / Heavy
-	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncher                                                        Entity = 111500 // Weapon/Weapon System / Single Rocket Launcher
-	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherLight                                                   Entity = 111501 // Weapon/Weapon System / Single Rocket Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherMedium                                                  Entity = 111502 // Weapon/Weapon System / Single Rocket Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherHeavy                                                   Entity = 111503 // Weapon/Weapon System / Single Rocket Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncher                                                      Entity = 111600 // Weapon/Weapon System / Multiple Rocket Launcher
-	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherLight                                                 Entity = 111601 // Weapon/Weapon System / Multiple Rocket Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherMedium                                                Entity = 111602 // Weapon/Weapon System / Multiple Rocket Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherHeavy                                                 Entity = 111603 // Weapon/Weapon System / Multiple Rocket Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncher                                                      Entity = 111700 // Weapon/Weapon System / Antitank Rocket Launcher
-	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherLight                                                 Entity = 111701 // Weapon/Weapon System / Antitank Rocket Launcher / Light
-	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherMedium                                                Entity = 111702 // Weapon/Weapon System / Antitank Rocket Launcher / Medium
-	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherHeavy                                                 Entity = 111703 // Weapon/Weapon System / Antitank Rocket Launcher / Heavy
-	EntityLandEquipment_WeaponWeaponSystemNonlethalWeapon                                                             Entity = 111800 // Weapon/Weapon System / Nonlethal Weapon
-	EntityLandEquipment_WeaponWeaponSystemTaser                                                                       Entity = 111900 // Weapon/Weapon System / Taser
-	EntityLandEquipment_WeaponWeaponSystemWaterCannon                                                                 Entity = 112000 // Weapon/Weapon System / Water Cannon
-	EntityLandEquipment_Vehicle                                                                                       Entity = 120000 // Vehicle
-	EntityLandEquipment_VehicleArmored                                                                                Entity = 120100 // Vehicle / Armored
-	EntityLandEquipment_VehicleArmoredArmoredFightingVehicle                                                          Entity = 120101 // Vehicle / Armored / Armored Fighting Vehicle
-	EntityLandEquipment_VehicleArmoredArmoredFightingVehicleCommandAndControl                                         Entity = 120102 // Vehicle / Armored / Armored Fighting Vehicle Command and Control
-	EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrier                                                         Entity = 120103 // Vehicle / Armored / Armored Personnel Carrier
-	EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrierAmbulance                                                Entity = 120104 // Vehicle / Armored / Armored Personnel Carrier Ambulance
-	EntityLandEquipment_VehicleArmoredArmoredProtectedVehicle                                                         Entity = 120105 // Vehicle / Armored / Armored Protected Vehicle
-	EntityLandEquipment_VehicleArmoredDisused                                                                         Entity = 120106 // Vehicle / Armored / {Disused}
-	EntityLandEquipment_VehicleArmoredDisused_120107                                                                  Entity = 120107 // Vehicle / Armored / {Disused}
-	EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrierRecovery                                                 Entity = 120108 // Vehicle / Armored / Armored Personnel Carrier, Recovery
-	EntityLandEquipment_VehicleArmoredCombatServiceSupportVehicle                                                     Entity = 120109 // Vehicle / Armored / Combat Service Support Vehicle
-	EntityLandEquipment_VehicleArmoredDisused_120110                                                                  Entity = 120110 // Vehicle / Armored / {Disused}
-	EntityLandEquipment_VehicleArmoredLightArmorReconnaissance                                                        Entity = 120111 // Vehicle / Armored / Light Armor Reconnaissance
-	EntityLandEquipment_VehicleTank                                                                                   Entity = 120200 // Vehicle / Tank
-	EntityLandEquipment_VehicleTankLight                                                                              Entity = 120201 // Vehicle / Tank / Light
-	EntityLandEquipment_VehicleTankMedium                                                                             Entity = 120202 // Vehicle / Tank / Medium
-	EntityLandEquipment_VehicleTankHeavy                                                                              Entity = 120203 // Vehicle / Tank / Heavy
-	EntityLandEquipment_VehicleDisused                                                                                Entity = 120300 // Vehicle / {Disused}
-	EntityLandEquipment_VehicleDisusedDisused                                                                         Entity = 120301 // Vehicle / {Disused} / {Disused}
-	EntityLandEquipment_VehicleDisusedDisused_120302                                                                  Entity = 120302 // Vehicle / {Disused} / {Disused}
-	EntityLandEquipment_VehicleDisusedDisused_120303                                                                  Entity = 120303 // Vehicle / {Disused} / {Disused}
-	EntityLandEquipment_EngineerVehicleAndEquipment                                                                   Entity = 130000 // Engineer Vehicle and Equipment
-	EntityLandEquipment_EngineerVehicleAndEquipmentBridge                                                             Entity = 130100 // Engineer Vehicle and Equipment / Bridge
-	EntityLandEquipment_EngineerVehicleAndEquipmentDisused                                                            Entity = 130200 // Engineer Vehicle and Equipment / {Disused}
-	EntityLandEquipment_EngineerVehicleAndEquipmentFixedBridge                                                        Entity = 130300 // Engineer Vehicle and Equipment / Fixed Bridge
-	EntityLandEquipment_EngineerVehicleAndEquipmentFloatingBridge                                                     Entity = 130400 // Engineer Vehicle and Equipment / Floating Bridge
-	EntityLandEquipment_EngineerVehicleAndEquipmentFoldingGirderBridge                                                Entity = 130500 // Engineer Vehicle and Equipment / Folding Girder Bridge
-	EntityLandEquipment_EngineerVehicleAndEquipmentHollowDeckBridge                                                   Entity = 130600 // Engineer Vehicle and Equipment / Hollow Deck Bridge
-	EntityLandEquipment_EngineerVehicleAndEquipmentDrill                                                              Entity = 130700 // Engineer Vehicle and Equipment / Drill
-	EntityLandEquipment_EngineerVehicleAndEquipmentDrillDrillMountedOnUtilityVehicle                                  Entity = 130701 // Engineer Vehicle and Equipment / Drill / Drill Mounted on Utility Vehicle
-	EntityLandEquipment_EngineerVehicleAndEquipmentEarthmover                                                         Entity = 130800 // Engineer Vehicle and Equipment / Earthmover
-	EntityLandEquipment_EngineerVehicleAndEquipmentEarthmoverMultifunctionalEarthmoverDigger                          Entity = 130801 // Engineer Vehicle and Equipment / Earthmover / Multifunctional Earthmover/Digger
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipment                                              Entity = 130900 // Engineer Vehicle and Equipment / Mine Clearing Equipment
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentDisused                                       Entity = 130901 // Engineer Vehicle and Equipment / Mine Clearing Equipment / {Disused}
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentMineClearingEquipmentOnTankChassis            Entity = 130902 // Engineer Vehicle and Equipment / Mine Clearing Equipment / Mine Clearing Equipment on Tank Chassis
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentAssaultBreacherVehicleABVWithCombatDozerBlade Entity = 130903 // Engineer Vehicle and Equipment / Mine Clearing Equipment / Assault Breacher Vehicle (ABV) with Combat Dozer Blade
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentMediumCapabilityEquipment                     Entity = 130904 // Engineer Vehicle and Equipment / Mine Clearing Equipment / Medium Capability Equipment
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentHeavyCapabilityEquipment                      Entity = 130905 // Engineer Vehicle and Equipment / Mine Clearing Equipment / Heavy Capability Equipment
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipment                                                Entity = 131000 // Engineer Vehicle and Equipment / Mine Laying Equipment
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentMineLayingEquipmentOnUtilityVehicle             Entity = 131001 // Engineer Vehicle and Equipment / Mine Laying Equipment / Mine Laying Equipment on Utility Vehicle
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentArmoredCarrierWithVolcano                       Entity = 131002 // Engineer Vehicle and Equipment / Mine Laying Equipment / Armored Carrier with Volcano
-	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentTruckMountedWithVolcano                         Entity = 131003 // Engineer Vehicle and Equipment / Mine Laying Equipment / Truck Mounted with Volcano
-	EntityLandEquipment_EngineerVehicleAndEquipmentDozer                                                              Entity = 131100 // Engineer Vehicle and Equipment / Dozer
-	EntityLandEquipment_EngineerVehicleAndEquipmentDozerDozerArmored                                                  Entity = 131101 // Engineer Vehicle and Equipment / Dozer / Dozer, Armored
-	EntityLandEquipment_EngineerVehicleAndEquipmentArmoredAssault                                                     Entity = 131200 // Engineer Vehicle and Equipment / Armored Assault
-	EntityLandEquipment_EngineerVehicleAndEquipmentArmoredEngineerReconVehicleAERV                                    Entity = 131300 // Engineer Vehicle and Equipment / Armored Engineer Recon Vehicle (AERV)
-	EntityLandEquipment_EngineerVehicleAndEquipmentBackhoe                                                            Entity = 131400 // Engineer Vehicle and Equipment / Backhoe
-	EntityLandEquipment_EngineerVehicleAndEquipmentConstructionVehicle                                                Entity = 131500 // Engineer Vehicle and Equipment / Construction Vehicle
-	EntityLandEquipment_EngineerVehicleAndEquipmentFerryTransporter                                                   Entity = 131600 // Engineer Vehicle and Equipment / Ferry Transporter
-	EntityLandEquipment_UtilityVehicle                                                                                Entity = 140000 // Utility Vehicle
-	EntityLandEquipment_UtilityVehicleVehicleGeneric                                                                  Entity = 140100 // Utility Vehicle / Vehicle (Generic)
-	EntityLandEquipment_UtilityVehicleMedical                                                                         Entity = 140200 // Utility Vehicle / Medical
-	EntityLandEquipment_UtilityVehicleDisused                                                                         Entity = 140300 // Utility Vehicle / {Disused}
-	EntityLandEquipment_UtilityVehicleMobileEmergencyPhysician                                                        Entity = 140400 // Utility Vehicle / Mobile Emergency Physician
-	EntityLandEquipment_UtilityVehicleBus                                                                             Entity = 140500 // Utility Vehicle / Bus
-	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruck                                                             Entity = 140600 // Utility Vehicle / Semi–Trailer and Truck
-	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckLight                                                        Entity = 140601 // Utility Vehicle / Semi–Trailer and Truck / Light
-	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckMedium                                                       Entity = 140602 // Utility Vehicle / Semi–Trailer and Truck / Medium
-	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckHeavy                                                        Entity = 140603 // Utility Vehicle / Semi–Trailer and Truck / Heavy
-	EntityLandEquipment_UtilityVehicleLimitedCrossCountryTruck                                                        Entity = 140700 // Utility Vehicle / Limited Cross Country Truck
-	EntityLandEquipment_UtilityVehicleCrossCountryTruck                                                               Entity = 140800 // Utility Vehicle / Cross Country Truck
-	EntityLandEquipment_UtilityVehiclePetroleumOilAndLubricant                                                        Entity = 140900 // Utility Vehicle / Petroleum, Oil and Lubricant
-	EntityLandEquipment_UtilityVehicleWater                                                                           Entity = 141000 // Utility Vehicle / Water
-	EntityLandEquipment_UtilityVehicleAmphibiousUtilityWheeledVehicle                                                 Entity = 141100 // Utility Vehicle / Amphibious Utility Wheeled Vehicle
-	EntityLandEquipment_UtilityVehicleTowTruck                                                                        Entity = 141200 // Utility Vehicle / Tow Truck
-	EntityLandEquipment_UtilityVehicleTowTruckLight                                                                   Entity = 141201 // Utility Vehicle / Tow Truck / Light
-	EntityLandEquipment_UtilityVehicleTowTruckHeavy                                                                   Entity = 141202 // Utility Vehicle / Tow Truck / Heavy
-	EntityLandEquipment_Train                                                                                         Entity = 150000 // Train
-	EntityLandEquipment_TrainLocomotive                                                                               Entity = 150100 // Train / Locomotive
-	EntityLandEquipment_CivilianVehicle                                                                               Entity = 160000 // Civilian Vehicle
-	EntityLandEquipment_CivilianVehicleAutomobile                                                                     Entity = 160100 // Civilian Vehicle / Automobile
-	EntityLandEquipment_CivilianVehicleOpenBedTruck                                                                   Entity = 160200 // Civilian Vehicle / Open-Bed Truck
-	EntityLandEquipment_CivilianVehicleMultiplePassengerVehicle                                                       Entity = 160300 // Civilian Vehicle / Multiple Passenger Vehicle
-	EntityLandEquipment_CivilianVehicleUtilityVehicle                                                                 Entity = 160400 // Civilian Vehicle / Utility Vehicle
-	EntityLandEquipment_CivilianVehicleJeepTypeVehicle                                                                Entity = 160500 // Civilian Vehicle / Jeep Type Vehicle
-	EntityLandEquipment_CivilianVehicleTractorTrailerTruckWithBox                                                     Entity = 160600 // Civilian Vehicle / Tractor Trailer Truck with Box
-	EntityLandEquipment_CivilianVehicleTractorTrailerTruckWithFlatbedTrailer                                          Entity = 160700 // Civilian Vehicle / Tractor Trailer Truck with Flatbed Trailer
-	EntityLandEquipment_CivilianVehicleKnownInsurgentVehicle                                                          Entity = 160800 // Civilian Vehicle / Known Insurgent Vehicle
-	EntityLandEquipment_CivilianVehicleDrugVehicle                                                                    Entity = 160900 // Civilian Vehicle / Drug Vehicle
-	EntityLandEquipment_LawEnforcement                                                                                Entity = 170000 // Law Enforcement
-	EntityLandEquipment_LawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice               Entity = 170100 // Law Enforcement / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice)
-	EntityLandEquipment_LawEnforcementBorderPatrol                                                                    Entity = 170200 // Law Enforcement / Border Patrol
-	EntityLandEquipment_LawEnforcementCustomsService                                                                  Entity = 170300 // Law Enforcement / Customs Service
-	EntityLandEquipment_LawEnforcementDrugEnforcementAdministrationDEA                                                Entity = 170400 // Law Enforcement / Drug Enforcement Administration (DEA)
-	EntityLandEquipment_LawEnforcementDepartmentOfJusticeDOJ                                                          Entity = 170500 // Law Enforcement / Department of Justice (DOJ)
-	EntityLandEquipment_LawEnforcementFederalBureauOfInvestigationFBI                                                 Entity = 170600 // Law Enforcement / Federal Bureau of Investigation (FBI)
-	EntityLandEquipment_LawEnforcementPolice                                                                          Entity = 170700 // Law Enforcement / Police
-	EntityLandEquipment_LawEnforcementUnitedStatesSecretServiceUSSS                                                   Entity = 170800 // Law Enforcement / United States Secret Service (USSS)
-	EntityLandEquipment_LawEnforcementTransportationSecurityAdministrationTSA                                         Entity = 170900 // Law Enforcement / Transportation Security Administration (TSA)
-	EntityLandEquipment_LawEnforcementCoastGuard                                                                      Entity = 171000 // Law Enforcement / Coast Guard
-	EntityLandEquipment_LawEnforcementUSMarshalsService                                                               Entity = 171100 // Law Enforcement / US Marshals Service
-	EntityLandEquipment_PackAnimals                                                                                   Entity = 180000 // Pack Animals
-	EntityLandEquipment_MissileSupport                                                                                Entity = 190000 // Missile Support
-	EntityLandEquipment_MissileSupportTransloader                                                                     Entity = 190100 // Missile Support / Transloader
-	EntityLandEquipment_MissileSupportTransporter                                                                     Entity = 190200 // Missile Support / Transporter
-	EntityLandEquipment_MissileSupportCraneLoadingDevice                                                              Entity = 190300 // Missile Support / Crane/Loading Device
-	EntityLandEquipment_MissileSupportPropellantTransporter                                                           Entity = 190400 // Missile Support / Propellant Transporter
-	EntityLandEquipment_MissileSupportWarheadTransporter                                                              Entity = 190500 // Missile Support / Warhead Transporter
-	EntityLandEquipment_OtherEquipment                                                                                Entity = 200000 // Other Equipment
-	EntityLandEquipment_OtherEquipmentAntennae                                                                        Entity = 200100 // Other Equipment / Antennae
-	EntityLandEquipment_OtherEquipmentBomb                                                                            Entity = 200200 // Other Equipment / Bomb
-	EntityLandEquipment_OtherEquipmentBoobyTrap                                                                       Entity = 200300 // Other Equipment / Booby Trap
-	EntityLandEquipment_OtherEquipmentCBRNEquipment                                                                   Entity = 200400 // Other Equipment / CBRN Equipment
-	EntityLandEquipment_OtherEquipmentComputerSystem                                                                  Entity = 200500 // Other Equipment / Computer System
-	EntityLandEquipment_OtherEquipmentCommandLaunchEquipmentCLE                                                       Entity = 200600 // Other Equipment / Command Launch Equipment (CLE)
-	EntityLandEquipment_OtherEquipmentGeneratorSet                                                                    Entity = 200700 // Other Equipment / Generator Set
-	EntityLandEquipment_OtherEquipmentGroundBasedMidcourseDefenseGMDFireControlGFCCenter                              Entity = 200800 // Other Equipment / Ground-based Midcourse Defense (GMD) Fire Control (GFC) Center
-	EntityLandEquipment_OtherEquipmentInFlightInterceptorCommunicationsSystemIFICSDataTerminalIDT                     Entity = 200900 // Other Equipment / In-Flight Interceptor Communications System (IFICS) Data Terminal (IDT)
-	EntityLandEquipment_OtherEquipmentDirectedEnergy                                                                  Entity = 201000 // Other Equipment / Directed Energy
-	EntityLandEquipment_OtherEquipmentMilitaryInformationSupportOperationsMISO                                        Entity = 201100 // Other Equipment / Military Information Support Operations (MISO)
-	EntityLandEquipment_OtherEquipmentSustainmentShipments                                                            Entity = 201200 // Other Equipment / Sustainment Shipments
-	EntityLandEquipment_OtherEquipmentTent                                                                            Entity = 201300 // Other Equipment / Tent
-	EntityLandEquipment_OtherEquipmentTentCivilian                                                                    Entity = 201301 // Other Equipment / Tent / Civilian
-	EntityLandEquipment_OtherEquipmentTentMilitary                                                                    Entity = 201302 // Other Equipment / Tent / Military
-	EntityLandEquipment_OtherEquipmentUnitDeploymentShipments                                                         Entity = 201400 // Other Equipment / Unit Deployment Shipments
-	EntityLandEquipment_OtherEquipmentEmergencyMedicalOperation                                                       Entity = 201500 // Other Equipment / Emergency Medical Operation
-	EntityLandEquipment_LandMines                                                                                     Entity = 210000 // Land Mines
-	EntityLandEquipment_LandMinesLandMine                                                                             Entity = 210100 // Land Mines / Land Mine
-	EntityLandEquipment_LandMinesAntipersonnelLandMineAPL                                                             Entity = 210200 // Land Mines / Antipersonnel Land mine (APL)
-	EntityLandEquipment_LandMinesAntitankMine                                                                         Entity = 210300 // Land Mines / Antitank Mine
-	EntityLandEquipment_LandMinesImprovisedExplosivesDeviceIED                                                        Entity = 210400 // Land Mines / Improvised Explosives Device (IED)
-	EntityLandEquipment_LandMinesLessThanLethal                                                                       Entity = 210500 // Land Mines / Less Than Lethal
-	EntityLandEquipment_Sensors                                                                                       Entity = 220000 // Sensors
-	EntityLandEquipment_SensorsSensor                                                                                 Entity = 220100 // Sensors / Sensor
-	EntityLandEquipment_SensorsSensorEmplaced                                                                         Entity = 220200 // Sensors / Sensor Emplaced
-	EntityLandEquipment_SensorsRadar                                                                                  Entity = 220300 // Sensors / Radar
-	EntityLandEquipment_EmergencyOperation                                                                            Entity = 230000 // Emergency Operation
-	EntityLandEquipment_EmergencyOperationDisused                                                                     Entity = 230100 // Emergency Operation / {Disused}
-	EntityLandEquipment_EmergencyOperationFireFightingFireProtection                                                  Entity = 230200 // Emergency Operation / Fire Fighting/Fire Protection
-	EntityLandEquipment_ManualTrack                                                                                   Entity = 240000 // Manual Track
-	EntityLandEquipment_RotaryWing                                                                                    Entity = 250000 // Rotary Wing
+	// EntityLandEquipment_WeaponWeaponSystem is Weapon/Weapon System.
+	EntityLandEquipment_WeaponWeaponSystem Entity = 110000
+
+	// EntityLandEquipment_WeaponWeaponSystemRifle is Weapon/Weapon System / Rifle.
+	EntityLandEquipment_WeaponWeaponSystemRifle Entity = 110100
+
+	// EntityLandEquipment_WeaponWeaponSystemRifleSingleShotRifle is Weapon/Weapon System / Rifle / Single Shot Rifle.
+	EntityLandEquipment_WeaponWeaponSystemRifleSingleShotRifle Entity = 110101
+
+	// EntityLandEquipment_WeaponWeaponSystemRifleSemiautomaticRifle is Weapon/Weapon System / Rifle / Semiautomatic Rifle.
+	EntityLandEquipment_WeaponWeaponSystemRifleSemiautomaticRifle Entity = 110102
+
+	// EntityLandEquipment_WeaponWeaponSystemRifleAutomaticRifle is Weapon/Weapon System / Rifle / Automatic Rifle.
+	EntityLandEquipment_WeaponWeaponSystemRifleAutomaticRifle Entity = 110103
+
+	// EntityLandEquipment_WeaponWeaponSystemMachineGun is Weapon/Weapon System / Machine Gun.
+	EntityLandEquipment_WeaponWeaponSystemMachineGun Entity = 110200
+
+	// EntityLandEquipment_WeaponWeaponSystemMachineGunLight is Weapon/Weapon System / Machine Gun / Light.
+	EntityLandEquipment_WeaponWeaponSystemMachineGunLight Entity = 110201
+
+	// EntityLandEquipment_WeaponWeaponSystemMachineGunMedium is Weapon/Weapon System / Machine Gun / Medium.
+	EntityLandEquipment_WeaponWeaponSystemMachineGunMedium Entity = 110202
+
+	// EntityLandEquipment_WeaponWeaponSystemMachineGunHeavy is Weapon/Weapon System / Machine Gun / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemMachineGunHeavy Entity = 110203
+
+	// EntityLandEquipment_WeaponWeaponSystemGrenadeLauncher is Weapon/Weapon System / Grenade Launcher.
+	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncher Entity = 110300
+
+	// EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherLight is Weapon/Weapon System / Grenade Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherLight Entity = 110301
+
+	// EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherMedium is Weapon/Weapon System / Grenade Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherMedium Entity = 110302
+
+	// EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherHeavy is Weapon/Weapon System / Grenade Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemGrenadeLauncherHeavy Entity = 110303
+
+	// EntityLandEquipment_WeaponWeaponSystemFlameThrower is Weapon/Weapon System / Flame Thrower.
+	EntityLandEquipment_WeaponWeaponSystemFlameThrower Entity = 110400
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseGun is Weapon/Weapon System / Air Defense Gun.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseGun Entity = 110500
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseGunLight is Weapon/Weapon System / Air Defense Gun / Light.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseGunLight Entity = 110501
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseGunMedium is Weapon/Weapon System / Air Defense Gun / Medium.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseGunMedium Entity = 110502
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseGunHeavy is Weapon/Weapon System / Air Defense Gun / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseGunHeavy Entity = 110503
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankGun is Weapon/Weapon System / Antitank Gun.
+	EntityLandEquipment_WeaponWeaponSystemAntitankGun Entity = 110600
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankGunLight is Weapon/Weapon System / Antitank Gun / Light.
+	EntityLandEquipment_WeaponWeaponSystemAntitankGunLight Entity = 110601
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankGunMedium is Weapon/Weapon System / Antitank Gun / Medium.
+	EntityLandEquipment_WeaponWeaponSystemAntitankGunMedium Entity = 110602
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankGunHeavy is Weapon/Weapon System / Antitank Gun / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemAntitankGunHeavy Entity = 110603
+
+	// EntityLandEquipment_WeaponWeaponSystemDirectFireGun is Weapon/Weapon System / Direct Fire Gun.
+	EntityLandEquipment_WeaponWeaponSystemDirectFireGun Entity = 110700
+
+	// EntityLandEquipment_WeaponWeaponSystemDirectFireGunLight is Weapon/Weapon System / Direct Fire Gun / Light.
+	EntityLandEquipment_WeaponWeaponSystemDirectFireGunLight Entity = 110701
+
+	// EntityLandEquipment_WeaponWeaponSystemDirectFireGunMedium is Weapon/Weapon System / Direct Fire Gun / Medium.
+	EntityLandEquipment_WeaponWeaponSystemDirectFireGunMedium Entity = 110702
+
+	// EntityLandEquipment_WeaponWeaponSystemDirectFireGunHeavy is Weapon/Weapon System / Direct Fire Gun / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemDirectFireGunHeavy Entity = 110703
+
+	// EntityLandEquipment_WeaponWeaponSystemRecoillessGun is Weapon/Weapon System / Recoilless Gun.
+	EntityLandEquipment_WeaponWeaponSystemRecoillessGun Entity = 110800
+
+	// EntityLandEquipment_WeaponWeaponSystemRecoillessGunLight is Weapon/Weapon System / Recoilless Gun / Light.
+	EntityLandEquipment_WeaponWeaponSystemRecoillessGunLight Entity = 110801
+
+	// EntityLandEquipment_WeaponWeaponSystemRecoillessGunMedium is Weapon/Weapon System / Recoilless Gun / Medium.
+	EntityLandEquipment_WeaponWeaponSystemRecoillessGunMedium Entity = 110802
+
+	// EntityLandEquipment_WeaponWeaponSystemRecoillessGunHeavy is Weapon/Weapon System / Recoilless Gun / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemRecoillessGunHeavy Entity = 110803
+
+	// EntityLandEquipment_WeaponWeaponSystemHowitzer is Weapon/Weapon System / Howitzer.
+	EntityLandEquipment_WeaponWeaponSystemHowitzer Entity = 110900
+
+	// EntityLandEquipment_WeaponWeaponSystemHowitzerLight is Weapon/Weapon System / Howitzer / Light.
+	EntityLandEquipment_WeaponWeaponSystemHowitzerLight Entity = 110901
+
+	// EntityLandEquipment_WeaponWeaponSystemHowitzerMedium is Weapon/Weapon System / Howitzer / Medium.
+	EntityLandEquipment_WeaponWeaponSystemHowitzerMedium Entity = 110902
+
+	// EntityLandEquipment_WeaponWeaponSystemHowitzerHeavy is Weapon/Weapon System / Howitzer / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemHowitzerHeavy Entity = 110903
+
+	// EntityLandEquipment_WeaponWeaponSystemMissileLauncher is Weapon/Weapon System / Missile Launcher.
+	EntityLandEquipment_WeaponWeaponSystemMissileLauncher Entity = 111000
+
+	// EntityLandEquipment_WeaponWeaponSystemMissileLauncherLight is Weapon/Weapon System / Missile Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemMissileLauncherLight Entity = 111001
+
+	// EntityLandEquipment_WeaponWeaponSystemMissileLauncherMedium is Weapon/Weapon System / Missile Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemMissileLauncherMedium Entity = 111002
+
+	// EntityLandEquipment_WeaponWeaponSystemMissileLauncherHeavy is Weapon/Weapon System / Missile Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemMissileLauncherHeavy Entity = 111003
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncher is Weapon/Weapon System / Air Defense Missile Launcher.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncher Entity = 111100
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLight is Weapon/Weapon System / Air Defense Missile Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLight Entity = 111101
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLightLightTransporterLauncherAndRadarTLAR is Weapon/Weapon System / Air Defense Missile Launcher / Light, Light Transporter-Launcher and Radar (TLAR).
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLightLightTransporterLauncherAndRadarTLAR Entity = 111102
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLightLightTacticalLandingApproachRadarTELAR is Weapon/Weapon System / Air Defense Missile Launcher / Light, Light Tactical Landing Approach Radar (TELAR).
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherLightLightTacticalLandingApproachRadarTELAR Entity = 111103
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMedium is Weapon/Weapon System / Air Defense Missile Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMedium Entity = 111104
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMediumTLAR is Weapon/Weapon System / Air Defense Missile Launcher / Medium, TLAR.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMediumTLAR Entity = 111105
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMediumTELAR is Weapon/Weapon System / Air Defense Missile Launcher / Medium, TELAR.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherMediumTELAR Entity = 111106
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavy is Weapon/Weapon System / Air Defense Missile Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavy Entity = 111107
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavyTLAR is Weapon/Weapon System / Air Defense Missile Launcher / Heavy, TLAR.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavyTLAR Entity = 111108
+
+	// EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavyTELAR is Weapon/Weapon System / Air Defense Missile Launcher / Heavy, TELAR.
+	EntityLandEquipment_WeaponWeaponSystemAirDefenseMissileLauncherHeavyTELAR Entity = 111109
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncher is Weapon/Weapon System / Antitank Missile Launcher.
+	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncher Entity = 111200
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherLight is Weapon/Weapon System / Antitank Missile Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherLight Entity = 111201
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherMedium is Weapon/Weapon System / Antitank Missile Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherMedium Entity = 111202
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherHeavy is Weapon/Weapon System / Antitank Missile Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemAntitankMissileLauncherHeavy Entity = 111203
+
+	// EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncher is Weapon/Weapon System / Surface-to-Surface Missile Launcher.
+	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncher Entity = 111300
+
+	// EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherLight is Weapon/Weapon System / Surface-to-Surface Missile Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherLight Entity = 111301
+
+	// EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherMedium is Weapon/Weapon System / Surface-to-Surface Missile Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherMedium Entity = 111302
+
+	// EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherHeavy is Weapon/Weapon System / Surface-to-Surface Missile Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemSurfaceToSurfaceMissileLauncherHeavy Entity = 111303
+
+	// EntityLandEquipment_WeaponWeaponSystemMortar is Weapon/Weapon System / Mortar.
+	EntityLandEquipment_WeaponWeaponSystemMortar Entity = 111400
+
+	// EntityLandEquipment_WeaponWeaponSystemMortarLight is Weapon/Weapon System / Mortar / Light.
+	EntityLandEquipment_WeaponWeaponSystemMortarLight Entity = 111401
+
+	// EntityLandEquipment_WeaponWeaponSystemMortarMedium is Weapon/Weapon System / Mortar / Medium.
+	EntityLandEquipment_WeaponWeaponSystemMortarMedium Entity = 111402
+
+	// EntityLandEquipment_WeaponWeaponSystemMortarHeavy is Weapon/Weapon System / Mortar / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemMortarHeavy Entity = 111403
+
+	// EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncher is Weapon/Weapon System / Single Rocket Launcher.
+	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncher Entity = 111500
+
+	// EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherLight is Weapon/Weapon System / Single Rocket Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherLight Entity = 111501
+
+	// EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherMedium is Weapon/Weapon System / Single Rocket Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherMedium Entity = 111502
+
+	// EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherHeavy is Weapon/Weapon System / Single Rocket Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemSingleRocketLauncherHeavy Entity = 111503
+
+	// EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncher is Weapon/Weapon System / Multiple Rocket Launcher.
+	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncher Entity = 111600
+
+	// EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherLight is Weapon/Weapon System / Multiple Rocket Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherLight Entity = 111601
+
+	// EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherMedium is Weapon/Weapon System / Multiple Rocket Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherMedium Entity = 111602
+
+	// EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherHeavy is Weapon/Weapon System / Multiple Rocket Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemMultipleRocketLauncherHeavy Entity = 111603
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncher is Weapon/Weapon System / Antitank Rocket Launcher.
+	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncher Entity = 111700
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherLight is Weapon/Weapon System / Antitank Rocket Launcher / Light.
+	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherLight Entity = 111701
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherMedium is Weapon/Weapon System / Antitank Rocket Launcher / Medium.
+	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherMedium Entity = 111702
+
+	// EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherHeavy is Weapon/Weapon System / Antitank Rocket Launcher / Heavy.
+	EntityLandEquipment_WeaponWeaponSystemAntitankRocketLauncherHeavy Entity = 111703
+
+	// EntityLandEquipment_WeaponWeaponSystemNonlethalWeapon is Weapon/Weapon System / Nonlethal Weapon.
+	EntityLandEquipment_WeaponWeaponSystemNonlethalWeapon Entity = 111800
+
+	// EntityLandEquipment_WeaponWeaponSystemTaser is Weapon/Weapon System / Taser.
+	EntityLandEquipment_WeaponWeaponSystemTaser Entity = 111900
+
+	// EntityLandEquipment_WeaponWeaponSystemWaterCannon is Weapon/Weapon System / Water Cannon.
+	EntityLandEquipment_WeaponWeaponSystemWaterCannon Entity = 112000
+
+	// EntityLandEquipment_Vehicle is Vehicle.
+	EntityLandEquipment_Vehicle Entity = 120000
+
+	// EntityLandEquipment_VehicleArmored is Vehicle / Armored.
+	EntityLandEquipment_VehicleArmored Entity = 120100
+
+	// EntityLandEquipment_VehicleArmoredArmoredFightingVehicle is Vehicle / Armored / Armored Fighting Vehicle.
+	EntityLandEquipment_VehicleArmoredArmoredFightingVehicle Entity = 120101
+
+	// EntityLandEquipment_VehicleArmoredArmoredFightingVehicleCommandAndControl is Vehicle / Armored / Armored Fighting Vehicle Command and Control.
+	EntityLandEquipment_VehicleArmoredArmoredFightingVehicleCommandAndControl Entity = 120102
+
+	// EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrier is Vehicle / Armored / Armored Personnel Carrier.
+	EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrier Entity = 120103
+
+	// EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrierAmbulance is Vehicle / Armored / Armored Personnel Carrier Ambulance.
+	EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrierAmbulance Entity = 120104
+
+	// EntityLandEquipment_VehicleArmoredArmoredProtectedVehicle is Vehicle / Armored / Armored Protected Vehicle.
+	EntityLandEquipment_VehicleArmoredArmoredProtectedVehicle Entity = 120105
+
+	// EntityLandEquipment_VehicleArmoredDisused is Vehicle / Armored / {Disused}.
+	EntityLandEquipment_VehicleArmoredDisused Entity = 120106
+
+	// EntityLandEquipment_VehicleArmoredDisused_120107 is Vehicle / Armored / {Disused}.
+	EntityLandEquipment_VehicleArmoredDisused_120107 Entity = 120107
+
+	// EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrierRecovery is Vehicle / Armored / Armored Personnel Carrier, Recovery.
+	EntityLandEquipment_VehicleArmoredArmoredPersonnelCarrierRecovery Entity = 120108
+
+	// EntityLandEquipment_VehicleArmoredCombatServiceSupportVehicle is Vehicle / Armored / Combat Service Support Vehicle.
+	EntityLandEquipment_VehicleArmoredCombatServiceSupportVehicle Entity = 120109
+
+	// EntityLandEquipment_VehicleArmoredDisused_120110 is Vehicle / Armored / {Disused}.
+	EntityLandEquipment_VehicleArmoredDisused_120110 Entity = 120110
+
+	// EntityLandEquipment_VehicleArmoredLightArmorReconnaissance is Vehicle / Armored / Light Armor Reconnaissance.
+	EntityLandEquipment_VehicleArmoredLightArmorReconnaissance Entity = 120111
+
+	// EntityLandEquipment_VehicleTank is Vehicle / Tank.
+	EntityLandEquipment_VehicleTank Entity = 120200
+
+	// EntityLandEquipment_VehicleTankLight is Vehicle / Tank / Light.
+	EntityLandEquipment_VehicleTankLight Entity = 120201
+
+	// EntityLandEquipment_VehicleTankMedium is Vehicle / Tank / Medium.
+	EntityLandEquipment_VehicleTankMedium Entity = 120202
+
+	// EntityLandEquipment_VehicleTankHeavy is Vehicle / Tank / Heavy.
+	EntityLandEquipment_VehicleTankHeavy Entity = 120203
+
+	// EntityLandEquipment_VehicleDisused is Vehicle / {Disused}.
+	EntityLandEquipment_VehicleDisused Entity = 120300
+
+	// EntityLandEquipment_VehicleDisusedDisused is Vehicle / {Disused} / {Disused}.
+	EntityLandEquipment_VehicleDisusedDisused Entity = 120301
+
+	// EntityLandEquipment_VehicleDisusedDisused_120302 is Vehicle / {Disused} / {Disused}.
+	EntityLandEquipment_VehicleDisusedDisused_120302 Entity = 120302
+
+	// EntityLandEquipment_VehicleDisusedDisused_120303 is Vehicle / {Disused} / {Disused}.
+	EntityLandEquipment_VehicleDisusedDisused_120303 Entity = 120303
+
+	// EntityLandEquipment_EngineerVehicleAndEquipment is Engineer Vehicle and Equipment.
+	EntityLandEquipment_EngineerVehicleAndEquipment Entity = 130000
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentBridge is Engineer Vehicle and Equipment / Bridge.
+	EntityLandEquipment_EngineerVehicleAndEquipmentBridge Entity = 130100
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentDisused is Engineer Vehicle and Equipment / {Disused}.
+	EntityLandEquipment_EngineerVehicleAndEquipmentDisused Entity = 130200
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentFixedBridge is Engineer Vehicle and Equipment / Fixed Bridge.
+	EntityLandEquipment_EngineerVehicleAndEquipmentFixedBridge Entity = 130300
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentFloatingBridge is Engineer Vehicle and Equipment / Floating Bridge.
+	EntityLandEquipment_EngineerVehicleAndEquipmentFloatingBridge Entity = 130400
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentFoldingGirderBridge is Engineer Vehicle and Equipment / Folding Girder Bridge.
+	EntityLandEquipment_EngineerVehicleAndEquipmentFoldingGirderBridge Entity = 130500
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentHollowDeckBridge is Engineer Vehicle and Equipment / Hollow Deck Bridge.
+	EntityLandEquipment_EngineerVehicleAndEquipmentHollowDeckBridge Entity = 130600
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentDrill is Engineer Vehicle and Equipment / Drill.
+	EntityLandEquipment_EngineerVehicleAndEquipmentDrill Entity = 130700
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentDrillDrillMountedOnUtilityVehicle is Engineer Vehicle and Equipment / Drill / Drill Mounted on Utility Vehicle.
+	EntityLandEquipment_EngineerVehicleAndEquipmentDrillDrillMountedOnUtilityVehicle Entity = 130701
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentEarthmover is Engineer Vehicle and Equipment / Earthmover.
+	EntityLandEquipment_EngineerVehicleAndEquipmentEarthmover Entity = 130800
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentEarthmoverMultifunctionalEarthmoverDigger is Engineer Vehicle and Equipment / Earthmover / Multifunctional Earthmover/Digger.
+	EntityLandEquipment_EngineerVehicleAndEquipmentEarthmoverMultifunctionalEarthmoverDigger Entity = 130801
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipment is Engineer Vehicle and Equipment / Mine Clearing Equipment.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipment Entity = 130900
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentDisused is Engineer Vehicle and Equipment / Mine Clearing Equipment / {Disused}.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentDisused Entity = 130901
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentMineClearingEquipmentOnTankChassis is Engineer Vehicle and Equipment / Mine Clearing Equipment / Mine Clearing Equipment on Tank Chassis.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentMineClearingEquipmentOnTankChassis Entity = 130902
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentAssaultBreacherVehicleABVWithCombatDozerBlade is Engineer Vehicle and Equipment / Mine Clearing Equipment / Assault Breacher Vehicle (ABV) with Combat Dozer Blade.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentAssaultBreacherVehicleABVWithCombatDozerBlade Entity = 130903
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentMediumCapabilityEquipment is Engineer Vehicle and Equipment / Mine Clearing Equipment / Medium Capability Equipment.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentMediumCapabilityEquipment Entity = 130904
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentHeavyCapabilityEquipment is Engineer Vehicle and Equipment / Mine Clearing Equipment / Heavy Capability Equipment.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineClearingEquipmentHeavyCapabilityEquipment Entity = 130905
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipment is Engineer Vehicle and Equipment / Mine Laying Equipment.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipment Entity = 131000
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentMineLayingEquipmentOnUtilityVehicle is Engineer Vehicle and Equipment / Mine Laying Equipment / Mine Laying Equipment on Utility Vehicle.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentMineLayingEquipmentOnUtilityVehicle Entity = 131001
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentArmoredCarrierWithVolcano is Engineer Vehicle and Equipment / Mine Laying Equipment / Armored Carrier with Volcano.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentArmoredCarrierWithVolcano Entity = 131002
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentTruckMountedWithVolcano is Engineer Vehicle and Equipment / Mine Laying Equipment / Truck Mounted with Volcano.
+	EntityLandEquipment_EngineerVehicleAndEquipmentMineLayingEquipmentTruckMountedWithVolcano Entity = 131003
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentDozer is Engineer Vehicle and Equipment / Dozer.
+	EntityLandEquipment_EngineerVehicleAndEquipmentDozer Entity = 131100
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentDozerDozerArmored is Engineer Vehicle and Equipment / Dozer / Dozer, Armored.
+	EntityLandEquipment_EngineerVehicleAndEquipmentDozerDozerArmored Entity = 131101
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentArmoredAssault is Engineer Vehicle and Equipment / Armored Assault.
+	EntityLandEquipment_EngineerVehicleAndEquipmentArmoredAssault Entity = 131200
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentArmoredEngineerReconVehicleAERV is Engineer Vehicle and Equipment / Armored Engineer Recon Vehicle (AERV).
+	EntityLandEquipment_EngineerVehicleAndEquipmentArmoredEngineerReconVehicleAERV Entity = 131300
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentBackhoe is Engineer Vehicle and Equipment / Backhoe.
+	EntityLandEquipment_EngineerVehicleAndEquipmentBackhoe Entity = 131400
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentConstructionVehicle is Engineer Vehicle and Equipment / Construction Vehicle.
+	EntityLandEquipment_EngineerVehicleAndEquipmentConstructionVehicle Entity = 131500
+
+	// EntityLandEquipment_EngineerVehicleAndEquipmentFerryTransporter is Engineer Vehicle and Equipment / Ferry Transporter.
+	EntityLandEquipment_EngineerVehicleAndEquipmentFerryTransporter Entity = 131600
+
+	// EntityLandEquipment_UtilityVehicle is Utility Vehicle.
+	EntityLandEquipment_UtilityVehicle Entity = 140000
+
+	// EntityLandEquipment_UtilityVehicleVehicleGeneric is Utility Vehicle / Vehicle (Generic).
+	EntityLandEquipment_UtilityVehicleVehicleGeneric Entity = 140100
+
+	// EntityLandEquipment_UtilityVehicleMedical is Utility Vehicle / Medical.
+	EntityLandEquipment_UtilityVehicleMedical Entity = 140200
+
+	// EntityLandEquipment_UtilityVehicleDisused is Utility Vehicle / {Disused}.
+	EntityLandEquipment_UtilityVehicleDisused Entity = 140300
+
+	// EntityLandEquipment_UtilityVehicleMobileEmergencyPhysician is Utility Vehicle / Mobile Emergency Physician.
+	EntityLandEquipment_UtilityVehicleMobileEmergencyPhysician Entity = 140400
+
+	// EntityLandEquipment_UtilityVehicleBus is Utility Vehicle / Bus.
+	EntityLandEquipment_UtilityVehicleBus Entity = 140500
+
+	// EntityLandEquipment_UtilityVehicleSemiTrailerAndTruck is Utility Vehicle / Semi–Trailer and Truck.
+	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruck Entity = 140600
+
+	// EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckLight is Utility Vehicle / Semi–Trailer and Truck / Light.
+	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckLight Entity = 140601
+
+	// EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckMedium is Utility Vehicle / Semi–Trailer and Truck / Medium.
+	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckMedium Entity = 140602
+
+	// EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckHeavy is Utility Vehicle / Semi–Trailer and Truck / Heavy.
+	EntityLandEquipment_UtilityVehicleSemiTrailerAndTruckHeavy Entity = 140603
+
+	// EntityLandEquipment_UtilityVehicleLimitedCrossCountryTruck is Utility Vehicle / Limited Cross Country Truck.
+	EntityLandEquipment_UtilityVehicleLimitedCrossCountryTruck Entity = 140700
+
+	// EntityLandEquipment_UtilityVehicleCrossCountryTruck is Utility Vehicle / Cross Country Truck.
+	EntityLandEquipment_UtilityVehicleCrossCountryTruck Entity = 140800
+
+	// EntityLandEquipment_UtilityVehiclePetroleumOilAndLubricant is Utility Vehicle / Petroleum, Oil and Lubricant.
+	EntityLandEquipment_UtilityVehiclePetroleumOilAndLubricant Entity = 140900
+
+	// EntityLandEquipment_UtilityVehicleWater is Utility Vehicle / Water.
+	EntityLandEquipment_UtilityVehicleWater Entity = 141000
+
+	// EntityLandEquipment_UtilityVehicleAmphibiousUtilityWheeledVehicle is Utility Vehicle / Amphibious Utility Wheeled Vehicle.
+	EntityLandEquipment_UtilityVehicleAmphibiousUtilityWheeledVehicle Entity = 141100
+
+	// EntityLandEquipment_UtilityVehicleTowTruck is Utility Vehicle / Tow Truck.
+	EntityLandEquipment_UtilityVehicleTowTruck Entity = 141200
+
+	// EntityLandEquipment_UtilityVehicleTowTruckLight is Utility Vehicle / Tow Truck / Light.
+	EntityLandEquipment_UtilityVehicleTowTruckLight Entity = 141201
+
+	// EntityLandEquipment_UtilityVehicleTowTruckHeavy is Utility Vehicle / Tow Truck / Heavy.
+	EntityLandEquipment_UtilityVehicleTowTruckHeavy Entity = 141202
+
+	// EntityLandEquipment_Train is Train.
+	EntityLandEquipment_Train Entity = 150000
+
+	// EntityLandEquipment_TrainLocomotive is Train / Locomotive.
+	EntityLandEquipment_TrainLocomotive Entity = 150100
+
+	// EntityLandEquipment_CivilianVehicle is Civilian Vehicle.
+	EntityLandEquipment_CivilianVehicle Entity = 160000
+
+	// EntityLandEquipment_CivilianVehicleAutomobile is Civilian Vehicle / Automobile.
+	EntityLandEquipment_CivilianVehicleAutomobile Entity = 160100
+
+	// EntityLandEquipment_CivilianVehicleOpenBedTruck is Civilian Vehicle / Open-Bed Truck.
+	EntityLandEquipment_CivilianVehicleOpenBedTruck Entity = 160200
+
+	// EntityLandEquipment_CivilianVehicleMultiplePassengerVehicle is Civilian Vehicle / Multiple Passenger Vehicle.
+	EntityLandEquipment_CivilianVehicleMultiplePassengerVehicle Entity = 160300
+
+	// EntityLandEquipment_CivilianVehicleUtilityVehicle is Civilian Vehicle / Utility Vehicle.
+	EntityLandEquipment_CivilianVehicleUtilityVehicle Entity = 160400
+
+	// EntityLandEquipment_CivilianVehicleJeepTypeVehicle is Civilian Vehicle / Jeep Type Vehicle.
+	EntityLandEquipment_CivilianVehicleJeepTypeVehicle Entity = 160500
+
+	// EntityLandEquipment_CivilianVehicleTractorTrailerTruckWithBox is Civilian Vehicle / Tractor Trailer Truck with Box.
+	EntityLandEquipment_CivilianVehicleTractorTrailerTruckWithBox Entity = 160600
+
+	// EntityLandEquipment_CivilianVehicleTractorTrailerTruckWithFlatbedTrailer is Civilian Vehicle / Tractor Trailer Truck with Flatbed Trailer.
+	EntityLandEquipment_CivilianVehicleTractorTrailerTruckWithFlatbedTrailer Entity = 160700
+
+	// EntityLandEquipment_CivilianVehicleKnownInsurgentVehicle is Civilian Vehicle / Known Insurgent Vehicle.
+	EntityLandEquipment_CivilianVehicleKnownInsurgentVehicle Entity = 160800
+
+	// EntityLandEquipment_CivilianVehicleDrugVehicle is Civilian Vehicle / Drug Vehicle.
+	EntityLandEquipment_CivilianVehicleDrugVehicle Entity = 160900
+
+	// EntityLandEquipment_LawEnforcement is Law Enforcement.
+	EntityLandEquipment_LawEnforcement Entity = 170000
+
+	// EntityLandEquipment_LawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice is Law Enforcement / Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice).
+	EntityLandEquipment_LawEnforcementBureauOfAlcoholTobaccoFirearmsAndExplosivesATFDepartmentOfJustice Entity = 170100
+
+	// EntityLandEquipment_LawEnforcementBorderPatrol is Law Enforcement / Border Patrol.
+	EntityLandEquipment_LawEnforcementBorderPatrol Entity = 170200
+
+	// EntityLandEquipment_LawEnforcementCustomsService is Law Enforcement / Customs Service.
+	EntityLandEquipment_LawEnforcementCustomsService Entity = 170300
+
+	// EntityLandEquipment_LawEnforcementDrugEnforcementAdministrationDEA is Law Enforcement / Drug Enforcement Administration (DEA).
+	EntityLandEquipment_LawEnforcementDrugEnforcementAdministrationDEA Entity = 170400
+
+	// EntityLandEquipment_LawEnforcementDepartmentOfJusticeDOJ is Law Enforcement / Department of Justice (DOJ).
+	EntityLandEquipment_LawEnforcementDepartmentOfJusticeDOJ Entity = 170500
+
+	// EntityLandEquipment_LawEnforcementFederalBureauOfInvestigationFBI is Law Enforcement / Federal Bureau of Investigation (FBI).
+	EntityLandEquipment_LawEnforcementFederalBureauOfInvestigationFBI Entity = 170600
+
+	// EntityLandEquipment_LawEnforcementPolice is Law Enforcement / Police.
+	EntityLandEquipment_LawEnforcementPolice Entity = 170700
+
+	// EntityLandEquipment_LawEnforcementUnitedStatesSecretServiceUSSS is Law Enforcement / United States Secret Service (USSS).
+	EntityLandEquipment_LawEnforcementUnitedStatesSecretServiceUSSS Entity = 170800
+
+	// EntityLandEquipment_LawEnforcementTransportationSecurityAdministrationTSA is Law Enforcement / Transportation Security Administration (TSA).
+	EntityLandEquipment_LawEnforcementTransportationSecurityAdministrationTSA Entity = 170900
+
+	// EntityLandEquipment_LawEnforcementCoastGuard is Law Enforcement / Coast Guard.
+	EntityLandEquipment_LawEnforcementCoastGuard Entity = 171000
+
+	// EntityLandEquipment_LawEnforcementUSMarshalsService is Law Enforcement / US Marshals Service.
+	EntityLandEquipment_LawEnforcementUSMarshalsService Entity = 171100
+
+	// EntityLandEquipment_PackAnimals is Pack Animals.
+	EntityLandEquipment_PackAnimals Entity = 180000
+
+	// EntityLandEquipment_MissileSupport is Missile Support.
+	EntityLandEquipment_MissileSupport Entity = 190000
+
+	// EntityLandEquipment_MissileSupportTransloader is Missile Support / Transloader.
+	EntityLandEquipment_MissileSupportTransloader Entity = 190100
+
+	// EntityLandEquipment_MissileSupportTransporter is Missile Support / Transporter.
+	EntityLandEquipment_MissileSupportTransporter Entity = 190200
+
+	// EntityLandEquipment_MissileSupportCraneLoadingDevice is Missile Support / Crane/Loading Device.
+	EntityLandEquipment_MissileSupportCraneLoadingDevice Entity = 190300
+
+	// EntityLandEquipment_MissileSupportPropellantTransporter is Missile Support / Propellant Transporter.
+	EntityLandEquipment_MissileSupportPropellantTransporter Entity = 190400
+
+	// EntityLandEquipment_MissileSupportWarheadTransporter is Missile Support / Warhead Transporter.
+	EntityLandEquipment_MissileSupportWarheadTransporter Entity = 190500
+
+	// EntityLandEquipment_OtherEquipment is Other Equipment.
+	EntityLandEquipment_OtherEquipment Entity = 200000
+
+	// EntityLandEquipment_OtherEquipmentAntennae is Other Equipment / Antennae.
+	EntityLandEquipment_OtherEquipmentAntennae Entity = 200100
+
+	// EntityLandEquipment_OtherEquipmentBomb is Other Equipment / Bomb.
+	EntityLandEquipment_OtherEquipmentBomb Entity = 200200
+
+	// EntityLandEquipment_OtherEquipmentBoobyTrap is Other Equipment / Booby Trap.
+	EntityLandEquipment_OtherEquipmentBoobyTrap Entity = 200300
+
+	// EntityLandEquipment_OtherEquipmentCBRNEquipment is Other Equipment / CBRN Equipment.
+	EntityLandEquipment_OtherEquipmentCBRNEquipment Entity = 200400
+
+	// EntityLandEquipment_OtherEquipmentComputerSystem is Other Equipment / Computer System.
+	EntityLandEquipment_OtherEquipmentComputerSystem Entity = 200500
+
+	// EntityLandEquipment_OtherEquipmentCommandLaunchEquipmentCLE is Other Equipment / Command Launch Equipment (CLE).
+	EntityLandEquipment_OtherEquipmentCommandLaunchEquipmentCLE Entity = 200600
+
+	// EntityLandEquipment_OtherEquipmentGeneratorSet is Other Equipment / Generator Set.
+	EntityLandEquipment_OtherEquipmentGeneratorSet Entity = 200700
+
+	// EntityLandEquipment_OtherEquipmentGroundBasedMidcourseDefenseGMDFireControlGFCCenter is Other Equipment / Ground-based Midcourse Defense (GMD) Fire Control (GFC) Center.
+	EntityLandEquipment_OtherEquipmentGroundBasedMidcourseDefenseGMDFireControlGFCCenter Entity = 200800
+
+	// EntityLandEquipment_OtherEquipmentInFlightInterceptorCommunicationsSystemIFICSDataTerminalIDT is Other Equipment / In-Flight Interceptor Communications System (IFICS) Data Terminal (IDT).
+	EntityLandEquipment_OtherEquipmentInFlightInterceptorCommunicationsSystemIFICSDataTerminalIDT Entity = 200900
+
+	// EntityLandEquipment_OtherEquipmentDirectedEnergy is Other Equipment / Directed Energy.
+	EntityLandEquipment_OtherEquipmentDirectedEnergy Entity = 201000
+
+	// EntityLandEquipment_OtherEquipmentMilitaryInformationSupportOperationsMISO is Other Equipment / Military Information Support Operations (MISO).
+	EntityLandEquipment_OtherEquipmentMilitaryInformationSupportOperationsMISO Entity = 201100
+
+	// EntityLandEquipment_OtherEquipmentSustainmentShipments is Other Equipment / Sustainment Shipments.
+	EntityLandEquipment_OtherEquipmentSustainmentShipments Entity = 201200
+
+	// EntityLandEquipment_OtherEquipmentTent is Other Equipment / Tent.
+	EntityLandEquipment_OtherEquipmentTent Entity = 201300
+
+	// EntityLandEquipment_OtherEquipmentTentCivilian is Other Equipment / Tent / Civilian.
+	EntityLandEquipment_OtherEquipmentTentCivilian Entity = 201301
+
+	// EntityLandEquipment_OtherEquipmentTentMilitary is Other Equipment / Tent / Military.
+	EntityLandEquipment_OtherEquipmentTentMilitary Entity = 201302
+
+	// EntityLandEquipment_OtherEquipmentUnitDeploymentShipments is Other Equipment / Unit Deployment Shipments.
+	EntityLandEquipment_OtherEquipmentUnitDeploymentShipments Entity = 201400
+
+	// EntityLandEquipment_OtherEquipmentEmergencyMedicalOperation is Other Equipment / Emergency Medical Operation.
+	EntityLandEquipment_OtherEquipmentEmergencyMedicalOperation Entity = 201500
+
+	// EntityLandEquipment_LandMines is Land Mines.
+	EntityLandEquipment_LandMines Entity = 210000
+
+	// EntityLandEquipment_LandMinesLandMine is Land Mines / Land Mine.
+	EntityLandEquipment_LandMinesLandMine Entity = 210100
+
+	// EntityLandEquipment_LandMinesAntipersonnelLandMineAPL is Land Mines / Antipersonnel Land mine (APL).
+	EntityLandEquipment_LandMinesAntipersonnelLandMineAPL Entity = 210200
+
+	// EntityLandEquipment_LandMinesAntitankMine is Land Mines / Antitank Mine.
+	EntityLandEquipment_LandMinesAntitankMine Entity = 210300
+
+	// EntityLandEquipment_LandMinesImprovisedExplosivesDeviceIED is Land Mines / Improvised Explosives Device (IED).
+	EntityLandEquipment_LandMinesImprovisedExplosivesDeviceIED Entity = 210400
+
+	// EntityLandEquipment_LandMinesLessThanLethal is Land Mines / Less Than Lethal.
+	EntityLandEquipment_LandMinesLessThanLethal Entity = 210500
+
+	// EntityLandEquipment_Sensors is Sensors.
+	EntityLandEquipment_Sensors Entity = 220000
+
+	// EntityLandEquipment_SensorsSensor is Sensors / Sensor.
+	EntityLandEquipment_SensorsSensor Entity = 220100
+
+	// EntityLandEquipment_SensorsSensorEmplaced is Sensors / Sensor Emplaced.
+	EntityLandEquipment_SensorsSensorEmplaced Entity = 220200
+
+	// EntityLandEquipment_SensorsRadar is Sensors / Radar.
+	EntityLandEquipment_SensorsRadar Entity = 220300
+
+	// EntityLandEquipment_EmergencyOperation is Emergency Operation.
+	EntityLandEquipment_EmergencyOperation Entity = 230000
+
+	// EntityLandEquipment_EmergencyOperationDisused is Emergency Operation / {Disused}.
+	EntityLandEquipment_EmergencyOperationDisused Entity = 230100
+
+	// EntityLandEquipment_EmergencyOperationFireFightingFireProtection is Emergency Operation / Fire Fighting/Fire Protection.
+	EntityLandEquipment_EmergencyOperationFireFightingFireProtection Entity = 230200
+
+	// EntityLandEquipment_ManualTrack is Manual Track.
+	EntityLandEquipment_ManualTrack Entity = 240000
+
+	// EntityLandEquipment_RotaryWing is Rotary Wing.
+	EntityLandEquipment_RotaryWing Entity = 250000
 )

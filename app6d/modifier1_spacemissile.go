@@ -5,8 +5,15 @@ package app6d
 
 // Modifier 1 constants for symbol set 06 (Space missile).
 const (
-	Modifier1SpaceMissile_Ballistic   Modifier1 = 1 // Ballistic
-	Modifier1SpaceMissile_Space       Modifier1 = 2 // Space
-	Modifier1SpaceMissile_Interceptor Modifier1 = 3 // Interceptor
-	Modifier1SpaceMissile_Hypersonic  Modifier1 = 4 // Hypersonic
+	// Modifier1SpaceMissile_Ballistic is Ballistic.
+	Modifier1SpaceMissile_Ballistic Modifier1 = 1
+
+	// Modifier1SpaceMissile_Space is Space.
+	Modifier1SpaceMissile_Space Modifier1 = 2
+
+	// Modifier1SpaceMissile_Interceptor is Interceptor.
+	Modifier1SpaceMissile_Interceptor Modifier1 = 3
+
+	// Modifier1SpaceMissile_Hypersonic is Hypersonic.
+	Modifier1SpaceMissile_Hypersonic Modifier1 = 4
 )

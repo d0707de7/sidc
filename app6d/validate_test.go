@@ -14,7 +14,7 @@ func TestValidate(t *testing.T) {
 		Status:      StatusPresent,
 		HQTFD:       HQTFDNone,
 		Amplifier:   AmplifierPlatoonDetachment,
-		Entity:      121100,
+		Entity:      EntityLandUnit_MovementAndManeuverInfantry,
 	}
 
 	tests := []struct {
@@ -74,14 +74,14 @@ func TestValidate(t *testing.T) {
 	}
 }
 
-func TestValidateStrict(t *testing.T) {
+func TestValidate_EntityAndModifierTableLookups(t *testing.T) {
 	tests := []struct {
-		name    string
-		sidc    SIDC
-		wantErr error
+		name      string
+		sidc      SIDC
+		wantField string
 	}{
 		{
-			name: "real Air fighter entity is accepted",
+			name: "real Air fighter entity passes",
 			sidc: SIDC{
 				Version:   VersionD10,
 				SymbolSet: SymbolSetAir,
@@ -89,60 +89,67 @@ func TestValidateStrict(t *testing.T) {
 			},
 		},
 		{
-			name: "real Land unit infantry entity is accepted",
+			name: "real Land unit infantry entity passes",
 			sidc: SIDC{
 				Version:   VersionD10,
 				SymbolSet: SymbolSetLandUnit,
-				Entity:    121100,
+				Entity:    EntityLandUnit_MovementAndManeuverInfantry,
 			},
 		},
 		{
-			name: "unknown entity in known symbol set is rejected",
+			name: "made-up entity in known symbol set is rejected",
 			sidc: SIDC{
 				Version:   VersionD10,
 				SymbolSet: SymbolSetAir,
 				Entity:    999999,
 			},
-			wantErr: ErrUnknownEntity,
+			wantField: "Entity",
 		},
 		{
-			name: "zero entity is allowed",
+			name: "zero entity is allowed (treated as unset)",
 			sidc: SIDC{
 				Version:   VersionD10,
 				SymbolSet: SymbolSetAir,
 			},
 		},
 		{
-			name: "unknown modifier1 is rejected",
+			name: "modifier1 not in the symbol set table is rejected",
 			sidc: SIDC{
 				Version:   VersionD10,
 				SymbolSet: SymbolSetAir,
 				Modifier1: 99,
 			},
-			wantErr: ErrUnknownModifier,
+			wantField: "Modifier1",
 		},
 		{
-			name: "unknown modifier2 is rejected",
+			name: "modifier2 not in the symbol set table is rejected",
 			sidc: SIDC{
 				Version:   VersionD10,
 				SymbolSet: SymbolSetAir,
 				Modifier2: 99,
 			},
-			wantErr: ErrUnknownModifier,
+			wantField: "Modifier2",
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			err := tt.sidc.ValidateStrict()
-			if tt.wantErr == nil {
+			err := tt.sidc.Validate()
+			if tt.wantField == "" {
 				if err != nil {
 					t.Fatalf("expected nil error, got %v", err)
 				}
 				return
 			}
-			if !errors.Is(err, tt.wantErr) {
-				t.Fatalf("got %v, expected to wrap %v", err, tt.wantErr)
+			if err == nil {
+				t.Fatalf("expected error for field %q, got nil", tt.wantField)
+			}
+			var ve *ValidationError
+			if !errors.As(err, &ve) {
+				t.Fatalf("expected *ValidationError, got %T: %v", err, err)
+			}
+			if ve.Field != tt.wantField {
+				t.Errorf("got error for field %q, expected %q (full error: %v)", ve.Field, tt.wantField, err)
 			}
 		})
 	}
@@ -156,8 +163,8 @@ func TestEntity_Name(t *testing.T) {
 		want   string
 	}{
 		{name: "fighter in air symbol set", set: SymbolSetAir, entity: EntityAir_MilitaryFixedWingFighter, want: "Military / Fixed Wing / Fighter"},
-		{name: "unknown entity returns empty string", set: SymbolSetAir, entity: 999999, want: ""},
-		{name: "same numeric entity code maps to different name in different symbol set", set: SymbolSetLandUnit, entity: 110000, want: "Command and Control"},
+		{name: "unknown entity returns empty string", set: SymbolSetAir, entity: Entity(999999), want: ""},
+		{name: "same numeric entity code maps to different name in different symbol set", set: SymbolSetLandUnit, entity: EntityLandUnit_CommandAndControl, want: "Command and Control"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

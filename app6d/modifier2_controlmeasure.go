@@ -5,9 +5,18 @@ package app6d
 
 // Modifier 2 constants for symbol set 25 (Control Measures).
 const (
-	Modifier2ControlMeasure_Urban      Modifier2 = 1 // Urban
-	Modifier2ControlMeasure_Water      Modifier2 = 2 // Water
-	Modifier2ControlMeasure_Ground     Modifier2 = 3 // Ground
-	Modifier2ControlMeasure_Vegetation Modifier2 = 4 // Vegetation
-	Modifier2ControlMeasure_Obstacles  Modifier2 = 5 // Obstacles
+	// Modifier2ControlMeasure_Urban is Urban.
+	Modifier2ControlMeasure_Urban Modifier2 = 1
+
+	// Modifier2ControlMeasure_Water is Water.
+	Modifier2ControlMeasure_Water Modifier2 = 2
+
+	// Modifier2ControlMeasure_Ground is Ground.
+	Modifier2ControlMeasure_Ground Modifier2 = 3
+
+	// Modifier2ControlMeasure_Vegetation is Vegetation.
+	Modifier2ControlMeasure_Vegetation Modifier2 = 4
+
+	// Modifier2ControlMeasure_Obstacles is Obstacles.
+	Modifier2ControlMeasure_Obstacles Modifier2 = 5
 )

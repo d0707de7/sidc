@@ -5,38 +5,105 @@ package app6d
 
 // Modifier 1 constants for symbol set 27 (Dismounted individual).
 const (
-	Modifier1DismountedIndividual_Disused                Modifier1 = 1  // {Disused}
-	Modifier1DismountedIndividual_Disused_02             Modifier1 = 2  // {Disused}
-	Modifier1DismountedIndividual_Disused_03             Modifier1 = 3  // {Disused}
-	Modifier1DismountedIndividual_Disused_04             Modifier1 = 4  // {Disused}
-	Modifier1DismountedIndividual_Disused_05             Modifier1 = 5  // {Disused}
-	Modifier1DismountedIndividual_Disused_06             Modifier1 = 6  // {Disused}
-	Modifier1DismountedIndividual_Disused_07             Modifier1 = 7  // {Disused}
-	Modifier1DismountedIndividual_Disused_08             Modifier1 = 8  // {Disused}
-	Modifier1DismountedIndividual_Disused_09             Modifier1 = 9  // {Disused}
-	Modifier1DismountedIndividual_FieldArtilleryObserver Modifier1 = 11 // Field Artillery Observer
-	Modifier1DismountedIndividual_JointFireSupport       Modifier1 = 12 // Joint Fire Support
-	Modifier1DismountedIndividual_Liaison                Modifier1 = 13 // Liaison
-	Modifier1DismountedIndividual_Messenger              Modifier1 = 14 // Messenger
-	Modifier1DismountedIndividual_MilitaryPolice         Modifier1 = 15 // Military Police
-	Modifier1DismountedIndividual_Observer               Modifier1 = 16 // Observer
-	Modifier1DismountedIndividual_DesignatedMarksman     Modifier1 = 17 // Designated Marksman
-	Modifier1DismountedIndividual_Disused_18             Modifier1 = 18 // {Disused}
-	Modifier1DismountedIndividual_Disused_19             Modifier1 = 19 // {Disused}
-	Modifier1DismountedIndividual_Signaler               Modifier1 = 20 // Signaler
-	Modifier1DismountedIndividual_Reconnaissance         Modifier1 = 21 // Reconnaissance
-	Modifier1DismountedIndividual_Infantry               Modifier1 = 22 // Infantry
-	Modifier1DismountedIndividual_CommanderCDR           Modifier1 = 23 // Commander (CDR)
-	Modifier1DismountedIndividual_SecondInCommandSIC     Modifier1 = 24 // Second In Command (SIC)
-	Modifier1DismountedIndividual_Demolition             Modifier1 = 25 // Demolition
-	Modifier1DismountedIndividual_Police                 Modifier1 = 26 // Police
-	Modifier1DismountedIndividual_Individual             Modifier1 = 46 // Individual
-	Modifier1DismountedIndividual_TeamCrew               Modifier1 = 47 // Team/Crew
-	Modifier1DismountedIndividual_Squad                  Modifier1 = 48 // Squad
-	Modifier1DismountedIndividual_Section                Modifier1 = 49 // Section
-	Modifier1DismountedIndividual_PlatoonDetachment      Modifier1 = 50 // Platoon/Detachment
-	Modifier1DismountedIndividual_Company                Modifier1 = 51 // Company
-	Modifier1DismountedIndividual_Battalion              Modifier1 = 52 // Battalion
-	Modifier1DismountedIndividual_RegimentGroup          Modifier1 = 53 // Regiment/Group
-	Modifier1DismountedIndividual_Disused_54             Modifier1 = 54 // {Disused}
+	// Modifier1DismountedIndividual_Disused is {Disused}.
+	Modifier1DismountedIndividual_Disused Modifier1 = 1
+
+	// Modifier1DismountedIndividual_Disused_02 is {Disused}.
+	Modifier1DismountedIndividual_Disused_02 Modifier1 = 2
+
+	// Modifier1DismountedIndividual_Disused_03 is {Disused}.
+	Modifier1DismountedIndividual_Disused_03 Modifier1 = 3
+
+	// Modifier1DismountedIndividual_Disused_04 is {Disused}.
+	Modifier1DismountedIndividual_Disused_04 Modifier1 = 4
+
+	// Modifier1DismountedIndividual_Disused_05 is {Disused}.
+	Modifier1DismountedIndividual_Disused_05 Modifier1 = 5
+
+	// Modifier1DismountedIndividual_Disused_06 is {Disused}.
+	Modifier1DismountedIndividual_Disused_06 Modifier1 = 6
+
+	// Modifier1DismountedIndividual_Disused_07 is {Disused}.
+	Modifier1DismountedIndividual_Disused_07 Modifier1 = 7
+
+	// Modifier1DismountedIndividual_Disused_08 is {Disused}.
+	Modifier1DismountedIndividual_Disused_08 Modifier1 = 8
+
+	// Modifier1DismountedIndividual_Disused_09 is {Disused}.
+	Modifier1DismountedIndividual_Disused_09 Modifier1 = 9
+
+	// Modifier1DismountedIndividual_FieldArtilleryObserver is Field Artillery Observer.
+	Modifier1DismountedIndividual_FieldArtilleryObserver Modifier1 = 11
+
+	// Modifier1DismountedIndividual_JointFireSupport is Joint Fire Support.
+	Modifier1DismountedIndividual_JointFireSupport Modifier1 = 12
+
+	// Modifier1DismountedIndividual_Liaison is Liaison.
+	Modifier1DismountedIndividual_Liaison Modifier1 = 13
+
+	// Modifier1DismountedIndividual_Messenger is Messenger.
+	Modifier1DismountedIndividual_Messenger Modifier1 = 14
+
+	// Modifier1DismountedIndividual_MilitaryPolice is Military Police.
+	Modifier1DismountedIndividual_MilitaryPolice Modifier1 = 15
+
+	// Modifier1DismountedIndividual_Observer is Observer.
+	Modifier1DismountedIndividual_Observer Modifier1 = 16
+
+	// Modifier1DismountedIndividual_DesignatedMarksman is Designated Marksman.
+	Modifier1DismountedIndividual_DesignatedMarksman Modifier1 = 17
+
+	// Modifier1DismountedIndividual_Disused_18 is {Disused}.
+	Modifier1DismountedIndividual_Disused_18 Modifier1 = 18
+
+	// Modifier1DismountedIndividual_Disused_19 is {Disused}.
+	Modifier1DismountedIndividual_Disused_19 Modifier1 = 19
+
+	// Modifier1DismountedIndividual_Signaler is Signaler.
+	Modifier1DismountedIndividual_Signaler Modifier1 = 20
+
+	// Modifier1DismountedIndividual_Reconnaissance is Reconnaissance.
+	Modifier1DismountedIndividual_Reconnaissance Modifier1 = 21
+
+	// Modifier1DismountedIndividual_Infantry is Infantry.
+	Modifier1DismountedIndividual_Infantry Modifier1 = 22
+
+	// Modifier1DismountedIndividual_CommanderCDR is Commander (CDR).
+	Modifier1DismountedIndividual_CommanderCDR Modifier1 = 23
+
+	// Modifier1DismountedIndividual_SecondInCommandSIC is Second In Command (SIC).
+	Modifier1DismountedIndividual_SecondInCommandSIC Modifier1 = 24
+
+	// Modifier1DismountedIndividual_Demolition is Demolition.
+	Modifier1DismountedIndividual_Demolition Modifier1 = 25
+
+	// Modifier1DismountedIndividual_Police is Police.
+	Modifier1DismountedIndividual_Police Modifier1 = 26
+
+	// Modifier1DismountedIndividual_Individual is Individual.
+	Modifier1DismountedIndividual_Individual Modifier1 = 46
+
+	// Modifier1DismountedIndividual_TeamCrew is Team/Crew.
+	Modifier1DismountedIndividual_TeamCrew Modifier1 = 47
+
+	// Modifier1DismountedIndividual_Squad is Squad.
+	Modifier1DismountedIndividual_Squad Modifier1 = 48
+
+	// Modifier1DismountedIndividual_Section is Section.
+	Modifier1DismountedIndividual_Section Modifier1 = 49
+
+	// Modifier1DismountedIndividual_PlatoonDetachment is Platoon/Detachment.
+	Modifier1DismountedIndividual_PlatoonDetachment Modifier1 = 50
+
+	// Modifier1DismountedIndividual_Company is Company.
+	Modifier1DismountedIndividual_Company Modifier1 = 51
+
+	// Modifier1DismountedIndividual_Battalion is Battalion.
+	Modifier1DismountedIndividual_Battalion Modifier1 = 52
+
+	// Modifier1DismountedIndividual_RegimentGroup is Regiment/Group.
+	Modifier1DismountedIndividual_RegimentGroup Modifier1 = 53
+
+	// Modifier1DismountedIndividual_Disused_54 is {Disused}.
+	Modifier1DismountedIndividual_Disused_54 Modifier1 = 54
 )
